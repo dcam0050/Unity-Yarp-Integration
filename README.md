@@ -1,2 +1,3 @@
-# Unity-Yarp-Integration
-Integrating yarp and unity together to provide a platform for visualising icub memories and developing an advanced icub simulator
+very basic unity project that instantiates a yarp port
+
+requires yarp/ace dlls to be in unity's editor path (or the product exe's path) to work!

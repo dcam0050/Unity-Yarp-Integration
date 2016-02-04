@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<RootNamespace></RootNamespace>
+	<ProjectGuid>{4C650486-E114-EE47-55B8-66167DCBB0B7}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;UNITY_64;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_LINUX;UNITY_STANDALONE;UNITY_STANDALONE_LINUX_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_LINUX</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Plugins\AbstractContactable.cs" />
+     <Compile Include="Assets\Plugins\BVector.cs" />
+     <Compile Include="Assets\Plugins\Bottle.cs" />
+     <Compile Include="Assets\Plugins\BottleCallback.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortBottle.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortImageFloat.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortImageInt.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortImageMono.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortImageMono16.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortImageRgb.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortImageRgbFloat.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortImageRgba.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortProperty.cs" />
+     <Compile Include="Assets\Plugins\BufferedPortSound.cs" />
+     <Compile Include="Assets\Plugins\CalibrationParameters.cs" />
+     <Compile Include="Assets\Plugins\CartesianEvent.cs" />
+     <Compile Include="Assets\Plugins\CartesianEventParameters.cs" />
+     <Compile Include="Assets\Plugins\CartesianEventVariables.cs" />
+     <Compile Include="Assets\Plugins\ConnectionReader.cs" />
+     <Compile Include="Assets\Plugins\ConnectionWriter.cs" />
+     <Compile Include="Assets\Plugins\Contact.cs" />
+     <Compile Include="Assets\Plugins\ContactStyle.cs" />
+     <Compile Include="Assets\Plugins\Contactable.cs" />
+     <Compile Include="Assets\Plugins\DVector.cs" />
+     <Compile Include="Assets\Plugins\DeviceDriver.cs" />
+     <Compile Include="Assets\Plugins\DeviceResponder.cs" />
+     <Compile Include="Assets\Plugins\DriverCreator.cs" />
+     <Compile Include="Assets\Plugins\Drivers.cs" />
+     <Compile Include="Assets\Plugins\DummyConnector.cs" />
+     <Compile Include="Assets\Plugins\FlexImage.cs" />
+     <Compile Include="Assets\Plugins\GazeEvent.cs" />
+     <Compile Include="Assets\Plugins\GazeEventParameters.cs" />
+     <Compile Include="Assets\Plugins\GazeEventVariables.cs" />
+     <Compile Include="Assets\Plugins\IAmplifierControl.cs" />
+     <Compile Include="Assets\Plugins\IAmplifierControlRaw.cs" />
+     <Compile Include="Assets\Plugins\IAudioVisualGrabber.cs" />
+     <Compile Include="Assets\Plugins\IAudioVisualStream.cs" />
+     <Compile Include="Assets\Plugins\IAxisInfo.cs" />
+     <Compile Include="Assets\Plugins\IAxisInfoRaw.cs" />
+     <Compile Include="Assets\Plugins\ICalibrator.cs" />
+     <Compile Include="Assets\Plugins\ICartesianControl.cs" />
+     <Compile Include="Assets\Plugins\IConfig.cs" />
+     <Compile Include="Assets\Plugins\IControlCalibration.cs" />
+     <Compile Include="Assets\Plugins\IControlCalibration2.cs" />
+     <Compile Include="Assets\Plugins\IControlCalibration2Raw.cs" />
+     <Compile Include="Assets\Plugins\IControlCalibrationRaw.cs" />
+     <Compile Include="Assets\Plugins\IControlDebug.cs" />
+     <Compile Include="Assets\Plugins\IControlLimits.cs" />
+     <Compile Include="Assets\Plugins\IControlLimitsRaw.cs" />
+     <Compile Include="Assets\Plugins\IControlMode.cs" />
+     <Compile Include="Assets\Plugins\IControlModeRaw.cs" />
+     <Compile Include="Assets\Plugins\IEncoders.cs" />
+     <Compile Include="Assets\Plugins\IEncodersRaw.cs" />
+     <Compile Include="Assets\Plugins\IFrameGrabber.cs" />
+     <Compile Include="Assets\Plugins\IFrameGrabberControls.cs" />
+     <Compile Include="Assets\Plugins\IFrameGrabberControlsDC1394.cs" />
+     <Compile Include="Assets\Plugins\IFrameGrabberImage.cs" />
+     <Compile Include="Assets\Plugins\IFrameGrabberImageRaw.cs" />
+     <Compile Include="Assets\Plugins\IFrameGrabberRgb.cs" />
+     <Compile Include="Assets\Plugins\IFrameWriterAudioVisual.cs" />
+     <Compile Include="Assets\Plugins\IFrameWriterImage.cs" />
+     <Compile Include="Assets\Plugins\IGazeControl.cs" />
+     <Compile Include="Assets\Plugins\IImpedanceControl.cs" />
+     <Compile Include="Assets\Plugins\IImpedanceControlRaw.cs" />
+     <Compile Include="Assets\Plugins\IOpenLoopControl.cs" />
+     <Compile Include="Assets\Plugins\IOpenLoopControlRaw.cs" />
+     <Compile Include="Assets\Plugins\IPidControl.cs" />
+     <Compile Include="Assets\Plugins\IPidControlRaw.cs" />
+     <Compile Include="Assets\Plugins\IPositionControl.cs" />
+     <Compile Include="Assets\Plugins\IPositionControlRaw.cs" />
+     <Compile Include="Assets\Plugins\IRemoteCalibrator.cs" />
+     <Compile Include="Assets\Plugins\ITorqueControl.cs" />
+     <Compile Include="Assets\Plugins\ITorqueControlRaw.cs" />
+     <Compile Include="Assets\Plugins\IVector.cs" />
+     <Compile Include="Assets\Plugins\IVelocityControl.cs" />
+     <Compile Include="Assets\Plugins\IVelocityControlRaw.cs" />
+     <Compile Include="Assets\Plugins\Image.cs" />
+     <Compile Include="Assets\Plugins\ImageFloat.cs" />
+     <Compile Include="Assets\Plugins\ImageInt.cs" />
+     <Compile Include="Assets\Plugins\ImageMono.cs" />
+     <Compile Include="Assets\Plugins\ImageMono16.cs" />
+     <Compile Include="Assets\Plugins\ImageRgb.cs" />
+     <Compile Include="Assets\Plugins\ImageRgbFloat.cs" />
+     <Compile Include="Assets\Plugins\ImageRgba.cs" />
+     <Compile Include="Assets\Plugins\MotorTorqueParameters.cs" />
+     <Compile Include="Assets\Plugins\NameStore.cs" />
+     <Compile Include="Assets\Plugins\Network.cs" />
+     <Compile Include="Assets\Plugins\NetworkBase.cs" />
+     <Compile Include="Assets\Plugins\Pid.cs" />
+     <Compile Include="Assets\Plugins\PidVector.cs" />
+     <Compile Include="Assets\Plugins\PixelBgr.cs" />
+     <Compile Include="Assets\Plugins\PixelBgra.cs" />
+     <Compile Include="Assets\Plugins\PixelHsv.cs" />
+     <Compile Include="Assets\Plugins\PixelHsvFloat.cs" />
+     <Compile Include="Assets\Plugins\PixelRgb.cs" />
+     <Compile Include="Assets\Plugins\PixelRgbFloat.cs" />
+     <Compile Include="Assets\Plugins\PixelRgbInt.cs" />
+     <Compile Include="Assets\Plugins\PixelRgbSigned.cs" />
+     <Compile Include="Assets\Plugins\PixelRgba.cs" />
+     <Compile Include="Assets\Plugins\PolyDriver.cs" />
+     <Compile Include="Assets\Plugins\Port.cs" />
+     <Compile Include="Assets\Plugins\PortReader.cs" />
+     <Compile Include="Assets\Plugins\PortReaderBufferBase.cs" />
+     <Compile Include="Assets\Plugins\PortReaderBufferBaseCreator.cs" />
+     <Compile Include="Assets\Plugins\PortReaderCreator.cs" />
+     <Compile Include="Assets\Plugins\PortReport.cs" />
+     <Compile Include="Assets\Plugins\PortWriter.cs" />
+     <Compile Include="Assets\Plugins\PortWriterBufferBase.cs" />
+     <Compile Include="Assets\Plugins\PortWriterBufferManager.cs" />
+     <Compile Include="Assets\Plugins\PortWriterWrapper.cs" />
+     <Compile Include="Assets\Plugins\Portable.cs" />
+     <Compile Include="Assets\Plugins\PortablePairBase.cs" />
+     <Compile Include="Assets\Plugins\Property.cs" />
+     <Compile Include="Assets\Plugins\PropertyCallback.cs" />
+     <Compile Include="Assets\Plugins\QosStyle.cs" />
+     <Compile Include="Assets\Plugins\RFModule.cs" />
+     <Compile Include="Assets\Plugins\Random.cs" />
+     <Compile Include="Assets\Plugins\RateThread.cs" />
+     <Compile Include="Assets\Plugins\RateThreadWrapper.cs" />
+     <Compile Include="Assets\Plugins\ResourceFinder.cs" />
+     <Compile Include="Assets\Plugins\RpcClient.cs" />
+     <Compile Include="Assets\Plugins\RpcServer.cs" />
+     <Compile Include="Assets\Plugins\SVector.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_Bytes.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_Clock.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_ICalibrator.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_NameStore.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_NestedContact.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_Pid.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_PortReaderCreator.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_ResourceFinderOptions.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_Runnable.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_Searchable.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_Type.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_YARP_INT64.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_bool.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_double.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_f_p_q_const__char_v_______int.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_float.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_int.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_p_char.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_size_t.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_std__string.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_unsigned_char.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_unsigned_int.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_void.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__InputStream.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__Mutex.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__NestedContact.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__NetUint16.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__OutputStream.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__PortInfo.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__SizedWriter.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__TypedReaderCallbackT_yarp__sig__Sound_t.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__sig__ImageOfT_yarp__sig__PixelBgr_t.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__sig__Matrix.cs" />
+     <Compile Include="Assets\Plugins\SearchMonitor.cs" />
+     <Compile Include="Assets\Plugins\SearchReport.cs" />
+     <Compile Include="Assets\Plugins\Searchable.cs" />
+     <Compile Include="Assets\Plugins\Semaphore.cs" />
+     <Compile Include="Assets\Plugins\Sound.cs" />
+     <Compile Include="Assets\Plugins\Stamp.cs" />
+     <Compile Include="Assets\Plugins\Stamped.cs" />
+     <Compile Include="Assets\Plugins\StubDriverCreator.cs" />
+     <Compile Include="Assets\Plugins\Things.cs" />
+     <Compile Include="Assets\Plugins\Thread.cs" />
+     <Compile Include="Assets\Plugins\Time.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderBottle.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderCallbackImageFloat.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderCallbackImageInt.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderCallbackImageMono.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderCallbackImageMono16.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderCallbackImageRgb.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderCallbackImageRgbFloat.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderCallbackImageRgba.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderImageFloat.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderImageInt.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderImageMono.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderImageMono16.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderImageRgb.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderImageRgbFloat.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderImageRgba.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderProperty.cs" />
+     <Compile Include="Assets\Plugins\TypedReaderSound.cs" />
+     <Compile Include="Assets\Plugins\UnbufferedContactable.cs" />
+     <Compile Include="Assets\Plugins\Value.cs" />
+     <Compile Include="Assets\Plugins\Vector.cs" />
+     <Compile Include="Assets\Plugins\VectorBase.cs" />
+     <Compile Include="Assets\Plugins\YarpVocabPixelTypesEnum.cs" />
+     <Compile Include="Assets\Plugins\yarp.cs" />
+     <Compile Include="Assets\Plugins\yarpPINVOKE.cs" />
+     <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\UnityStandardSurface.cginc" />
+     <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_Standard.shader" />
+     <None Include="Assets\MORPH3D\Content\Shaders\StandardSpecular-doublesided.shader" />
+     <None Include="Assets\Plugins\CMakeCache.txt" />
+     <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_ShadowSample.cginc" />
+     <None Include="Assets\MORPH3D\Readme.txt" />
+     <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\Volund_StandardCharacterSpecularSurface.shader" />
+     <None Include="Assets\MORPH3D\Content\Shaders\Standard-doublesided.shader" />
+     <None Include="Assets\MORPH3D\Content\Shaders\Standard-2pass-doublesided-half depth.shader" />
+     <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\UnityPBSLighting.cginc" />
+     <None Include="Assets\MORPH3D\Content\Shaders\Standard-2pass-doublesided.shader" />
+     <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_setup.cginc" />
+     <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_UnityStandardCore.cginc" />
+     <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_DepthOnly.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="M3DIMPORT_DLL">
+ <HintPath>/media/daniel/Data/icubSimulator/YarpUnity/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
+ </Reference>
+ <Reference Include="M3D_DLL">
+ <HintPath>/media/daniel/Data/icubSimulator/YarpUnity/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

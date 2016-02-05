@@ -98,13 +98,13 @@ public class Property : Searchable {
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void put(string key, int v) {
-    yarpPINVOKE.Property_put__SWIG_3(swigCPtr, key, v);
+  public void put(string key, int value) {
+    yarpPINVOKE.Property_put__SWIG_3(swigCPtr, key, value);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void put(string key, double v) {
-    yarpPINVOKE.Property_put__SWIG_4(swigCPtr, key, v);
+  public void put(string key, double value) {
+    yarpPINVOKE.Property_put__SWIG_4(swigCPtr, key, value);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -183,20 +183,20 @@ public class Property : Searchable {
     return ret;
   }
 
-  public bool fromConfigDir(string firname, string section, bool wipe) {
-    bool ret = yarpPINVOKE.Property_fromConfigDir__SWIG_0(swigCPtr, firname, section, wipe);
+  public bool fromConfigDir(string dirname, string section, bool wipe) {
+    bool ret = yarpPINVOKE.Property_fromConfigDir__SWIG_0(swigCPtr, dirname, section, wipe);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool fromConfigDir(string firname, string section) {
-    bool ret = yarpPINVOKE.Property_fromConfigDir__SWIG_1(swigCPtr, firname, section);
+  public bool fromConfigDir(string dirname, string section) {
+    bool ret = yarpPINVOKE.Property_fromConfigDir__SWIG_1(swigCPtr, dirname, section);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool fromConfigDir(string firname) {
-    bool ret = yarpPINVOKE.Property_fromConfigDir__SWIG_2(swigCPtr, firname);
+  public bool fromConfigDir(string dirname) {
+    bool ret = yarpPINVOKE.Property_fromConfigDir__SWIG_2(swigCPtr, dirname);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -232,14 +232,14 @@ public class Property : Searchable {
     return ret;
   }
 
-  public new bool read(ConnectionReader connection) {
-    bool ret = yarpPINVOKE.Property_read(swigCPtr, ConnectionReader.getCPtr(connection));
+  public new bool read(ConnectionReader reader) {
+    bool ret = yarpPINVOKE.Property_read(swigCPtr, ConnectionReader.getCPtr(reader));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public new bool write(ConnectionWriter connection) {
-    bool ret = yarpPINVOKE.Property_write(swigCPtr, ConnectionWriter.getCPtr(connection));
+  public new bool write(ConnectionWriter writer) {
+    bool ret = yarpPINVOKE.Property_write(swigCPtr, ConnectionWriter.getCPtr(writer));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

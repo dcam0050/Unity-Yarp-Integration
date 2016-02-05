@@ -99,14 +99,10 @@ public class TypedReaderImageMono16 : IDisposable {
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual SWIGTYPE_p_void acquire() {
-    IntPtr cPtr = yarpPINVOKE.TypedReaderImageMono16_acquire(swigCPtr);
-    SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
-    return ret;
-  }
+  public virtual System.IntPtr acquire() { return yarpPINVOKE.TypedReaderImageMono16_acquire(swigCPtr); }
 
-  public virtual void release(SWIGTYPE_p_void handle) {
-    yarpPINVOKE.TypedReaderImageMono16_release(swigCPtr, SWIGTYPE_p_void.getCPtr(handle));
+  public virtual void release(System.IntPtr handle) {
+    yarpPINVOKE.TypedReaderImageMono16_release(swigCPtr, handle);
   }
 
   public new void setTargetPeriod(double period) {

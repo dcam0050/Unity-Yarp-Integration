@@ -46,4 +46,10 @@ public class IAxisInfo : IDisposable {
     return ret;
   }
 
+  public virtual bool getJointType(int axis, SWIGTYPE_p_yarp__dev__JointTypeEnum type) {
+    bool ret = yarpPINVOKE.IAxisInfo_getJointType(swigCPtr, axis, SWIGTYPE_p_yarp__dev__JointTypeEnum.getCPtr(type));
+    if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }

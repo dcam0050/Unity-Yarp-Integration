@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{E6B6D4EC-3F22-38EC-8F40-A016AF9F9C3A}</ProjectGuid>
+	<ProjectGuid>{72309FDE-61C9-119A-AF46-4F2E1A2265C3}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -65,9 +65,6 @@
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_setup.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_DepthOnly.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -83,14 +80,11 @@
  <Reference Include="UnityEditor.Networking">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <Reference Include="M3D_DLL">
+ <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
  </Reference>
  <Reference Include="M3DIMPORT_DLL">
- <HintPath>/media/daniel/Data/icubSimulator/YarpUnity/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
- </Reference>
- <Reference Include="M3D_DLL">
- <HintPath>/media/daniel/Data/icubSimulator/YarpUnity/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -119,9 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{4C650486-E114-EE47-55B8-66167DCBB0B7}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{2E019EC8-BFEA-F0D6-9CDF-A9CE4E198B11}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{CAFA6478-C48F-1CBA-44E1-E633E90379BE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

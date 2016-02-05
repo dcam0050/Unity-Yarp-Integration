@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{4C650486-E114-EE47-55B8-66167DCBB0B7}</ProjectGuid>
+	<ProjectGuid>{CAFA6478-C48F-1CBA-44E1-E633E90379BE}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -250,23 +250,17 @@
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_setup.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_DepthOnly.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <Reference Include="M3D_DLL">
+ <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
  </Reference>
  <Reference Include="M3DIMPORT_DLL">
- <HintPath>/media/daniel/Data/icubSimulator/YarpUnity/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
- </Reference>
- <Reference Include="M3D_DLL">
- <HintPath>/media/daniel/Data/icubSimulator/YarpUnity/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

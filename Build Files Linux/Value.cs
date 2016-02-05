@@ -95,7 +95,7 @@ public class Value : Portable {
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public Value(SWIGTYPE_p_void data, int length) : this(yarpPINVOKE.new_Value__SWIG_6(SWIGTYPE_p_void.getCPtr(data), length), true) {
+  public Value(System.IntPtr data, int length) : this(yarpPINVOKE.new_Value__SWIG_6(data, length), true) {
   }
 
   public Value(Value alt) : this(yarpPINVOKE.new_Value__SWIG_7(Value.getCPtr(alt)), true) {
@@ -223,24 +223,24 @@ public class Value : Portable {
     return ret;
   }
 
-  public virtual bool isEqual(Value alt) {
+  public bool isEqual(Value alt) {
     bool ret = yarpPINVOKE.Value_isEqual__SWIG_0(swigCPtr, Value.getCPtr(alt));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool notEqual(Value alt) {
+  public bool notEqual(Value alt) {
     bool ret = yarpPINVOKE.Value_notEqual__SWIG_0(swigCPtr, Value.getCPtr(alt));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool isEqual(string alt) {
+  public bool isEqual(string alt) {
     bool ret = yarpPINVOKE.Value_isEqual__SWIG_1(swigCPtr, alt);
     return ret;
   }
 
-  public virtual bool notEqual(string alt) {
+  public bool notEqual(string alt) {
     bool ret = yarpPINVOKE.Value_notEqual__SWIG_1(swigCPtr, alt);
     return ret;
   }
@@ -313,8 +313,8 @@ public class Value : Portable {
     return ret;
   }
 
-  public static Value makeBlob(SWIGTYPE_p_void data, int length) {
-    IntPtr cPtr = yarpPINVOKE.Value_makeBlob(SWIGTYPE_p_void.getCPtr(data), length);
+  public static Value makeBlob(System.IntPtr data, int length) {
+    IntPtr cPtr = yarpPINVOKE.Value_makeBlob(data, length);
     Value ret = (cPtr == IntPtr.Zero) ? null : new Value(cPtr, false);
     return ret;
   }

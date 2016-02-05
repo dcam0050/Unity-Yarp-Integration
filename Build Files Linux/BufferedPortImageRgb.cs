@@ -39,6 +39,11 @@ public class BufferedPortImageRgb : Contactable {
     }
   }
 
+  public new void onRead(ImageRgb datum, TypedReaderImageRgb reader) {
+    yarpPINVOKE.BufferedPortImageRgb_onRead__SWIG_0_0(swigCPtr, ImageRgb.getCPtr(datum), TypedReaderImageRgb.getCPtr(reader));
+    if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public BufferedPortImageRgb() : this(yarpPINVOKE.new_BufferedPortImageRgb__SWIG_0(), true) {
   }
 
@@ -164,7 +169,7 @@ public class BufferedPortImageRgb : Contactable {
   }
 
   public new void onRead(ImageRgb datum) {
-    yarpPINVOKE.BufferedPortImageRgb_onRead(swigCPtr, ImageRgb.getCPtr(datum));
+    yarpPINVOKE.BufferedPortImageRgb_onRead__SWIG_1(swigCPtr, ImageRgb.getCPtr(datum));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -218,14 +223,10 @@ public class BufferedPortImageRgb : Contactable {
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual SWIGTYPE_p_void acquire() {
-    IntPtr cPtr = yarpPINVOKE.BufferedPortImageRgb_acquire(swigCPtr);
-    SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
-    return ret;
-  }
+  public virtual System.IntPtr acquire() { return yarpPINVOKE.BufferedPortImageRgb_acquire(swigCPtr); }
 
-  public virtual void release(SWIGTYPE_p_void handle) {
-    yarpPINVOKE.BufferedPortImageRgb_release(swigCPtr, SWIGTYPE_p_void.getCPtr(handle));
+  public virtual void release(System.IntPtr handle) {
+    yarpPINVOKE.BufferedPortImageRgb_release(swigCPtr, handle);
   }
 
   public new void setTargetPeriod(double period) {

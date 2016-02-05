@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Runtime.InteropServices;
 
+//this code receives a texture2D from a unity camera and converts it into a yarp image
+
 public class yarpSendCameraImage : MonoBehaviour {
 
 	public string sourcePortName;
@@ -11,8 +13,8 @@ public class yarpSendCameraImage : MonoBehaviour {
 	private int resWidth;
 	private int resHeight;
 	public Texture2D temp2D;
-	private BufferedPortImageRgba imagePort;
-	private ImageRgba texImage;
+	private BufferedPortImageRgb imagePort;
+	private ImageRgb texImage;
 
 	// Use this for initialization
 	void Start () 
@@ -20,7 +22,7 @@ public class yarpSendCameraImage : MonoBehaviour {
 		Debug.Log ("Initialising Network ... ");
 		Network.init();
 		Debug.Log ("Initialising Port");
-		imagePort = new BufferedPortImageRgba();
+		imagePort = new BufferedPortImageRgb();
 		Debug.Log ("Open Port");
 		imagePort.open (sourcePortName);
 
@@ -56,12 +58,33 @@ public class yarpSendCameraImage : MonoBehaviour {
 		temp2D.ReadPixels(new Rect(0,0,resWidth,resHeight),0,0);
 		temp2D.Apply();
 
+		Debug.Log ("Width = " + resWidth + " Height = " + resHeight);
+
 		//extract byte array from Texture2D
 		Color32[] pix = temp2D.GetPixels32();
+		int numPix = temp2D.width * temp2D.height;
 
-		//need to wrap external
-		//texImage.setExternal((SWIGTYPE_p_void)pix,resWidth,resHeight); 
+		//create pointer to texImage
+		System.IntPtr imagePtr = texImage.getRawImage();
+		int imageSize = texImage.getRawImageSize();
+		byte[] byteArray = new byte[imageSize];
 
+		//convert Color32 array into byte array
+		int currLoc = 0;
+		for (int i = 0; i < numPix; i++) 
+		{
+			Color currPix = pix[i];
+			currLoc = i*3;
+			byteArray[currLoc]=(byte)currPix.r;
+			byteArray[currLoc+1]=(byte)currPix.g;
+			byteArray[currLoc+2]=(byte)currPix.b;
+		}
+
+		System.IntPtr arrayPointer = Marshal.AllocHGlobal(imageSize);
+		Marshal.Copy(byteArray, 0, imagePtr, imageSize);
+		Marshal.FreeHGlobal(arrayPointer);
+
+		texImage.setExternal (imagePtr, resWidth, resHeight);
 		//send image
 		imagePort.write();
 	}

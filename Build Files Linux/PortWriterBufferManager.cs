@@ -40,8 +40,8 @@ public class PortWriterBufferManager : IDisposable {
     }
   }
 
-  public virtual void onCompletion(SWIGTYPE_p_void tracker) {
-    yarpPINVOKE.PortWriterBufferManager_onCompletion(swigCPtr, SWIGTYPE_p_void.getCPtr(tracker));
+  public virtual void onCompletion(System.IntPtr tracker) {
+    yarpPINVOKE.PortWriterBufferManager_onCompletion(swigCPtr, tracker);
   }
 
 }

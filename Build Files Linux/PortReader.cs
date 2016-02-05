@@ -40,8 +40,8 @@ public class PortReader : IDisposable {
     }
   }
 
-  public new bool read(ConnectionReader connection) {
-    bool ret = yarpPINVOKE.PortReader_read(swigCPtr, ConnectionReader.getCPtr(connection));
+  public new bool read(ConnectionReader reader) {
+    bool ret = yarpPINVOKE.PortReader_read(swigCPtr, ConnectionReader.getCPtr(reader));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -69,15 +69,15 @@ public class PortReader : IDisposable {
     return hasDerivedMethod;
   }
 
-  private bool SwigDirectorread(IntPtr connection) {
-    return read(new ConnectionReader(connection, false));
+  private bool SwigDirectorread(IntPtr reader) {
+    return read(new ConnectionReader(reader, false));
   }
 
   private IntPtr SwigDirectorgetReadType() {
     return SWIGTYPE_p_Type.getCPtr(getReadType()).Handle;
   }
 
-  public delegate bool SwigDelegatePortReader_0(IntPtr connection);
+  public delegate bool SwigDelegatePortReader_0(IntPtr reader);
   public delegate IntPtr SwigDelegatePortReader_1();
 
   private SwigDelegatePortReader_0 swigDelegate0;

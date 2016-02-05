@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{2E019EC8-BFEA-F0D6-9CDF-A9CE4E198B11}</ProjectGuid>
+	<ProjectGuid>{5AF4C839-7DC6-DDF1-6B25-82D2A9887B34}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -71,28 +71,22 @@
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_setup.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_DepthOnly.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <Reference Include="M3D_DLL">
+ <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
  </Reference>
  <Reference Include="M3DIMPORT_DLL">
- <HintPath>/media/daniel/Data/icubSimulator/YarpUnity/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
- </Reference>
- <Reference Include="M3D_DLL">
- <HintPath>/media/daniel/Data/icubSimulator/YarpUnity/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{4C650486-E114-EE47-55B8-66167DCBB0B7}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{CAFA6478-C48F-1CBA-44E1-E633E90379BE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -81,8 +81,8 @@ public class RateThread : IDisposable {
     return ret;
   }
 
-  public bool setRate(int p) {
-    bool ret = yarpPINVOKE.RateThread_setRate(swigCPtr, p);
+  public bool setRate(int period) {
+    bool ret = yarpPINVOKE.RateThread_setRate(swigCPtr, period);
     return ret;
   }
 

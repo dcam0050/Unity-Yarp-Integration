@@ -1381,16 +1381,16 @@ SwigDirector_PortReader::~SwigDirector_PortReader() {
 }
 
 
-bool SwigDirector_PortReader::read(yarp::os::ConnectionReader &connection) {
+bool SwigDirector_PortReader::read(yarp::os::ConnectionReader &reader) {
   bool c_result = SwigValueInit< bool >() ;
   unsigned int jresult = 0 ;
-  void * jconnection = 0 ;
+  void * jreader = 0 ;
   
   if (!swig_callbackread) {
     throw Swig::DirectorPureVirtualException("yarp::os::PortReader::read");
   } else {
-    jconnection = (yarp::os::ConnectionReader *) &connection; 
-    jresult = (unsigned int) swig_callbackread(jconnection);
+    jreader = (yarp::os::ConnectionReader *) &reader; 
+    jresult = (unsigned int) swig_callbackread(jreader);
     c_result = jresult ? true : false; 
   }
   return c_result;
@@ -3761,7 +3761,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Value__SWIG_6(void * jarg1, int jarg2) 
   int arg2 ;
   yarp::os::Value *result = 0 ;
   
-  arg1 = (void *)jarg1; 
+  arg1 = jarg1; 
   arg2 = (int)jarg2; 
   result = (yarp::os::Value *)new yarp::os::Value(arg1,arg2);
   jresult = (void *)result; 
@@ -4310,7 +4310,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Value_makeBlob(void * jarg1, int jarg2) {
   int arg2 ;
   yarp::os::Value *result = 0 ;
   
-  arg1 = (void *)jarg1; 
+  arg1 = jarg1; 
   arg2 = (int)jarg2; 
   result = (yarp::os::Value *)yarp::os::Value::makeBlob(arg1,arg2);
   jresult = (void *)result; 
@@ -4376,6 +4376,53 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_Value_toString(void * jarg1) {
   result = yarp_os_Value_toString(arg1);
   jresult = SWIG_csharp_string_callback((&result)->c_str()); 
   return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_Vocab_encode(char * jarg1) {
+  int jresult ;
+  yarp::os::ConstString *arg1 = 0 ;
+  yarp::os::NetInt32 result;
+  
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
+    return 0;
+  }
+  yarp::os::ConstString arg1_str(jarg1);
+  arg1 = &arg1_str; 
+  result = (yarp::os::NetInt32)yarp::os::Vocab::encode((std::string const &)*arg1);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_Vocab_decode(int jarg1) {
+  char * jresult ;
+  yarp::os::NetInt32 arg1 ;
+  yarp::os::ConstString result;
+  
+  arg1 = (yarp::os::NetInt32)jarg1; 
+  result = yarp::os::Vocab::decode(arg1);
+  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_Vocab() {
+  void * jresult ;
+  yarp::os::Vocab *result = 0 ;
+  
+  result = (yarp::os::Vocab *)new yarp::os::Vocab();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Vocab(void * jarg1) {
+  yarp::os::Vocab *arg1 = (yarp::os::Vocab *) 0 ;
+  
+  arg1 = (yarp::os::Vocab *)jarg1; 
+  delete arg1;
 }
 
 
@@ -8979,6 +9026,14 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Bottle__SWIG_2(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_Bottle(void * jarg1) {
+  yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
+  
+  arg1 = (yarp::os::Bottle *)jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_Bottle_clear(void * jarg1) {
   yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
   
@@ -9052,16 +9107,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Bottle_add__SWIG_0(void * jarg1, void * jarg2
     return ;
   } 
   (arg1)->add((yarp::os::Value const &)*arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Bottle_add__SWIG_1(void * jarg1, char * jarg2) {
-  yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
-  char *arg2 = (char *) 0 ;
-  
-  arg1 = (yarp::os::Bottle *)jarg1; 
-  arg2 = (char *)jarg2; 
-  (arg1)->add((char const *)arg2);
 }
 
 
@@ -9343,14 +9388,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Bottle_isNull(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Bottle(void * jarg1) {
-  yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
-  
-  arg1 = (yarp::os::Bottle *)jarg1; 
-  delete arg1;
-}
-
-
 SWIGEXPORT void SWIGSTDCALL CSharp_Bottle_copy__SWIG_0(void * jarg1, void * jarg2, int jarg3, int jarg4) {
   yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
   yarp::os::Bottle *arg2 = 0 ;
@@ -9471,38 +9508,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Bottle_tail(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_Bottle_specialize(void * jarg1, int jarg2) {
-  yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
-  int arg2 ;
-  
-  arg1 = (yarp::os::Bottle *)jarg1; 
-  arg2 = (int)jarg2; 
-  (arg1)->specialize(arg2);
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_Bottle_getSpecialization(void * jarg1) {
-  int jresult ;
-  yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
-  int result;
-  
-  arg1 = (yarp::os::Bottle *)jarg1; 
-  result = (int)(arg1)->getSpecialization();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_Bottle_setNested(void * jarg1, unsigned int jarg2) {
-  yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (yarp::os::Bottle *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  (arg1)->setNested(arg2);
-}
-
-
 SWIGEXPORT void SWIGSTDCALL CSharp_Bottle_hasChanged(void * jarg1) {
   yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
   
@@ -9523,6 +9528,18 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_Bottle_toString__SWIG_0(int jarg1) {
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_Bottle_getSpecialization(void * jarg1) {
+  int jresult ;
+  yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
+  int result;
+  
+  arg1 = (yarp::os::Bottle *)jarg1; 
+  result = (int)(arg1)->getSpecialization();
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT char * SWIGSTDCALL CSharp_Bottle_describeBottleCode(int jarg1) {
   char * jresult ;
   int arg1 ;
@@ -9532,6 +9549,16 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_Bottle_describeBottleCode(int jarg1) {
   result = yarp::os::Bottle::describeBottleCode(arg1);
   jresult = SWIG_csharp_string_callback((&result)->c_str()); 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_Bottle_add__SWIG_1(void * jarg1, char * jarg2) {
+  yarp::os::Bottle *arg1 = (yarp::os::Bottle *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  arg1 = (yarp::os::Bottle *)jarg1; 
+  arg2 = (char *)jarg2; 
+  (arg1)->add((char const *)arg2);
 }
 
 
@@ -9857,7 +9884,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PortReaderBufferBase_acquire(void * jarg1) 
   
   arg1 = (yarp::os::impl::PortReaderBufferBase *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -9867,7 +9894,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PortReaderBufferBase_release__SWIG_1(void * j
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::impl::PortReaderBufferBase *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -9903,7 +9930,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PortWriterBufferManager_onCompletion(void * j
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::PortWriterBufferManager *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->onCompletion(arg2);
 }
 
@@ -9949,7 +9976,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PortWriterBufferBase_create(void * jarg1, v
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::PortWriterBufferManager & type is null", 0);
     return 0;
   } 
-  arg3 = (void *)jarg3; 
+  arg3 = jarg3; 
   result = (yarp::os::PortWriterWrapper *)(arg1)->create(*arg2,arg3);
   jresult = (void *)result; 
   return jresult;
@@ -9963,7 +9990,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_PortWriterBufferBase_getContent(void * jarg
   
   arg1 = (yarp::os::PortWriterBufferBase *)jarg1; 
   result = (void *)(arg1)->getContent();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -13803,7 +13830,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderProperty_acquire(void * jarg1) {
   
   arg1 = (yarp::os::TypedReader< Property > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -13813,7 +13840,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderProperty_release(void * jarg1, voi
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< Property > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -13920,6 +13947,26 @@ SWIGEXPORT void SWIGSTDCALL CSharp_PropertyCallback_director_connect(void *objar
   if (director) {
     director->swig_connect_director(callback0, callback1);
   }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortProperty_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< Property > *arg1 = (yarp::os::BufferedPort< Property > *) 0 ;
+  yarp::os::Property *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::os::Property > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< Property > *)jarg1; 
+  arg2 = (yarp::os::Property *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::Property & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::os::Property > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::os::Property > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::os::Property > const &)*arg3);
 }
 
 
@@ -14248,7 +14295,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortProperty_setAdminReader(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortProperty_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortProperty_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< Property > *arg1 = (yarp::os::BufferedPort< Property > *) 0 ;
   yarp::os::Property *arg2 = 0 ;
   
@@ -14399,7 +14446,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortProperty_acquire(void * jarg1) 
   
   arg1 = (yarp::os::BufferedPort< Property > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -14409,7 +14456,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortProperty_release(void * jarg1, vo
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< Property > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -14723,7 +14770,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderBottle_acquire(void * jarg1) {
   
   arg1 = (yarp::os::TypedReader< Bottle > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -14733,7 +14780,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderBottle_release(void * jarg1, void 
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< Bottle > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -14840,6 +14887,26 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BottleCallback_director_connect(void *objarg,
   if (director) {
     director->swig_connect_director(callback0, callback1);
   }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortBottle_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< Bottle > *arg1 = (yarp::os::BufferedPort< Bottle > *) 0 ;
+  yarp::os::Bottle *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::os::Bottle > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< Bottle > *)jarg1; 
+  arg2 = (yarp::os::Bottle *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::Bottle & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::os::Bottle > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::os::Bottle > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::os::Bottle > const &)*arg3);
 }
 
 
@@ -15168,7 +15235,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortBottle_setAdminReader(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortBottle_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortBottle_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< Bottle > *arg1 = (yarp::os::BufferedPort< Bottle > *) 0 ;
   yarp::os::Bottle *arg2 = 0 ;
   
@@ -15319,7 +15386,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortBottle_acquire(void * jarg1) {
   
   arg1 = (yarp::os::BufferedPort< Bottle > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -15329,7 +15396,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortBottle_release(void * jarg1, void
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< Bottle > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -15751,7 +15818,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Image_setExternal(void * jarg1, void * jarg2,
   int arg4 ;
   
   arg1 = (yarp::sig::Image *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   arg3 = (int)jarg3; 
   arg4 = (int)jarg4; 
   (arg1)->setExternal(arg2,arg3,arg4);
@@ -15789,7 +15856,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Image_getIplImage(void * jarg1) {
   
   arg1 = (yarp::sig::Image *)jarg1; 
   result = (void *)(arg1)->getIplImage();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -15799,7 +15866,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Image_wrapIplImage(void * jarg1, void * jarg2
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::sig::Image *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->wrapIplImage(arg2);
 }
 
@@ -15807,13 +15874,13 @@ SWIGEXPORT void SWIGSTDCALL CSharp_Image_wrapIplImage(void * jarg1, void * jarg2
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Image_read(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   yarp::sig::Image *arg1 = (yarp::sig::Image *) 0 ;
-  yarp::ConnectionReader *arg2 = 0 ;
+  yarp::os::ConnectionReader *arg2 = 0 ;
   bool result;
   
   arg1 = (yarp::sig::Image *)jarg1; 
-  arg2 = (yarp::ConnectionReader *)jarg2;
+  arg2 = (yarp::os::ConnectionReader *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::ConnectionReader & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::ConnectionReader & type is null", 0);
     return 0;
   } 
   result = (bool)(arg1)->read(*arg2);
@@ -15825,13 +15892,13 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Image_read(void * jarg1, void * jarg2
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Image_write(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   yarp::sig::Image *arg1 = (yarp::sig::Image *) 0 ;
-  yarp::ConnectionWriter *arg2 = 0 ;
+  yarp::os::ConnectionWriter *arg2 = 0 ;
   bool result;
   
   arg1 = (yarp::sig::Image *)jarg1; 
-  arg2 = (yarp::ConnectionWriter *)jarg2;
+  arg2 = (yarp::os::ConnectionWriter *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::ConnectionWriter & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::ConnectionWriter & type is null", 0);
     return 0;
   } 
   result = (bool)(arg1)->write(*arg2);
@@ -17430,13 +17497,13 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Sound_getChannels(void * jarg1) {
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Sound_read(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   yarp::sig::Sound *arg1 = (yarp::sig::Sound *) 0 ;
-  yarp::ConnectionReader *arg2 = 0 ;
+  yarp::os::ConnectionReader *arg2 = 0 ;
   bool result;
   
   arg1 = (yarp::sig::Sound *)jarg1; 
-  arg2 = (yarp::ConnectionReader *)jarg2;
+  arg2 = (yarp::os::ConnectionReader *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::ConnectionReader & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::ConnectionReader & type is null", 0);
     return 0;
   } 
   result = (bool)(arg1)->read(*arg2);
@@ -17448,13 +17515,13 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Sound_read(void * jarg1, void * jarg2
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Sound_write(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   yarp::sig::Sound *arg1 = (yarp::sig::Sound *) 0 ;
-  yarp::ConnectionWriter *arg2 = 0 ;
+  yarp::os::ConnectionWriter *arg2 = 0 ;
   bool result;
   
   arg1 = (yarp::sig::Sound *)jarg1; 
-  arg2 = (yarp::ConnectionWriter *)jarg2;
+  arg2 = (yarp::os::ConnectionWriter *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::ConnectionWriter & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::ConnectionWriter & type is null", 0);
     return 0;
   } 
   result = (bool)(arg1)->write(*arg2);
@@ -17866,7 +17933,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_Vector_getGslVector__SWIG_0(void * jarg1) {
   
   arg1 = (yarp::sig::Vector *)jarg1; 
   result = (void *)(arg1)->getGslVector();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -18185,7 +18252,27 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_DeviceResponder_read(void * jarg1, vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_DeviceResponder_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_DeviceResponder_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::dev::DeviceResponder *arg1 = (yarp::dev::DeviceResponder *) 0 ;
+  yarp::os::Bottle *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::os::Bottle > *arg3 = 0 ;
+  
+  arg1 = (yarp::dev::DeviceResponder *)jarg1; 
+  arg2 = (yarp::os::Bottle *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::Bottle & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::os::Bottle > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::os::Bottle > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::os::Bottle > const &)*arg3);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_DeviceResponder_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::dev::DeviceResponder *arg1 = (yarp::dev::DeviceResponder *) 0 ;
   yarp::os::Bottle *arg2 = 0 ;
   
@@ -20233,6 +20320,50 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CalibrationParameters_param4_get(void * jar
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CalibrationParameters_param5_set(void * jarg1, double jarg2) {
+  yarp::dev::CalibrationParameters *arg1 = (yarp::dev::CalibrationParameters *) 0 ;
+  double arg2 ;
+  
+  arg1 = (yarp::dev::CalibrationParameters *)jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->param5 = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_CalibrationParameters_param5_get(void * jarg1) {
+  double jresult ;
+  yarp::dev::CalibrationParameters *arg1 = (yarp::dev::CalibrationParameters *) 0 ;
+  double result;
+  
+  arg1 = (yarp::dev::CalibrationParameters *)jarg1; 
+  result = (double) ((arg1)->param5);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CalibrationParameters_paramZero_set(void * jarg1, double jarg2) {
+  yarp::dev::CalibrationParameters *arg1 = (yarp::dev::CalibrationParameters *) 0 ;
+  double arg2 ;
+  
+  arg1 = (yarp::dev::CalibrationParameters *)jarg1; 
+  arg2 = (double)jarg2; 
+  if (arg1) (arg1)->paramZero = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_CalibrationParameters_paramZero_get(void * jarg1) {
+  double jresult ;
+  yarp::dev::CalibrationParameters *arg1 = (yarp::dev::CalibrationParameters *) 0 ;
+  double result;
+  
+  arg1 = (yarp::dev::CalibrationParameters *)jarg1; 
+  result = (double) ((arg1)->paramZero);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CalibrationParameters() {
   void * jresult ;
   yarp::dev::CalibrationParameters *result = 0 ;
@@ -21143,6 +21274,36 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_disableAmp(void * j
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getAmpStatus__SWIG_0(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
+  int *arg2 = (int *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
+  arg2 = (int *)jarg2; 
+  result = (bool)(arg1)->getAmpStatus(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getAmpStatus__SWIG_1(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
+  int arg2 ;
+  int *arg3 = (int *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int *)jarg3; 
+  result = (bool)(arg1)->getAmpStatus(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getCurrents__SWIG_0(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
@@ -21205,31 +21366,113 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_setMaxCurrent(void 
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getAmpStatus__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getNominalCurrent(void * jarg1, int jarg2, void * jarg3) {
   unsigned int jresult ;
   yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
-  int *arg2 = (int *) 0 ;
+  int arg2 ;
+  double *arg3 = (double *) 0 ;
   bool result;
   
   arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
-  arg2 = (int *)jarg2; 
-  result = (bool)(arg1)->getAmpStatus(arg2);
+  arg2 = (int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getNominalCurrent(arg2,arg3);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getAmpStatus__SWIG_1(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getPeakCurrent(void * jarg1, int jarg2, void * jarg3) {
   unsigned int jresult ;
   yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
   int arg2 ;
-  int *arg3 = (int *) 0 ;
+  double *arg3 = (double *) 0 ;
   bool result;
   
   arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (int *)jarg3; 
-  result = (bool)(arg1)->getAmpStatus(arg2,arg3);
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getPeakCurrent(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_setPeakCurrent(void * jarg1, int jarg2, double jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
+  int arg2 ;
+  double arg3 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->setPeakCurrent(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getPWM(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
+  int arg2 ;
+  double *arg3 = (double *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getPWM(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getPWMLimit(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
+  int arg2 ;
+  double *arg3 = (double *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getPWMLimit(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_setPWMLimit(void * jarg1, int jarg2, double jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
+  int arg2 ;
+  double arg3 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->setPWMLimit(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControl_getPowerSupplyVoltage(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControl *arg1 = (yarp::dev::IAmplifierControl *) 0 ;
+  int arg2 ;
+  double *arg3 = (double *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControl *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getPowerSupplyVoltage(arg2,arg3);
   jresult = result; 
   return jresult;
 }
@@ -21309,6 +21552,36 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_disableAmpRaw(vo
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_0(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
+  int *arg2 = (int *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
+  arg2 = (int *)jarg2; 
+  result = (bool)(arg1)->getAmpStatusRaw(arg2);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_1(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
+  int arg2 ;
+  int *arg3 = (int *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int *)jarg3; 
+  result = (bool)(arg1)->getAmpStatusRaw(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getCurrentsRaw(void * jarg1, void * jarg2) {
   unsigned int jresult ;
   yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
@@ -21371,31 +21644,113 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getMaxCurrentRaw
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_0(void * jarg1, void * jarg2) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getNominalCurrentRaw(void * jarg1, int jarg2, void * jarg3) {
   unsigned int jresult ;
   yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
-  int *arg2 = (int *) 0 ;
+  int arg2 ;
+  double *arg3 = (double *) 0 ;
   bool result;
   
   arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
-  arg2 = (int *)jarg2; 
-  result = (bool)(arg1)->getAmpStatusRaw(arg2);
+  arg2 = (int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getNominalCurrentRaw(arg2,arg3);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_1(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getPeakCurrentRaw(void * jarg1, int jarg2, void * jarg3) {
   unsigned int jresult ;
   yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
   int arg2 ;
-  int *arg3 = (int *) 0 ;
+  double *arg3 = (double *) 0 ;
   bool result;
   
   arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (int *)jarg3; 
-  result = (bool)(arg1)->getAmpStatusRaw(arg2,arg3);
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getPeakCurrentRaw(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_setPeakCurrentRaw(void * jarg1, int jarg2, double jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
+  int arg2 ;
+  double arg3 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->setPeakCurrentRaw(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getPWMRaw(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
+  int arg2 ;
+  double *arg3 = (double *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getPWMRaw(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getPWMLimitRaw(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
+  int arg2 ;
+  double *arg3 = (double *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getPWMLimitRaw(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_setPWMLimitRaw(void * jarg1, int jarg2, double jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
+  int arg2 ;
+  double arg3 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double)jarg3; 
+  result = (bool)(arg1)->setPWMLimitRaw(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAmplifierControlRaw_getPowerSupplyVoltageRaw(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAmplifierControlRaw *arg1 = (yarp::dev::IAmplifierControlRaw *) 0 ;
+  int arg2 ;
+  double *arg3 = (double *) 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAmplifierControlRaw *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double *)jarg3; 
+  result = (bool)(arg1)->getPowerSupplyVoltageRaw(arg2,arg3);
   jresult = result; 
   return jresult;
 }
@@ -21921,6 +22276,26 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAxisInfo_getAxisName(void * jarg1, i
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAxisInfo_getJointType(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAxisInfo *arg1 = (yarp::dev::IAxisInfo *) 0 ;
+  int arg2 ;
+  yarp::dev::JointTypeEnum *arg3 = 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAxisInfo *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (yarp::dev::JointTypeEnum *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::dev::JointTypeEnum & type is null", 0);
+    return 0;
+  } 
+  result = (bool)(arg1)->getJointType(arg2,*arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_IAxisInfoRaw(void * jarg1) {
   yarp::dev::IAxisInfoRaw *arg1 = (yarp::dev::IAxisInfoRaw *) 0 ;
   
@@ -21949,711 +22324,21 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAxisInfoRaw_getAxisNameRaw(void * ja
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CALIBRATE_JOINT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CALIBRATE_JOINT_PARAMS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CALIBRATE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ABORTCALIB_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ABORTPARK_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CALIBRATE_DONE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_PARK_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_SET_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_GET_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_IS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_FAILED_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OK_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OFFSET_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_PID_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_PIDS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REF_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REFS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REFG_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_LIM_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_LIMS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_RESET_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_DISABLE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ENABLE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ERR_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ERRS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OUTPUT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OUTPUTS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REFERENCE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REFERENCES_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_AXES_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_MOTION_DONE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_MOTION_DONES_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_POSITION_MODE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_POSITION_MOVE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_POSITION_MOVES_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_RELATIVE_MOVE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_RELATIVE_MOVES_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REF_SPEED_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REF_SPEEDS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REF_ACCELERATION_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REF_ACCELERATIONS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_STOP_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_STOPS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_VELOCITY_MODE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_VELOCITY_MOVE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_VELOCITY_MOVES_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_AMP_ENABLE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_AMP_DISABLE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_AMP_CURRENT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_AMP_CURRENTS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_AMP_MAXCURRENT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_AMP_STATUS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_AMP_STATUS_SINGLE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_LIMITS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OPENLOOP_MODE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_INFO_NAME_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_TIMESTAMP_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_TORQUE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_TORQUE_MODE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_TRQS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_TRQ_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_BEMF_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_MOTOR_PARAMS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_RANGES_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_RANGE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_IMP_PARAM_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_IMP_OFFSET_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_TORQUES_DIRECTS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_TORQUES_DIRECT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_TORQUES_DIRECT_GROUP_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_PROTOCOL_VERSION_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IAxisInfoRaw_getJointTypeRaw(void * jarg1, int jarg2, void * jarg3) {
+  unsigned int jresult ;
+  yarp::dev::IAxisInfoRaw *arg1 = (yarp::dev::IAxisInfoRaw *) 0 ;
+  int arg2 ;
+  yarp::dev::JointTypeEnum *arg3 = 0 ;
+  bool result;
+  
+  arg1 = (yarp::dev::IAxisInfoRaw *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (yarp::dev::JointTypeEnum *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::dev::JointTypeEnum & type is null", 0);
+    return 0;
+  } 
+  result = (bool)(arg1)->getJointTypeRaw(arg2,*arg3);
   jresult = result; 
   return jresult;
 }
@@ -27256,86 +26941,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IEncoders_getEncoderAccelerations__SW
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_E_RESET_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_E_RESETS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ENCODER_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ENCODERS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ENCODER_SPEED_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ENCODER_SPEEDS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ENCODER_ACCELERATION_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ENCODER_ACCELERATIONS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_ICalibrator(void * jarg1) {
   yarp::dev::ICalibrator *arg1 = (yarp::dev::ICalibrator *) 0 ;
   
@@ -27581,106 +27186,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IRemoteCalibrator_quitPark(void * jar
   
   arg1 = (yarp::dev::IRemoteCalibrator *)jarg1; 
   result = (bool)(arg1)->quitPark();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_REMOTE_CALIBRATOR_INTERFACE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_IS_CALIBRATOR_PRESENT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CALIBRATE_SINGLE_JOINT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CALIBRATE_WHOLE_PART_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_HOMING_SINGLE_JOINT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_HOMING_WHOLE_PART_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_PARK_SINGLE_JOINT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_PARK_WHOLE_PART_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_QUIT_CALIBRATE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_QUIT_PARK_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
   jresult = result; 
   return jresult;
 }
@@ -27957,136 +27462,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IControlModeRaw_getControlModesRaw(vo
   arg1 = (yarp::dev::IControlModeRaw *)jarg1; 
   arg2 = (int *)jarg2; 
   result = (bool)(arg1)->getControlModesRaw(arg2);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_ICONTROLMODE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_CONTROL_MODE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_CONTROL_MODE_GROUP_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_CONTROL_MODES_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_IDLE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_TORQUE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_POSITION_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_POSITION_DIRECT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_VELOCITY_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_OPENLOOP_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_IMPEDANCE_POS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_IMPEDANCE_VEL_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_CM_UNKNOWN_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
   jresult = result; 
   return jresult;
 }
@@ -29398,46 +28773,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IImpedanceControl_getCurrentImpedance
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_IMPEDANCE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_POSITION_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_VELOCITY_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_IOPENLOOP_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_IVelocityControlRaw(void * jarg1) {
   yarp::dev::IVelocityControlRaw *arg1 = (yarp::dev::IVelocityControlRaw *) 0 ;
   
@@ -30039,56 +29374,6 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_IOpenLoopControl_setOpenLoopMode(void
   
   arg1 = (yarp::dev::IOpenLoopControl *)jarg1; 
   result = (bool)(arg1)->setOpenLoopMode();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OPENLOOP_INTERFACE_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OPENLOOP_REF_OUTPUT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OPENLOOP_REF_OUTPUTS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OPENLOOP_PWM_OUTPUT_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_VOCAB_OPENLOOP_PWM_OUTPUTS_get() {
-  int jresult ;
-  int result;
-  
-  result = (int)(0);
   jresult = result; 
   return jresult;
 }
@@ -32483,7 +31768,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderImageRgb_acquire(void * jarg1) {
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -32493,7 +31778,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderImageRgb_release(void * jarg1, voi
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -32557,6 +31842,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TypedReaderCallbackImageRgb() {
   result = (yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *)new yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelRgb > >();
   jresult = (void *)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgb_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *) 0 ;
+  yarp::sig::ImageOf< yarp::sig::PixelRgb > *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *)jarg1; 
+  arg2 = (yarp::sig::ImageOf< yarp::sig::PixelRgb > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::sig::ImageOf< yarp::sig::PixelRgb > & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgb > > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgb > > const &)*arg3);
 }
 
 
@@ -32885,7 +32190,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgb_setAdminReader(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgb_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgb_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *) 0 ;
   yarp::sig::ImageOf< yarp::sig::PixelRgb > *arg2 = 0 ;
   
@@ -33036,7 +32341,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortImageRgb_acquire(void * jarg1) 
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -33046,7 +32351,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgb_release(void * jarg1, vo
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgb > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -33450,7 +32755,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderImageRgba_acquire(void * jarg1) 
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -33460,7 +32765,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderImageRgba_release(void * jarg1, vo
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -33524,6 +32829,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TypedReaderCallbackImageRgba() {
   result = (yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *)new yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelRgba > >();
   jresult = (void *)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgba_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *) 0 ;
+  yarp::sig::ImageOf< yarp::sig::PixelRgba > *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *)jarg1; 
+  arg2 = (yarp::sig::ImageOf< yarp::sig::PixelRgba > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::sig::ImageOf< yarp::sig::PixelRgba > & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgba > > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgba > > const &)*arg3);
 }
 
 
@@ -33852,7 +33177,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgba_setAdminReader(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgba_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgba_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *) 0 ;
   yarp::sig::ImageOf< yarp::sig::PixelRgba > *arg2 = 0 ;
   
@@ -34003,7 +33328,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortImageRgba_acquire(void * jarg1)
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -34013,7 +33338,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgba_release(void * jarg1, v
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgba > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -34417,7 +33742,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderImageMono_acquire(void * jarg1) 
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -34427,7 +33752,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderImageMono_release(void * jarg1, vo
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -34491,6 +33816,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TypedReaderCallbackImageMono() {
   result = (yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelMono > > *)new yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelMono > >();
   jresult = (void *)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono > > *) 0 ;
+  yarp::sig::ImageOf< yarp::sig::PixelMono > *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono > > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono > > *)jarg1; 
+  arg2 = (yarp::sig::ImageOf< yarp::sig::PixelMono > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::sig::ImageOf< yarp::sig::PixelMono > & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono > > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono > > const &)*arg3);
 }
 
 
@@ -34819,7 +34164,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono_setAdminReader(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono > > *) 0 ;
   yarp::sig::ImageOf< yarp::sig::PixelMono > *arg2 = 0 ;
   
@@ -34970,7 +34315,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortImageMono_acquire(void * jarg1)
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -34980,7 +34325,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono_release(void * jarg1, v
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -35384,7 +34729,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderImageMono16_acquire(void * jarg1
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -35394,7 +34739,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderImageMono16_release(void * jarg1, 
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -35458,6 +34803,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TypedReaderCallbackImageMono16() {
   result = (yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *)new yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelMono16 > >();
   jresult = (void *)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono16_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *) 0 ;
+  yarp::sig::ImageOf< yarp::sig::PixelMono16 > *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *)jarg1; 
+  arg2 = (yarp::sig::ImageOf< yarp::sig::PixelMono16 > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::sig::ImageOf< yarp::sig::PixelMono16 > & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > const &)*arg3);
 }
 
 
@@ -35786,7 +35151,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono16_setAdminReader(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono16_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono16_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *) 0 ;
   yarp::sig::ImageOf< yarp::sig::PixelMono16 > *arg2 = 0 ;
   
@@ -35937,7 +35302,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortImageMono16_acquire(void * jarg
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -35947,7 +35312,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageMono16_release(void * jarg1,
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelMono16 > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -36381,7 +35746,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderImageInt_acquire(void * jarg1) {
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelInt > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -36391,7 +35756,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderImageInt_release(void * jarg1, voi
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelInt > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -36455,6 +35820,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TypedReaderCallbackImageInt() {
   result = (yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelInt > > *)new yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelInt > >();
   jresult = (void *)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageInt_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelInt > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelInt > > *) 0 ;
+  yarp::sig::ImageOf< yarp::sig::PixelInt > *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelInt > > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelInt > > *)jarg1; 
+  arg2 = (yarp::sig::ImageOf< yarp::sig::PixelInt > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::sig::ImageOf< yarp::sig::PixelInt > & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelInt > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelInt > > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelInt > > const &)*arg3);
 }
 
 
@@ -36783,7 +36168,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageInt_setAdminReader(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageInt_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageInt_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelInt > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelInt > > *) 0 ;
   yarp::sig::ImageOf< yarp::sig::PixelInt > *arg2 = 0 ;
   
@@ -36934,7 +36319,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortImageInt_acquire(void * jarg1) 
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelInt > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -36944,7 +36329,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageInt_release(void * jarg1, vo
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelInt > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -37258,7 +36643,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderSound_acquire(void * jarg1) {
   
   arg1 = (yarp::os::TypedReader< yarp::sig::Sound > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -37268,7 +36653,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderSound_release(void * jarg1, void *
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< yarp::sig::Sound > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -37280,6 +36665,26 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderSound_setTargetPeriod(void * jarg1
   arg1 = (yarp::os::TypedReader< yarp::sig::Sound > *)jarg1; 
   arg2 = (double)jarg2; 
   (arg1)->setTargetPeriod(arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortSound_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< yarp::sig::Sound > *arg1 = (yarp::os::BufferedPort< yarp::sig::Sound > *) 0 ;
+  yarp::sig::Sound *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::sig::Sound > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< yarp::sig::Sound > *)jarg1; 
+  arg2 = (yarp::sig::Sound *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::sig::Sound & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::sig::Sound > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::sig::Sound > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::sig::Sound > const &)*arg3);
 }
 
 
@@ -37608,7 +37013,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortSound_setAdminReader(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortSound_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortSound_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< yarp::sig::Sound > *arg1 = (yarp::os::BufferedPort< yarp::sig::Sound > *) 0 ;
   yarp::sig::Sound *arg2 = 0 ;
   
@@ -37759,7 +37164,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortSound_acquire(void * jarg1) {
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::Sound > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -37769,7 +37174,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortSound_release(void * jarg1, void 
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::Sound > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -38203,7 +37608,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderImageFloat_acquire(void * jarg1)
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -38213,7 +37618,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderImageFloat_release(void * jarg1, v
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -38277,6 +37682,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TypedReaderCallbackImageFloat() {
   result = (yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *)new yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelFloat > >();
   jresult = (void *)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageFloat_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *) 0 ;
+  yarp::sig::ImageOf< yarp::sig::PixelFloat > *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *)jarg1; 
+  arg2 = (yarp::sig::ImageOf< yarp::sig::PixelFloat > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::sig::ImageOf< yarp::sig::PixelFloat > & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelFloat > > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelFloat > > const &)*arg3);
 }
 
 
@@ -38605,7 +38030,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageFloat_setAdminReader(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageFloat_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageFloat_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *) 0 ;
   yarp::sig::ImageOf< yarp::sig::PixelFloat > *arg2 = 0 ;
   
@@ -38756,7 +38181,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortImageFloat_acquire(void * jarg1
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -38766,7 +38191,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageFloat_release(void * jarg1, 
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelFloat > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -39170,7 +38595,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_TypedReaderImageRgbFloat_acquire(void * jar
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -39180,7 +38605,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_TypedReaderImageRgbFloat_release(void * jarg1
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 
@@ -39244,6 +38669,26 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_TypedReaderCallbackImageRgbFloat() {
   result = (yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *)new yarp::os::TypedReaderCallback< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > >();
   jresult = (void *)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgbFloat_onRead__SWIG_0_0(void * jarg1, void * jarg2, void * jarg3) {
+  yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *) 0 ;
+  yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > *arg2 = 0 ;
+  yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *arg3 = 0 ;
+  
+  arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *)jarg1; 
+  arg2 = (yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > & type is null", 0);
+    return ;
+  } 
+  arg3 = (yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > const & type is null", 0);
+    return ;
+  } 
+  (arg1)->onRead(*arg2,(yarp::os::TypedReader< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > const &)*arg3);
 }
 
 
@@ -39572,7 +39017,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgbFloat_setAdminReader(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgbFloat_onRead(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgbFloat_onRead__SWIG_1(void * jarg1, void * jarg2) {
   yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *) 0 ;
   yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > *arg2 = 0 ;
   
@@ -39723,7 +39168,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_BufferedPortImageRgbFloat_acquire(void * ja
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *)jarg1; 
   result = (void *)(arg1)->acquire();
-  jresult = (void *)result; 
+  jresult = result; 
   return jresult;
 }
 
@@ -39733,7 +39178,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_BufferedPortImageRgbFloat_release(void * jarg
   void *arg2 = (void *) 0 ;
   
   arg1 = (yarp::os::BufferedPort< yarp::sig::ImageOf< yarp::sig::PixelRgbFloat > > *)jarg1; 
-  arg2 = (void *)jarg2; 
+  arg2 = jarg2; 
   (arg1)->release(arg2);
 }
 

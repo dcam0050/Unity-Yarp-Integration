@@ -33,7 +33,7 @@ class yarpPINVOKE {
     static ExceptionArgumentDelegate argumentNullDelegate = new ExceptionArgumentDelegate(SetPendingArgumentNullException);
     static ExceptionArgumentDelegate argumentOutOfRangeDelegate = new ExceptionArgumentDelegate(SetPendingArgumentOutOfRangeException);
 
-    [DllImport("yarp", EntryPoint="SWIGRegisterExceptionCallbacks_yarp")]
+    [DllImport("yarp_cs", EntryPoint="SWIGRegisterExceptionCallbacks_yarp")]
     public static extern void SWIGRegisterExceptionCallbacks_yarp(
                                 ExceptionDelegate applicationDelegate,
                                 ExceptionDelegate arithmeticDelegate,
@@ -47,7 +47,7 @@ class yarpPINVOKE {
                                 ExceptionDelegate overflowDelegate, 
                                 ExceptionDelegate systemExceptionDelegate);
 
-    [DllImport("yarp", EntryPoint="SWIGRegisterExceptionArgumentCallbacks_yarp")]
+    [DllImport("yarp_cs", EntryPoint="SWIGRegisterExceptionArgumentCallbacks_yarp")]
     public static extern void SWIGRegisterExceptionCallbacksArgument_yarp(
                                 ExceptionArgumentDelegate argumentDelegate,
                                 ExceptionArgumentDelegate argumentNullDelegate,
@@ -169,7 +169,7 @@ class yarpPINVOKE {
     public delegate string SWIGStringDelegate(string message);
     static SWIGStringDelegate stringDelegate = new SWIGStringDelegate(CreateString);
 
-    [DllImport("yarp", EntryPoint="SWIGRegisterStringCallback_yarp")]
+    [DllImport("yarp_cs", EntryPoint="SWIGRegisterStringCallback_yarp")]
     public static extern void SWIGRegisterStringCallback_yarp(SWIGStringDelegate stringDelegate);
 
     static string CreateString(string cString) {
@@ -188,8622 +188,8388 @@ class yarpPINVOKE {
   }
 
 
-  [DllImport("yarp", EntryPoint="CSharp_YARP_CONSTSTRING_IS_STD_STRING_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_YARP_CONSTSTRING_IS_STD_STRING_get")]
   public static extern int YARP_CONSTSTRING_IS_STD_STRING_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortReport")]
   public static extern void delete_PortReport(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReport_report")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReport_report")]
   public static extern void PortReport_report(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Contact__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Contact__SWIG_0")]
   public static extern IntPtr new_Contact__SWIG_0(string jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_empty")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_empty")]
   public static extern IntPtr Contact_empty();
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_invalid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_invalid")]
   public static extern IntPtr Contact_invalid();
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_byName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_byName")]
   public static extern IntPtr Contact_byName(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_byCarrier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_byCarrier")]
   public static extern IntPtr Contact_byCarrier(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_byConfig")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_byConfig")]
   public static extern IntPtr Contact_byConfig(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_addCarrier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_addCarrier")]
   public static extern IntPtr Contact_addCarrier(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_addHost")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_addHost")]
   public static extern IntPtr Contact_addHost(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_addPort")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_addPort")]
   public static extern IntPtr Contact_addPort(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_bySocket")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_bySocket")]
   public static extern IntPtr Contact_bySocket(string jarg1, string jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_addSocket")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_addSocket")]
   public static extern IntPtr Contact_addSocket(HandleRef jarg1, string jarg2, string jarg3, int jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_addNested")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_addNested")]
   public static extern IntPtr Contact_addNested(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_addName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_addName")]
   public static extern IntPtr Contact_addName(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_convertHostToIp")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_convertHostToIp")]
   public static extern string Contact_convertHostToIp(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Contact__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Contact__SWIG_1")]
   public static extern IntPtr new_Contact__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Contact")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Contact")]
   public static extern void delete_Contact(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_getName")]
   public static extern string Contact_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_getHost")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_getHost")]
   public static extern string Contact_getHost(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_getCarrier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_getCarrier")]
   public static extern string Contact_getCarrier(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_getNested")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_getNested")]
   public static extern IntPtr Contact_getNested(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_getPort")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_getPort")]
   public static extern int Contact_getPort(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_toString_c")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_toString_c")]
   public static extern string Contact_toString_c(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_toURI")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_toURI")]
   public static extern string Contact_toURI(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_fromString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_fromString")]
   public static extern IntPtr Contact_fromString(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_isValid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_isValid")]
   public static extern bool Contact_isValid(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Contact__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Contact__SWIG_2")]
   public static extern IntPtr new_Contact__SWIG_2();
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_hasTimeout")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_hasTimeout")]
   public static extern bool Contact_hasTimeout(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_setTimeout")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_setTimeout")]
   public static extern void Contact_setTimeout(HandleRef jarg1, float jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_setNested")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_setNested")]
   public static extern void Contact_setNested(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_getTimeout")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_getTimeout")]
   public static extern float Contact_getTimeout(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_getRegName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_getRegName")]
   public static extern string Contact_getRegName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_setHost")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_setHost")]
   public static extern void Contact_setHost(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contact_setPort")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contact_setPort")]
   public static extern void Contact_setPort(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ConnectionReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ConnectionReader")]
   public static extern void delete_ConnectionReader(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_expectBlock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_expectBlock")]
   public static extern bool ConnectionReader_expectBlock(HandleRef jarg1, string jarg2, uint jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_expectText__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_expectText__SWIG_0")]
   public static extern string ConnectionReader_expectText__SWIG_0(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_expectText__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_expectText__SWIG_1")]
   public static extern string ConnectionReader_expectText__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_expectInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_expectInt")]
   public static extern int ConnectionReader_expectInt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_expectInt64")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_expectInt64")]
   public static extern IntPtr ConnectionReader_expectInt64(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_expectDouble")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_expectDouble")]
   public static extern double ConnectionReader_expectDouble(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_isTextMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_isTextMode")]
   public static extern bool ConnectionReader_isTextMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_isBareMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_isBareMode")]
   public static extern bool ConnectionReader_isBareMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_convertTextMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_convertTextMode")]
   public static extern bool ConnectionReader_convertTextMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_getSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_getSize")]
   public static extern uint ConnectionReader_getSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_getWriter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_getWriter")]
   public static extern IntPtr ConnectionReader_getWriter(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_readEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_readEnvelope")]
   public static extern IntPtr ConnectionReader_readEnvelope(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_getReference")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_getReference")]
   public static extern IntPtr ConnectionReader_getReference(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_getRemoteContact")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_getRemoteContact")]
   public static extern IntPtr ConnectionReader_getRemoteContact(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_getLocalContact")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_getLocalContact")]
   public static extern IntPtr ConnectionReader_getLocalContact(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_isValid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_isValid")]
   public static extern bool ConnectionReader_isValid(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_isActive")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_isActive")]
   public static extern bool ConnectionReader_isActive(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_isError")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_isError")]
   public static extern bool ConnectionReader_isError(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_requestDrop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_requestDrop")]
   public static extern void ConnectionReader_requestDrop(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_getConnectionModifiers")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_getConnectionModifiers")]
   public static extern IntPtr ConnectionReader_getConnectionModifiers(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_pushInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_pushInt")]
   public static extern bool ConnectionReader_pushInt(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_setSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_setSize")]
   public static extern bool ConnectionReader_setSize(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_createConnectionReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_createConnectionReader")]
   public static extern IntPtr ConnectionReader_createConnectionReader(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionReader_readFromStream")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionReader_readFromStream")]
   public static extern bool ConnectionReader_readFromStream(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ConnectionWriter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ConnectionWriter")]
   public static extern void delete_ConnectionWriter(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_appendBlock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_appendBlock")]
   public static extern void ConnectionWriter_appendBlock(HandleRef jarg1, string jarg2, uint jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_appendInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_appendInt")]
   public static extern void ConnectionWriter_appendInt(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_appendInt64")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_appendInt64")]
   public static extern void ConnectionWriter_appendInt64(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_appendDouble")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_appendDouble")]
   public static extern void ConnectionWriter_appendDouble(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_appendString__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_appendString__SWIG_0")]
   public static extern void ConnectionWriter_appendString__SWIG_0(HandleRef jarg1, string jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_appendString__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_appendString__SWIG_1")]
   public static extern void ConnectionWriter_appendString__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_appendExternalBlock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_appendExternalBlock")]
   public static extern void ConnectionWriter_appendExternalBlock(HandleRef jarg1, string jarg2, uint jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_isTextMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_isTextMode")]
   public static extern bool ConnectionWriter_isTextMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_isBareMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_isBareMode")]
   public static extern bool ConnectionWriter_isBareMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_declareSizes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_declareSizes")]
   public static extern void ConnectionWriter_declareSizes(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_setReplyHandler")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_setReplyHandler")]
   public static extern void ConnectionWriter_setReplyHandler(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_setReference")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_setReference")]
   public static extern void ConnectionWriter_setReference(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_convertTextMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_convertTextMode")]
   public static extern bool ConnectionWriter_convertTextMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_isValid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_isValid")]
   public static extern bool ConnectionWriter_isValid(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_isActive")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_isActive")]
   public static extern bool ConnectionWriter_isActive(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_isError")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_isError")]
   public static extern bool ConnectionWriter_isError(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_requestDrop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_requestDrop")]
   public static extern void ConnectionWriter_requestDrop(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_isNull")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_isNull")]
   public static extern bool ConnectionWriter_isNull(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_getBuffer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_getBuffer")]
   public static extern IntPtr ConnectionWriter_getBuffer(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_appendRawString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_appendRawString")]
   public static extern void ConnectionWriter_appendRawString(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_createBufferedConnectionWriter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_createBufferedConnectionWriter")]
   public static extern IntPtr ConnectionWriter_createBufferedConnectionWriter();
 
-  [DllImport("yarp", EntryPoint="CSharp_ConnectionWriter_writeToStream")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ConnectionWriter_writeToStream")]
   public static extern bool ConnectionWriter_writeToStream(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortReader")]
   public static extern void delete_PortReader(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReader_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReader_read")]
   public static extern bool PortReader_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReader_getReadType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReader_getReadType")]
   public static extern IntPtr PortReader_getReadType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReader_getReadTypeSwigExplicitPortReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReader_getReadTypeSwigExplicitPortReader")]
   public static extern IntPtr PortReader_getReadTypeSwigExplicitPortReader(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PortReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PortReader")]
   public static extern IntPtr new_PortReader();
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReader_director_connect")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReader_director_connect")]
   public static extern void PortReader_director_connect(HandleRef jarg1, PortReader.SwigDelegatePortReader_0 delegate0, PortReader.SwigDelegatePortReader_1 delegate1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortWriter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortWriter")]
   public static extern void delete_PortWriter(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriter_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriter_write")]
   public static extern bool PortWriter_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriter_onCompletion")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriter_onCompletion")]
   public static extern void PortWriter_onCompletion(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriter_onCommencement")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriter_onCommencement")]
   public static extern void PortWriter_onCommencement(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriter_getWriteType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriter_getWriteType")]
   public static extern IntPtr PortWriter_getWriteType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Portable_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Portable_read")]
   public static extern bool Portable_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Portable_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Portable_write")]
   public static extern bool Portable_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Portable_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Portable_getType")]
   public static extern IntPtr Portable_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Portable_copyPortable")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Portable_copyPortable")]
   public static extern bool Portable_copyPortable(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Portable")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Portable")]
   public static extern void delete_Portable(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_key_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_key_set")]
   public static extern void SearchReport_key_set(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_key_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_key_get")]
   public static extern string SearchReport_key_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_value_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_value_set")]
   public static extern void SearchReport_value_set(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_value_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_value_get")]
   public static extern string SearchReport_value_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_isFound_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_isFound_set")]
   public static extern void SearchReport_isFound_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_isFound_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_isFound_get")]
   public static extern bool SearchReport_isFound_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_isGroup_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_isGroup_set")]
   public static extern void SearchReport_isGroup_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_isGroup_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_isGroup_get")]
   public static extern bool SearchReport_isGroup_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_isComment_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_isComment_set")]
   public static extern void SearchReport_isComment_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_isComment_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_isComment_get")]
   public static extern bool SearchReport_isComment_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_isDefault_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_isDefault_set")]
   public static extern void SearchReport_isDefault_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchReport_isDefault_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchReport_isDefault_get")]
   public static extern bool SearchReport_isDefault_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_SearchReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_SearchReport")]
   public static extern IntPtr new_SearchReport();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_SearchReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_SearchReport")]
   public static extern void delete_SearchReport(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_SearchMonitor")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_SearchMonitor")]
   public static extern void delete_SearchMonitor(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SearchMonitor_report")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SearchMonitor_report")]
   public static extern void SearchMonitor_report(HandleRef jarg1, HandleRef jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Searchable")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Searchable")]
   public static extern void delete_Searchable(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_check__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_check__SWIG_0")]
   public static extern bool Searchable_check__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_check__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_check__SWIG_1")]
   public static extern bool Searchable_check__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_find")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_find")]
   public static extern IntPtr Searchable_find(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_findGroup__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_findGroup__SWIG_0")]
   public static extern IntPtr Searchable_findGroup__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_findGroup__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_findGroup__SWIG_1")]
   public static extern IntPtr Searchable_findGroup__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_check__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_check__SWIG_2")]
   public static extern IntPtr Searchable_check__SWIG_2(HandleRef jarg1, string jarg2, HandleRef jarg3, string jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_check__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_check__SWIG_3")]
   public static extern IntPtr Searchable_check__SWIG_3(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_isNull")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_isNull")]
   public static extern bool Searchable_isNull(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_toString_c")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_toString_c")]
   public static extern string Searchable_toString_c(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_setMonitor__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_setMonitor__SWIG_0")]
   public static extern void Searchable_setMonitor__SWIG_0(HandleRef jarg1, HandleRef jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_setMonitor__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_setMonitor__SWIG_1")]
   public static extern void Searchable_setMonitor__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_getMonitor")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_getMonitor")]
   public static extern IntPtr Searchable_getMonitor(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_getMonitorContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_getMonitorContext")]
   public static extern string Searchable_getMonitorContext(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Searchable_reportToMonitor")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Searchable_reportToMonitor")]
   public static extern void Searchable_reportToMonitor(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_check__SWIG_0_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_check__SWIG_0_0")]
   public static extern bool Value_check__SWIG_0_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_check__SWIG_0_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_check__SWIG_0_1")]
   public static extern bool Value_check__SWIG_0_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_check__SWIG_0_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_check__SWIG_0_2")]
   public static extern IntPtr Value_check__SWIG_0_2(HandleRef jarg1, string jarg2, HandleRef jarg3, string jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_check__SWIG_0_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_check__SWIG_0_3")]
   public static extern IntPtr Value_check__SWIG_0_3(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_findGroup__SWIG_0_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_findGroup__SWIG_0_0")]
   public static extern IntPtr Value_findGroup__SWIG_0_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_findGroup__SWIG_0_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_findGroup__SWIG_0_1")]
   public static extern IntPtr Value_findGroup__SWIG_0_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Value__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_0")]
   public static extern IntPtr new_Value__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Value__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_1")]
   public static extern IntPtr new_Value__SWIG_1(int jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Value__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_2")]
   public static extern IntPtr new_Value__SWIG_2(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Value__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_3")]
   public static extern IntPtr new_Value__SWIG_3(double jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Value__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_4")]
   public static extern IntPtr new_Value__SWIG_4(string jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Value__SWIG_5")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_5")]
   public static extern IntPtr new_Value__SWIG_5(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Value__SWIG_6")]
-  public static extern IntPtr new_Value__SWIG_6(HandleRef jarg1, int jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_6")]
+  public static extern IntPtr new_Value__SWIG_6(System.IntPtr jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Value__SWIG_7")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_7")]
   public static extern IntPtr new_Value__SWIG_7(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Value")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Value")]
   public static extern void delete_Value(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isBool")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isBool")]
   public static extern bool Value_isBool(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isInt")]
   public static extern bool Value_isInt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isInt64")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isInt64")]
   public static extern bool Value_isInt64(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isString")]
   public static extern bool Value_isString(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isDouble")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isDouble")]
   public static extern bool Value_isDouble(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isList")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isList")]
   public static extern bool Value_isList(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isDict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isDict")]
   public static extern bool Value_isDict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isVocab")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isVocab")]
   public static extern bool Value_isVocab(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isBlob")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isBlob")]
   public static extern bool Value_isBlob(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asBool")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asBool")]
   public static extern bool Value_asBool(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asInt")]
   public static extern int Value_asInt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asInt64")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asInt64")]
   public static extern IntPtr Value_asInt64(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asVocab")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asVocab")]
   public static extern int Value_asVocab(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asDouble")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asDouble")]
   public static extern double Value_asDouble(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asString")]
   public static extern string Value_asString(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asList")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asList")]
   public static extern IntPtr Value_asList(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asDict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asDict")]
   public static extern IntPtr Value_asDict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asSearchable")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asSearchable")]
   public static extern IntPtr Value_asSearchable(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asBlob")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asBlob")]
   public static extern string Value_asBlob(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_asBlobLength")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_asBlobLength")]
   public static extern uint Value_asBlobLength(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_read")]
   public static extern bool Value_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_write")]
   public static extern bool Value_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_find")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_find")]
   public static extern IntPtr Value_find(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isEqual__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isEqual__SWIG_0")]
   public static extern bool Value_isEqual__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_notEqual__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_notEqual__SWIG_0")]
   public static extern bool Value_notEqual__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isEqual__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isEqual__SWIG_1")]
   public static extern bool Value_isEqual__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_notEqual__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_notEqual__SWIG_1")]
   public static extern bool Value_notEqual__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_fromString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_fromString")]
   public static extern void Value_fromString(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_toString_c")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_toString_c")]
   public static extern string Value_toString_c(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_create")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_create")]
   public static extern IntPtr Value_create(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_clone")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_clone")]
   public static extern IntPtr Value_clone(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_getCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_getCode")]
   public static extern int Value_getCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isNull")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isNull")]
   public static extern bool Value_isNull(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_isLeaf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_isLeaf")]
   public static extern bool Value_isLeaf(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeInt")]
   public static extern IntPtr Value_makeInt(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeDouble")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeDouble")]
   public static extern IntPtr Value_makeDouble(double jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeString")]
   public static extern IntPtr Value_makeString(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeVocab__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeVocab__SWIG_0")]
   public static extern IntPtr Value_makeVocab__SWIG_0(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeVocab__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeVocab__SWIG_1")]
   public static extern IntPtr Value_makeVocab__SWIG_1(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeBlob")]
-  public static extern IntPtr Value_makeBlob(HandleRef jarg1, int jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeBlob")]
+  public static extern IntPtr Value_makeBlob(System.IntPtr jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeList__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeList__SWIG_0")]
   public static extern IntPtr Value_makeList__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeList__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeList__SWIG_1")]
   public static extern IntPtr Value_makeList__SWIG_1(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_makeValue")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_makeValue")]
   public static extern IntPtr Value_makeValue(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_getNullValue")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_getNullValue")]
   public static extern IntPtr Value_getNullValue();
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_toString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_toString")]
   public static extern string Value_toString(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Contactable")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vocab_encode")]
+  public static extern int Vocab_encode(string jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vocab_decode")]
+  public static extern string Vocab_decode(int jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Vocab")]
+  public static extern IntPtr new_Vocab();
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Vocab")]
+  public static extern void delete_Vocab(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Contactable")]
   public static extern void delete_Contactable(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_open__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_open__SWIG_0")]
   public static extern bool Contactable_open__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_open__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_open__SWIG_1")]
   public static extern bool Contactable_open__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_open__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_open__SWIG_2")]
   public static extern bool Contactable_open__SWIG_2(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_open__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_open__SWIG_3")]
   public static extern bool Contactable_open__SWIG_3(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_addOutput__SWIG_0")]
   public static extern bool Contactable_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_addOutput__SWIG_1")]
   public static extern bool Contactable_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_addOutput__SWIG_2")]
   public static extern bool Contactable_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_close")]
   public static extern void Contactable_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_interrupt")]
   public static extern void Contactable_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_resume")]
   public static extern void Contactable_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_where")]
   public static extern IntPtr Contactable_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_getName")]
   public static extern string Contactable_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setEnvelope__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setEnvelope__SWIG_0")]
   public static extern bool Contactable_setEnvelope__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_getEnvelope")]
   public static extern bool Contactable_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_getInputCount")]
   public static extern int Contactable_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_getOutputCount")]
   public static extern int Contactable_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_getReport")]
   public static extern void Contactable_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setReporter")]
   public static extern void Contactable_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_isWriting")]
   public static extern bool Contactable_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setReader")]
   public static extern void Contactable_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setAdminReader")]
   public static extern void Contactable_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setInputMode")]
   public static extern void Contactable_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setOutputMode")]
   public static extern void Contactable_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setRpcMode")]
   public static extern void Contactable_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_getType")]
   public static extern IntPtr Contactable_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_promiseType")]
   public static extern void Contactable_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_acquireProperties")]
   public static extern IntPtr Contactable_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_releaseProperties")]
   public static extern void Contactable_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_includeNodeInName")]
   public static extern void Contactable_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setReadOnly")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setReadOnly")]
   public static extern void Contactable_setReadOnly(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setWriteOnly")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setWriteOnly")]
   public static extern void Contactable_setWriteOnly(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setRpcServer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setRpcServer")]
   public static extern void Contactable_setRpcServer(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setRpcClient")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setRpcClient")]
   public static extern void Contactable_setRpcClient(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setCallbackLock__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setCallbackLock__SWIG_0")]
   public static extern bool Contactable_setCallbackLock__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setCallbackLock__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setCallbackLock__SWIG_1")]
   public static extern bool Contactable_setCallbackLock__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_removeCallbackLock")]
   public static extern bool Contactable_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_lockCallback")]
   public static extern bool Contactable_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_tryLockCallback")]
   public static extern bool Contactable_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_unlockCallback")]
   public static extern void Contactable_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Contactable_setEnvelope__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Contactable_setEnvelope__SWIG_1")]
   public static extern bool Contactable_setEnvelope__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_write__SWIG_0")]
   public static extern bool UnbufferedContactable_write__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_write__SWIG_1")]
   public static extern bool UnbufferedContactable_write__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_write__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_write__SWIG_2")]
   public static extern bool UnbufferedContactable_write__SWIG_2(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_write__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_write__SWIG_3")]
   public static extern bool UnbufferedContactable_write__SWIG_3(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_read__SWIG_0")]
   public static extern bool UnbufferedContactable_read__SWIG_0(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_read__SWIG_1")]
   public static extern bool UnbufferedContactable_read__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_reply")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_reply")]
   public static extern bool UnbufferedContactable_reply(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_replyAndDrop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_replyAndDrop")]
   public static extern bool UnbufferedContactable_replyAndDrop(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_UnbufferedContactable")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_UnbufferedContactable")]
   public static extern void delete_UnbufferedContactable(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Port")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Port")]
   public static extern IntPtr new_Port();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Port")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Port")]
   public static extern void delete_Port(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_openFake")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_openFake")]
   public static extern bool Port_openFake(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_addOutput__SWIG_0")]
   public static extern bool Port_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_addOutput__SWIG_1")]
   public static extern bool Port_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_addOutput__SWIG_2")]
   public static extern bool Port_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_close")]
   public static extern void Port_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_interrupt")]
   public static extern void Port_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_resume")]
   public static extern void Port_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_where")]
   public static extern IntPtr Port_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_0")]
   public static extern bool Port_write__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_1")]
   public static extern bool Port_write__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_2")]
   public static extern bool Port_write__SWIG_2(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_3")]
   public static extern bool Port_write__SWIG_3(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_read__SWIG_0")]
   public static extern bool Port_read__SWIG_0(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_read__SWIG_1")]
   public static extern bool Port_read__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_reply__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_reply__SWIG_0")]
   public static extern bool Port_reply__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_replyAndDrop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_replyAndDrop")]
   public static extern bool Port_replyAndDrop(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setReader")]
   public static extern void Port_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setAdminReader")]
   public static extern void Port_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setReaderCreator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setReaderCreator")]
   public static extern void Port_setReaderCreator(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_enableBackgroundWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_enableBackgroundWrite")]
   public static extern void Port_enableBackgroundWrite(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_isWriting")]
   public static extern bool Port_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setEnvelope")]
   public static extern bool Port_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_getEnvelope")]
   public static extern bool Port_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_getInputCount")]
   public static extern int Port_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_getOutputCount")]
   public static extern int Port_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_getReport")]
   public static extern void Port_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setReporter")]
   public static extern void Port_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setAdminMode__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setAdminMode__SWIG_0")]
   public static extern void Port_setAdminMode__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setAdminMode__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setAdminMode__SWIG_1")]
   public static extern void Port_setAdminMode__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setInputMode")]
   public static extern void Port_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setOutputMode")]
   public static extern void Port_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setRpcMode")]
   public static extern void Port_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setTimeout")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setTimeout")]
   public static extern bool Port_setTimeout(HandleRef jarg1, float jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setVerbosity")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setVerbosity")]
   public static extern void Port_setVerbosity(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_getVerbosity")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_getVerbosity")]
   public static extern int Port_getVerbosity(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_getType")]
   public static extern IntPtr Port_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_promiseType")]
   public static extern void Port_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_acquireProperties")]
   public static extern IntPtr Port_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_releaseProperties")]
   public static extern void Port_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_includeNodeInName")]
   public static extern void Port_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_sharedOpen")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_sharedOpen")]
   public static extern bool Port_sharedOpen(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_isOpen")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_isOpen")]
   public static extern bool Port_isOpen(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setCallbackLock__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setCallbackLock__SWIG_0")]
   public static extern bool Port_setCallbackLock__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_setCallbackLock__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_setCallbackLock__SWIG_1")]
   public static extern bool Port_setCallbackLock__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_removeCallbackLock")]
   public static extern bool Port_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_lockCallback")]
   public static extern bool Port_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_tryLockCallback")]
   public static extern bool Port_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_unlockCallback")]
   public static extern void Port_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_4")]
   public static extern bool Port_write__SWIG_4(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_5")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_5")]
   public static extern bool Port_write__SWIG_5(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_6")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_6")]
   public static extern bool Port_write__SWIG_6(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_7")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_7")]
   public static extern bool Port_write__SWIG_7(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_8")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_8")]
   public static extern bool Port_write__SWIG_8(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_write__SWIG_9")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_write__SWIG_9")]
   public static extern bool Port_write__SWIG_9(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_reply__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_reply__SWIG_1")]
   public static extern bool Port_reply__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_open__SWIG_0_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_open__SWIG_0_0")]
   public static extern bool AbstractContactable_open__SWIG_0_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_open__SWIG_0_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_open__SWIG_0_1")]
   public static extern bool AbstractContactable_open__SWIG_0_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_open__SWIG_0_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_open__SWIG_0_2")]
   public static extern bool AbstractContactable_open__SWIG_0_2(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_open__SWIG_0_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_open__SWIG_0_3")]
   public static extern bool AbstractContactable_open__SWIG_0_3(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_asPort__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_asPort__SWIG_0")]
   public static extern IntPtr AbstractContactable_asPort__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_addOutput__SWIG_0")]
   public static extern bool AbstractContactable_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_addOutput__SWIG_1")]
   public static extern bool AbstractContactable_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_addOutput__SWIG_2")]
   public static extern bool AbstractContactable_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_close")]
   public static extern void AbstractContactable_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_interrupt")]
   public static extern void AbstractContactable_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_resume")]
   public static extern void AbstractContactable_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_where")]
   public static extern IntPtr AbstractContactable_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_getName")]
   public static extern string AbstractContactable_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setEnvelope")]
   public static extern bool AbstractContactable_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_getEnvelope")]
   public static extern bool AbstractContactable_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_getInputCount")]
   public static extern int AbstractContactable_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_getOutputCount")]
   public static extern int AbstractContactable_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_getReport")]
   public static extern void AbstractContactable_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setReporter")]
   public static extern void AbstractContactable_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_isWriting")]
   public static extern bool AbstractContactable_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setReader")]
   public static extern void AbstractContactable_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setAdminReader")]
   public static extern void AbstractContactable_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setInputMode")]
   public static extern void AbstractContactable_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setOutputMode")]
   public static extern void AbstractContactable_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setRpcMode")]
   public static extern void AbstractContactable_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_getType")]
   public static extern IntPtr AbstractContactable_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_promiseType")]
   public static extern void AbstractContactable_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_acquireProperties")]
   public static extern IntPtr AbstractContactable_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_releaseProperties")]
   public static extern void AbstractContactable_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_write__SWIG_0")]
   public static extern bool AbstractContactable_write__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_write__SWIG_1")]
   public static extern bool AbstractContactable_write__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_write__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_write__SWIG_2")]
   public static extern bool AbstractContactable_write__SWIG_2(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_write__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_write__SWIG_3")]
   public static extern bool AbstractContactable_write__SWIG_3(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_read__SWIG_0")]
   public static extern bool AbstractContactable_read__SWIG_0(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_read__SWIG_1")]
   public static extern bool AbstractContactable_read__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_reply")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_reply")]
   public static extern bool AbstractContactable_reply(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_replyAndDrop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_replyAndDrop")]
   public static extern bool AbstractContactable_replyAndDrop(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_includeNodeInName")]
   public static extern void AbstractContactable_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setCallbackLock__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setCallbackLock__SWIG_0")]
   public static extern bool AbstractContactable_setCallbackLock__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_setCallbackLock__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_setCallbackLock__SWIG_1")]
   public static extern bool AbstractContactable_setCallbackLock__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_removeCallbackLock")]
   public static extern bool AbstractContactable_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_lockCallback")]
   public static extern bool AbstractContactable_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_tryLockCallback")]
   public static extern bool AbstractContactable_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_unlockCallback")]
   public static extern void AbstractContactable_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_AbstractContactable")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_AbstractContactable")]
   public static extern void delete_AbstractContactable(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_initMinimum")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_initMinimum")]
   public static extern void NetworkBase_initMinimum();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_autoInitMinimum")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_autoInitMinimum")]
   public static extern void NetworkBase_autoInitMinimum();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_finiMinimum")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_finiMinimum")]
   public static extern void NetworkBase_finiMinimum();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_connect__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_connect__SWIG_0")]
   public static extern bool NetworkBase_connect__SWIG_0(string jarg1, string jarg2, string jarg3, bool jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_connect__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_connect__SWIG_1")]
   public static extern bool NetworkBase_connect__SWIG_1(string jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_connect__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_connect__SWIG_2")]
   public static extern bool NetworkBase_connect__SWIG_2(string jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_connect__SWIG_5")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_connect__SWIG_5")]
   public static extern bool NetworkBase_connect__SWIG_5(string jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_disconnect__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_disconnect__SWIG_0")]
   public static extern bool NetworkBase_disconnect__SWIG_0(string jarg1, string jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_disconnect__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_disconnect__SWIG_1")]
   public static extern bool NetworkBase_disconnect__SWIG_1(string jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_disconnect__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_disconnect__SWIG_2")]
   public static extern bool NetworkBase_disconnect__SWIG_2(string jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_isConnected__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_isConnected__SWIG_0")]
   public static extern bool NetworkBase_isConnected__SWIG_0(string jarg1, string jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_isConnected__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_isConnected__SWIG_1")]
   public static extern bool NetworkBase_isConnected__SWIG_1(string jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_isConnected__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_isConnected__SWIG_2")]
   public static extern bool NetworkBase_isConnected__SWIG_2(string jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_exists__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_exists__SWIG_0")]
   public static extern bool NetworkBase_exists__SWIG_0(string jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_exists__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_exists__SWIG_1")]
   public static extern bool NetworkBase_exists__SWIG_1(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_exists__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_exists__SWIG_2")]
   public static extern bool NetworkBase_exists__SWIG_2(string jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_sync__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_sync__SWIG_0")]
   public static extern bool NetworkBase_sync__SWIG_0(string jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_sync__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_sync__SWIG_1")]
   public static extern bool NetworkBase_sync__SWIG_1(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_main")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_main")]
   public static extern int NetworkBase_main(int jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_runNameServer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_runNameServer")]
   public static extern int NetworkBase_runNameServer(int jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_assertion")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_assertion")]
   public static extern void NetworkBase_assertion(bool jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_queryName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_queryName")]
   public static extern IntPtr NetworkBase_queryName(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_registerName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_registerName")]
   public static extern IntPtr NetworkBase_registerName(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_registerContact")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_registerContact")]
   public static extern IntPtr NetworkBase_registerContact(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_unregisterName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_unregisterName")]
   public static extern IntPtr NetworkBase_unregisterName(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_unregisterContact")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_unregisterContact")]
   public static extern IntPtr NetworkBase_unregisterContact(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setProperty")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setProperty")]
   public static extern bool NetworkBase_setProperty(string jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getProperty")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getProperty")]
   public static extern IntPtr NetworkBase_getProperty(string jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getNameServerName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getNameServerName")]
   public static extern string NetworkBase_getNameServerName();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getNameServerContact")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getNameServerContact")]
   public static extern IntPtr NetworkBase_getNameServerContact();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setNameServerName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setNameServerName")]
   public static extern bool NetworkBase_setNameServerName(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setLocalMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setLocalMode")]
   public static extern bool NetworkBase_setLocalMode(bool jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getLocalMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getLocalMode")]
   public static extern bool NetworkBase_getLocalMode();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_readString__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_readString__SWIG_0")]
   public static extern string NetworkBase_readString__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_readString__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_readString__SWIG_1")]
   public static extern string NetworkBase_readString__SWIG_1();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_write__SWIG_0")]
   public static extern bool NetworkBase_write__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, bool jarg4, bool jarg5, double jarg6);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_write__SWIG_1")]
   public static extern bool NetworkBase_write__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, bool jarg4, bool jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_write__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_write__SWIG_2")]
   public static extern bool NetworkBase_write__SWIG_2(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, bool jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_write__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_write__SWIG_3")]
   public static extern bool NetworkBase_write__SWIG_3(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_write__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_write__SWIG_4")]
   public static extern bool NetworkBase_write__SWIG_4(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_writeToNameServer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_writeToNameServer")]
   public static extern bool NetworkBase_writeToNameServer(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_write__SWIG_5")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_write__SWIG_5")]
   public static extern bool NetworkBase_write__SWIG_5(string jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_checkNetwork__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_checkNetwork__SWIG_0")]
   public static extern bool NetworkBase_checkNetwork__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_checkNetwork__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_checkNetwork__SWIG_1")]
   public static extern bool NetworkBase_checkNetwork__SWIG_1(double jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_initialized")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_initialized")]
   public static extern bool NetworkBase_initialized();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setVerbosity")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setVerbosity")]
   public static extern void NetworkBase_setVerbosity(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_queryBypass")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_queryBypass")]
   public static extern void NetworkBase_queryBypass(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getQueryBypass")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getQueryBypass")]
   public static extern IntPtr NetworkBase_getQueryBypass();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getEnvironment__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getEnvironment__SWIG_0")]
   public static extern string NetworkBase_getEnvironment__SWIG_0(string jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getEnvironment__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getEnvironment__SWIG_1")]
   public static extern string NetworkBase_getEnvironment__SWIG_1(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setEnvironment")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setEnvironment")]
   public static extern void NetworkBase_setEnvironment(string jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_unsetEnvironment")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_unsetEnvironment")]
   public static extern void NetworkBase_unsetEnvironment(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getDirectorySeparator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getDirectorySeparator")]
   public static extern string NetworkBase_getDirectorySeparator();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getPathSeparator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getPathSeparator")]
   public static extern string NetworkBase_getPathSeparator();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_registerCarrier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_registerCarrier")]
   public static extern bool NetworkBase_registerCarrier(string jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase__lock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase__lock")]
   public static extern void NetworkBase__lock();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_unlock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_unlock")]
   public static extern void NetworkBase_unlock();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_localNetworkAllocation")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_localNetworkAllocation")]
   public static extern bool NetworkBase_localNetworkAllocation();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_detectNameServer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_detectNameServer")]
   public static extern IntPtr NetworkBase_detectNameServer(bool jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setNameServerContact")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setNameServerContact")]
   public static extern bool NetworkBase_setNameServerContact(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getConfigFile")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getConfigFile")]
   public static extern string NetworkBase_getConfigFile(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getDefaultPortRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getDefaultPortRange")]
   public static extern int NetworkBase_getDefaultPortRange();
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setConnectionQos__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setConnectionQos__SWIG_0")]
   public static extern bool NetworkBase_setConnectionQos__SWIG_0(string jarg1, string jarg2, HandleRef jarg3, HandleRef jarg4, bool jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setConnectionQos__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setConnectionQos__SWIG_1")]
   public static extern bool NetworkBase_setConnectionQos__SWIG_1(string jarg1, string jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setConnectionQos__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setConnectionQos__SWIG_2")]
   public static extern bool NetworkBase_setConnectionQos__SWIG_2(string jarg1, string jarg2, HandleRef jarg3, bool jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_setConnectionQos__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_setConnectionQos__SWIG_3")]
   public static extern bool NetworkBase_setConnectionQos__SWIG_3(string jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getConnectionQos__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getConnectionQos__SWIG_0")]
   public static extern bool NetworkBase_getConnectionQos__SWIG_0(string jarg1, string jarg2, HandleRef jarg3, HandleRef jarg4, bool jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_NetworkBase_getConnectionQos__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NetworkBase_getConnectionQos__SWIG_1")]
   public static extern bool NetworkBase_getConnectionQos__SWIG_1(string jarg1, string jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_NetworkBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_NetworkBase")]
   public static extern IntPtr new_NetworkBase();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_NetworkBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_NetworkBase")]
   public static extern void delete_NetworkBase(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Network")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Network")]
   public static extern IntPtr new_Network();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Network")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Network")]
   public static extern void delete_Network(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Network_init")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Network_init")]
   public static extern void Network_init();
 
-  [DllImport("yarp", EntryPoint="CSharp_Network_fini")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Network_fini")]
   public static extern void Network_fini();
 
-  [DllImport("yarp", EntryPoint="CSharp_PortablePairBase_readPair")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortablePairBase_readPair")]
   public static extern bool PortablePairBase_readPair(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortablePairBase_writePair")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortablePairBase_writePair")]
   public static extern bool PortablePairBase_writePair(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortablePairBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortablePairBase")]
   public static extern void delete_PortablePairBase(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortReaderCreator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortReaderCreator")]
   public static extern void delete_PortReaderCreator(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderCreator_create")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderCreator_create")]
   public static extern IntPtr PortReaderCreator_create(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_check__SWIG_0_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_check__SWIG_0_0")]
   public static extern bool Property_check__SWIG_0_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_check__SWIG_0_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_check__SWIG_0_1")]
   public static extern bool Property_check__SWIG_0_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_check__SWIG_0_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_check__SWIG_0_2")]
   public static extern IntPtr Property_check__SWIG_0_2(HandleRef jarg1, string jarg2, HandleRef jarg3, string jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_check__SWIG_0_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_check__SWIG_0_3")]
   public static extern IntPtr Property_check__SWIG_0_3(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_findGroup__SWIG_0_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_findGroup__SWIG_0_0")]
   public static extern IntPtr Property_findGroup__SWIG_0_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_findGroup__SWIG_0_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_findGroup__SWIG_0_1")]
   public static extern IntPtr Property_findGroup__SWIG_0_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Property__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Property__SWIG_0")]
   public static extern IntPtr new_Property__SWIG_0(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Property__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Property__SWIG_1")]
   public static extern IntPtr new_Property__SWIG_1();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Property__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Property__SWIG_2")]
   public static extern IntPtr new_Property__SWIG_2(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Property__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Property__SWIG_3")]
   public static extern IntPtr new_Property__SWIG_3(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Property")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Property")]
   public static extern void delete_Property(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_put__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_put__SWIG_0")]
   public static extern void Property_put__SWIG_0(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_put__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_put__SWIG_1")]
   public static extern void Property_put__SWIG_1(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_put__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_put__SWIG_3")]
   public static extern void Property_put__SWIG_3(HandleRef jarg1, string jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_put__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_put__SWIG_4")]
   public static extern void Property_put__SWIG_4(HandleRef jarg1, string jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_addGroup")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_addGroup")]
   public static extern IntPtr Property_addGroup(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_unput")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_unput")]
   public static extern void Property_unput(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_find")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_find")]
   public static extern IntPtr Property_find(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_clear")]
   public static extern void Property_clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromString__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromString__SWIG_0")]
   public static extern void Property_fromString__SWIG_0(HandleRef jarg1, string jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromString__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromString__SWIG_1")]
   public static extern void Property_fromString__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromCommand__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromCommand__SWIG_0")]
   public static extern void Property_fromCommand__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3, bool jarg4, bool jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromCommand__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromCommand__SWIG_1")]
   public static extern void Property_fromCommand__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3, bool jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromCommand__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromCommand__SWIG_2")]
   public static extern void Property_fromCommand__SWIG_2(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromArguments__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromArguments__SWIG_0")]
   public static extern void Property_fromArguments__SWIG_0(HandleRef jarg1, string jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromArguments__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromArguments__SWIG_1")]
   public static extern void Property_fromArguments__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfigFile__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfigFile__SWIG_0")]
   public static extern bool Property_fromConfigFile__SWIG_0(HandleRef jarg1, string jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfigFile__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfigFile__SWIG_1")]
   public static extern bool Property_fromConfigFile__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfigFile__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfigFile__SWIG_2")]
   public static extern bool Property_fromConfigFile__SWIG_2(HandleRef jarg1, string jarg2, HandleRef jarg3, bool jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfigFile__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfigFile__SWIG_3")]
   public static extern bool Property_fromConfigFile__SWIG_3(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfigDir__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfigDir__SWIG_0")]
   public static extern bool Property_fromConfigDir__SWIG_0(HandleRef jarg1, string jarg2, string jarg3, bool jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfigDir__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfigDir__SWIG_1")]
   public static extern bool Property_fromConfigDir__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfigDir__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfigDir__SWIG_2")]
   public static extern bool Property_fromConfigDir__SWIG_2(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfig__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfig__SWIG_0")]
   public static extern void Property_fromConfig__SWIG_0(HandleRef jarg1, string jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfig__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfig__SWIG_1")]
   public static extern void Property_fromConfig__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfig__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfig__SWIG_2")]
   public static extern void Property_fromConfig__SWIG_2(HandleRef jarg1, string jarg2, HandleRef jarg3, bool jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromConfig__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromConfig__SWIG_3")]
   public static extern void Property_fromConfig__SWIG_3(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromQuery__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromQuery__SWIG_0")]
   public static extern void Property_fromQuery__SWIG_0(HandleRef jarg1, string jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_fromQuery__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_fromQuery__SWIG_1")]
   public static extern void Property_fromQuery__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_toString_c")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_toString_c")]
   public static extern string Property_toString_c(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_read")]
   public static extern bool Property_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_write")]
   public static extern bool Property_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_toString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_toString")]
   public static extern string Property_toString(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BOTTLE_TAG_INT_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BOTTLE_TAG_INT_get")]
   public static extern int BOTTLE_TAG_INT_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_BOTTLE_TAG_VOCAB_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BOTTLE_TAG_VOCAB_get")]
   public static extern int BOTTLE_TAG_VOCAB_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_BOTTLE_TAG_DOUBLE_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BOTTLE_TAG_DOUBLE_get")]
   public static extern int BOTTLE_TAG_DOUBLE_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_BOTTLE_TAG_STRING_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BOTTLE_TAG_STRING_get")]
   public static extern int BOTTLE_TAG_STRING_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_BOTTLE_TAG_BLOB_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BOTTLE_TAG_BLOB_get")]
   public static extern int BOTTLE_TAG_BLOB_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_BOTTLE_TAG_INT64_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BOTTLE_TAG_INT64_get")]
   public static extern int BOTTLE_TAG_INT64_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_BOTTLE_TAG_LIST_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BOTTLE_TAG_LIST_get")]
   public static extern int BOTTLE_TAG_LIST_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_BOTTLE_TAG_DICT_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BOTTLE_TAG_DICT_get")]
   public static extern int BOTTLE_TAG_DICT_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_check__SWIG_0_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_check__SWIG_0_0")]
   public static extern bool Bottle_check__SWIG_0_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_check__SWIG_0_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_check__SWIG_0_1")]
   public static extern bool Bottle_check__SWIG_0_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_check__SWIG_0_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_check__SWIG_0_2")]
   public static extern IntPtr Bottle_check__SWIG_0_2(HandleRef jarg1, string jarg2, HandleRef jarg3, string jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_check__SWIG_0_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_check__SWIG_0_3")]
   public static extern IntPtr Bottle_check__SWIG_0_3(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_findGroup__SWIG_0_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_findGroup__SWIG_0_0")]
   public static extern IntPtr Bottle_findGroup__SWIG_0_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_findGroup__SWIG_0_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_findGroup__SWIG_0_1")]
   public static extern IntPtr Bottle_findGroup__SWIG_0_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Bottle__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Bottle__SWIG_0")]
   public static extern IntPtr new_Bottle__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Bottle__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Bottle__SWIG_1")]
   public static extern IntPtr new_Bottle__SWIG_1(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Bottle__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Bottle__SWIG_2")]
   public static extern IntPtr new_Bottle__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_clear")]
-  public static extern void Bottle_clear(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_addInt")]
-  public static extern void Bottle_addInt(HandleRef jarg1, int jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_addInt64")]
-  public static extern void Bottle_addInt64(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_addVocab")]
-  public static extern void Bottle_addVocab(HandleRef jarg1, int jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_addDouble")]
-  public static extern void Bottle_addDouble(HandleRef jarg1, double jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_addString__SWIG_0")]
-  public static extern void Bottle_addString__SWIG_0(HandleRef jarg1, string jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_add__SWIG_0")]
-  public static extern void Bottle_add__SWIG_0(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_add__SWIG_1")]
-  public static extern void Bottle_add__SWIG_1(HandleRef jarg1, string jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_addList")]
-  public static extern IntPtr Bottle_addList(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_addDict")]
-  public static extern IntPtr Bottle_addDict(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_pop")]
-  public static extern IntPtr Bottle_pop(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_get")]
-  public static extern IntPtr Bottle_get(HandleRef jarg1, int jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_size")]
-  public static extern int Bottle_size(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_fromString")]
-  public static extern void Bottle_fromString(HandleRef jarg1, string jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_fromBinary")]
-  public static extern void Bottle_fromBinary(HandleRef jarg1, string jarg2, int jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_toBinary__SWIG_0")]
-  public static extern string Bottle_toBinary__SWIG_0(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_toBinary__SWIG_1")]
-  public static extern string Bottle_toBinary__SWIG_1(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_toString_c")]
-  public static extern string Bottle_toString_c(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_write__SWIG_0")]
-  public static extern bool Bottle_write__SWIG_0(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_read__SWIG_0")]
-  public static extern bool Bottle_read__SWIG_0(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_write__SWIG_1")]
-  public static extern bool Bottle_write__SWIG_1(HandleRef jarg1, HandleRef jarg2, bool jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_write__SWIG_2")]
-  public static extern bool Bottle_write__SWIG_2(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_read__SWIG_1")]
-  public static extern bool Bottle_read__SWIG_1(HandleRef jarg1, HandleRef jarg2, bool jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_read__SWIG_2")]
-  public static extern bool Bottle_read__SWIG_2(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_onCommencement")]
-  public static extern void Bottle_onCommencement(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_find")]
-  public static extern IntPtr Bottle_find(HandleRef jarg1, string jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_isNull")]
-  public static extern bool Bottle_isNull(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_delete_Bottle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Bottle")]
   public static extern void delete_Bottle(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_copy__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_clear")]
+  public static extern void Bottle_clear(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_addInt")]
+  public static extern void Bottle_addInt(HandleRef jarg1, int jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_addInt64")]
+  public static extern void Bottle_addInt64(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_addVocab")]
+  public static extern void Bottle_addVocab(HandleRef jarg1, int jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_addDouble")]
+  public static extern void Bottle_addDouble(HandleRef jarg1, double jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_addString__SWIG_0")]
+  public static extern void Bottle_addString__SWIG_0(HandleRef jarg1, string jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_add__SWIG_0")]
+  public static extern void Bottle_add__SWIG_0(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_addList")]
+  public static extern IntPtr Bottle_addList(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_addDict")]
+  public static extern IntPtr Bottle_addDict(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_pop")]
+  public static extern IntPtr Bottle_pop(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_get")]
+  public static extern IntPtr Bottle_get(HandleRef jarg1, int jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_size")]
+  public static extern int Bottle_size(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_fromString")]
+  public static extern void Bottle_fromString(HandleRef jarg1, string jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_fromBinary")]
+  public static extern void Bottle_fromBinary(HandleRef jarg1, string jarg2, int jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_toBinary__SWIG_0")]
+  public static extern string Bottle_toBinary__SWIG_0(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_toBinary__SWIG_1")]
+  public static extern string Bottle_toBinary__SWIG_1(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_toString_c")]
+  public static extern string Bottle_toString_c(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_write__SWIG_0")]
+  public static extern bool Bottle_write__SWIG_0(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_read__SWIG_0")]
+  public static extern bool Bottle_read__SWIG_0(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_write__SWIG_1")]
+  public static extern bool Bottle_write__SWIG_1(HandleRef jarg1, HandleRef jarg2, bool jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_write__SWIG_2")]
+  public static extern bool Bottle_write__SWIG_2(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_read__SWIG_1")]
+  public static extern bool Bottle_read__SWIG_1(HandleRef jarg1, HandleRef jarg2, bool jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_read__SWIG_2")]
+  public static extern bool Bottle_read__SWIG_2(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_onCommencement")]
+  public static extern void Bottle_onCommencement(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_find")]
+  public static extern IntPtr Bottle_find(HandleRef jarg1, string jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_isNull")]
+  public static extern bool Bottle_isNull(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_copy__SWIG_0")]
   public static extern void Bottle_copy__SWIG_0(HandleRef jarg1, HandleRef jarg2, int jarg3, int jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_copy__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_copy__SWIG_1")]
   public static extern void Bottle_copy__SWIG_1(HandleRef jarg1, HandleRef jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_copy__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_copy__SWIG_2")]
   public static extern void Bottle_copy__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_getNullBottle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_getNullBottle")]
   public static extern IntPtr Bottle_getNullBottle();
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_isEqual")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_isEqual")]
   public static extern bool Bottle_isEqual(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_notEqual")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_notEqual")]
   public static extern bool Bottle_notEqual(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_append")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_append")]
   public static extern void Bottle_append(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_tail")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_tail")]
   public static extern IntPtr Bottle_tail(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_specialize")]
-  public static extern void Bottle_specialize(HandleRef jarg1, int jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_getSpecialization")]
-  public static extern int Bottle_getSpecialization(HandleRef jarg1);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_setNested")]
-  public static extern void Bottle_setNested(HandleRef jarg1, bool jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_hasChanged")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_hasChanged")]
   public static extern void Bottle_hasChanged(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_toString__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_toString__SWIG_0")]
   public static extern string Bottle_toString__SWIG_0(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_describeBottleCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_getSpecialization")]
+  public static extern int Bottle_getSpecialization(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_describeBottleCode")]
   public static extern string Bottle_describeBottleCode(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_toString__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_add__SWIG_1")]
+  public static extern void Bottle_add__SWIG_1(HandleRef jarg1, string jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_toString__SWIG_1")]
   public static extern string Bottle_toString__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_typedReaderMissingCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_typedReaderMissingCallback")]
   public static extern void typedReaderMissingCallback();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortReaderBufferBaseCreator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortReaderBufferBaseCreator")]
   public static extern void delete_PortReaderBufferBaseCreator(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBaseCreator_create")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBaseCreator_create")]
   public static extern IntPtr PortReaderBufferBaseCreator_create(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PortReaderBufferBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PortReaderBufferBase")]
   public static extern IntPtr new_PortReaderBufferBase(uint jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortReaderBufferBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortReaderBufferBase")]
   public static extern void delete_PortReaderBufferBase(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setCreator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setCreator")]
   public static extern void PortReaderBufferBase_setCreator(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setReplier")]
   public static extern void PortReaderBufferBase_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setPrune__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setPrune__SWIG_0")]
   public static extern void PortReaderBufferBase_setPrune__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setPrune__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setPrune__SWIG_1")]
   public static extern void PortReaderBufferBase_setPrune__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setAllowReuse__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setAllowReuse__SWIG_0")]
   public static extern void PortReaderBufferBase_setAllowReuse__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setAllowReuse__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setAllowReuse__SWIG_1")]
   public static extern void PortReaderBufferBase_setAllowReuse__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setTargetPeriod")]
   public static extern void PortReaderBufferBase_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_getName")]
   public static extern string PortReaderBufferBase_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_getMaxBuffer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_getMaxBuffer")]
   public static extern uint PortReaderBufferBase_getMaxBuffer(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_isClosed")]
   public static extern bool PortReaderBufferBase_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_clear")]
   public static extern void PortReaderBufferBase_clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_create")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_create")]
   public static extern IntPtr PortReaderBufferBase_create(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_release__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_release__SWIG_0")]
   public static extern void PortReaderBufferBase_release__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_check")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_check")]
   public static extern int PortReaderBufferBase_check(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_read")]
   public static extern bool PortReaderBufferBase_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_readBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_readBase")]
   public static extern IntPtr PortReaderBufferBase_readBase(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_interrupt")]
   public static extern void PortReaderBufferBase_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_attachBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_attachBase")]
   public static extern void PortReaderBufferBase_attachBase(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_acceptObjectBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_acceptObjectBase")]
   public static extern bool PortReaderBufferBase_acceptObjectBase(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_forgetObjectBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_forgetObjectBase")]
   public static extern bool PortReaderBufferBase_forgetObjectBase(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_getEnvelope")]
   public static extern bool PortReaderBufferBase_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_acquire")]
-  public static extern IntPtr PortReaderBufferBase_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_acquire")]
+  public static extern System.IntPtr PortReaderBufferBase_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_release__SWIG_1")]
-  public static extern void PortReaderBufferBase_release__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_release__SWIG_1")]
+  public static extern void PortReaderBufferBase_release__SWIG_1(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setAutoRelease__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setAutoRelease__SWIG_0")]
   public static extern void PortReaderBufferBase_setAutoRelease__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_setAutoRelease__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setAutoRelease__SWIG_1")]
   public static extern void PortReaderBufferBase_setAutoRelease__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortWriterBufferManager")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortWriterBufferManager")]
   public static extern void delete_PortWriterBufferManager(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferManager_onCompletion")]
-  public static extern void PortWriterBufferManager_onCompletion(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferManager_onCompletion")]
+  public static extern void PortWriterBufferManager_onCompletion(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterWrapper_getInternal")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterWrapper_getInternal")]
   public static extern IntPtr PortWriterWrapper_getInternal(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortWriterWrapper")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortWriterWrapper")]
   public static extern void delete_PortWriterWrapper(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PortWriterBufferBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PortWriterBufferBase")]
   public static extern void delete_PortWriterBufferBase(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferBase_create")]
-  public static extern IntPtr PortWriterBufferBase_create(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_create")]
+  public static extern IntPtr PortWriterBufferBase_create(HandleRef jarg1, HandleRef jarg2, System.IntPtr jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferBase_getContent")]
-  public static extern IntPtr PortWriterBufferBase_getContent(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_getContent")]
+  public static extern System.IntPtr PortWriterBufferBase_getContent(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferBase_releaseContent")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_releaseContent")]
   public static extern bool PortWriterBufferBase_releaseContent(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferBase_getCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_getCount")]
   public static extern int PortWriterBufferBase_getCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferBase_attach")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_attach")]
   public static extern void PortWriterBufferBase_attach(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferBase_detach")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_detach")]
   public static extern void PortWriterBufferBase_detach(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferBase_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_write")]
   public static extern void PortWriterBufferBase_write(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterBufferBase_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_waitForWrite")]
   public static extern void PortWriterBufferBase_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Random_uniform__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Random_uniform__SWIG_0")]
   public static extern double Random_uniform__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_Random_normal__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Random_normal__SWIG_0")]
   public static extern double Random_normal__SWIG_0(double jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Random_seed_c")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Random_seed_c")]
   public static extern void Random_seed_c(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Random_normal__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Random_normal__SWIG_1")]
   public static extern double Random_normal__SWIG_1();
 
-  [DllImport("yarp", EntryPoint="CSharp_Random_uniform__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Random_uniform__SWIG_1")]
   public static extern int Random_uniform__SWIG_1(int jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Random")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Random")]
   public static extern IntPtr new_Random();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Random")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Random")]
   public static extern void delete_Random(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Semaphore__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Semaphore__SWIG_0")]
   public static extern IntPtr new_Semaphore__SWIG_0(uint jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Semaphore__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Semaphore__SWIG_1")]
   public static extern IntPtr new_Semaphore__SWIG_1();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Semaphore")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Semaphore")]
   public static extern void delete_Semaphore(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Semaphore_wait")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Semaphore_wait")]
   public static extern void Semaphore_wait(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Semaphore_waitWithTimeout")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Semaphore_waitWithTimeout")]
   public static extern bool Semaphore_waitWithTimeout(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Semaphore_check")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Semaphore_check")]
   public static extern bool Semaphore_check(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Semaphore_post")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Semaphore_post")]
   public static extern void Semaphore_post(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Thread")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Thread")]
   public static extern IntPtr new_Thread();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Thread")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Thread")]
   public static extern void delete_Thread(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_run")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_run")]
   public static extern void Thread_run(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_onStop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_onStop")]
   public static extern void Thread_onStop(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_onStopSwigExplicitThread")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_onStopSwigExplicitThread")]
   public static extern void Thread_onStopSwigExplicitThread(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_start")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_start")]
   public static extern bool Thread_start(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_stop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_stop")]
   public static extern bool Thread_stop(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_beforeStart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_beforeStart")]
   public static extern void Thread_beforeStart(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_beforeStartSwigExplicitThread")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_beforeStartSwigExplicitThread")]
   public static extern void Thread_beforeStartSwigExplicitThread(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_afterStart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_afterStart")]
   public static extern void Thread_afterStart(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_afterStartSwigExplicitThread")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_afterStartSwigExplicitThread")]
   public static extern void Thread_afterStartSwigExplicitThread(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_threadInit")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_threadInit")]
   public static extern bool Thread_threadInit(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_threadInitSwigExplicitThread")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_threadInitSwigExplicitThread")]
   public static extern bool Thread_threadInitSwigExplicitThread(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_threadRelease")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_threadRelease")]
   public static extern void Thread_threadRelease(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_threadReleaseSwigExplicitThread")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_threadReleaseSwigExplicitThread")]
   public static extern void Thread_threadReleaseSwigExplicitThread(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_isStopping")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_isStopping")]
   public static extern bool Thread_isStopping(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_isRunning")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_isRunning")]
   public static extern bool Thread_isRunning(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_setOptions__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_setOptions__SWIG_0")]
   public static extern void Thread_setOptions__SWIG_0(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_setOptions__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_setOptions__SWIG_1")]
   public static extern void Thread_setOptions__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_getCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_getCount")]
   public static extern int Thread_getCount();
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_getKey")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_getKey")]
   public static extern int Thread_getKey(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_getKeyOfCaller")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_getKeyOfCaller")]
   public static extern int Thread_getKeyOfCaller();
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_setPriority__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_setPriority__SWIG_0")]
   public static extern int Thread_setPriority__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_setPriority__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_setPriority__SWIG_1")]
   public static extern int Thread_setPriority__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_getPriority")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_getPriority")]
   public static extern int Thread_getPriority(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_getPolicy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_getPolicy")]
   public static extern int Thread_getPolicy(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_setDefaultStackSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_setDefaultStackSize")]
   public static extern void Thread_setDefaultStackSize(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_join__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_join__SWIG_0")]
   public static extern bool Thread_join__SWIG_0(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_join__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_join__SWIG_1")]
   public static extern bool Thread_join__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Thread_director_connect")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Thread_director_connect")]
   public static extern void Thread_director_connect(HandleRef jarg1, Thread.SwigDelegateThread_0 delegate0, Thread.SwigDelegateThread_1 delegate1, Thread.SwigDelegateThread_2 delegate2, Thread.SwigDelegateThread_3 delegate3, Thread.SwigDelegateThread_4 delegate4, Thread.SwigDelegateThread_5 delegate5);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_RateThread")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_RateThread")]
   public static extern void delete_RateThread(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_threadInit")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_threadInit")]
   public static extern bool RateThread_threadInit(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_threadRelease")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_threadRelease")]
   public static extern void RateThread_threadRelease(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_run")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_run")]
   public static extern void RateThread_run(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_start")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_start")]
   public static extern bool RateThread_start(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_step")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_step")]
   public static extern bool RateThread_step(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_stop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_stop")]
   public static extern void RateThread_stop(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_askToStop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_askToStop")]
   public static extern void RateThread_askToStop(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_isRunning")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_isRunning")]
   public static extern bool RateThread_isRunning(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_isSuspended")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_isSuspended")]
   public static extern bool RateThread_isSuspended(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_setRate")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_setRate")]
   public static extern bool RateThread_setRate(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_getRate")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_getRate")]
   public static extern double RateThread_getRate(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_suspend")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_suspend")]
   public static extern void RateThread_suspend(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_resume")]
   public static extern void RateThread_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_resetStat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_resetStat")]
   public static extern void RateThread_resetStat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_getEstPeriod__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_getEstPeriod__SWIG_0")]
   public static extern double RateThread_getEstPeriod__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_getEstPeriod__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_getEstPeriod__SWIG_1")]
   public static extern void RateThread_getEstPeriod__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_getIterations")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_getIterations")]
   public static extern uint RateThread_getIterations(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_getEstUsed__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_getEstUsed__SWIG_0")]
   public static extern double RateThread_getEstUsed__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_getEstUsed__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_getEstUsed__SWIG_1")]
   public static extern void RateThread_getEstUsed__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_beforeStart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_beforeStart")]
   public static extern void RateThread_beforeStart(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_afterStart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_afterStart")]
   public static extern void RateThread_afterStart(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_setPriority__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_setPriority__SWIG_0")]
   public static extern int RateThread_setPriority__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_setPriority__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_setPriority__SWIG_1")]
   public static extern int RateThread_setPriority__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_getPriority")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_getPriority")]
   public static extern int RateThread_getPriority(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThread_getPolicy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThread_getPolicy")]
   public static extern int RateThread_getPolicy(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_RateThreadWrapper__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_RateThreadWrapper__SWIG_0")]
   public static extern IntPtr new_RateThreadWrapper__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_RateThreadWrapper__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_RateThreadWrapper__SWIG_1")]
   public static extern IntPtr new_RateThreadWrapper__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_RateThreadWrapper")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_RateThreadWrapper")]
   public static extern void delete_RateThreadWrapper(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_detach")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_detach")]
   public static extern void RateThreadWrapper_detach(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_attach__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_attach__SWIG_0")]
   public static extern bool RateThreadWrapper_attach__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_open__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_open__SWIG_0")]
   public static extern bool RateThreadWrapper_open__SWIG_0(HandleRef jarg1, double jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_open__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_open__SWIG_1")]
   public static extern bool RateThreadWrapper_open__SWIG_1(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_open__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_open__SWIG_2")]
   public static extern bool RateThreadWrapper_open__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_close")]
   public static extern void RateThreadWrapper_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_stop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_stop")]
   public static extern void RateThreadWrapper_stop(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_run")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_run")]
   public static extern void RateThreadWrapper_run(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_threadInit")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_threadInit")]
   public static extern bool RateThreadWrapper_threadInit(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_threadRelease")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_threadRelease")]
   public static extern void RateThreadWrapper_threadRelease(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_afterStart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_afterStart")]
   public static extern void RateThreadWrapper_afterStart(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_beforeStart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_beforeStart")]
   public static extern void RateThreadWrapper_beforeStart(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_getAttachment")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_getAttachment")]
   public static extern IntPtr RateThreadWrapper_getAttachment(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_delay")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_delay")]
   public static extern void Time_delay(double jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_now")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_now")]
   public static extern double Time_now();
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_yield")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_yield")]
   public static extern void Time_yield();
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_turboBoost")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_turboBoost")]
   public static extern void Time_turboBoost();
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_useSystemClock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_useSystemClock")]
   public static extern void Time_useSystemClock();
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_useNetworkClock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_useNetworkClock")]
   public static extern void Time_useNetworkClock(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_useCustomClock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_useCustomClock")]
   public static extern void Time_useCustomClock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_isSystemClock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_isSystemClock")]
   public static extern bool Time_isSystemClock();
 
-  [DllImport("yarp", EntryPoint="CSharp_Time_isValid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Time_isValid")]
   public static extern bool Time_isValid();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Time")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Time")]
   public static extern IntPtr new_Time();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Time")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Time")]
   public static extern void delete_Time(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_RFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_RFModule")]
   public static extern IntPtr new_RFModule();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_RFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_RFModule")]
   public static extern void delete_RFModule(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_getPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_getPeriod")]
   public static extern double RFModule_getPeriod(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_getPeriodSwigExplicitRFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_getPeriodSwigExplicitRFModule")]
   public static extern double RFModule_getPeriodSwigExplicitRFModule(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_updateModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_updateModule")]
   public static extern bool RFModule_updateModule(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_runModule__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_runModule__SWIG_0")]
   public static extern int RFModule_runModule__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_runModuleSwigExplicitRFModule__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_runModuleSwigExplicitRFModule__SWIG_0")]
   public static extern int RFModule_runModuleSwigExplicitRFModule__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_runModule__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_runModule__SWIG_1")]
   public static extern int RFModule_runModule__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_runModuleSwigExplicitRFModule__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_runModuleSwigExplicitRFModule__SWIG_1")]
   public static extern int RFModule_runModuleSwigExplicitRFModule__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_configure")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_configure")]
   public static extern bool RFModule_configure(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_configureSwigExplicitRFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_configureSwigExplicitRFModule")]
   public static extern bool RFModule_configureSwigExplicitRFModule(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_respond")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_respond")]
   public static extern bool RFModule_respond(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_respondSwigExplicitRFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_respondSwigExplicitRFModule")]
   public static extern bool RFModule_respondSwigExplicitRFModule(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_attach")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_attach")]
   public static extern bool RFModule_attach(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_attachSwigExplicitRFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_attachSwigExplicitRFModule")]
   public static extern bool RFModule_attachSwigExplicitRFModule(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_attach_rpc_server")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_attach_rpc_server")]
   public static extern bool RFModule_attach_rpc_server(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_attach_rpc_serverSwigExplicitRFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_attach_rpc_serverSwigExplicitRFModule")]
   public static extern bool RFModule_attach_rpc_serverSwigExplicitRFModule(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_attachTerminal")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_attachTerminal")]
   public static extern bool RFModule_attachTerminal(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_detachTerminal")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_detachTerminal")]
   public static extern bool RFModule_detachTerminal(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_interruptModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_interruptModule")]
   public static extern bool RFModule_interruptModule(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_interruptModuleSwigExplicitRFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_interruptModuleSwigExplicitRFModule")]
   public static extern bool RFModule_interruptModuleSwigExplicitRFModule(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_close")]
   public static extern bool RFModule_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_closeSwigExplicitRFModule")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_closeSwigExplicitRFModule")]
   public static extern bool RFModule_closeSwigExplicitRFModule(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_stopModule__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_stopModule__SWIG_0")]
   public static extern void RFModule_stopModule__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_stopModule__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_stopModule__SWIG_1")]
   public static extern void RFModule_stopModule__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_isStopping")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_isStopping")]
   public static extern bool RFModule_isStopping(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_getName__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_getName__SWIG_0")]
   public static extern string RFModule_getName__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_getName__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_getName__SWIG_1")]
   public static extern string RFModule_getName__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_setName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_setName")]
   public static extern void RFModule_setName(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_safeRespond")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_safeRespond")]
   public static extern bool RFModule_safeRespond(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RFModule_director_connect")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RFModule_director_connect")]
   public static extern void RFModule_director_connect(HandleRef jarg1, RFModule.SwigDelegateRFModule_0 delegate0, RFModule.SwigDelegateRFModule_1 delegate1, RFModule.SwigDelegateRFModule_2 delegate2, RFModule.SwigDelegateRFModule_3 delegate3, RFModule.SwigDelegateRFModule_4 delegate4, RFModule.SwigDelegateRFModule_5 delegate5, RFModule.SwigDelegateRFModule_6 delegate6, RFModule.SwigDelegateRFModule_7 delegate7, RFModule.SwigDelegateRFModule_8 delegate8, RFModule.SwigDelegateRFModule_9 delegate9);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Stamp__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Stamp__SWIG_0")]
   public static extern IntPtr new_Stamp__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Stamp__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Stamp__SWIG_1")]
   public static extern IntPtr new_Stamp__SWIG_1(int jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_getCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_getCount")]
   public static extern int Stamp_getCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_getTime")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_getTime")]
   public static extern double Stamp_getTime(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_isValid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_isValid")]
   public static extern bool Stamp_isValid(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_getMaxCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_getMaxCount")]
   public static extern int Stamp_getMaxCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_update__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_update__SWIG_0")]
   public static extern void Stamp_update__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_update__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_update__SWIG_1")]
   public static extern void Stamp_update__SWIG_1(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_read")]
   public static extern bool Stamp_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_write")]
   public static extern bool Stamp_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Stamp")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Stamp")]
   public static extern void delete_Stamp(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Stamped")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Stamped")]
   public static extern void delete_Stamped(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamped_getStamp")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamped_getStamp")]
   public static extern IntPtr Stamped_getStamp(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_NameStore")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_NameStore")]
   public static extern void delete_NameStore(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_NameStore_query")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NameStore_query")]
   public static extern IntPtr NameStore_query(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_NameStore_announce")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NameStore_announce")]
   public static extern bool NameStore_announce(HandleRef jarg1, string jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_NameStore_process")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_NameStore_process")]
   public static extern bool NameStore_process(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_admin_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_admin_set")]
   public static extern void ContactStyle_admin_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_admin_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_admin_get")]
   public static extern bool ContactStyle_admin_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_quiet_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_quiet_set")]
   public static extern void ContactStyle_quiet_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_quiet_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_quiet_get")]
   public static extern bool ContactStyle_quiet_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_verboseOnSuccess_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_verboseOnSuccess_set")]
   public static extern void ContactStyle_verboseOnSuccess_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_verboseOnSuccess_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_verboseOnSuccess_get")]
   public static extern bool ContactStyle_verboseOnSuccess_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_timeout_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_timeout_set")]
   public static extern void ContactStyle_timeout_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_timeout_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_timeout_get")]
   public static extern double ContactStyle_timeout_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_carrier_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_carrier_set")]
   public static extern void ContactStyle_carrier_set(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_carrier_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_carrier_get")]
   public static extern string ContactStyle_carrier_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_expectReply_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_expectReply_set")]
   public static extern void ContactStyle_expectReply_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_expectReply_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_expectReply_get")]
   public static extern bool ContactStyle_expectReply_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_persistent_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_persistent_set")]
   public static extern void ContactStyle_persistent_set(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_persistent_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_persistent_get")]
   public static extern bool ContactStyle_persistent_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_persistenceType_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_persistenceType_set")]
   public static extern void ContactStyle_persistenceType_set(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ContactStyle_persistenceType_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ContactStyle_persistenceType_get")]
   public static extern int ContactStyle_persistenceType_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ContactStyle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ContactStyle")]
   public static extern IntPtr new_ContactStyle();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ContactStyle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ContactStyle")]
   public static extern void delete_ContactStyle(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ResourceFinder__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ResourceFinder__SWIG_0")]
   public static extern IntPtr new_ResourceFinder__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ResourceFinder__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ResourceFinder__SWIG_1")]
   public static extern IntPtr new_ResourceFinder__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ResourceFinder")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ResourceFinder")]
   public static extern void delete_ResourceFinder(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setVerbose__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setVerbose__SWIG_0")]
   public static extern bool ResourceFinder_setVerbose__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setVerbose__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setVerbose__SWIG_1")]
   public static extern bool ResourceFinder_setVerbose__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setQuiet__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setQuiet__SWIG_0")]
   public static extern bool ResourceFinder_setQuiet__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setQuiet__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setQuiet__SWIG_1")]
   public static extern bool ResourceFinder_setQuiet__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_configure__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_configure__SWIG_0")]
   public static extern bool ResourceFinder_configure__SWIG_0(HandleRef jarg1, string jarg2, int jarg3, HandleRef jarg4, bool jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_configure__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_configure__SWIG_1")]
   public static extern bool ResourceFinder_configure__SWIG_1(HandleRef jarg1, string jarg2, int jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_configure__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_configure__SWIG_2")]
   public static extern bool ResourceFinder_configure__SWIG_2(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setDefaultContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setDefaultContext")]
   public static extern bool ResourceFinder_setDefaultContext(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setContext")]
   public static extern bool ResourceFinder_setContext(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setDefault__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setDefault__SWIG_0")]
   public static extern bool ResourceFinder_setDefault__SWIG_0(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setDefault__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setDefault__SWIG_1")]
   public static extern bool ResourceFinder_setDefault__SWIG_1(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_setDefaultConfigFile")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_setDefaultConfigFile")]
   public static extern bool ResourceFinder_setDefaultConfigFile(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findFile__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findFile__SWIG_0")]
   public static extern string ResourceFinder_findFile__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findFileByName__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findFileByName__SWIG_0")]
   public static extern string ResourceFinder_findFileByName__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findPath__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findPath__SWIG_0")]
   public static extern string ResourceFinder_findPath__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findPaths__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findPaths__SWIG_0")]
   public static extern IntPtr ResourceFinder_findPaths__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findPath__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findPath__SWIG_1")]
   public static extern string ResourceFinder_findPath__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getContext")]
   public static extern string ResourceFinder_getContext(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getContextPath")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getContextPath")]
   public static extern string ResourceFinder_getContextPath(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getContexts")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getContexts")]
   public static extern IntPtr ResourceFinder_getContexts(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_check__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_check__SWIG_0")]
   public static extern bool ResourceFinder_check__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_find")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_find")]
   public static extern IntPtr ResourceFinder_find(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findGroup__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findGroup__SWIG_0")]
   public static extern IntPtr ResourceFinder_findGroup__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_isNull")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_isNull")]
   public static extern bool ResourceFinder_isNull(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_toString_c")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_toString_c")]
   public static extern string ResourceFinder_toString_c(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findNestedResourceFinder")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findNestedResourceFinder")]
   public static extern IntPtr ResourceFinder_findNestedResourceFinder(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_isConfigured")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_isConfigured")]
   public static extern bool ResourceFinder_isConfigured(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getResourceFinderSingleton")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getResourceFinderSingleton")]
   public static extern IntPtr ResourceFinder_getResourceFinderSingleton();
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_check__SWIG_1_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_check__SWIG_1_0")]
   public static extern bool ResourceFinder_check__SWIG_1_0(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_check__SWIG_1_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_check__SWIG_1_1")]
   public static extern IntPtr ResourceFinder_check__SWIG_1_1(HandleRef jarg1, string jarg2, HandleRef jarg3, string jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_check__SWIG_1_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_check__SWIG_1_2")]
   public static extern IntPtr ResourceFinder_check__SWIG_1_2(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findGroup__SWIG_1_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findGroup__SWIG_1_0")]
   public static extern IntPtr ResourceFinder_findGroup__SWIG_1_0(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getDataHome")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getDataHome")]
   public static extern string ResourceFinder_getDataHome();
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getDataHomeNoCreate")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getDataHomeNoCreate")]
   public static extern string ResourceFinder_getDataHomeNoCreate();
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getConfigHome")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getConfigHome")]
   public static extern string ResourceFinder_getConfigHome();
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getConfigHomeNoCreate")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getConfigHomeNoCreate")]
   public static extern string ResourceFinder_getConfigHomeNoCreate();
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getHomeContextPath")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getHomeContextPath")]
   public static extern string ResourceFinder_getHomeContextPath(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getHomeRobotPath")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getHomeRobotPath")]
   public static extern string ResourceFinder_getHomeRobotPath(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getDataDirs")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getDataDirs")]
   public static extern IntPtr ResourceFinder_getDataDirs();
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_getConfigDirs")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_getConfigDirs")]
   public static extern IntPtr ResourceFinder_getConfigDirs();
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findPaths__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findPaths__SWIG_1")]
   public static extern IntPtr ResourceFinder_findPaths__SWIG_1(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findPath__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findPath__SWIG_2")]
   public static extern string ResourceFinder_findPath__SWIG_2(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findFile__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findFile__SWIG_1")]
   public static extern string ResourceFinder_findFile__SWIG_1(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_findFileByName__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_findFileByName__SWIG_1")]
   public static extern string ResourceFinder_findFileByName__SWIG_1(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_readConfig")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_readConfig")]
   public static extern bool ResourceFinder_readConfig(HandleRef jarg1, HandleRef jarg2, string jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_configure__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_configure__SWIG_3")]
   public static extern bool ResourceFinder_configure__SWIG_3(HandleRef jarg1, string jarg2, HandleRef jarg3, bool jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_configure__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_configure__SWIG_4")]
   public static extern bool ResourceFinder_configure__SWIG_4(HandleRef jarg1, string jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_open_SWIG_0_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_open_SWIG_0_0")]
   public static extern bool RpcServer_open_SWIG_0_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_open_SWIG_0_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_open_SWIG_0_1")]
   public static extern bool RpcServer_open_SWIG_0_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_open_SWIG_0_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_open_SWIG_0_2")]
   public static extern bool RpcServer_open_SWIG_0_2(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_open_SWIG_0_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_open_SWIG_0_3")]
   public static extern bool RpcServer_open_SWIG_0_3(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_RpcServer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_RpcServer")]
   public static extern IntPtr new_RpcServer();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_RpcServer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_RpcServer")]
   public static extern void delete_RpcServer(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_write__SWIG_0")]
   public static extern bool RpcServer_write__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_write__SWIG_1")]
   public static extern bool RpcServer_write__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_write__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_write__SWIG_2")]
   public static extern bool RpcServer_write__SWIG_2(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_write__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_write__SWIG_3")]
   public static extern bool RpcServer_write__SWIG_3(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_read__SWIG_0")]
   public static extern bool RpcServer_read__SWIG_0(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_read__SWIG_1")]
   public static extern bool RpcServer_read__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_setInputMode")]
   public static extern void RpcServer_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_setOutputMode")]
   public static extern void RpcServer_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_setRpcMode")]
   public static extern void RpcServer_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_asPort__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_asPort__SWIG_0")]
   public static extern IntPtr RpcServer_asPort__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_RpcClient")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_RpcClient")]
   public static extern IntPtr new_RpcClient();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_RpcClient")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_RpcClient")]
   public static extern void delete_RpcClient(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_read__SWIG_0")]
   public static extern bool RpcClient_read__SWIG_0(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_read__SWIG_1")]
   public static extern bool RpcClient_read__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_reply")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_reply")]
   public static extern bool RpcClient_reply(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_replyAndDrop")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_replyAndDrop")]
   public static extern bool RpcClient_replyAndDrop(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_setInputMode")]
   public static extern void RpcClient_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_setOutputMode")]
   public static extern void RpcClient_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_setRpcMode")]
   public static extern void RpcClient_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_asPort__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_asPort__SWIG_0")]
   public static extern IntPtr RpcClient_asPort__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_write")]
   public static extern bool RpcClient_write(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_DummyConnector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_DummyConnector")]
   public static extern IntPtr new_DummyConnector();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_DummyConnector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_DummyConnector")]
   public static extern void delete_DummyConnector(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DummyConnector_setTextMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DummyConnector_setTextMode")]
   public static extern void DummyConnector_setTextMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DummyConnector_getCleanWriter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DummyConnector_getCleanWriter")]
   public static extern IntPtr DummyConnector_getCleanWriter(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DummyConnector_getWriter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DummyConnector_getWriter")]
   public static extern IntPtr DummyConnector_getWriter(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DummyConnector_getReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DummyConnector_getReader")]
   public static extern IntPtr DummyConnector_getReader(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DummyConnector_reset")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DummyConnector_reset")]
   public static extern void DummyConnector_reset(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Things")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Things")]
   public static extern IntPtr new_Things();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Things")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Things")]
   public static extern void delete_Things(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_setPortWriter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_setPortWriter")]
   public static extern void Things_setPortWriter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_getPortWriter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_getPortWriter")]
   public static extern IntPtr Things_getPortWriter(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_setPortReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_setPortReader")]
   public static extern void Things_setPortReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_getPortReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_getPortReader")]
   public static extern IntPtr Things_getPortReader(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_setConnectionReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_setConnectionReader")]
   public static extern bool Things_setConnectionReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_write")]
   public static extern bool Things_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_reset")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_reset")]
   public static extern void Things_reset(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_hasBeenRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_hasBeenRead")]
   public static extern bool Things_hasBeenRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asValue")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asValue")]
   public static extern IntPtr Things_asValue(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asBottle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asBottle")]
   public static extern IntPtr Things_asBottle(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asProperty")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asProperty")]
   public static extern IntPtr Things_asProperty(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asVector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asVector")]
   public static extern IntPtr Things_asVector(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asMatrix")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asMatrix")]
   public static extern IntPtr Things_asMatrix(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asImage")]
   public static extern IntPtr Things_asImage(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asImageOfPixelRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asImageOfPixelRgb")]
   public static extern IntPtr Things_asImageOfPixelRgb(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asImageOfPixelBgr")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asImageOfPixelBgr")]
   public static extern IntPtr Things_asImageOfPixelBgr(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Things_asImageOfPixelMono")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Things_asImageOfPixelMono")]
   public static extern IntPtr Things_asImageOfPixelMono(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_QosStyle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_QosStyle")]
   public static extern IntPtr new_QosStyle();
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_setPacketPriorityByDscp")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_setPacketPriorityByDscp")]
   public static extern void QosStyle_setPacketPriorityByDscp(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_setPacketPriorityByLevel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_setPacketPriorityByLevel")]
   public static extern void QosStyle_setPacketPriorityByLevel(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_setPacketPrioritybyTOS")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_setPacketPrioritybyTOS")]
   public static extern void QosStyle_setPacketPrioritybyTOS(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_setPacketPriority")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_setPacketPriority")]
   public static extern bool QosStyle_setPacketPriority(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_setThreadPriority")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_setThreadPriority")]
   public static extern void QosStyle_setThreadPriority(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_setThreadPolicy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_setThreadPolicy")]
   public static extern void QosStyle_setThreadPolicy(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_getPacketPriorityAsTOS")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_getPacketPriorityAsTOS")]
   public static extern int QosStyle_getPacketPriorityAsTOS(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_getPacketPriorityAsDSCP")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_getPacketPriorityAsDSCP")]
   public static extern int QosStyle_getPacketPriorityAsDSCP(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_getPacketPriorityAsLevel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_getPacketPriorityAsLevel")]
   public static extern int QosStyle_getPacketPriorityAsLevel(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_getThreadPriority")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_getThreadPriority")]
   public static extern int QosStyle_getThreadPriority(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_getThreadPolicy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_getThreadPolicy")]
   public static extern int QosStyle_getThreadPolicy(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_getDSCPByVocab")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_getDSCPByVocab")]
   public static extern int QosStyle_getDSCPByVocab(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_QosStyle_getLevelByVocab")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_QosStyle_getLevelByVocab")]
   public static extern int QosStyle_getLevelByVocab(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_QosStyle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_QosStyle")]
   public static extern void delete_QosStyle(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_setStrict__SWIG_0")]
   public static extern void TypedReaderProperty_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_setStrict__SWIG_1")]
   public static extern void TypedReaderProperty_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_read__SWIG_0")]
   public static extern IntPtr TypedReaderProperty_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_read__SWIG_1")]
   public static extern IntPtr TypedReaderProperty_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_interrupt")]
   public static extern void TypedReaderProperty_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_lastRead")]
   public static extern IntPtr TypedReaderProperty_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_isClosed")]
   public static extern bool TypedReaderProperty_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_useCallback")]
   public static extern void TypedReaderProperty_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_disableCallback")]
   public static extern void TypedReaderProperty_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_getPendingReads")]
   public static extern int TypedReaderProperty_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderProperty")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderProperty")]
   public static extern void delete_TypedReaderProperty(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_getName")]
   public static extern string TypedReaderProperty_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_setReplier")]
   public static extern void TypedReaderProperty_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_acquire")]
-  public static extern IntPtr TypedReaderProperty_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_acquire")]
+  public static extern System.IntPtr TypedReaderProperty_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_release")]
-  public static extern void TypedReaderProperty_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_release")]
+  public static extern void TypedReaderProperty_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderProperty_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_setTargetPeriod")]
   public static extern void TypedReaderProperty_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PropertyCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PropertyCallback")]
   public static extern void delete_PropertyCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PropertyCallback_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PropertyCallback_onRead__SWIG_0")]
   public static extern void PropertyCallback_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PropertyCallback_onReadSwigExplicitPropertyCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PropertyCallback_onReadSwigExplicitPropertyCallback__SWIG_0")]
   public static extern void PropertyCallback_onReadSwigExplicitPropertyCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PropertyCallback_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PropertyCallback_onRead__SWIG_1")]
   public static extern void PropertyCallback_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PropertyCallback_onReadSwigExplicitPropertyCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PropertyCallback_onReadSwigExplicitPropertyCallback__SWIG_1")]
   public static extern void PropertyCallback_onReadSwigExplicitPropertyCallback__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PropertyCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PropertyCallback")]
   public static extern IntPtr new_PropertyCallback();
 
-  [DllImport("yarp", EntryPoint="CSharp_PropertyCallback_director_connect")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PropertyCallback_director_connect")]
   public static extern void PropertyCallback_director_connect(HandleRef jarg1, PropertyCallback.SwigDelegatePropertyCallback_0 delegate0, PropertyCallback.SwigDelegatePropertyCallback_1 delegate1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortProperty__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_onRead__SWIG_0_0")]
+  public static extern void BufferedPortProperty_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortProperty__SWIG_0")]
   public static extern IntPtr new_BufferedPortProperty__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortProperty__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortProperty__SWIG_1")]
   public static extern IntPtr new_BufferedPortProperty__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortProperty")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortProperty")]
   public static extern void delete_BufferedPortProperty(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_addOutput__SWIG_0")]
   public static extern bool BufferedPortProperty_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_addOutput__SWIG_1")]
   public static extern bool BufferedPortProperty_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_addOutput__SWIG_2")]
   public static extern bool BufferedPortProperty_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_close")]
   public static extern void BufferedPortProperty_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_interrupt")]
   public static extern void BufferedPortProperty_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_resume")]
   public static extern void BufferedPortProperty_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_getPendingReads")]
   public static extern int BufferedPortProperty_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_where")]
   public static extern IntPtr BufferedPortProperty_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_getName")]
   public static extern string BufferedPortProperty_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_prepare")]
   public static extern IntPtr BufferedPortProperty_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_unprepare")]
   public static extern bool BufferedPortProperty_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_write__SWIG_0")]
   public static extern void BufferedPortProperty_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_write__SWIG_1")]
   public static extern void BufferedPortProperty_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_writeStrict")]
   public static extern void BufferedPortProperty_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_waitForWrite")]
   public static extern void BufferedPortProperty_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setStrict__SWIG_0")]
   public static extern void BufferedPortProperty_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setStrict__SWIG_1")]
   public static extern void BufferedPortProperty_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_read__SWIG_0")]
   public static extern IntPtr BufferedPortProperty_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_read__SWIG_1")]
   public static extern IntPtr BufferedPortProperty_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_lastRead")]
   public static extern IntPtr BufferedPortProperty_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_isClosed")]
   public static extern bool BufferedPortProperty_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setReplier")]
   public static extern void BufferedPortProperty_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setReader")]
   public static extern void BufferedPortProperty_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setAdminReader")]
   public static extern void BufferedPortProperty_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_onRead")]
-  public static extern void BufferedPortProperty_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_onRead__SWIG_1")]
+  public static extern void BufferedPortProperty_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_useCallback__SWIG_0")]
   public static extern void BufferedPortProperty_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_useCallback__SWIG_1")]
   public static extern void BufferedPortProperty_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_disableCallback")]
   public static extern void BufferedPortProperty_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setEnvelope")]
   public static extern bool BufferedPortProperty_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_getEnvelope")]
   public static extern bool BufferedPortProperty_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_getInputCount")]
   public static extern int BufferedPortProperty_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_getOutputCount")]
   public static extern int BufferedPortProperty_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_isWriting")]
   public static extern bool BufferedPortProperty_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_getReport")]
   public static extern void BufferedPortProperty_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setReporter")]
   public static extern void BufferedPortProperty_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_acquire")]
-  public static extern IntPtr BufferedPortProperty_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_acquire")]
+  public static extern System.IntPtr BufferedPortProperty_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_release")]
-  public static extern void BufferedPortProperty_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_release")]
+  public static extern void BufferedPortProperty_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setTargetPeriod")]
   public static extern void BufferedPortProperty_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_getType")]
   public static extern IntPtr BufferedPortProperty_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_promiseType")]
   public static extern void BufferedPortProperty_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setInputMode")]
   public static extern void BufferedPortProperty_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setOutputMode")]
   public static extern void BufferedPortProperty_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setRpcMode")]
   public static extern void BufferedPortProperty_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_acquireProperties")]
   public static extern IntPtr BufferedPortProperty_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_releaseProperties")]
   public static extern void BufferedPortProperty_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_includeNodeInName")]
   public static extern void BufferedPortProperty_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setCallbackLock")]
   public static extern bool BufferedPortProperty_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_removeCallbackLock")]
   public static extern bool BufferedPortProperty_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_lockCallback")]
   public static extern bool BufferedPortProperty_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_tryLockCallback")]
   public static extern bool BufferedPortProperty_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_unlockCallback")]
   public static extern void BufferedPortProperty_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_setStrict__SWIG_0")]
   public static extern void TypedReaderBottle_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_setStrict__SWIG_1")]
   public static extern void TypedReaderBottle_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_read__SWIG_0")]
   public static extern IntPtr TypedReaderBottle_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_read__SWIG_1")]
   public static extern IntPtr TypedReaderBottle_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_interrupt")]
   public static extern void TypedReaderBottle_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_lastRead")]
   public static extern IntPtr TypedReaderBottle_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_isClosed")]
   public static extern bool TypedReaderBottle_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_useCallback")]
   public static extern void TypedReaderBottle_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_disableCallback")]
   public static extern void TypedReaderBottle_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_getPendingReads")]
   public static extern int TypedReaderBottle_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderBottle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderBottle")]
   public static extern void delete_TypedReaderBottle(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_getName")]
   public static extern string TypedReaderBottle_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_setReplier")]
   public static extern void TypedReaderBottle_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_acquire")]
-  public static extern IntPtr TypedReaderBottle_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_acquire")]
+  public static extern System.IntPtr TypedReaderBottle_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_release")]
-  public static extern void TypedReaderBottle_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_release")]
+  public static extern void TypedReaderBottle_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderBottle_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_setTargetPeriod")]
   public static extern void TypedReaderBottle_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BottleCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BottleCallback")]
   public static extern void delete_BottleCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BottleCallback_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BottleCallback_onRead__SWIG_0")]
   public static extern void BottleCallback_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BottleCallback_onReadSwigExplicitBottleCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BottleCallback_onReadSwigExplicitBottleCallback__SWIG_0")]
   public static extern void BottleCallback_onReadSwigExplicitBottleCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BottleCallback_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BottleCallback_onRead__SWIG_1")]
   public static extern void BottleCallback_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BottleCallback_onReadSwigExplicitBottleCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BottleCallback_onReadSwigExplicitBottleCallback__SWIG_1")]
   public static extern void BottleCallback_onReadSwigExplicitBottleCallback__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BottleCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BottleCallback")]
   public static extern IntPtr new_BottleCallback();
 
-  [DllImport("yarp", EntryPoint="CSharp_BottleCallback_director_connect")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BottleCallback_director_connect")]
   public static extern void BottleCallback_director_connect(HandleRef jarg1, BottleCallback.SwigDelegateBottleCallback_0 delegate0, BottleCallback.SwigDelegateBottleCallback_1 delegate1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortBottle__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_onRead__SWIG_0_0")]
+  public static extern void BufferedPortBottle_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortBottle__SWIG_0")]
   public static extern IntPtr new_BufferedPortBottle__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortBottle__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortBottle__SWIG_1")]
   public static extern IntPtr new_BufferedPortBottle__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortBottle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortBottle")]
   public static extern void delete_BufferedPortBottle(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_addOutput__SWIG_0")]
   public static extern bool BufferedPortBottle_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_addOutput__SWIG_1")]
   public static extern bool BufferedPortBottle_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_addOutput__SWIG_2")]
   public static extern bool BufferedPortBottle_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_close")]
   public static extern void BufferedPortBottle_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_interrupt")]
   public static extern void BufferedPortBottle_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_resume")]
   public static extern void BufferedPortBottle_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_getPendingReads")]
   public static extern int BufferedPortBottle_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_where")]
   public static extern IntPtr BufferedPortBottle_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_getName")]
   public static extern string BufferedPortBottle_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_prepare")]
   public static extern IntPtr BufferedPortBottle_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_unprepare")]
   public static extern bool BufferedPortBottle_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_write__SWIG_0")]
   public static extern void BufferedPortBottle_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_write__SWIG_1")]
   public static extern void BufferedPortBottle_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_writeStrict")]
   public static extern void BufferedPortBottle_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_waitForWrite")]
   public static extern void BufferedPortBottle_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setStrict__SWIG_0")]
   public static extern void BufferedPortBottle_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setStrict__SWIG_1")]
   public static extern void BufferedPortBottle_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_read__SWIG_0")]
   public static extern IntPtr BufferedPortBottle_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_read__SWIG_1")]
   public static extern IntPtr BufferedPortBottle_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_lastRead")]
   public static extern IntPtr BufferedPortBottle_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_isClosed")]
   public static extern bool BufferedPortBottle_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setReplier")]
   public static extern void BufferedPortBottle_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setReader")]
   public static extern void BufferedPortBottle_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setAdminReader")]
   public static extern void BufferedPortBottle_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_onRead")]
-  public static extern void BufferedPortBottle_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_onRead__SWIG_1")]
+  public static extern void BufferedPortBottle_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_useCallback__SWIG_0")]
   public static extern void BufferedPortBottle_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_useCallback__SWIG_1")]
   public static extern void BufferedPortBottle_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_disableCallback")]
   public static extern void BufferedPortBottle_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setEnvelope")]
   public static extern bool BufferedPortBottle_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_getEnvelope")]
   public static extern bool BufferedPortBottle_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_getInputCount")]
   public static extern int BufferedPortBottle_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_getOutputCount")]
   public static extern int BufferedPortBottle_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_isWriting")]
   public static extern bool BufferedPortBottle_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_getReport")]
   public static extern void BufferedPortBottle_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setReporter")]
   public static extern void BufferedPortBottle_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_acquire")]
-  public static extern IntPtr BufferedPortBottle_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_acquire")]
+  public static extern System.IntPtr BufferedPortBottle_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_release")]
-  public static extern void BufferedPortBottle_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_release")]
+  public static extern void BufferedPortBottle_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setTargetPeriod")]
   public static extern void BufferedPortBottle_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_getType")]
   public static extern IntPtr BufferedPortBottle_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_promiseType")]
   public static extern void BufferedPortBottle_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setInputMode")]
   public static extern void BufferedPortBottle_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setOutputMode")]
   public static extern void BufferedPortBottle_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setRpcMode")]
   public static extern void BufferedPortBottle_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_acquireProperties")]
   public static extern IntPtr BufferedPortBottle_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_releaseProperties")]
   public static extern void BufferedPortBottle_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_includeNodeInName")]
   public static extern void BufferedPortBottle_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setCallbackLock")]
   public static extern bool BufferedPortBottle_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_removeCallbackLock")]
   public static extern bool BufferedPortBottle_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_lockCallback")]
   public static extern bool BufferedPortBottle_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_tryLockCallback")]
   public static extern bool BufferedPortBottle_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_unlockCallback")]
   public static extern void BufferedPortBottle_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PAD_BYTES")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PAD_BYTES")]
   public static extern int PAD_BYTES(int jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Image__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Image__SWIG_0")]
   public static extern IntPtr new_Image__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Image__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Image__SWIG_1")]
   public static extern IntPtr new_Image__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Image")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Image")]
   public static extern void delete_Image(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_copy__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_copy__SWIG_0")]
   public static extern bool Image_copy__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_copy__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_copy__SWIG_1")]
   public static extern bool Image_copy__SWIG_1(HandleRef jarg1, HandleRef jarg2, int jarg3, int jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_width")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_width")]
   public static extern int Image_width(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_height")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_height")]
   public static extern int Image_height(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getPixelSize")]
   public static extern int Image_getPixelSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getPixelCode")]
   public static extern int Image_getPixelCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getRowSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getRowSize")]
   public static extern int Image_getRowSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getQuantum")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getQuantum")]
   public static extern int Image_getQuantum(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getPadding")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getPadding")]
   public static extern int Image_getPadding(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getRow")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getRow")]
   public static extern System.IntPtr Image_getRow(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getPixelAddress")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getPixelAddress")]
   public static extern System.IntPtr Image_getPixelAddress(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_isPixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_isPixel")]
   public static extern bool Image_isPixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_zero")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_zero")]
   public static extern void Image_zero(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_resize__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_resize__SWIG_0")]
   public static extern void Image_resize__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_resize__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_resize__SWIG_1")]
   public static extern void Image_resize__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_setExternal")]
-  public static extern void Image_setExternal(HandleRef jarg1, HandleRef jarg2, int jarg3, int jarg4);
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_setExternal")]
+  public static extern void Image_setExternal(HandleRef jarg1, System.IntPtr jarg2, int jarg3, int jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getRawImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getRawImage")]
   public static extern System.IntPtr Image_getRawImage(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getRawImageSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getRawImageSize")]
   public static extern int Image_getRawImageSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getIplImage")]
-  public static extern IntPtr Image_getIplImage(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getIplImage")]
+  public static extern System.IntPtr Image_getIplImage(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_wrapIplImage")]
-  public static extern void Image_wrapIplImage(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_wrapIplImage")]
+  public static extern void Image_wrapIplImage(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_read")]
   public static extern bool Image_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_write")]
   public static extern bool Image_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_setQuantum")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_setQuantum")]
   public static extern void Image_setQuantum(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_topIsLowIndex")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_topIsLowIndex")]
   public static extern bool Image_topIsLowIndex(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_setTopIsLowIndex")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_setTopIsLowIndex")]
   public static extern void Image_setTopIsLowIndex(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_getRowArray")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_getRowArray")]
   public static extern IntPtr Image_getRowArray(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_FlexImage_setPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FlexImage_setPixelCode")]
   public static extern void FlexImage_setPixelCode(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_FlexImage_setPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FlexImage_setPixelSize")]
   public static extern void FlexImage_setPixelSize(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_FlexImage_setQuantum")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FlexImage_setQuantum")]
   public static extern void FlexImage_setQuantum(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_FlexImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_FlexImage")]
   public static extern IntPtr new_FlexImage();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_FlexImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_FlexImage")]
   public static extern void delete_FlexImage(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgb_r_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgb_r_set")]
   public static extern void PixelRgb_r_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgb_r_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgb_r_get")]
   public static extern byte PixelRgb_r_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgb_g_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgb_g_set")]
   public static extern void PixelRgb_g_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgb_g_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgb_g_get")]
   public static extern byte PixelRgb_g_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgb_b_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgb_b_set")]
   public static extern void PixelRgb_b_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgb_b_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgb_b_get")]
   public static extern byte PixelRgb_b_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgb__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgb__SWIG_0")]
   public static extern IntPtr new_PixelRgb__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgb__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgb__SWIG_1")]
   public static extern IntPtr new_PixelRgb__SWIG_1(byte jarg1, byte jarg2, byte jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelRgb")]
   public static extern void delete_PixelRgb(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgba_r_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgba_r_set")]
   public static extern void PixelRgba_r_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgba_r_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgba_r_get")]
   public static extern byte PixelRgba_r_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgba_g_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgba_g_set")]
   public static extern void PixelRgba_g_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgba_g_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgba_g_get")]
   public static extern byte PixelRgba_g_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgba_b_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgba_b_set")]
   public static extern void PixelRgba_b_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgba_b_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgba_b_get")]
   public static extern byte PixelRgba_b_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgba_a_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgba_a_set")]
   public static extern void PixelRgba_a_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgba_a_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgba_a_get")]
   public static extern byte PixelRgba_a_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgba__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgba__SWIG_0")]
   public static extern IntPtr new_PixelRgba__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgba__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgba__SWIG_1")]
   public static extern IntPtr new_PixelRgba__SWIG_1(byte jarg1, byte jarg2, byte jarg3, byte jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelRgba")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelRgba")]
   public static extern void delete_PixelRgba(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgra_b_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgra_b_set")]
   public static extern void PixelBgra_b_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgra_b_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgra_b_get")]
   public static extern byte PixelBgra_b_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgra_g_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgra_g_set")]
   public static extern void PixelBgra_g_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgra_g_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgra_g_get")]
   public static extern byte PixelBgra_g_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgra_r_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgra_r_set")]
   public static extern void PixelBgra_r_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgra_r_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgra_r_get")]
   public static extern byte PixelBgra_r_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgra_a_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgra_a_set")]
   public static extern void PixelBgra_a_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgra_a_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgra_a_get")]
   public static extern byte PixelBgra_a_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelBgra__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelBgra__SWIG_0")]
   public static extern IntPtr new_PixelBgra__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelBgra__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelBgra__SWIG_1")]
   public static extern IntPtr new_PixelBgra__SWIG_1(byte jarg1, byte jarg2, byte jarg3, byte jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelBgra")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelBgra")]
   public static extern void delete_PixelBgra(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgr_b_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgr_b_set")]
   public static extern void PixelBgr_b_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgr_b_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgr_b_get")]
   public static extern byte PixelBgr_b_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgr_g_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgr_g_set")]
   public static extern void PixelBgr_g_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgr_g_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgr_g_get")]
   public static extern byte PixelBgr_g_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgr_r_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgr_r_set")]
   public static extern void PixelBgr_r_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelBgr_r_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelBgr_r_get")]
   public static extern byte PixelBgr_r_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelBgr__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelBgr__SWIG_0")]
   public static extern IntPtr new_PixelBgr__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelBgr__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelBgr__SWIG_1")]
   public static extern IntPtr new_PixelBgr__SWIG_1(byte jarg1, byte jarg2, byte jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelBgr")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelBgr")]
   public static extern void delete_PixelBgr(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsv_h_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsv_h_set")]
   public static extern void PixelHsv_h_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsv_h_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsv_h_get")]
   public static extern byte PixelHsv_h_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsv_s_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsv_s_set")]
   public static extern void PixelHsv_s_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsv_s_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsv_s_get")]
   public static extern byte PixelHsv_s_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsv_v_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsv_v_set")]
   public static extern void PixelHsv_v_set(HandleRef jarg1, byte jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsv_v_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsv_v_get")]
   public static extern byte PixelHsv_v_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelHsv")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelHsv")]
   public static extern IntPtr new_PixelHsv();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelHsv")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelHsv")]
   public static extern void delete_PixelHsv(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbSigned_r_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbSigned_r_set")]
   public static extern void PixelRgbSigned_r_set(HandleRef jarg1, char jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbSigned_r_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbSigned_r_get")]
   public static extern char PixelRgbSigned_r_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbSigned_g_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbSigned_g_set")]
   public static extern void PixelRgbSigned_g_set(HandleRef jarg1, char jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbSigned_g_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbSigned_g_get")]
   public static extern char PixelRgbSigned_g_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbSigned_b_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbSigned_b_set")]
   public static extern void PixelRgbSigned_b_set(HandleRef jarg1, char jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbSigned_b_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbSigned_b_get")]
   public static extern char PixelRgbSigned_b_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgbSigned")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgbSigned")]
   public static extern IntPtr new_PixelRgbSigned();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelRgbSigned")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelRgbSigned")]
   public static extern void delete_PixelRgbSigned(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbFloat_r_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbFloat_r_set")]
   public static extern void PixelRgbFloat_r_set(HandleRef jarg1, float jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbFloat_r_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbFloat_r_get")]
   public static extern float PixelRgbFloat_r_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbFloat_g_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbFloat_g_set")]
   public static extern void PixelRgbFloat_g_set(HandleRef jarg1, float jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbFloat_g_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbFloat_g_get")]
   public static extern float PixelRgbFloat_g_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbFloat_b_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbFloat_b_set")]
   public static extern void PixelRgbFloat_b_set(HandleRef jarg1, float jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbFloat_b_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbFloat_b_get")]
   public static extern float PixelRgbFloat_b_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgbFloat__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgbFloat__SWIG_0")]
   public static extern IntPtr new_PixelRgbFloat__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgbFloat__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgbFloat__SWIG_1")]
   public static extern IntPtr new_PixelRgbFloat__SWIG_1(float jarg1, float jarg2, float jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelRgbFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelRgbFloat")]
   public static extern void delete_PixelRgbFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbInt_r_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbInt_r_set")]
   public static extern void PixelRgbInt_r_set(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbInt_r_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbInt_r_get")]
   public static extern int PixelRgbInt_r_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbInt_g_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbInt_g_set")]
   public static extern void PixelRgbInt_g_set(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbInt_g_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbInt_g_get")]
   public static extern int PixelRgbInt_g_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbInt_b_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbInt_b_set")]
   public static extern void PixelRgbInt_b_set(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelRgbInt_b_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelRgbInt_b_get")]
   public static extern int PixelRgbInt_b_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgbInt__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgbInt__SWIG_0")]
   public static extern IntPtr new_PixelRgbInt__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelRgbInt__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelRgbInt__SWIG_1")]
   public static extern IntPtr new_PixelRgbInt__SWIG_1(int jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelRgbInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelRgbInt")]
   public static extern void delete_PixelRgbInt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsvFloat_h_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsvFloat_h_set")]
   public static extern void PixelHsvFloat_h_set(HandleRef jarg1, float jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsvFloat_h_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsvFloat_h_get")]
   public static extern float PixelHsvFloat_h_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsvFloat_s_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsvFloat_s_set")]
   public static extern void PixelHsvFloat_s_set(HandleRef jarg1, float jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsvFloat_s_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsvFloat_s_get")]
   public static extern float PixelHsvFloat_s_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsvFloat_v_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsvFloat_v_set")]
   public static extern void PixelHsvFloat_v_set(HandleRef jarg1, float jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PixelHsvFloat_v_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PixelHsvFloat_v_get")]
   public static extern float PixelHsvFloat_v_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PixelHsvFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PixelHsvFloat")]
   public static extern IntPtr new_PixelHsvFloat();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PixelHsvFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PixelHsvFloat")]
   public static extern void delete_PixelHsvFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_FORMAT_NULL_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FORMAT_NULL_get")]
   public static extern int FORMAT_NULL_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_FORMAT_ANY_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FORMAT_ANY_get")]
   public static extern int FORMAT_ANY_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_FORMAT_PGM_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FORMAT_PGM_get")]
   public static extern int FORMAT_PGM_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_FORMAT_PPM_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FORMAT_PPM_get")]
   public static extern int FORMAT_PPM_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_FORMAT_NUMERIC_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FORMAT_NUMERIC_get")]
   public static extern int FORMAT_NUMERIC_get();
 
-  [DllImport("yarp", EntryPoint="CSharp_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_read__SWIG_0")]
   public static extern bool read__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_read__SWIG_1")]
   public static extern bool read__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_read__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_read__SWIG_2")]
   public static extern bool read__SWIG_2(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_read__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_read__SWIG_3")]
   public static extern bool read__SWIG_3(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_read__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_read__SWIG_4")]
   public static extern bool read__SWIG_4(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_write__SWIG_0")]
   public static extern bool write__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_write__SWIG_1")]
   public static extern bool write__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_write__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_write__SWIG_2")]
   public static extern bool write__SWIG_2(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_write__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_write__SWIG_3")]
   public static extern bool write__SWIG_3(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_write__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_write__SWIG_4")]
   public static extern bool write__SWIG_4(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_write__SWIG_5")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_write__SWIG_5")]
   public static extern bool write__SWIG_5(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Sound__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Sound__SWIG_0")]
   public static extern IntPtr new_Sound__SWIG_0(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Sound__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Sound__SWIG_1")]
   public static extern IntPtr new_Sound__SWIG_1();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Sound__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Sound__SWIG_2")]
   public static extern IntPtr new_Sound__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Sound")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Sound")]
   public static extern void delete_Sound(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_subSound")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_subSound")]
   public static extern IntPtr Sound_subSound(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_resize__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_resize__SWIG_0")]
   public static extern void Sound_resize__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_resize__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_resize__SWIG_1")]
   public static extern void Sound_resize__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_get__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_get__SWIG_0")]
   public static extern int Sound_get__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_get__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_get__SWIG_1")]
   public static extern int Sound_get__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_set__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_set__SWIG_0")]
   public static extern void Sound_set__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_set__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_set__SWIG_1")]
   public static extern void Sound_set__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_getSafe__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_getSafe__SWIG_0")]
   public static extern int Sound_getSafe__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_getSafe__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_getSafe__SWIG_1")]
   public static extern int Sound_getSafe__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_setSafe__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_setSafe__SWIG_0")]
   public static extern void Sound_setSafe__SWIG_0(HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_setSafe__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_setSafe__SWIG_1")]
   public static extern void Sound_setSafe__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_isSample__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_isSample__SWIG_0")]
   public static extern bool Sound_isSample__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_isSample__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_isSample__SWIG_1")]
   public static extern bool Sound_isSample__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_clear")]
   public static extern void Sound_clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_getFrequency")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_getFrequency")]
   public static extern int Sound_getFrequency(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_setFrequency")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_setFrequency")]
   public static extern void Sound_setFrequency(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_getBytesPerSample")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_getBytesPerSample")]
   public static extern int Sound_getBytesPerSample(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_getSamples")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_getSamples")]
   public static extern int Sound_getSamples(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_getChannels")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_getChannels")]
   public static extern int Sound_getChannels(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_read")]
   public static extern bool Sound_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_write")]
   public static extern bool Sound_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_getRawData")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_getRawData")]
   public static extern System.IntPtr Sound_getRawData(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_getRawDataSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_getRawDataSize")]
   public static extern int Sound_getRawDataSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_VectorBase_getElementSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_getElementSize")]
   public static extern int VectorBase_getElementSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_VectorBase_getBottleTag")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_getBottleTag")]
   public static extern int VectorBase_getBottleTag(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_VectorBase_getListSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_getListSize")]
   public static extern uint VectorBase_getListSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_VectorBase_getMemoryBlock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_getMemoryBlock")]
   public static extern string VectorBase_getMemoryBlock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_VectorBase_resize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_resize")]
   public static extern void VectorBase_resize(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_VectorBase_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_read")]
   public static extern bool VectorBase_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_VectorBase_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_write")]
   public static extern bool VectorBase_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_VectorBase")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_VectorBase")]
   public static extern void delete_VectorBase(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Vector__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Vector__SWIG_0")]
   public static extern IntPtr new_Vector__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Vector__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Vector__SWIG_1")]
   public static extern IntPtr new_Vector__SWIG_1(uint jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Vector__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Vector__SWIG_2")]
   public static extern IntPtr new_Vector__SWIG_2(uint jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Vector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Vector")]
   public static extern void delete_Vector(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Vector__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Vector__SWIG_3")]
   public static extern IntPtr new_Vector__SWIG_3(uint jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Vector__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Vector__SWIG_4")]
   public static extern IntPtr new_Vector__SWIG_4(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_size__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_size__SWIG_0")]
   public static extern void Vector_size__SWIG_0(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_resize__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_resize__SWIG_0")]
   public static extern void Vector_resize__SWIG_0(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_resize__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_resize__SWIG_1")]
   public static extern void Vector_resize__SWIG_1(HandleRef jarg1, uint jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_size__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_size__SWIG_1")]
   public static extern uint Vector_size__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_length")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_length")]
   public static extern uint Vector_length(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_zero")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_zero")]
   public static extern void Vector_zero(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_toString__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_toString__SWIG_0")]
   public static extern string Vector_toString__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_toString__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_toString__SWIG_1")]
   public static extern string Vector_toString__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_toString_c")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_toString_c")]
   public static extern string Vector_toString_c(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_subVector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_subVector")]
   public static extern IntPtr Vector_subVector(HandleRef jarg1, uint jarg2, uint jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_setSubvector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_setSubvector")]
   public static extern bool Vector_setSubvector(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_data__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_data__SWIG_0")]
   public static extern IntPtr Vector_data__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_isEqual")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_isEqual")]
   public static extern bool Vector_isEqual(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_push_back")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_push_back")]
   public static extern void Vector_push_back(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_pop_back")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_pop_back")]
   public static extern void Vector_pop_back(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_getGslVector__SWIG_0")]
-  public static extern IntPtr Vector_getGslVector__SWIG_0(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_getGslVector__SWIG_0")]
+  public static extern System.IntPtr Vector_getGslVector__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_access__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_access__SWIG_0")]
   public static extern IntPtr Vector_access__SWIG_0(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_clear")]
   public static extern void Vector_clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_read")]
   public static extern bool Vector_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_write")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_write")]
   public static extern bool Vector_write(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_get")]
   public static extern double Vector_get(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_set")]
   public static extern void Vector_set(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IConfig")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IConfig")]
   public static extern void delete_IConfig(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IConfig_open")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IConfig_open")]
   public static extern bool IConfig_open(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IConfig_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IConfig_close")]
   public static extern bool IConfig_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IConfig_configure")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IConfig_configure")]
   public static extern bool IConfig_configure(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_IConfig")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_IConfig")]
   public static extern IntPtr new_IConfig();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_DeviceDriver")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_DeviceDriver")]
   public static extern void delete_DeviceDriver(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceDriver_open")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceDriver_open")]
   public static extern bool DeviceDriver_open(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceDriver_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceDriver_close")]
   public static extern bool DeviceDriver_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceDriver_getImplementation")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceDriver_getImplementation")]
   public static extern IntPtr DeviceDriver_getImplementation(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_DeviceDriver")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_DeviceDriver")]
   public static extern IntPtr new_DeviceDriver();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_DeviceResponder")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_DeviceResponder")]
   public static extern IntPtr new_DeviceResponder();
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_addUsage__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_addUsage__SWIG_0")]
   public static extern void DeviceResponder_addUsage__SWIG_0(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_addUsage__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_addUsage__SWIG_1")]
   public static extern void DeviceResponder_addUsage__SWIG_1(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_addUsage__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_addUsage__SWIG_2")]
   public static extern void DeviceResponder_addUsage__SWIG_2(HandleRef jarg1, HandleRef jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_addUsage__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_addUsage__SWIG_3")]
   public static extern void DeviceResponder_addUsage__SWIG_3(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_respond")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_respond")]
   public static extern bool DeviceResponder_respond(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_read")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_read")]
   public static extern bool DeviceResponder_read(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_onRead")]
-  public static extern void DeviceResponder_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_onRead__SWIG_0_0")]
+  public static extern void DeviceResponder_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_makeUsage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_onRead__SWIG_1")]
+  public static extern void DeviceResponder_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_makeUsage")]
   public static extern void DeviceResponder_makeUsage(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_attach")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_attach")]
   public static extern void DeviceResponder_attach(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_DeviceResponder")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_DeviceResponder")]
   public static extern void delete_DeviceResponder(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PolyDriver__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PolyDriver__SWIG_0")]
   public static extern IntPtr new_PolyDriver__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PolyDriver__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PolyDriver__SWIG_1")]
   public static extern IntPtr new_PolyDriver__SWIG_1(string jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PolyDriver__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PolyDriver__SWIG_2")]
   public static extern IntPtr new_PolyDriver__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_open_str")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_open_str")]
   public static extern bool PolyDriver_open_str(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_open")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_open")]
   public static extern bool PolyDriver_open(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_link")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_link")]
   public static extern bool PolyDriver_link(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_take")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_take")]
   public static extern IntPtr PolyDriver_take(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_give")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_give")]
   public static extern bool PolyDriver_give(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PolyDriver")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PolyDriver")]
   public static extern void delete_PolyDriver(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_close")]
   public static extern bool PolyDriver_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_isValid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_isValid")]
   public static extern bool PolyDriver_isValid(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_getOptions")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_getOptions")]
   public static extern IntPtr PolyDriver_getOptions(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_getComment")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_getComment")]
   public static extern string PolyDriver_getComment(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_getDefaultValue")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_getDefaultValue")]
   public static extern IntPtr PolyDriver_getDefaultValue(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_getValue")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_getValue")]
   public static extern IntPtr PolyDriver_getValue(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_getImplementation")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_getImplementation")]
   public static extern IntPtr PolyDriver_getImplementation(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewFrameGrabberImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewFrameGrabberImage")]
   public static extern IntPtr PolyDriver_viewFrameGrabberImage(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIPositionControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIPositionControl")]
   public static extern IntPtr PolyDriver_viewIPositionControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIVelocityControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIVelocityControl")]
   public static extern IntPtr PolyDriver_viewIVelocityControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIEncoders")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIEncoders")]
   public static extern IntPtr PolyDriver_viewIEncoders(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIPidControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIPidControl")]
   public static extern IntPtr PolyDriver_viewIPidControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIAmplifierControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIAmplifierControl")]
   public static extern IntPtr PolyDriver_viewIAmplifierControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIControlLimits")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIControlLimits")]
   public static extern IntPtr PolyDriver_viewIControlLimits(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewICartesianControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewICartesianControl")]
   public static extern IntPtr PolyDriver_viewICartesianControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIGazeControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIGazeControl")]
   public static extern IntPtr PolyDriver_viewIGazeControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIImpedanceControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIImpedanceControl")]
   public static extern IntPtr PolyDriver_viewIImpedanceControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewITorqueControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewITorqueControl")]
   public static extern IntPtr PolyDriver_viewITorqueControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIControlMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIControlMode")]
   public static extern IntPtr PolyDriver_viewIControlMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_viewIOpenLoopControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_viewIOpenLoopControl")]
   public static extern IntPtr PolyDriver_viewIOpenLoopControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_DriverCreator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_DriverCreator")]
   public static extern void delete_DriverCreator(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DriverCreator_toString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DriverCreator_toString")]
   public static extern string DriverCreator_toString(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DriverCreator_create")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DriverCreator_create")]
   public static extern IntPtr DriverCreator_create(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DriverCreator_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DriverCreator_getName")]
   public static extern string DriverCreator_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DriverCreator_getWrapper")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DriverCreator_getWrapper")]
   public static extern string DriverCreator_getWrapper(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DriverCreator_getCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DriverCreator_getCode")]
   public static extern string DriverCreator_getCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DriverCreator_owner")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DriverCreator_owner")]
   public static extern IntPtr DriverCreator_owner(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_StubDriverCreator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_StubDriverCreator")]
   public static extern IntPtr new_StubDriverCreator(string jarg1, string jarg2, string jarg3, string jarg4, string jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_StubDriverCreator_toString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_StubDriverCreator_toString")]
   public static extern string StubDriverCreator_toString(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_StubDriverCreator_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_StubDriverCreator_getName")]
   public static extern string StubDriverCreator_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_StubDriverCreator_getWrapper")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_StubDriverCreator_getWrapper")]
   public static extern string StubDriverCreator_getWrapper(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_StubDriverCreator_getCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_StubDriverCreator_getCode")]
   public static extern string StubDriverCreator_getCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_StubDriverCreator_create")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_StubDriverCreator_create")]
   public static extern IntPtr StubDriverCreator_create(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_StubDriverCreator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_StubDriverCreator")]
   public static extern void delete_StubDriverCreator(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Drivers_factory")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Drivers_factory")]
   public static extern IntPtr Drivers_factory();
 
-  [DllImport("yarp", EntryPoint="CSharp_Drivers_open__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Drivers_open__SWIG_0")]
   public static extern IntPtr Drivers_open__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Drivers_open__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Drivers_open__SWIG_1")]
   public static extern IntPtr Drivers_open__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Drivers_toString")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Drivers_toString")]
   public static extern string Drivers_toString(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Drivers")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Drivers")]
   public static extern void delete_Drivers(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Drivers_add")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Drivers_add")]
   public static extern void Drivers_add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Drivers_find")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Drivers_find")]
   public static extern IntPtr Drivers_find(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Drivers_remove")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Drivers_remove")]
   public static extern bool Drivers_remove(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Drivers_yarpdev")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Drivers_yarpdev")]
   public static extern int Drivers_yarpdev(int jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IFrameGrabber")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IFrameGrabber")]
   public static extern void delete_IFrameGrabber(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabber_getRawBuffer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabber_getRawBuffer")]
   public static extern bool IFrameGrabber_getRawBuffer(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabber_getRawBufferSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabber_getRawBufferSize")]
   public static extern int IFrameGrabber_getRawBufferSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabber_height")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabber_height")]
   public static extern int IFrameGrabber_height(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabber_width")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabber_width")]
   public static extern int IFrameGrabber_width(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IFrameGrabberRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IFrameGrabberRgb")]
   public static extern void delete_IFrameGrabberRgb(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberRgb_getRgbBuffer")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberRgb_getRgbBuffer")]
   public static extern bool IFrameGrabberRgb_getRgbBuffer(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberRgb_height")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberRgb_height")]
   public static extern int IFrameGrabberRgb_height(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberRgb_width")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberRgb_width")]
   public static extern int IFrameGrabberRgb_width(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IFrameGrabberImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IFrameGrabberImage")]
   public static extern void delete_IFrameGrabberImage(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberImage_getImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberImage_getImage")]
   public static extern bool IFrameGrabberImage_getImage(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberImage_height")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberImage_height")]
   public static extern int IFrameGrabberImage_height(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberImage_width")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberImage_width")]
   public static extern int IFrameGrabberImage_width(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IFrameGrabberImageRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IFrameGrabberImageRaw")]
   public static extern void delete_IFrameGrabberImageRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberImageRaw_getImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberImageRaw_getImage")]
   public static extern bool IFrameGrabberImageRaw_getImage(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberImageRaw_height")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberImageRaw_height")]
   public static extern int IFrameGrabberImageRaw_height(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberImageRaw_width")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberImageRaw_width")]
   public static extern int IFrameGrabberImageRaw_width(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IFrameWriterImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IFrameWriterImage")]
   public static extern void delete_IFrameWriterImage(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameWriterImage_putImage")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameWriterImage_putImage")]
   public static extern bool IFrameWriterImage_putImage(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IFrameGrabberControls")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IFrameGrabberControls")]
   public static extern void delete_IFrameGrabberControls(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setBrightness")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setBrightness")]
   public static extern bool IFrameGrabberControls_setBrightness(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setExposure")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setExposure")]
   public static extern bool IFrameGrabberControls_setExposure(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setSharpness")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setSharpness")]
   public static extern bool IFrameGrabberControls_setSharpness(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setWhiteBalance")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setWhiteBalance")]
   public static extern bool IFrameGrabberControls_setWhiteBalance(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setHue")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setHue")]
   public static extern bool IFrameGrabberControls_setHue(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setSaturation")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setSaturation")]
   public static extern bool IFrameGrabberControls_setSaturation(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setGamma")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setGamma")]
   public static extern bool IFrameGrabberControls_setGamma(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setShutter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setShutter")]
   public static extern bool IFrameGrabberControls_setShutter(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setGain")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setGain")]
   public static extern bool IFrameGrabberControls_setGain(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_setIris")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_setIris")]
   public static extern bool IFrameGrabberControls_setIris(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getBrightness")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getBrightness")]
   public static extern double IFrameGrabberControls_getBrightness(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getExposure")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getExposure")]
   public static extern double IFrameGrabberControls_getExposure(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getSharpness")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getSharpness")]
   public static extern double IFrameGrabberControls_getSharpness(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getWhiteBalance")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getWhiteBalance")]
   public static extern bool IFrameGrabberControls_getWhiteBalance(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getHue")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getHue")]
   public static extern double IFrameGrabberControls_getHue(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getSaturation")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getSaturation")]
   public static extern double IFrameGrabberControls_getSaturation(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getGamma")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getGamma")]
   public static extern double IFrameGrabberControls_getGamma(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getShutter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getShutter")]
   public static extern double IFrameGrabberControls_getShutter(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getGain")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getGain")]
   public static extern double IFrameGrabberControls_getGain(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControls_getIris")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControls_getIris")]
   public static extern double IFrameGrabberControls_getIris(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasFeatureDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasFeatureDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_hasFeatureDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setFeatureDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setFeatureDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setFeatureDC1394(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFeatureDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFeatureDC1394")]
   public static extern double IFrameGrabberControlsDC1394_getFeatureDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasOnOffDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasOnOffDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_hasOnOffDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setActiveDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setActiveDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setActiveDC1394(HandleRef jarg1, int jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getActiveDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getActiveDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_getActiveDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasAutoDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasAutoDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_hasAutoDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasManualDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasManualDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_hasManualDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasOnePushDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_hasOnePushDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_hasOnePushDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setModeDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setModeDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setModeDC1394(HandleRef jarg1, int jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getModeDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getModeDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_getModeDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setOnePushDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setOnePushDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setOnePushDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getVideoModeMaskDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getVideoModeMaskDC1394")]
   public static extern uint IFrameGrabberControlsDC1394_getVideoModeMaskDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getVideoModeDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getVideoModeDC1394")]
   public static extern uint IFrameGrabberControlsDC1394_getVideoModeDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setVideoModeDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setVideoModeDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setVideoModeDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFPSMaskDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFPSMaskDC1394")]
   public static extern uint IFrameGrabberControlsDC1394_getFPSMaskDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFPSDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFPSDC1394")]
   public static extern uint IFrameGrabberControlsDC1394_getFPSDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setFPSDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setFPSDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setFPSDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getISOSpeedDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getISOSpeedDC1394")]
   public static extern uint IFrameGrabberControlsDC1394_getISOSpeedDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setISOSpeedDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setISOSpeedDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setISOSpeedDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getColorCodingMaskDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getColorCodingMaskDC1394")]
   public static extern uint IFrameGrabberControlsDC1394_getColorCodingMaskDC1394(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getColorCodingDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getColorCodingDC1394")]
   public static extern uint IFrameGrabberControlsDC1394_getColorCodingDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setColorCodingDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setColorCodingDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setColorCodingDC1394(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setWhiteBalanceDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setWhiteBalanceDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setWhiteBalanceDC1394(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getWhiteBalanceDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getWhiteBalanceDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_getWhiteBalanceDC1394(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFormat7MaxWindowDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFormat7MaxWindowDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_getFormat7MaxWindowDC1394(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5, HandleRef jarg6, HandleRef jarg7);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFormat7WindowDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getFormat7WindowDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_getFormat7WindowDC1394(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setFormat7WindowDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setFormat7WindowDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setFormat7WindowDC1394(HandleRef jarg1, uint jarg2, uint jarg3, int jarg4, int jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setOperationModeDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setOperationModeDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setOperationModeDC1394(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getOperationModeDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getOperationModeDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_getOperationModeDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setTransmissionDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setTransmissionDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setTransmissionDC1394(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getTransmissionDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getTransmissionDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_getTransmissionDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setBroadcastDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setBroadcastDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setBroadcastDC1394(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setDefaultsDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setDefaultsDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setDefaultsDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setResetDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setResetDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setResetDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setPowerDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setPowerDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setPowerDC1394(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setCaptureDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setCaptureDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setCaptureDC1394(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getBytesPerPacketDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_getBytesPerPacketDC1394")]
   public static extern uint IFrameGrabberControlsDC1394_getBytesPerPacketDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setBytesPerPacketDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_setBytesPerPacketDC1394")]
   public static extern bool IFrameGrabberControlsDC1394_setBytesPerPacketDC1394(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IFrameGrabberControlsDC1394")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IFrameGrabberControlsDC1394")]
   public static extern void delete_IFrameGrabberControlsDC1394(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IAudioVisualGrabber")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IAudioVisualGrabber")]
   public static extern void delete_IAudioVisualGrabber(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAudioVisualGrabber_getAudioVisual")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAudioVisualGrabber_getAudioVisual")]
   public static extern bool IAudioVisualGrabber_getAudioVisual(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IFrameWriterAudioVisual")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IFrameWriterAudioVisual")]
   public static extern void delete_IFrameWriterAudioVisual(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameWriterAudioVisual_putAudioVisual")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameWriterAudioVisual_putAudioVisual")]
   public static extern bool IFrameWriterAudioVisual_putAudioVisual(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IAudioVisualStream")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IAudioVisualStream")]
   public static extern void delete_IAudioVisualStream(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAudioVisualStream_hasAudio")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAudioVisualStream_hasAudio")]
   public static extern bool IAudioVisualStream_hasAudio(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAudioVisualStream_hasVideo")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAudioVisualStream_hasVideo")]
   public static extern bool IAudioVisualStream_hasVideo(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAudioVisualStream_hasRawVideo")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAudioVisualStream_hasRawVideo")]
   public static extern bool IAudioVisualStream_hasRawVideo(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_type_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_type_set")]
   public static extern void CalibrationParameters_type_set(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_type_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_type_get")]
   public static extern uint CalibrationParameters_type_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_param1_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param1_set")]
   public static extern void CalibrationParameters_param1_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_param1_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param1_get")]
   public static extern double CalibrationParameters_param1_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_param2_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param2_set")]
   public static extern void CalibrationParameters_param2_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_param2_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param2_get")]
   public static extern double CalibrationParameters_param2_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_param3_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param3_set")]
   public static extern void CalibrationParameters_param3_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_param3_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param3_get")]
   public static extern double CalibrationParameters_param3_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_param4_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param4_set")]
   public static extern void CalibrationParameters_param4_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CalibrationParameters_param4_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param4_get")]
   public static extern double CalibrationParameters_param4_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_CalibrationParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param5_set")]
+  public static extern void CalibrationParameters_param5_set(HandleRef jarg1, double jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param5_get")]
+  public static extern double CalibrationParameters_param5_get(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_paramZero_set")]
+  public static extern void CalibrationParameters_paramZero_set(HandleRef jarg1, double jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_paramZero_get")]
+  public static extern double CalibrationParameters_paramZero_get(HandleRef jarg1);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_CalibrationParameters")]
   public static extern IntPtr new_CalibrationParameters();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_CalibrationParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_CalibrationParameters")]
   public static extern void delete_CalibrationParameters(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IPidControlRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IPidControlRaw")]
   public static extern void delete_IPidControlRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_setPidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_setPidRaw")]
   public static extern bool IPidControlRaw_setPidRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_setPidsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_setPidsRaw")]
   public static extern bool IPidControlRaw_setPidsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_setReferenceRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_setReferenceRaw")]
   public static extern bool IPidControlRaw_setReferenceRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_setReferencesRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_setReferencesRaw")]
   public static extern bool IPidControlRaw_setReferencesRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_setErrorLimitRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_setErrorLimitRaw")]
   public static extern bool IPidControlRaw_setErrorLimitRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_setErrorLimitsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_setErrorLimitsRaw")]
   public static extern bool IPidControlRaw_setErrorLimitsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getErrorRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getErrorRaw")]
   public static extern bool IPidControlRaw_getErrorRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getErrorsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getErrorsRaw")]
   public static extern bool IPidControlRaw_getErrorsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getOutputRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getOutputRaw")]
   public static extern bool IPidControlRaw_getOutputRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getOutputsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getOutputsRaw")]
   public static extern bool IPidControlRaw_getOutputsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getPidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getPidRaw")]
   public static extern bool IPidControlRaw_getPidRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getPidsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getPidsRaw")]
   public static extern bool IPidControlRaw_getPidsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getReferenceRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getReferenceRaw")]
   public static extern bool IPidControlRaw_getReferenceRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getReferencesRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getReferencesRaw")]
   public static extern bool IPidControlRaw_getReferencesRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getErrorLimitRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getErrorLimitRaw")]
   public static extern bool IPidControlRaw_getErrorLimitRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_getErrorLimitsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_getErrorLimitsRaw")]
   public static extern bool IPidControlRaw_getErrorLimitsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_resetPidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_resetPidRaw")]
   public static extern bool IPidControlRaw_resetPidRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_disablePidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_disablePidRaw")]
   public static extern bool IPidControlRaw_disablePidRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_enablePidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_enablePidRaw")]
   public static extern bool IPidControlRaw_enablePidRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControlRaw_setOffsetRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControlRaw_setOffsetRaw")]
   public static extern bool IPidControlRaw_setOffsetRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IPidControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IPidControl")]
   public static extern void delete_IPidControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setPids__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setPids__SWIG_0")]
   public static extern bool IPidControl_setPids__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setReference")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setReference")]
   public static extern bool IPidControl_setReference(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setReferences__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setReferences__SWIG_0")]
   public static extern bool IPidControl_setReferences__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setErrorLimit")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setErrorLimit")]
   public static extern bool IPidControl_setErrorLimit(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setErrorLimits__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setErrorLimits__SWIG_0")]
   public static extern bool IPidControl_setErrorLimits__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getError__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getError__SWIG_0")]
   public static extern bool IPidControl_getError__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getErrors__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getErrors__SWIG_0")]
   public static extern bool IPidControl_getErrors__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getOutput__SWIG_0")]
   public static extern bool IPidControl_getOutput__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getOutputs__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getOutputs__SWIG_0")]
   public static extern bool IPidControl_getOutputs__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getPids__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getPids__SWIG_0")]
   public static extern bool IPidControl_getPids__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getReference__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getReference__SWIG_0")]
   public static extern bool IPidControl_getReference__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getReferences__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getReferences__SWIG_0")]
   public static extern bool IPidControl_getReferences__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getErrorLimit__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getErrorLimit__SWIG_0")]
   public static extern bool IPidControl_getErrorLimit__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getErrorLimits__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getErrorLimits__SWIG_0")]
   public static extern bool IPidControl_getErrorLimits__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_resetPid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_resetPid")]
   public static extern bool IPidControl_resetPid(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_disablePid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_disablePid")]
   public static extern bool IPidControl_disablePid(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_enablePid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_enablePid")]
   public static extern bool IPidControl_enablePid(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setOffset")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setOffset")]
   public static extern bool IPidControl_setOffset(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setReferences__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setReferences__SWIG_1")]
   public static extern bool IPidControl_setReferences__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getReference__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getReference__SWIG_1")]
   public static extern bool IPidControl_getReference__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getReferences__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getReferences__SWIG_1")]
   public static extern bool IPidControl_getReferences__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setErrorLimits__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setErrorLimits__SWIG_1")]
   public static extern bool IPidControl_setErrorLimits__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getErrorLimit__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getErrorLimit__SWIG_1")]
   public static extern bool IPidControl_getErrorLimit__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getErrorLimits__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getErrorLimits__SWIG_1")]
   public static extern bool IPidControl_getErrorLimits__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getError__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getError__SWIG_1")]
   public static extern bool IPidControl_getError__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getErrors__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getErrors__SWIG_1")]
   public static extern bool IPidControl_getErrors__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getOutput__SWIG_1")]
   public static extern bool IPidControl_getOutput__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getOutputs__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getOutputs__SWIG_1")]
   public static extern bool IPidControl_getOutputs__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setPid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setPid")]
   public static extern bool IPidControl_setPid(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_setPids__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_setPids__SWIG_1")]
   public static extern bool IPidControl_setPids__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getPid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getPid")]
   public static extern bool IPidControl_getPid(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPidControl_getPids__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPidControl_getPids__SWIG_1")]
   public static extern bool IPidControl_getPids__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IAmplifierControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IAmplifierControl")]
   public static extern void delete_IAmplifierControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_enableAmp")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_enableAmp")]
   public static extern bool IAmplifierControl_enableAmp(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_disableAmp")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_disableAmp")]
   public static extern bool IAmplifierControl_disableAmp(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_getCurrents__SWIG_0")]
-  public static extern bool IAmplifierControl_getCurrents__SWIG_0(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_getCurrent__SWIG_0")]
-  public static extern bool IAmplifierControl_getCurrent__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_getMaxCurrent")]
-  public static extern bool IAmplifierControl_getMaxCurrent(HandleRef jarg1, int jarg2, HandleRef jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_setMaxCurrent")]
-  public static extern bool IAmplifierControl_setMaxCurrent(HandleRef jarg1, int jarg2, double jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_getAmpStatus__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getAmpStatus__SWIG_0")]
   public static extern bool IAmplifierControl_getAmpStatus__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_getAmpStatus__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getAmpStatus__SWIG_1")]
   public static extern bool IAmplifierControl_getAmpStatus__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_getCurrents__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getCurrents__SWIG_0")]
+  public static extern bool IAmplifierControl_getCurrents__SWIG_0(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getCurrent__SWIG_0")]
+  public static extern bool IAmplifierControl_getCurrent__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getMaxCurrent")]
+  public static extern bool IAmplifierControl_getMaxCurrent(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_setMaxCurrent")]
+  public static extern bool IAmplifierControl_setMaxCurrent(HandleRef jarg1, int jarg2, double jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getNominalCurrent")]
+  public static extern bool IAmplifierControl_getNominalCurrent(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getPeakCurrent")]
+  public static extern bool IAmplifierControl_getPeakCurrent(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_setPeakCurrent")]
+  public static extern bool IAmplifierControl_setPeakCurrent(HandleRef jarg1, int jarg2, double jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getPWM")]
+  public static extern bool IAmplifierControl_getPWM(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getPWMLimit")]
+  public static extern bool IAmplifierControl_getPWMLimit(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_setPWMLimit")]
+  public static extern bool IAmplifierControl_setPWMLimit(HandleRef jarg1, int jarg2, double jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getPowerSupplyVoltage")]
+  public static extern bool IAmplifierControl_getPowerSupplyVoltage(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getCurrents__SWIG_1")]
   public static extern bool IAmplifierControl_getCurrents__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControl_getCurrent__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getCurrent__SWIG_1")]
   public static extern bool IAmplifierControl_getCurrent__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IAmplifierControlRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IAmplifierControlRaw")]
   public static extern void delete_IAmplifierControlRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControlRaw_enableAmpRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_enableAmpRaw")]
   public static extern bool IAmplifierControlRaw_enableAmpRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControlRaw_disableAmpRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_disableAmpRaw")]
   public static extern bool IAmplifierControlRaw_disableAmpRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControlRaw_getCurrentsRaw")]
-  public static extern bool IAmplifierControlRaw_getCurrentsRaw(HandleRef jarg1, HandleRef jarg2);
-
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControlRaw_getCurrentRaw")]
-  public static extern bool IAmplifierControlRaw_getCurrentRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControlRaw_setMaxCurrentRaw")]
-  public static extern bool IAmplifierControlRaw_setMaxCurrentRaw(HandleRef jarg1, int jarg2, double jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControlRaw_getMaxCurrentRaw")]
-  public static extern bool IAmplifierControlRaw_getMaxCurrentRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
-
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_0")]
   public static extern bool IAmplifierControlRaw_getAmpStatusRaw__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_1")]
   public static extern bool IAmplifierControlRaw_getAmpStatusRaw__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlCalibrationRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getCurrentsRaw")]
+  public static extern bool IAmplifierControlRaw_getCurrentsRaw(HandleRef jarg1, HandleRef jarg2);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_getCurrentRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_setMaxCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_setMaxCurrentRaw(HandleRef jarg1, int jarg2, double jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getMaxCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_getMaxCurrentRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getNominalCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_getNominalCurrentRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getPeakCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_getPeakCurrentRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_setPeakCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_setPeakCurrentRaw(HandleRef jarg1, int jarg2, double jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getPWMRaw")]
+  public static extern bool IAmplifierControlRaw_getPWMRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getPWMLimitRaw")]
+  public static extern bool IAmplifierControlRaw_getPWMLimitRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_setPWMLimitRaw")]
+  public static extern bool IAmplifierControlRaw_setPWMLimitRaw(HandleRef jarg1, int jarg2, double jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getPowerSupplyVoltageRaw")]
+  public static extern bool IAmplifierControlRaw_getPowerSupplyVoltageRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlCalibrationRaw")]
   public static extern void delete_IControlCalibrationRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibrationRaw_calibrateRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibrationRaw_calibrateRaw")]
   public static extern bool IControlCalibrationRaw_calibrateRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibrationRaw_doneRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibrationRaw_doneRaw")]
   public static extern bool IControlCalibrationRaw_doneRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlCalibration2Raw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlCalibration2Raw")]
   public static extern void delete_IControlCalibration2Raw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2Raw_calibrate2Raw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2Raw_calibrate2Raw")]
   public static extern bool IControlCalibration2Raw_calibrate2Raw(HandleRef jarg1, int jarg2, uint jarg3, double jarg4, double jarg5, double jarg6);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2Raw_setCalibrationParametersRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2Raw_setCalibrationParametersRaw")]
   public static extern bool IControlCalibration2Raw_setCalibrationParametersRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2Raw_doneRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2Raw_doneRaw")]
   public static extern bool IControlCalibration2Raw_doneRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlCalibration")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlCalibration")]
   public static extern void delete_IControlCalibration(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration_calibrate__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration_calibrate__SWIG_0")]
   public static extern bool IControlCalibration_calibrate__SWIG_0(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration_done")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration_done")]
   public static extern bool IControlCalibration_done(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration_setCalibrator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration_setCalibrator")]
   public static extern bool IControlCalibration_setCalibrator(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration_calibrate__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration_calibrate__SWIG_1")]
   public static extern bool IControlCalibration_calibrate__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration_park__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration_park__SWIG_0")]
   public static extern bool IControlCalibration_park__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration_park__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration_park__SWIG_1")]
   public static extern bool IControlCalibration_park__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlCalibration2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlCalibration2")]
   public static extern void delete_IControlCalibration2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_calibrate2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_calibrate2")]
   public static extern bool IControlCalibration2_calibrate2(HandleRef jarg1, int jarg2, uint jarg3, double jarg4, double jarg5, double jarg6);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_setCalibrationParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_setCalibrationParameters")]
   public static extern bool IControlCalibration2_setCalibrationParameters(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_done")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_done")]
   public static extern bool IControlCalibration2_done(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_setCalibrator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_setCalibrator")]
   public static extern bool IControlCalibration2_setCalibrator(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_calibrate")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_calibrate")]
   public static extern bool IControlCalibration2_calibrate(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_park__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_park__SWIG_0")]
   public static extern bool IControlCalibration2_park__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_park__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_park__SWIG_1")]
   public static extern bool IControlCalibration2_park__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_abortCalibration")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_abortCalibration")]
   public static extern bool IControlCalibration2_abortCalibration(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlCalibration2_abortPark")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlCalibration2_abortPark")]
   public static extern bool IControlCalibration2_abortPark(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlDebug")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlDebug")]
   public static extern void delete_IControlDebug(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlDebug_setPrintFunction")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlDebug_setPrintFunction")]
   public static extern bool IControlDebug_setPrintFunction(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlDebug_loadBootMemory")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlDebug_loadBootMemory")]
   public static extern bool IControlDebug_loadBootMemory(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlDebug_saveBootMemory")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlDebug_saveBootMemory")]
   public static extern bool IControlDebug_saveBootMemory(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlLimits")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlLimits")]
   public static extern void delete_IControlLimits(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlLimits_setLimits")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlLimits_setLimits")]
   public static extern bool IControlLimits_setLimits(HandleRef jarg1, int jarg2, double jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlLimits_getLimits__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlLimits_getLimits__SWIG_0")]
   public static extern bool IControlLimits_getLimits__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlLimits_getLimits__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlLimits_getLimits__SWIG_1")]
   public static extern bool IControlLimits_getLimits__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlLimitsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlLimitsRaw")]
   public static extern void delete_IControlLimitsRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlLimitsRaw_setLimitsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlLimitsRaw_setLimitsRaw")]
   public static extern bool IControlLimitsRaw_setLimitsRaw(HandleRef jarg1, int jarg2, double jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlLimitsRaw_getLimitsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlLimitsRaw_getLimitsRaw")]
   public static extern bool IControlLimitsRaw_getLimitsRaw(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IAxisInfo")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IAxisInfo")]
   public static extern void delete_IAxisInfo(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAxisInfo_getAxisName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAxisInfo_getAxisName")]
   public static extern bool IAxisInfo_getAxisName(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IAxisInfoRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAxisInfo_getJointType")]
+  public static extern bool IAxisInfo_getJointType(HandleRef jarg1, int jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IAxisInfoRaw")]
   public static extern void delete_IAxisInfoRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IAxisInfoRaw_getAxisNameRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAxisInfoRaw_getAxisNameRaw")]
   public static extern bool IAxisInfoRaw_getAxisNameRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CALIBRATE_JOINT_get")]
-  public static extern int VOCAB_CALIBRATE_JOINT_get();
+  [DllImport("yarp_cs", EntryPoint="CSharp_IAxisInfoRaw_getJointTypeRaw")]
+  public static extern bool IAxisInfoRaw_getJointTypeRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CALIBRATE_JOINT_PARAMS_get")]
-  public static extern int VOCAB_CALIBRATE_JOINT_PARAMS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CALIBRATE_get")]
-  public static extern int VOCAB_CALIBRATE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ABORTCALIB_get")]
-  public static extern int VOCAB_ABORTCALIB_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ABORTPARK_get")]
-  public static extern int VOCAB_ABORTPARK_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CALIBRATE_DONE_get")]
-  public static extern int VOCAB_CALIBRATE_DONE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_PARK_get")]
-  public static extern int VOCAB_PARK_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_SET_get")]
-  public static extern int VOCAB_SET_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_GET_get")]
-  public static extern int VOCAB_GET_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_IS_get")]
-  public static extern int VOCAB_IS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_FAILED_get")]
-  public static extern int VOCAB_FAILED_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OK_get")]
-  public static extern int VOCAB_OK_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OFFSET_get")]
-  public static extern int VOCAB_OFFSET_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_PID_get")]
-  public static extern int VOCAB_PID_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_PIDS_get")]
-  public static extern int VOCAB_PIDS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REF_get")]
-  public static extern int VOCAB_REF_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REFS_get")]
-  public static extern int VOCAB_REFS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REFG_get")]
-  public static extern int VOCAB_REFG_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_LIM_get")]
-  public static extern int VOCAB_LIM_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_LIMS_get")]
-  public static extern int VOCAB_LIMS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_RESET_get")]
-  public static extern int VOCAB_RESET_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_DISABLE_get")]
-  public static extern int VOCAB_DISABLE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ENABLE_get")]
-  public static extern int VOCAB_ENABLE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ERR_get")]
-  public static extern int VOCAB_ERR_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ERRS_get")]
-  public static extern int VOCAB_ERRS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OUTPUT_get")]
-  public static extern int VOCAB_OUTPUT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OUTPUTS_get")]
-  public static extern int VOCAB_OUTPUTS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REFERENCE_get")]
-  public static extern int VOCAB_REFERENCE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REFERENCES_get")]
-  public static extern int VOCAB_REFERENCES_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_AXES_get")]
-  public static extern int VOCAB_AXES_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_MOTION_DONE_get")]
-  public static extern int VOCAB_MOTION_DONE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_MOTION_DONES_get")]
-  public static extern int VOCAB_MOTION_DONES_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_POSITION_MODE_get")]
-  public static extern int VOCAB_POSITION_MODE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_POSITION_MOVE_get")]
-  public static extern int VOCAB_POSITION_MOVE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_POSITION_MOVES_get")]
-  public static extern int VOCAB_POSITION_MOVES_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_RELATIVE_MOVE_get")]
-  public static extern int VOCAB_RELATIVE_MOVE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_RELATIVE_MOVES_get")]
-  public static extern int VOCAB_RELATIVE_MOVES_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REF_SPEED_get")]
-  public static extern int VOCAB_REF_SPEED_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REF_SPEEDS_get")]
-  public static extern int VOCAB_REF_SPEEDS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REF_ACCELERATION_get")]
-  public static extern int VOCAB_REF_ACCELERATION_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REF_ACCELERATIONS_get")]
-  public static extern int VOCAB_REF_ACCELERATIONS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_STOP_get")]
-  public static extern int VOCAB_STOP_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_STOPS_get")]
-  public static extern int VOCAB_STOPS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_VELOCITY_MODE_get")]
-  public static extern int VOCAB_VELOCITY_MODE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_VELOCITY_MOVE_get")]
-  public static extern int VOCAB_VELOCITY_MOVE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_VELOCITY_MOVES_get")]
-  public static extern int VOCAB_VELOCITY_MOVES_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_AMP_ENABLE_get")]
-  public static extern int VOCAB_AMP_ENABLE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_AMP_DISABLE_get")]
-  public static extern int VOCAB_AMP_DISABLE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_AMP_CURRENT_get")]
-  public static extern int VOCAB_AMP_CURRENT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_AMP_CURRENTS_get")]
-  public static extern int VOCAB_AMP_CURRENTS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_AMP_MAXCURRENT_get")]
-  public static extern int VOCAB_AMP_MAXCURRENT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_AMP_STATUS_get")]
-  public static extern int VOCAB_AMP_STATUS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_AMP_STATUS_SINGLE_get")]
-  public static extern int VOCAB_AMP_STATUS_SINGLE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_LIMITS_get")]
-  public static extern int VOCAB_LIMITS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OPENLOOP_MODE_get")]
-  public static extern int VOCAB_OPENLOOP_MODE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_INFO_NAME_get")]
-  public static extern int VOCAB_INFO_NAME_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_TIMESTAMP_get")]
-  public static extern int VOCAB_TIMESTAMP_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_TORQUE_get")]
-  public static extern int VOCAB_TORQUE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_TORQUE_MODE_get")]
-  public static extern int VOCAB_TORQUE_MODE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_TRQS_get")]
-  public static extern int VOCAB_TRQS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_TRQ_get")]
-  public static extern int VOCAB_TRQ_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_BEMF_get")]
-  public static extern int VOCAB_BEMF_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_MOTOR_PARAMS_get")]
-  public static extern int VOCAB_MOTOR_PARAMS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_RANGES_get")]
-  public static extern int VOCAB_RANGES_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_RANGE_get")]
-  public static extern int VOCAB_RANGE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_IMP_PARAM_get")]
-  public static extern int VOCAB_IMP_PARAM_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_IMP_OFFSET_get")]
-  public static extern int VOCAB_IMP_OFFSET_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_TORQUES_DIRECTS_get")]
-  public static extern int VOCAB_TORQUES_DIRECTS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_TORQUES_DIRECT_get")]
-  public static extern int VOCAB_TORQUES_DIRECT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_TORQUES_DIRECT_GROUP_get")]
-  public static extern int VOCAB_TORQUES_DIRECT_GROUP_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_PROTOCOL_VERSION_get")]
-  public static extern int VOCAB_PROTOCOL_VERSION_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_Pid_kp_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_kp_set")]
   public static extern void Pid_kp_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_kp_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_kp_get")]
   public static extern double Pid_kp_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_kd_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_kd_set")]
   public static extern void Pid_kd_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_kd_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_kd_get")]
   public static extern double Pid_kd_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_ki_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_ki_set")]
   public static extern void Pid_ki_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_ki_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_ki_get")]
   public static extern double Pid_ki_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_max_int_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_max_int_set")]
   public static extern void Pid_max_int_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_max_int_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_max_int_get")]
   public static extern double Pid_max_int_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_scale_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_scale_set")]
   public static extern void Pid_scale_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_scale_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_scale_get")]
   public static extern double Pid_scale_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_max_output_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_max_output_set")]
   public static extern void Pid_max_output_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_max_output_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_max_output_get")]
   public static extern double Pid_max_output_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_offset_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_offset_set")]
   public static extern void Pid_offset_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_offset_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_offset_get")]
   public static extern double Pid_offset_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_stiction_up_val_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_stiction_up_val_set")]
   public static extern void Pid_stiction_up_val_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_stiction_up_val_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_stiction_up_val_get")]
   public static extern double Pid_stiction_up_val_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_stiction_down_val_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_stiction_down_val_set")]
   public static extern void Pid_stiction_down_val_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_stiction_down_val_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_stiction_down_val_get")]
   public static extern double Pid_stiction_down_val_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_kff_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_kff_set")]
   public static extern void Pid_kff_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_kff_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_kff_get")]
   public static extern double Pid_kff_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Pid__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Pid__SWIG_0")]
   public static extern IntPtr new_Pid__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_Pid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_Pid")]
   public static extern void delete_Pid(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Pid__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Pid__SWIG_1")]
   public static extern IntPtr new_Pid__SWIG_1(double jarg1, double jarg2, double jarg3, double jarg4, double jarg5, double jarg6);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_Pid__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_Pid__SWIG_2")]
   public static extern IntPtr new_Pid__SWIG_2(double jarg1, double jarg2, double jarg3, double jarg4, double jarg5, double jarg6, double jarg7, double jarg8, double jarg9);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_setMaxInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_setMaxInt")]
   public static extern void Pid_setMaxInt(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_setMaxOut")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_setMaxOut")]
   public static extern void Pid_setMaxOut(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_Pid_setStictionValues")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Pid_setStictionValues")]
   public static extern void Pid_setStictionValues(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventParameters_type_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventParameters_type_set")]
   public static extern void CartesianEventParameters_type_set(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventParameters_type_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventParameters_type_get")]
   public static extern string CartesianEventParameters_type_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventParameters_motionOngoingCheckPoint_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventParameters_motionOngoingCheckPoint_set")]
   public static extern void CartesianEventParameters_motionOngoingCheckPoint_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventParameters_motionOngoingCheckPoint_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventParameters_motionOngoingCheckPoint_get")]
   public static extern double CartesianEventParameters_motionOngoingCheckPoint_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_CartesianEventParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_CartesianEventParameters")]
   public static extern IntPtr new_CartesianEventParameters();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_CartesianEventParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_CartesianEventParameters")]
   public static extern void delete_CartesianEventParameters(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventVariables_type_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventVariables_type_set")]
   public static extern void CartesianEventVariables_type_set(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventVariables_type_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventVariables_type_get")]
   public static extern string CartesianEventVariables_type_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventVariables_time_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventVariables_time_set")]
   public static extern void CartesianEventVariables_time_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventVariables_time_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventVariables_time_get")]
   public static extern double CartesianEventVariables_time_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventVariables_motionOngoingCheckPoint_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventVariables_motionOngoingCheckPoint_set")]
   public static extern void CartesianEventVariables_motionOngoingCheckPoint_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEventVariables_motionOngoingCheckPoint_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEventVariables_motionOngoingCheckPoint_get")]
   public static extern double CartesianEventVariables_motionOngoingCheckPoint_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_CartesianEventVariables")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_CartesianEventVariables")]
   public static extern IntPtr new_CartesianEventVariables();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_CartesianEventVariables")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_CartesianEventVariables")]
   public static extern void delete_CartesianEventVariables(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_CartesianEvent")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_CartesianEvent")]
   public static extern void delete_CartesianEvent(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEvent_cartesianEventParameters_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEvent_cartesianEventParameters_set")]
   public static extern void CartesianEvent_cartesianEventParameters_set(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEvent_cartesianEventParameters_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEvent_cartesianEventParameters_get")]
   public static extern IntPtr CartesianEvent_cartesianEventParameters_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEvent_cartesianEventVariables_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEvent_cartesianEventVariables_set")]
   public static extern void CartesianEvent_cartesianEventVariables_set(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEvent_cartesianEventVariables_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEvent_cartesianEventVariables_get")]
   public static extern IntPtr CartesianEvent_cartesianEventVariables_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_CartesianEvent_cartesianEventCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_CartesianEvent_cartesianEventCallback")]
   public static extern void CartesianEvent_cartesianEventCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ICartesianControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ICartesianControl")]
   public static extern void delete_ICartesianControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setTrackingMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setTrackingMode")]
   public static extern bool ICartesianControl_setTrackingMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getTrackingMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getTrackingMode")]
   public static extern bool ICartesianControl_getTrackingMode(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setReferenceMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setReferenceMode")]
   public static extern bool ICartesianControl_setReferenceMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getReferenceMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getReferenceMode")]
   public static extern bool ICartesianControl_getReferenceMode(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setPosePriority")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setPosePriority")]
   public static extern bool ICartesianControl_setPosePriority(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getPosePriority")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getPosePriority")]
   public static extern bool ICartesianControl_getPosePriority(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getPose__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getPose__SWIG_0")]
   public static extern bool ICartesianControl_getPose__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getPose__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getPose__SWIG_1")]
   public static extern bool ICartesianControl_getPose__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getPose__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getPose__SWIG_2")]
   public static extern bool ICartesianControl_getPose__SWIG_2(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getPose__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getPose__SWIG_3")]
   public static extern bool ICartesianControl_getPose__SWIG_3(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_goToPose__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_goToPose__SWIG_0")]
   public static extern bool ICartesianControl_goToPose__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_goToPose__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_goToPose__SWIG_1")]
   public static extern bool ICartesianControl_goToPose__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_goToPosition__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_goToPosition__SWIG_0")]
   public static extern bool ICartesianControl_goToPosition__SWIG_0(HandleRef jarg1, HandleRef jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_goToPosition__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_goToPosition__SWIG_1")]
   public static extern bool ICartesianControl_goToPosition__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_goToPoseSync__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_goToPoseSync__SWIG_0")]
   public static extern bool ICartesianControl_goToPoseSync__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_goToPoseSync__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_goToPoseSync__SWIG_1")]
   public static extern bool ICartesianControl_goToPoseSync__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_goToPositionSync__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_goToPositionSync__SWIG_0")]
   public static extern bool ICartesianControl_goToPositionSync__SWIG_0(HandleRef jarg1, HandleRef jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_goToPositionSync__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_goToPositionSync__SWIG_1")]
   public static extern bool ICartesianControl_goToPositionSync__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getDesired")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getDesired")]
   public static extern bool ICartesianControl_getDesired(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_askForPose__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_askForPose__SWIG_0")]
   public static extern bool ICartesianControl_askForPose__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5, HandleRef jarg6);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_askForPose__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_askForPose__SWIG_1")]
   public static extern bool ICartesianControl_askForPose__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5, HandleRef jarg6, HandleRef jarg7);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_askForPosition__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_askForPosition__SWIG_0")]
   public static extern bool ICartesianControl_askForPosition__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_askForPosition__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_askForPosition__SWIG_1")]
   public static extern bool ICartesianControl_askForPosition__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5, HandleRef jarg6);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getDOF")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getDOF")]
   public static extern bool ICartesianControl_getDOF(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setDOF")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setDOF")]
   public static extern bool ICartesianControl_setDOF(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getRestPos")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getRestPos")]
   public static extern bool ICartesianControl_getRestPos(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setRestPos")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setRestPos")]
   public static extern bool ICartesianControl_setRestPos(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getRestWeights")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getRestWeights")]
   public static extern bool ICartesianControl_getRestWeights(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setRestWeights")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setRestWeights")]
   public static extern bool ICartesianControl_setRestWeights(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getLimits")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getLimits")]
   public static extern bool ICartesianControl_getLimits(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setLimits")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setLimits")]
   public static extern bool ICartesianControl_setLimits(HandleRef jarg1, int jarg2, double jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getTrajTime")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getTrajTime")]
   public static extern bool ICartesianControl_getTrajTime(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setTrajTime")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setTrajTime")]
   public static extern bool ICartesianControl_setTrajTime(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getInTargetTol")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getInTargetTol")]
   public static extern bool ICartesianControl_getInTargetTol(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setInTargetTol")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setInTargetTol")]
   public static extern bool ICartesianControl_setInTargetTol(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getJointsVelocities")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getJointsVelocities")]
   public static extern bool ICartesianControl_getJointsVelocities(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getTaskVelocities")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getTaskVelocities")]
   public static extern bool ICartesianControl_getTaskVelocities(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_setTaskVelocities")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_setTaskVelocities")]
   public static extern bool ICartesianControl_setTaskVelocities(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_attachTipFrame")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_attachTipFrame")]
   public static extern bool ICartesianControl_attachTipFrame(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getTipFrame")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getTipFrame")]
   public static extern bool ICartesianControl_getTipFrame(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_removeTipFrame")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_removeTipFrame")]
   public static extern bool ICartesianControl_removeTipFrame(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_checkMotionDone__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_checkMotionDone__SWIG_0")]
   public static extern bool ICartesianControl_checkMotionDone__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_waitMotionDone__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_waitMotionDone__SWIG_0")]
   public static extern bool ICartesianControl_waitMotionDone__SWIG_0(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_waitMotionDone__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_waitMotionDone__SWIG_1")]
   public static extern bool ICartesianControl_waitMotionDone__SWIG_1(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_waitMotionDone__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_waitMotionDone__SWIG_2")]
   public static extern bool ICartesianControl_waitMotionDone__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_stopControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_stopControl")]
   public static extern bool ICartesianControl_stopControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_storeContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_storeContext")]
   public static extern bool ICartesianControl_storeContext(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_restoreContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_restoreContext")]
   public static extern bool ICartesianControl_restoreContext(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_deleteContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_deleteContext")]
   public static extern bool ICartesianControl_deleteContext(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_getInfo")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_getInfo")]
   public static extern bool ICartesianControl_getInfo(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_registerEvent")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_registerEvent")]
   public static extern bool ICartesianControl_registerEvent(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_unregisterEvent")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_unregisterEvent")]
   public static extern bool ICartesianControl_unregisterEvent(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_tweakSet")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_tweakSet")]
   public static extern bool ICartesianControl_tweakSet(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_tweakGet")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_tweakGet")]
   public static extern bool ICartesianControl_tweakGet(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_checkMotionDone__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_checkMotionDone__SWIG_1")]
   public static extern bool ICartesianControl_checkMotionDone__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_checkMotionDone__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_checkMotionDone__SWIG_2")]
   public static extern bool ICartesianControl_checkMotionDone__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICartesianControl_isMotionDone")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICartesianControl_isMotionDone")]
   public static extern bool ICartesianControl_isMotionDone(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventParameters_type_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventParameters_type_set")]
   public static extern void GazeEventParameters_type_set(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventParameters_type_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventParameters_type_get")]
   public static extern string GazeEventParameters_type_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventParameters_motionOngoingCheckPoint_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventParameters_motionOngoingCheckPoint_set")]
   public static extern void GazeEventParameters_motionOngoingCheckPoint_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventParameters_motionOngoingCheckPoint_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventParameters_motionOngoingCheckPoint_get")]
   public static extern double GazeEventParameters_motionOngoingCheckPoint_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_GazeEventParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_GazeEventParameters")]
   public static extern IntPtr new_GazeEventParameters();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_GazeEventParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_GazeEventParameters")]
   public static extern void delete_GazeEventParameters(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventVariables_type_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventVariables_type_set")]
   public static extern void GazeEventVariables_type_set(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventVariables_type_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventVariables_type_get")]
   public static extern string GazeEventVariables_type_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventVariables_time_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventVariables_time_set")]
   public static extern void GazeEventVariables_time_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventVariables_time_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventVariables_time_get")]
   public static extern double GazeEventVariables_time_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventVariables_motionOngoingCheckPoint_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventVariables_motionOngoingCheckPoint_set")]
   public static extern void GazeEventVariables_motionOngoingCheckPoint_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEventVariables_motionOngoingCheckPoint_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEventVariables_motionOngoingCheckPoint_get")]
   public static extern double GazeEventVariables_motionOngoingCheckPoint_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_GazeEventVariables")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_GazeEventVariables")]
   public static extern IntPtr new_GazeEventVariables();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_GazeEventVariables")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_GazeEventVariables")]
   public static extern void delete_GazeEventVariables(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_GazeEvent")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_GazeEvent")]
   public static extern void delete_GazeEvent(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEvent_gazeEventParameters_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEvent_gazeEventParameters_set")]
   public static extern void GazeEvent_gazeEventParameters_set(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEvent_gazeEventParameters_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEvent_gazeEventParameters_get")]
   public static extern IntPtr GazeEvent_gazeEventParameters_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEvent_gazeEventVariables_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEvent_gazeEventVariables_set")]
   public static extern void GazeEvent_gazeEventVariables_set(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEvent_gazeEventVariables_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEvent_gazeEventVariables_get")]
   public static extern IntPtr GazeEvent_gazeEventVariables_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_GazeEvent_gazeEventCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_GazeEvent_gazeEventCallback")]
   public static extern void GazeEvent_gazeEventCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IGazeControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IGazeControl")]
   public static extern void delete_IGazeControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setTrackingMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setTrackingMode")]
   public static extern bool IGazeControl_setTrackingMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getTrackingMode__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getTrackingMode__SWIG_0")]
   public static extern bool IGazeControl_getTrackingMode__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setStabilizationMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setStabilizationMode")]
   public static extern bool IGazeControl_setStabilizationMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getStabilizationMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getStabilizationMode")]
   public static extern bool IGazeControl_getStabilizationMode(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getFixationPoint__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getFixationPoint__SWIG_0")]
   public static extern bool IGazeControl_getFixationPoint__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getFixationPoint__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getFixationPoint__SWIG_1")]
   public static extern bool IGazeControl_getFixationPoint__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getAngles__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getAngles__SWIG_0")]
   public static extern bool IGazeControl_getAngles__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getAngles__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getAngles__SWIG_1")]
   public static extern bool IGazeControl_getAngles__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_lookAtFixationPoint")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_lookAtFixationPoint")]
   public static extern bool IGazeControl_lookAtFixationPoint(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_lookAtAbsAngles")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_lookAtAbsAngles")]
   public static extern bool IGazeControl_lookAtAbsAngles(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_lookAtRelAngles")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_lookAtRelAngles")]
   public static extern bool IGazeControl_lookAtRelAngles(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_lookAtMonoPixel__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_lookAtMonoPixel__SWIG_0")]
   public static extern bool IGazeControl_lookAtMonoPixel__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_lookAtMonoPixel__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_lookAtMonoPixel__SWIG_1")]
   public static extern bool IGazeControl_lookAtMonoPixel__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_lookAtMonoPixelWithVergence")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_lookAtMonoPixelWithVergence")]
   public static extern bool IGazeControl_lookAtMonoPixelWithVergence(HandleRef jarg1, int jarg2, HandleRef jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_lookAtStereoPixels")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_lookAtStereoPixels")]
   public static extern bool IGazeControl_lookAtStereoPixels(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getNeckTrajTime__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getNeckTrajTime__SWIG_0")]
   public static extern bool IGazeControl_getNeckTrajTime__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getEyesTrajTime__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getEyesTrajTime__SWIG_0")]
   public static extern bool IGazeControl_getEyesTrajTime__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getVORGain")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getVORGain")]
   public static extern bool IGazeControl_getVORGain(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getOCRGain")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getOCRGain")]
   public static extern bool IGazeControl_getOCRGain(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getSaccadesMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getSaccadesMode")]
   public static extern bool IGazeControl_getSaccadesMode(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getSaccadesInhibitionPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getSaccadesInhibitionPeriod")]
   public static extern bool IGazeControl_getSaccadesInhibitionPeriod(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getSaccadesActivationAngle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getSaccadesActivationAngle")]
   public static extern bool IGazeControl_getSaccadesActivationAngle(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getLeftEyePose__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getLeftEyePose__SWIG_0")]
   public static extern bool IGazeControl_getLeftEyePose__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getLeftEyePose__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getLeftEyePose__SWIG_1")]
   public static extern bool IGazeControl_getLeftEyePose__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getRightEyePose__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getRightEyePose__SWIG_0")]
   public static extern bool IGazeControl_getRightEyePose__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getRightEyePose__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getRightEyePose__SWIG_1")]
   public static extern bool IGazeControl_getRightEyePose__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getHeadPose__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getHeadPose__SWIG_0")]
   public static extern bool IGazeControl_getHeadPose__SWIG_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getHeadPose__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getHeadPose__SWIG_1")]
   public static extern bool IGazeControl_getHeadPose__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_get2DPixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_get2DPixel")]
   public static extern bool IGazeControl_get2DPixel(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_get3DPoint")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_get3DPoint")]
   public static extern bool IGazeControl_get3DPoint(HandleRef jarg1, int jarg2, HandleRef jarg3, double jarg4, HandleRef jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_get3DPointOnPlane")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_get3DPointOnPlane")]
   public static extern bool IGazeControl_get3DPointOnPlane(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_get3DPointFromAngles")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_get3DPointFromAngles")]
   public static extern bool IGazeControl_get3DPointFromAngles(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getAnglesFrom3DPoint")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getAnglesFrom3DPoint")]
   public static extern bool IGazeControl_getAnglesFrom3DPoint(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_triangulate3DPoint")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_triangulate3DPoint")]
   public static extern bool IGazeControl_triangulate3DPoint(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getJointsDesired")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getJointsDesired")]
   public static extern bool IGazeControl_getJointsDesired(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getJointsVelocities")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getJointsVelocities")]
   public static extern bool IGazeControl_getJointsVelocities(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getStereoOptions")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getStereoOptions")]
   public static extern bool IGazeControl_getStereoOptions(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setNeckTrajTime")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setNeckTrajTime")]
   public static extern bool IGazeControl_setNeckTrajTime(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setEyesTrajTime")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setEyesTrajTime")]
   public static extern bool IGazeControl_setEyesTrajTime(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setVORGain")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setVORGain")]
   public static extern bool IGazeControl_setVORGain(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setOCRGain")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setOCRGain")]
   public static extern bool IGazeControl_setOCRGain(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setSaccadesMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setSaccadesMode")]
   public static extern bool IGazeControl_setSaccadesMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setSaccadesInhibitionPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setSaccadesInhibitionPeriod")]
   public static extern bool IGazeControl_setSaccadesInhibitionPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setSaccadesActivationAngle")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setSaccadesActivationAngle")]
   public static extern bool IGazeControl_setSaccadesActivationAngle(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setStereoOptions")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setStereoOptions")]
   public static extern bool IGazeControl_setStereoOptions(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_bindNeckPitch")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_bindNeckPitch")]
   public static extern bool IGazeControl_bindNeckPitch(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_blockNeckPitch__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_blockNeckPitch__SWIG_0")]
   public static extern bool IGazeControl_blockNeckPitch__SWIG_0(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_blockNeckPitch__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_blockNeckPitch__SWIG_1")]
   public static extern bool IGazeControl_blockNeckPitch__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_bindNeckRoll")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_bindNeckRoll")]
   public static extern bool IGazeControl_bindNeckRoll(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_blockNeckRoll__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_blockNeckRoll__SWIG_0")]
   public static extern bool IGazeControl_blockNeckRoll__SWIG_0(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_blockNeckRoll__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_blockNeckRoll__SWIG_1")]
   public static extern bool IGazeControl_blockNeckRoll__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_bindNeckYaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_bindNeckYaw")]
   public static extern bool IGazeControl_bindNeckYaw(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_blockNeckYaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_blockNeckYaw__SWIG_0")]
   public static extern bool IGazeControl_blockNeckYaw__SWIG_0(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_blockNeckYaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_blockNeckYaw__SWIG_1")]
   public static extern bool IGazeControl_blockNeckYaw__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_blockEyes__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_blockEyes__SWIG_0")]
   public static extern bool IGazeControl_blockEyes__SWIG_0(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_blockEyes__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_blockEyes__SWIG_1")]
   public static extern bool IGazeControl_blockEyes__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getNeckPitchRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getNeckPitchRange")]
   public static extern bool IGazeControl_getNeckPitchRange(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getNeckRollRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getNeckRollRange")]
   public static extern bool IGazeControl_getNeckRollRange(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getNeckYawRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getNeckYawRange")]
   public static extern bool IGazeControl_getNeckYawRange(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getBlockedVergence")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getBlockedVergence")]
   public static extern bool IGazeControl_getBlockedVergence(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_clearNeckPitch")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_clearNeckPitch")]
   public static extern bool IGazeControl_clearNeckPitch(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_clearNeckRoll")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_clearNeckRoll")]
   public static extern bool IGazeControl_clearNeckRoll(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_clearNeckYaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_clearNeckYaw")]
   public static extern bool IGazeControl_clearNeckYaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_clearEyes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_clearEyes")]
   public static extern bool IGazeControl_clearEyes(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getNeckAngleUserTolerance")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getNeckAngleUserTolerance")]
   public static extern bool IGazeControl_getNeckAngleUserTolerance(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_setNeckAngleUserTolerance")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_setNeckAngleUserTolerance")]
   public static extern bool IGazeControl_setNeckAngleUserTolerance(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_checkMotionDone__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_checkMotionDone__SWIG_0")]
   public static extern bool IGazeControl_checkMotionDone__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_waitMotionDone__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_waitMotionDone__SWIG_0")]
   public static extern bool IGazeControl_waitMotionDone__SWIG_0(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_waitMotionDone__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_waitMotionDone__SWIG_1")]
   public static extern bool IGazeControl_waitMotionDone__SWIG_1(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_waitMotionDone__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_waitMotionDone__SWIG_2")]
   public static extern bool IGazeControl_waitMotionDone__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_checkSaccadeDone")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_checkSaccadeDone")]
   public static extern bool IGazeControl_checkSaccadeDone(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_waitSaccadeDone__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_waitSaccadeDone__SWIG_0")]
   public static extern bool IGazeControl_waitSaccadeDone__SWIG_0(HandleRef jarg1, double jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_waitSaccadeDone__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_waitSaccadeDone__SWIG_1")]
   public static extern bool IGazeControl_waitSaccadeDone__SWIG_1(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_waitSaccadeDone__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_waitSaccadeDone__SWIG_2")]
   public static extern bool IGazeControl_waitSaccadeDone__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_stopControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_stopControl")]
   public static extern bool IGazeControl_stopControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_storeContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_storeContext")]
   public static extern bool IGazeControl_storeContext(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_restoreContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_restoreContext")]
   public static extern bool IGazeControl_restoreContext(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_deleteContext")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_deleteContext")]
   public static extern bool IGazeControl_deleteContext(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getInfo")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getInfo")]
   public static extern bool IGazeControl_getInfo(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_registerEvent")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_registerEvent")]
   public static extern bool IGazeControl_registerEvent(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_unregisterEvent")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_unregisterEvent")]
   public static extern bool IGazeControl_unregisterEvent(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_tweakSet")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_tweakSet")]
   public static extern bool IGazeControl_tweakSet(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_tweakGet")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_tweakGet")]
   public static extern bool IGazeControl_tweakGet(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getTrackingMode__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getTrackingMode__SWIG_1")]
   public static extern bool IGazeControl_getTrackingMode__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getNeckTrajTime__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getNeckTrajTime__SWIG_1")]
   public static extern double IGazeControl_getNeckTrajTime__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_getEyesTrajTime__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_getEyesTrajTime__SWIG_1")]
   public static extern double IGazeControl_getEyesTrajTime__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IGazeControl_checkMotionDone__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IGazeControl_checkMotionDone__SWIG_1")]
   public static extern bool IGazeControl_checkMotionDone__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IPositionControlRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IPositionControlRaw")]
   public static extern void delete_IPositionControlRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_getAxes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_getAxes")]
   public static extern bool IPositionControlRaw_getAxes(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_setPositionModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_setPositionModeRaw")]
   public static extern bool IPositionControlRaw_setPositionModeRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_positionMoveRaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_positionMoveRaw__SWIG_0")]
   public static extern bool IPositionControlRaw_positionMoveRaw__SWIG_0(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_positionMoveRaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_positionMoveRaw__SWIG_1")]
   public static extern bool IPositionControlRaw_positionMoveRaw__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_relativeMoveRaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_relativeMoveRaw__SWIG_0")]
   public static extern bool IPositionControlRaw_relativeMoveRaw__SWIG_0(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_relativeMoveRaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_relativeMoveRaw__SWIG_1")]
   public static extern bool IPositionControlRaw_relativeMoveRaw__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_checkMotionDoneRaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_checkMotionDoneRaw__SWIG_0")]
   public static extern bool IPositionControlRaw_checkMotionDoneRaw__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_checkMotionDoneRaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_checkMotionDoneRaw__SWIG_1")]
   public static extern bool IPositionControlRaw_checkMotionDoneRaw__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_setRefSpeedRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_setRefSpeedRaw")]
   public static extern bool IPositionControlRaw_setRefSpeedRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_setRefSpeedsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_setRefSpeedsRaw")]
   public static extern bool IPositionControlRaw_setRefSpeedsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_setRefAccelerationRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_setRefAccelerationRaw")]
   public static extern bool IPositionControlRaw_setRefAccelerationRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_setRefAccelerationsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_setRefAccelerationsRaw")]
   public static extern bool IPositionControlRaw_setRefAccelerationsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_getRefSpeedRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_getRefSpeedRaw")]
   public static extern bool IPositionControlRaw_getRefSpeedRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_getRefSpeedsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_getRefSpeedsRaw")]
   public static extern bool IPositionControlRaw_getRefSpeedsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_getRefAccelerationRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_getRefAccelerationRaw")]
   public static extern bool IPositionControlRaw_getRefAccelerationRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_getRefAccelerationsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_getRefAccelerationsRaw")]
   public static extern bool IPositionControlRaw_getRefAccelerationsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_stopRaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_stopRaw__SWIG_0")]
   public static extern bool IPositionControlRaw_stopRaw__SWIG_0(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControlRaw_stopRaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControlRaw_stopRaw__SWIG_1")]
   public static extern bool IPositionControlRaw_stopRaw__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IPositionControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IPositionControl")]
   public static extern void delete_IPositionControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getAxes__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getAxes__SWIG_0")]
   public static extern bool IPositionControl_getAxes__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_setPositionMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_setPositionMode")]
   public static extern bool IPositionControl_setPositionMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_positionMove__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_positionMove__SWIG_0")]
   public static extern bool IPositionControl_positionMove__SWIG_0(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_positionMove__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_positionMove__SWIG_1")]
   public static extern bool IPositionControl_positionMove__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_relativeMove__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_relativeMove__SWIG_0")]
   public static extern bool IPositionControl_relativeMove__SWIG_0(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_relativeMove__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_relativeMove__SWIG_1")]
   public static extern bool IPositionControl_relativeMove__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_0")]
   public static extern bool IPositionControl_checkMotionDone__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_1")]
   public static extern bool IPositionControl_checkMotionDone__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_setRefSpeed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_setRefSpeed")]
   public static extern bool IPositionControl_setRefSpeed(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_setRefSpeeds__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_setRefSpeeds__SWIG_0")]
   public static extern bool IPositionControl_setRefSpeeds__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_setRefAcceleration")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_setRefAcceleration")]
   public static extern bool IPositionControl_setRefAcceleration(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_setRefAccelerations")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_setRefAccelerations")]
   public static extern bool IPositionControl_setRefAccelerations(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getRefSpeed__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getRefSpeed__SWIG_0")]
   public static extern bool IPositionControl_getRefSpeed__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getRefSpeeds__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getRefSpeeds__SWIG_0")]
   public static extern bool IPositionControl_getRefSpeeds__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getRefAcceleration__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getRefAcceleration__SWIG_0")]
   public static extern bool IPositionControl_getRefAcceleration__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getRefAccelerations__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getRefAccelerations__SWIG_0")]
   public static extern bool IPositionControl_getRefAccelerations__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_stop__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_stop__SWIG_0")]
   public static extern bool IPositionControl_stop__SWIG_0(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_stop__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_stop__SWIG_1")]
   public static extern bool IPositionControl_stop__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getAxes__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getAxes__SWIG_1")]
   public static extern int IPositionControl_getAxes__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_positionMove__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_positionMove__SWIG_2")]
   public static extern bool IPositionControl_positionMove__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_relativeMove__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_relativeMove__SWIG_2")]
   public static extern bool IPositionControl_relativeMove__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_setRefSpeeds__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_setRefSpeeds__SWIG_1")]
   public static extern bool IPositionControl_setRefSpeeds__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getRefSpeed__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getRefSpeed__SWIG_1")]
   public static extern bool IPositionControl_getRefSpeed__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getRefSpeeds__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getRefSpeeds__SWIG_1")]
   public static extern bool IPositionControl_getRefSpeeds__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getRefAcceleration__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getRefAcceleration__SWIG_1")]
   public static extern bool IPositionControl_getRefAcceleration__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_getRefAccelerations__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_getRefAccelerations__SWIG_1")]
   public static extern bool IPositionControl_getRefAccelerations__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_2")]
   public static extern bool IPositionControl_checkMotionDone__SWIG_2(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_3")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_3")]
   public static extern bool IPositionControl_checkMotionDone__SWIG_3(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_4")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_checkMotionDone__SWIG_4")]
   public static extern bool IPositionControl_checkMotionDone__SWIG_4(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_isMotionDone__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_isMotionDone__SWIG_0")]
   public static extern bool IPositionControl_isMotionDone__SWIG_0(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IPositionControl_isMotionDone__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IPositionControl_isMotionDone__SWIG_1")]
   public static extern bool IPositionControl_isMotionDone__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IEncodersRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IEncodersRaw")]
   public static extern void delete_IEncodersRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_getAxes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_getAxes")]
   public static extern bool IEncodersRaw_getAxes(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_resetEncoderRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_resetEncoderRaw")]
   public static extern bool IEncodersRaw_resetEncoderRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_resetEncodersRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_resetEncodersRaw")]
   public static extern bool IEncodersRaw_resetEncodersRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_setEncoderRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_setEncoderRaw")]
   public static extern bool IEncodersRaw_setEncoderRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_setEncodersRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_setEncodersRaw")]
   public static extern bool IEncodersRaw_setEncodersRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_getEncoderRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_getEncoderRaw")]
   public static extern bool IEncodersRaw_getEncoderRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_getEncodersRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_getEncodersRaw")]
   public static extern bool IEncodersRaw_getEncodersRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_getEncoderSpeedRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_getEncoderSpeedRaw")]
   public static extern bool IEncodersRaw_getEncoderSpeedRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_getEncoderSpeedsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_getEncoderSpeedsRaw")]
   public static extern bool IEncodersRaw_getEncoderSpeedsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_getEncoderAccelerationRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_getEncoderAccelerationRaw")]
   public static extern bool IEncodersRaw_getEncoderAccelerationRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncodersRaw_getEncoderAccelerationsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncodersRaw_getEncoderAccelerationsRaw")]
   public static extern bool IEncodersRaw_getEncoderAccelerationsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IEncoders")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IEncoders")]
   public static extern void delete_IEncoders(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getAxes__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getAxes__SWIG_0")]
   public static extern bool IEncoders_getAxes__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_resetEncoder")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_resetEncoder")]
   public static extern bool IEncoders_resetEncoder(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_resetEncoders")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_resetEncoders")]
   public static extern bool IEncoders_resetEncoders(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_setEncoder")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_setEncoder")]
   public static extern bool IEncoders_setEncoder(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_setEncoders__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_setEncoders__SWIG_0")]
   public static extern bool IEncoders_setEncoders__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoder__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoder__SWIG_0")]
   public static extern bool IEncoders_getEncoder__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoders__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoders__SWIG_0")]
   public static extern bool IEncoders_getEncoders__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoderSpeed__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderSpeed__SWIG_0")]
   public static extern bool IEncoders_getEncoderSpeed__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoderSpeeds__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderSpeeds__SWIG_0")]
   public static extern bool IEncoders_getEncoderSpeeds__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoderAcceleration__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderAcceleration__SWIG_0")]
   public static extern bool IEncoders_getEncoderAcceleration__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoderAccelerations__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderAccelerations__SWIG_0")]
   public static extern bool IEncoders_getEncoderAccelerations__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getAxes__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getAxes__SWIG_1")]
   public static extern int IEncoders_getAxes__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_setEncoders__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_setEncoders__SWIG_1")]
   public static extern bool IEncoders_setEncoders__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoder__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoder__SWIG_1")]
   public static extern double IEncoders_getEncoder__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoders__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoders__SWIG_1")]
   public static extern bool IEncoders_getEncoders__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoderSpeed__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderSpeed__SWIG_1")]
   public static extern double IEncoders_getEncoderSpeed__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoderSpeeds__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderSpeeds__SWIG_1")]
   public static extern bool IEncoders_getEncoderSpeeds__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoderAcceleration__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderAcceleration__SWIG_1")]
   public static extern double IEncoders_getEncoderAcceleration__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IEncoders_getEncoderAccelerations__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderAccelerations__SWIG_1")]
   public static extern bool IEncoders_getEncoderAccelerations__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_E_RESET_get")]
-  public static extern int VOCAB_E_RESET_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_E_RESETS_get")]
-  public static extern int VOCAB_E_RESETS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ENCODER_get")]
-  public static extern int VOCAB_ENCODER_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ENCODERS_get")]
-  public static extern int VOCAB_ENCODERS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ENCODER_SPEED_get")]
-  public static extern int VOCAB_ENCODER_SPEED_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ENCODER_SPEEDS_get")]
-  public static extern int VOCAB_ENCODER_SPEEDS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ENCODER_ACCELERATION_get")]
-  public static extern int VOCAB_ENCODER_ACCELERATION_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ENCODER_ACCELERATIONS_get")]
-  public static extern int VOCAB_ENCODER_ACCELERATIONS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_delete_ICalibrator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ICalibrator")]
   public static extern void delete_ICalibrator(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICalibrator_calibrate")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICalibrator_calibrate")]
   public static extern bool ICalibrator_calibrate(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICalibrator_park__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICalibrator_park__SWIG_0")]
   public static extern bool ICalibrator_park__SWIG_0(HandleRef jarg1, HandleRef jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICalibrator_park__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICalibrator_park__SWIG_1")]
   public static extern bool ICalibrator_park__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICalibrator_quitCalibrate")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICalibrator_quitCalibrate")]
   public static extern bool ICalibrator_quitCalibrate(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ICalibrator_quitPark")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ICalibrator_quitPark")]
   public static extern bool ICalibrator_quitPark(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IRemoteCalibrator")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IRemoteCalibrator")]
   public static extern void delete_IRemoteCalibrator(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_setCalibratorDevice")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_setCalibratorDevice")]
   public static extern bool IRemoteCalibrator_setCalibratorDevice(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_getCalibratorDevice")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_getCalibratorDevice")]
   public static extern IntPtr IRemoteCalibrator_getCalibratorDevice(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_isCalibratorDevicePresent")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_isCalibratorDevicePresent")]
   public static extern bool IRemoteCalibrator_isCalibratorDevicePresent(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_releaseCalibratorDevice")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_releaseCalibratorDevice")]
   public static extern void IRemoteCalibrator_releaseCalibratorDevice(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_calibrateSingleJoint")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_calibrateSingleJoint")]
   public static extern bool IRemoteCalibrator_calibrateSingleJoint(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_calibrateWholePart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_calibrateWholePart")]
   public static extern bool IRemoteCalibrator_calibrateWholePart(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_homingSingleJoint")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_homingSingleJoint")]
   public static extern bool IRemoteCalibrator_homingSingleJoint(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_homingWholePart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_homingWholePart")]
   public static extern bool IRemoteCalibrator_homingWholePart(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_parkSingleJoint__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_parkSingleJoint__SWIG_0")]
   public static extern bool IRemoteCalibrator_parkSingleJoint__SWIG_0(HandleRef jarg1, int jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_parkSingleJoint__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_parkSingleJoint__SWIG_1")]
   public static extern bool IRemoteCalibrator_parkSingleJoint__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_parkWholePart")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_parkWholePart")]
   public static extern bool IRemoteCalibrator_parkWholePart(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_quitCalibrate")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_quitCalibrate")]
   public static extern bool IRemoteCalibrator_quitCalibrate(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IRemoteCalibrator_quitPark")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_quitPark")]
   public static extern bool IRemoteCalibrator_quitPark(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_REMOTE_CALIBRATOR_INTERFACE_get")]
-  public static extern int VOCAB_REMOTE_CALIBRATOR_INTERFACE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_IS_CALIBRATOR_PRESENT_get")]
-  public static extern int VOCAB_IS_CALIBRATOR_PRESENT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CALIBRATE_SINGLE_JOINT_get")]
-  public static extern int VOCAB_CALIBRATE_SINGLE_JOINT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CALIBRATE_WHOLE_PART_get")]
-  public static extern int VOCAB_CALIBRATE_WHOLE_PART_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_HOMING_SINGLE_JOINT_get")]
-  public static extern int VOCAB_HOMING_SINGLE_JOINT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_HOMING_WHOLE_PART_get")]
-  public static extern int VOCAB_HOMING_WHOLE_PART_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_PARK_SINGLE_JOINT_get")]
-  public static extern int VOCAB_PARK_SINGLE_JOINT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_PARK_WHOLE_PART_get")]
-  public static extern int VOCAB_PARK_WHOLE_PART_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_QUIT_CALIBRATE_get")]
-  public static extern int VOCAB_QUIT_CALIBRATE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_QUIT_PARK_get")]
-  public static extern int VOCAB_QUIT_PARK_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlMode")]
   public static extern void delete_IControlMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_setPositionMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_setPositionMode")]
   public static extern bool IControlMode_setPositionMode(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_setVelocityMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_setVelocityMode")]
   public static extern bool IControlMode_setVelocityMode(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_setTorqueMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_setTorqueMode")]
   public static extern bool IControlMode_setTorqueMode(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_setImpedancePositionMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_setImpedancePositionMode")]
   public static extern bool IControlMode_setImpedancePositionMode(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_setImpedanceVelocityMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_setImpedanceVelocityMode")]
   public static extern bool IControlMode_setImpedanceVelocityMode(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_setOpenLoopMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_setOpenLoopMode")]
   public static extern bool IControlMode_setOpenLoopMode(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_getControlMode__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlMode__SWIG_0")]
   public static extern bool IControlMode_getControlMode__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_getControlModes__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlModes__SWIG_0")]
   public static extern bool IControlMode_getControlModes__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_getControlMode__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlMode__SWIG_1")]
   public static extern int IControlMode_getControlMode__SWIG_1(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlMode_getControlModes__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlModes__SWIG_1")]
   public static extern bool IControlMode_getControlModes__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IControlModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlModeRaw")]
   public static extern void delete_IControlModeRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlModeRaw_setPositionModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_setPositionModeRaw")]
   public static extern bool IControlModeRaw_setPositionModeRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlModeRaw_setVelocityModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_setVelocityModeRaw")]
   public static extern bool IControlModeRaw_setVelocityModeRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlModeRaw_setTorqueModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_setTorqueModeRaw")]
   public static extern bool IControlModeRaw_setTorqueModeRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlModeRaw_setImpedancePositionModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_setImpedancePositionModeRaw")]
   public static extern bool IControlModeRaw_setImpedancePositionModeRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlModeRaw_setImpedanceVelocityModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_setImpedanceVelocityModeRaw")]
   public static extern bool IControlModeRaw_setImpedanceVelocityModeRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlModeRaw_setOpenLoopModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_setOpenLoopModeRaw")]
   public static extern bool IControlModeRaw_setOpenLoopModeRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlModeRaw_getControlModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_getControlModeRaw")]
   public static extern bool IControlModeRaw_getControlModeRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IControlModeRaw_getControlModesRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_getControlModesRaw")]
   public static extern bool IControlModeRaw_getControlModesRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_ICONTROLMODE_get")]
-  public static extern int VOCAB_ICONTROLMODE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_CONTROL_MODE_get")]
-  public static extern int VOCAB_CM_CONTROL_MODE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_CONTROL_MODE_GROUP_get")]
-  public static extern int VOCAB_CM_CONTROL_MODE_GROUP_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_CONTROL_MODES_get")]
-  public static extern int VOCAB_CM_CONTROL_MODES_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_IDLE_get")]
-  public static extern int VOCAB_CM_IDLE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_TORQUE_get")]
-  public static extern int VOCAB_CM_TORQUE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_POSITION_get")]
-  public static extern int VOCAB_CM_POSITION_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_POSITION_DIRECT_get")]
-  public static extern int VOCAB_CM_POSITION_DIRECT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_VELOCITY_get")]
-  public static extern int VOCAB_CM_VELOCITY_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_OPENLOOP_get")]
-  public static extern int VOCAB_CM_OPENLOOP_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_IMPEDANCE_POS_get")]
-  public static extern int VOCAB_CM_IMPEDANCE_POS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_IMPEDANCE_VEL_get")]
-  public static extern int VOCAB_CM_IMPEDANCE_VEL_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_CM_UNKNOWN_get")]
-  public static extern int VOCAB_CM_UNKNOWN_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_MotorTorqueParameters_bemf_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_bemf_set")]
   public static extern void MotorTorqueParameters_bemf_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_MotorTorqueParameters_bemf_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_bemf_get")]
   public static extern double MotorTorqueParameters_bemf_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_MotorTorqueParameters_bemf_scale_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_bemf_scale_set")]
   public static extern void MotorTorqueParameters_bemf_scale_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_MotorTorqueParameters_bemf_scale_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_bemf_scale_get")]
   public static extern double MotorTorqueParameters_bemf_scale_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_MotorTorqueParameters_ktau_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_ktau_set")]
   public static extern void MotorTorqueParameters_ktau_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_MotorTorqueParameters_ktau_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_ktau_get")]
   public static extern double MotorTorqueParameters_ktau_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_MotorTorqueParameters_ktau_scale_set")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_ktau_scale_set")]
   public static extern void MotorTorqueParameters_ktau_scale_set(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_MotorTorqueParameters_ktau_scale_get")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_ktau_scale_get")]
   public static extern double MotorTorqueParameters_ktau_scale_get(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_MotorTorqueParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_MotorTorqueParameters")]
   public static extern IntPtr new_MotorTorqueParameters();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_MotorTorqueParameters")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_MotorTorqueParameters")]
   public static extern void delete_MotorTorqueParameters(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ITorqueControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ITorqueControl")]
   public static extern void delete_ITorqueControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getAxes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getAxes")]
   public static extern bool ITorqueControl_getAxes(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setTorqueMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setTorqueMode")]
   public static extern bool ITorqueControl_setTorqueMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getRefTorques")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getRefTorques")]
   public static extern bool ITorqueControl_getRefTorques(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getRefTorque")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getRefTorque")]
   public static extern bool ITorqueControl_getRefTorque(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setRefTorques__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setRefTorques__SWIG_0")]
   public static extern bool ITorqueControl_setRefTorques__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setRefTorque")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setRefTorque")]
   public static extern bool ITorqueControl_setRefTorque(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setRefTorques__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setRefTorques__SWIG_1")]
   public static extern bool ITorqueControl_setRefTorques__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getBemfParam")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getBemfParam")]
   public static extern bool ITorqueControl_getBemfParam(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setBemfParam")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setBemfParam")]
   public static extern bool ITorqueControl_setBemfParam(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getMotorTorqueParams")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getMotorTorqueParams")]
   public static extern bool ITorqueControl_getMotorTorqueParams(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setMotorTorqueParams")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setMotorTorqueParams")]
   public static extern bool ITorqueControl_setMotorTorqueParams(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setTorquePid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setTorquePid")]
   public static extern bool ITorqueControl_setTorquePid(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorque")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorque")]
   public static extern bool ITorqueControl_getTorque(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorques")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorques")]
   public static extern bool ITorqueControl_getTorques(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorqueRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorqueRange")]
   public static extern bool ITorqueControl_getTorqueRange(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorqueRanges")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorqueRanges")]
   public static extern bool ITorqueControl_getTorqueRanges(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setTorquePids")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setTorquePids")]
   public static extern bool ITorqueControl_setTorquePids(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setTorqueErrorLimit")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setTorqueErrorLimit")]
   public static extern bool ITorqueControl_setTorqueErrorLimit(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setTorqueErrorLimits")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setTorqueErrorLimits")]
   public static extern bool ITorqueControl_setTorqueErrorLimits(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorqueError")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorqueError")]
   public static extern bool ITorqueControl_getTorqueError(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorqueErrors")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorqueErrors")]
   public static extern bool ITorqueControl_getTorqueErrors(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorquePidOutput")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorquePidOutput")]
   public static extern bool ITorqueControl_getTorquePidOutput(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorquePidOutputs")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorquePidOutputs")]
   public static extern bool ITorqueControl_getTorquePidOutputs(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorquePid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorquePid")]
   public static extern bool ITorqueControl_getTorquePid(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorquePids")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorquePids")]
   public static extern bool ITorqueControl_getTorquePids(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorqueErrorLimit")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorqueErrorLimit")]
   public static extern bool ITorqueControl_getTorqueErrorLimit(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_getTorqueErrorLimits")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_getTorqueErrorLimits")]
   public static extern bool ITorqueControl_getTorqueErrorLimits(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_resetTorquePid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_resetTorquePid")]
   public static extern bool ITorqueControl_resetTorquePid(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_disableTorquePid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_disableTorquePid")]
   public static extern bool ITorqueControl_disableTorquePid(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_enableTorquePid")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_enableTorquePid")]
   public static extern bool ITorqueControl_enableTorquePid(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControl_setTorqueOffset")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControl_setTorqueOffset")]
   public static extern bool ITorqueControl_setTorqueOffset(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ITorqueControlRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ITorqueControlRaw")]
   public static extern void delete_ITorqueControlRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getAxes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getAxes")]
   public static extern bool ITorqueControlRaw_getAxes(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setTorqueModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setTorqueModeRaw")]
   public static extern bool ITorqueControlRaw_setTorqueModeRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorqueRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorqueRaw")]
   public static extern bool ITorqueControlRaw_getTorqueRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorquesRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorquesRaw")]
   public static extern bool ITorqueControlRaw_getTorquesRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorqueRangeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorqueRangeRaw")]
   public static extern bool ITorqueControlRaw_getTorqueRangeRaw(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorqueRangesRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorqueRangesRaw")]
   public static extern bool ITorqueControlRaw_getTorqueRangesRaw(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setRefTorquesRaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setRefTorquesRaw__SWIG_0")]
   public static extern bool ITorqueControlRaw_setRefTorquesRaw__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setRefTorqueRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setRefTorqueRaw")]
   public static extern bool ITorqueControlRaw_setRefTorqueRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setRefTorquesRaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setRefTorquesRaw__SWIG_1")]
   public static extern bool ITorqueControlRaw_setRefTorquesRaw__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getRefTorquesRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getRefTorquesRaw")]
   public static extern bool ITorqueControlRaw_getRefTorquesRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getRefTorqueRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getRefTorqueRaw")]
   public static extern bool ITorqueControlRaw_getRefTorqueRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getBemfParamRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getBemfParamRaw")]
   public static extern bool ITorqueControlRaw_getBemfParamRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setBemfParamRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setBemfParamRaw")]
   public static extern bool ITorqueControlRaw_setBemfParamRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getMotorTorqueParamsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getMotorTorqueParamsRaw")]
   public static extern bool ITorqueControlRaw_getMotorTorqueParamsRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setMotorTorqueParamsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setMotorTorqueParamsRaw")]
   public static extern bool ITorqueControlRaw_setMotorTorqueParamsRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setTorquePidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setTorquePidRaw")]
   public static extern bool ITorqueControlRaw_setTorquePidRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setTorquePidsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setTorquePidsRaw")]
   public static extern bool ITorqueControlRaw_setTorquePidsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setTorqueErrorLimitRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setTorqueErrorLimitRaw")]
   public static extern bool ITorqueControlRaw_setTorqueErrorLimitRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setTorqueErrorLimitsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setTorqueErrorLimitsRaw")]
   public static extern bool ITorqueControlRaw_setTorqueErrorLimitsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorqueErrorRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorqueErrorRaw")]
   public static extern bool ITorqueControlRaw_getTorqueErrorRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorqueErrorsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorqueErrorsRaw")]
   public static extern bool ITorqueControlRaw_getTorqueErrorsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorquePidOutputRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorquePidOutputRaw")]
   public static extern bool ITorqueControlRaw_getTorquePidOutputRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorquePidOutputsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorquePidOutputsRaw")]
   public static extern bool ITorqueControlRaw_getTorquePidOutputsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorquePidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorquePidRaw")]
   public static extern bool ITorqueControlRaw_getTorquePidRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorquePidsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorquePidsRaw")]
   public static extern bool ITorqueControlRaw_getTorquePidsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorqueErrorLimitRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorqueErrorLimitRaw")]
   public static extern bool ITorqueControlRaw_getTorqueErrorLimitRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_getTorqueErrorLimitsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_getTorqueErrorLimitsRaw")]
   public static extern bool ITorqueControlRaw_getTorqueErrorLimitsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_resetTorquePidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_resetTorquePidRaw")]
   public static extern bool ITorqueControlRaw_resetTorquePidRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_disableTorquePidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_disableTorquePidRaw")]
   public static extern bool ITorqueControlRaw_disableTorquePidRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_enableTorquePidRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_enableTorquePidRaw")]
   public static extern bool ITorqueControlRaw_enableTorquePidRaw(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_ITorqueControlRaw_setTorqueOffsetRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ITorqueControlRaw_setTorqueOffsetRaw")]
   public static extern bool ITorqueControlRaw_setTorqueOffsetRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IImpedanceControlRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IImpedanceControlRaw")]
   public static extern void delete_IImpedanceControlRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControlRaw_getAxes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControlRaw_getAxes")]
   public static extern bool IImpedanceControlRaw_getAxes(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControlRaw_getImpedanceRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControlRaw_getImpedanceRaw")]
   public static extern bool IImpedanceControlRaw_getImpedanceRaw(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControlRaw_setImpedanceRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControlRaw_setImpedanceRaw")]
   public static extern bool IImpedanceControlRaw_setImpedanceRaw(HandleRef jarg1, int jarg2, double jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControlRaw_setImpedanceOffsetRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControlRaw_setImpedanceOffsetRaw")]
   public static extern bool IImpedanceControlRaw_setImpedanceOffsetRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControlRaw_getImpedanceOffsetRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControlRaw_getImpedanceOffsetRaw")]
   public static extern bool IImpedanceControlRaw_getImpedanceOffsetRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControlRaw_getCurrentImpedanceLimitRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControlRaw_getCurrentImpedanceLimitRaw")]
   public static extern bool IImpedanceControlRaw_getCurrentImpedanceLimitRaw(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5, HandleRef jarg6);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IImpedanceControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IImpedanceControl")]
   public static extern void delete_IImpedanceControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControl_getAxes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControl_getAxes")]
   public static extern bool IImpedanceControl_getAxes(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControl_getImpedance")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControl_getImpedance")]
   public static extern bool IImpedanceControl_getImpedance(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControl_setImpedance")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControl_setImpedance")]
   public static extern bool IImpedanceControl_setImpedance(HandleRef jarg1, int jarg2, double jarg3, double jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControl_setImpedanceOffset")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControl_setImpedanceOffset")]
   public static extern bool IImpedanceControl_setImpedanceOffset(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControl_getImpedanceOffset")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControl_getImpedanceOffset")]
   public static extern bool IImpedanceControl_getImpedanceOffset(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IImpedanceControl_getCurrentImpedanceLimit")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControl_getCurrentImpedanceLimit")]
   public static extern bool IImpedanceControl_getCurrentImpedanceLimit(HandleRef jarg1, int jarg2, HandleRef jarg3, HandleRef jarg4, HandleRef jarg5, HandleRef jarg6);
 
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_IMPEDANCE_get")]
-  public static extern int VOCAB_IMPEDANCE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_POSITION_get")]
-  public static extern int VOCAB_POSITION_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_VELOCITY_get")]
-  public static extern int VOCAB_VELOCITY_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_IOPENLOOP_get")]
-  public static extern int VOCAB_IOPENLOOP_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_delete_IVelocityControlRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IVelocityControlRaw")]
   public static extern void delete_IVelocityControlRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_getAxes")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_getAxes")]
   public static extern bool IVelocityControlRaw_getAxes(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_setVelocityModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_setVelocityModeRaw")]
   public static extern bool IVelocityControlRaw_setVelocityModeRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_velocityMoveRaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_velocityMoveRaw__SWIG_0")]
   public static extern bool IVelocityControlRaw_velocityMoveRaw__SWIG_0(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_velocityMoveRaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_velocityMoveRaw__SWIG_1")]
   public static extern bool IVelocityControlRaw_velocityMoveRaw__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_setRefAccelerationRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_setRefAccelerationRaw")]
   public static extern bool IVelocityControlRaw_setRefAccelerationRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_setRefAccelerationsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_setRefAccelerationsRaw")]
   public static extern bool IVelocityControlRaw_setRefAccelerationsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_getRefAccelerationRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_getRefAccelerationRaw")]
   public static extern bool IVelocityControlRaw_getRefAccelerationRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_getRefAccelerationsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_getRefAccelerationsRaw")]
   public static extern bool IVelocityControlRaw_getRefAccelerationsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_stopRaw__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_stopRaw__SWIG_0")]
   public static extern bool IVelocityControlRaw_stopRaw__SWIG_0(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControlRaw_stopRaw__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControlRaw_stopRaw__SWIG_1")]
   public static extern bool IVelocityControlRaw_stopRaw__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IVelocityControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IVelocityControl")]
   public static extern void delete_IVelocityControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_getAxes__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_getAxes__SWIG_0")]
   public static extern bool IVelocityControl_getAxes__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_setVelocityMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_setVelocityMode")]
   public static extern bool IVelocityControl_setVelocityMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_velocityMove__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_velocityMove__SWIG_0")]
   public static extern bool IVelocityControl_velocityMove__SWIG_0(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_velocityMove__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_velocityMove__SWIG_1")]
   public static extern bool IVelocityControl_velocityMove__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_setRefAcceleration")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_setRefAcceleration")]
   public static extern bool IVelocityControl_setRefAcceleration(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_setRefAccelerations__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_setRefAccelerations__SWIG_0")]
   public static extern bool IVelocityControl_setRefAccelerations__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_getRefAcceleration__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_getRefAcceleration__SWIG_0")]
   public static extern bool IVelocityControl_getRefAcceleration__SWIG_0(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_getRefAccelerations__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_getRefAccelerations__SWIG_0")]
   public static extern bool IVelocityControl_getRefAccelerations__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_stop__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_stop__SWIG_0")]
   public static extern bool IVelocityControl_stop__SWIG_0(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_stop__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_stop__SWIG_1")]
   public static extern bool IVelocityControl_stop__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_getAxes__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_getAxes__SWIG_1")]
   public static extern int IVelocityControl_getAxes__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_velocityMove__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_velocityMove__SWIG_2")]
   public static extern bool IVelocityControl_velocityMove__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_setRefAccelerations__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_setRefAccelerations__SWIG_1")]
   public static extern bool IVelocityControl_setRefAccelerations__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_getRefAcceleration__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_getRefAcceleration__SWIG_1")]
   public static extern bool IVelocityControl_getRefAcceleration__SWIG_1(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVelocityControl_getRefAccelerations__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVelocityControl_getRefAccelerations__SWIG_1")]
   public static extern bool IVelocityControl_getRefAccelerations__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IOpenLoopControlRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IOpenLoopControlRaw")]
   public static extern void delete_IOpenLoopControlRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControlRaw_setRefOutputRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControlRaw_setRefOutputRaw")]
   public static extern bool IOpenLoopControlRaw_setRefOutputRaw(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControlRaw_setRefOutputsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControlRaw_setRefOutputsRaw")]
   public static extern bool IOpenLoopControlRaw_setRefOutputsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControlRaw_getRefOutputRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControlRaw_getRefOutputRaw")]
   public static extern bool IOpenLoopControlRaw_getRefOutputRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControlRaw_getRefOutputsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControlRaw_getRefOutputsRaw")]
   public static extern bool IOpenLoopControlRaw_getRefOutputsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControlRaw_getOutputRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControlRaw_getOutputRaw")]
   public static extern bool IOpenLoopControlRaw_getOutputRaw(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControlRaw_getOutputsRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControlRaw_getOutputsRaw")]
   public static extern bool IOpenLoopControlRaw_getOutputsRaw(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControlRaw_setOpenLoopModeRaw")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControlRaw_setOpenLoopModeRaw")]
   public static extern bool IOpenLoopControlRaw_setOpenLoopModeRaw(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IOpenLoopControl")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IOpenLoopControl")]
   public static extern void delete_IOpenLoopControl(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControl_setRefOutput")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControl_setRefOutput")]
   public static extern bool IOpenLoopControl_setRefOutput(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControl_setRefOutputs")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControl_setRefOutputs")]
   public static extern bool IOpenLoopControl_setRefOutputs(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControl_getRefOutput")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControl_getRefOutput")]
   public static extern bool IOpenLoopControl_getRefOutput(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControl_getRefOutputs")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControl_getRefOutputs")]
   public static extern bool IOpenLoopControl_getRefOutputs(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControl_getOutput")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControl_getOutput")]
   public static extern bool IOpenLoopControl_getOutput(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControl_getOutputs")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControl_getOutputs")]
   public static extern bool IOpenLoopControl_getOutputs(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IOpenLoopControl_setOpenLoopMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControl_setOpenLoopMode")]
   public static extern bool IOpenLoopControl_setOpenLoopMode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OPENLOOP_INTERFACE_get")]
-  public static extern int VOCAB_OPENLOOP_INTERFACE_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OPENLOOP_REF_OUTPUT_get")]
-  public static extern int VOCAB_OPENLOOP_REF_OUTPUT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OPENLOOP_REF_OUTPUTS_get")]
-  public static extern int VOCAB_OPENLOOP_REF_OUTPUTS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OPENLOOP_PWM_OUTPUT_get")]
-  public static extern int VOCAB_OPENLOOP_PWM_OUTPUT_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_VOCAB_OPENLOOP_PWM_OUTPUTS_get")]
-  public static extern int VOCAB_OPENLOOP_PWM_OUTPUTS_get();
-
-  [DllImport("yarp", EntryPoint="CSharp_DVector_Clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_Clear")]
   public static extern void DVector_Clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_Add")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_Add")]
   public static extern void DVector_Add(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_size")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_size")]
   public static extern uint DVector_size(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_capacity")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_capacity")]
   public static extern uint DVector_capacity(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_reserve")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_reserve")]
   public static extern void DVector_reserve(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_DVector__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_DVector__SWIG_0")]
   public static extern IntPtr new_DVector__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_DVector__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_DVector__SWIG_1")]
   public static extern IntPtr new_DVector__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_DVector__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_DVector__SWIG_2")]
   public static extern IntPtr new_DVector__SWIG_2(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_getitemcopy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_getitemcopy")]
   public static extern double DVector_getitemcopy(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_getitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_getitem")]
   public static extern double DVector_getitem(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_setitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_setitem")]
   public static extern void DVector_setitem(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_AddRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_AddRange")]
   public static extern void DVector_AddRange(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_GetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_GetRange")]
   public static extern IntPtr DVector_GetRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_Insert")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_Insert")]
   public static extern void DVector_Insert(HandleRef jarg1, int jarg2, double jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_InsertRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_InsertRange")]
   public static extern void DVector_InsertRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_RemoveAt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_RemoveAt")]
   public static extern void DVector_RemoveAt(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_RemoveRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_RemoveRange")]
   public static extern void DVector_RemoveRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_Repeat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_Repeat")]
   public static extern IntPtr DVector_Repeat(double jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_Reverse__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_Reverse__SWIG_0")]
   public static extern void DVector_Reverse__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_Reverse__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_Reverse__SWIG_1")]
   public static extern void DVector_Reverse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_SetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_SetRange")]
   public static extern void DVector_SetRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_Contains")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_Contains")]
   public static extern bool DVector_Contains(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_IndexOf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_IndexOf")]
   public static extern int DVector_IndexOf(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_LastIndexOf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_LastIndexOf")]
   public static extern int DVector_LastIndexOf(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_DVector_Remove")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DVector_Remove")]
   public static extern bool DVector_Remove(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_DVector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_DVector")]
   public static extern void delete_DVector(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_Clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_Clear")]
   public static extern void BVector_Clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_Add")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_Add")]
   public static extern void BVector_Add(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_size")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_size")]
   public static extern uint BVector_size(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_capacity")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_capacity")]
   public static extern uint BVector_capacity(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_reserve")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_reserve")]
   public static extern void BVector_reserve(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BVector__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BVector__SWIG_0")]
   public static extern IntPtr new_BVector__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BVector__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BVector__SWIG_1")]
   public static extern IntPtr new_BVector__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BVector__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BVector__SWIG_2")]
   public static extern IntPtr new_BVector__SWIG_2(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_getitemcopy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_getitemcopy")]
   public static extern bool BVector_getitemcopy(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_getitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_getitem")]
   public static extern bool BVector_getitem(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_setitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_setitem")]
   public static extern void BVector_setitem(HandleRef jarg1, int jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_AddRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_AddRange")]
   public static extern void BVector_AddRange(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_GetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_GetRange")]
   public static extern IntPtr BVector_GetRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_Insert")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_Insert")]
   public static extern void BVector_Insert(HandleRef jarg1, int jarg2, bool jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_InsertRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_InsertRange")]
   public static extern void BVector_InsertRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_RemoveAt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_RemoveAt")]
   public static extern void BVector_RemoveAt(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_RemoveRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_RemoveRange")]
   public static extern void BVector_RemoveRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_Repeat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_Repeat")]
   public static extern IntPtr BVector_Repeat(bool jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_Reverse__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_Reverse__SWIG_0")]
   public static extern void BVector_Reverse__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_Reverse__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_Reverse__SWIG_1")]
   public static extern void BVector_Reverse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_SetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_SetRange")]
   public static extern void BVector_SetRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_Contains")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_Contains")]
   public static extern bool BVector_Contains(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_IndexOf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_IndexOf")]
   public static extern int BVector_IndexOf(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_LastIndexOf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_LastIndexOf")]
   public static extern int BVector_LastIndexOf(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BVector_Remove")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BVector_Remove")]
   public static extern bool BVector_Remove(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BVector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BVector")]
   public static extern void delete_BVector(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_Clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_Clear")]
   public static extern void SVector_Clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_Add")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_Add")]
   public static extern void SVector_Add(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_size")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_size")]
   public static extern uint SVector_size(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_capacity")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_capacity")]
   public static extern uint SVector_capacity(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_reserve")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_reserve")]
   public static extern void SVector_reserve(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_SVector__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_SVector__SWIG_0")]
   public static extern IntPtr new_SVector__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_SVector__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_SVector__SWIG_1")]
   public static extern IntPtr new_SVector__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_SVector__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_SVector__SWIG_2")]
   public static extern IntPtr new_SVector__SWIG_2(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_getitemcopy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_getitemcopy")]
   public static extern string SVector_getitemcopy(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_getitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_getitem")]
   public static extern string SVector_getitem(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_setitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_setitem")]
   public static extern void SVector_setitem(HandleRef jarg1, int jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_AddRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_AddRange")]
   public static extern void SVector_AddRange(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_GetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_GetRange")]
   public static extern IntPtr SVector_GetRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_Insert")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_Insert")]
   public static extern void SVector_Insert(HandleRef jarg1, int jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_InsertRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_InsertRange")]
   public static extern void SVector_InsertRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_RemoveAt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_RemoveAt")]
   public static extern void SVector_RemoveAt(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_RemoveRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_RemoveRange")]
   public static extern void SVector_RemoveRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_Repeat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_Repeat")]
   public static extern IntPtr SVector_Repeat(string jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_Reverse__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_Reverse__SWIG_0")]
   public static extern void SVector_Reverse__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_Reverse__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_Reverse__SWIG_1")]
   public static extern void SVector_Reverse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_SetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_SetRange")]
   public static extern void SVector_SetRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_Contains")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_Contains")]
   public static extern bool SVector_Contains(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_IndexOf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_IndexOf")]
   public static extern int SVector_IndexOf(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_LastIndexOf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_LastIndexOf")]
   public static extern int SVector_LastIndexOf(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_SVector_Remove")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_SVector_Remove")]
   public static extern bool SVector_Remove(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_SVector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_SVector")]
   public static extern void delete_SVector(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_Clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_Clear")]
   public static extern void IVector_Clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_Add")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_Add")]
   public static extern void IVector_Add(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_size")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_size")]
   public static extern uint IVector_size(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_capacity")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_capacity")]
   public static extern uint IVector_capacity(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_reserve")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_reserve")]
   public static extern void IVector_reserve(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_IVector__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_IVector__SWIG_0")]
   public static extern IntPtr new_IVector__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_IVector__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_IVector__SWIG_1")]
   public static extern IntPtr new_IVector__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_IVector__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_IVector__SWIG_2")]
   public static extern IntPtr new_IVector__SWIG_2(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_getitemcopy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_getitemcopy")]
   public static extern int IVector_getitemcopy(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_getitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_getitem")]
   public static extern int IVector_getitem(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_setitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_setitem")]
   public static extern void IVector_setitem(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_AddRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_AddRange")]
   public static extern void IVector_AddRange(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_GetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_GetRange")]
   public static extern IntPtr IVector_GetRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_Insert")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_Insert")]
   public static extern void IVector_Insert(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_InsertRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_InsertRange")]
   public static extern void IVector_InsertRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_RemoveAt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_RemoveAt")]
   public static extern void IVector_RemoveAt(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_RemoveRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_RemoveRange")]
   public static extern void IVector_RemoveRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_Repeat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_Repeat")]
   public static extern IntPtr IVector_Repeat(int jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_Reverse__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_Reverse__SWIG_0")]
   public static extern void IVector_Reverse__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_Reverse__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_Reverse__SWIG_1")]
   public static extern void IVector_Reverse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_SetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_SetRange")]
   public static extern void IVector_SetRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_Contains")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_Contains")]
   public static extern bool IVector_Contains(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_IndexOf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_IndexOf")]
   public static extern int IVector_IndexOf(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_LastIndexOf")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_LastIndexOf")]
   public static extern int IVector_LastIndexOf(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_IVector_Remove")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IVector_Remove")]
   public static extern bool IVector_Remove(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_IVector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_IVector")]
   public static extern void delete_IVector(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_Clear")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_Clear")]
   public static extern void PidVector_Clear(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_Add")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_Add")]
   public static extern void PidVector_Add(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_size")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_size")]
   public static extern uint PidVector_size(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_capacity")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_capacity")]
   public static extern uint PidVector_capacity(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_reserve")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_reserve")]
   public static extern void PidVector_reserve(HandleRef jarg1, uint jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PidVector__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PidVector__SWIG_0")]
   public static extern IntPtr new_PidVector__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PidVector__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PidVector__SWIG_1")]
   public static extern IntPtr new_PidVector__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_PidVector__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_PidVector__SWIG_2")]
   public static extern IntPtr new_PidVector__SWIG_2(int jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_getitemcopy")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_getitemcopy")]
   public static extern IntPtr PidVector_getitemcopy(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_getitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_getitem")]
   public static extern IntPtr PidVector_getitem(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_setitem")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_setitem")]
   public static extern void PidVector_setitem(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_AddRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_AddRange")]
   public static extern void PidVector_AddRange(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_GetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_GetRange")]
   public static extern IntPtr PidVector_GetRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_Insert")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_Insert")]
   public static extern void PidVector_Insert(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_InsertRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_InsertRange")]
   public static extern void PidVector_InsertRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_RemoveAt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_RemoveAt")]
   public static extern void PidVector_RemoveAt(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_RemoveRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_RemoveRange")]
   public static extern void PidVector_RemoveRange(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_Repeat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_Repeat")]
   public static extern IntPtr PidVector_Repeat(HandleRef jarg1, int jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_Reverse__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_Reverse__SWIG_0")]
   public static extern void PidVector_Reverse__SWIG_0(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_Reverse__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_Reverse__SWIG_1")]
   public static extern void PidVector_Reverse__SWIG_1(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_PidVector_SetRange")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PidVector_SetRange")]
   public static extern void PidVector_SetRange(HandleRef jarg1, int jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_PidVector")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_PidVector")]
   public static extern void delete_PidVector(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgb_getPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgb_getPixelSize")]
   public static extern int ImageRgb_getPixelSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgb_getPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgb_getPixelCode")]
   public static extern int ImageRgb_getPixelCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgb_pixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgb_pixel")]
   public static extern IntPtr ImageRgb_pixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgb_access")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgb_access")]
   public static extern IntPtr ImageRgb_access(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgb_safePixel__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgb_safePixel__SWIG_0")]
   public static extern IntPtr ImageRgb_safePixel__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ImageRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ImageRgb")]
   public static extern IntPtr new_ImageRgb();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ImageRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ImageRgb")]
   public static extern void delete_ImageRgb(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_setStrict__SWIG_0")]
   public static extern void TypedReaderImageRgb_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_setStrict__SWIG_1")]
   public static extern void TypedReaderImageRgb_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_read__SWIG_0")]
   public static extern IntPtr TypedReaderImageRgb_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_read__SWIG_1")]
   public static extern IntPtr TypedReaderImageRgb_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_interrupt")]
   public static extern void TypedReaderImageRgb_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_lastRead")]
   public static extern IntPtr TypedReaderImageRgb_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_isClosed")]
   public static extern bool TypedReaderImageRgb_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_useCallback")]
   public static extern void TypedReaderImageRgb_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_disableCallback")]
   public static extern void TypedReaderImageRgb_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_getPendingReads")]
   public static extern int TypedReaderImageRgb_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderImageRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderImageRgb")]
   public static extern void delete_TypedReaderImageRgb(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_getName")]
   public static extern string TypedReaderImageRgb_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_setReplier")]
   public static extern void TypedReaderImageRgb_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_acquire")]
-  public static extern IntPtr TypedReaderImageRgb_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_acquire")]
+  public static extern System.IntPtr TypedReaderImageRgb_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_release")]
-  public static extern void TypedReaderImageRgb_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_release")]
+  public static extern void TypedReaderImageRgb_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgb_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_setTargetPeriod")]
   public static extern void TypedReaderImageRgb_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderCallbackImageRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderCallbackImageRgb")]
   public static extern void delete_TypedReaderCallbackImageRgb(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageRgb_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageRgb_onRead__SWIG_0")]
   public static extern void TypedReaderCallbackImageRgb_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageRgb_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageRgb_onRead__SWIG_1")]
   public static extern void TypedReaderCallbackImageRgb_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_TypedReaderCallbackImageRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageRgb")]
   public static extern IntPtr new_TypedReaderCallbackImageRgb();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageRgb__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageRgb_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgb__SWIG_0")]
   public static extern IntPtr new_BufferedPortImageRgb__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageRgb__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgb__SWIG_1")]
   public static extern IntPtr new_BufferedPortImageRgb__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortImageRgb")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortImageRgb")]
   public static extern void delete_BufferedPortImageRgb(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_addOutput__SWIG_0")]
   public static extern bool BufferedPortImageRgb_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_addOutput__SWIG_1")]
   public static extern bool BufferedPortImageRgb_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_addOutput__SWIG_2")]
   public static extern bool BufferedPortImageRgb_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_close")]
   public static extern void BufferedPortImageRgb_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_interrupt")]
   public static extern void BufferedPortImageRgb_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_resume")]
   public static extern void BufferedPortImageRgb_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_getPendingReads")]
   public static extern int BufferedPortImageRgb_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_where")]
   public static extern IntPtr BufferedPortImageRgb_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_getName")]
   public static extern string BufferedPortImageRgb_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_prepare")]
   public static extern IntPtr BufferedPortImageRgb_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_unprepare")]
   public static extern bool BufferedPortImageRgb_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_write__SWIG_0")]
   public static extern void BufferedPortImageRgb_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_write__SWIG_1")]
   public static extern void BufferedPortImageRgb_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_writeStrict")]
   public static extern void BufferedPortImageRgb_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_waitForWrite")]
   public static extern void BufferedPortImageRgb_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setStrict__SWIG_0")]
   public static extern void BufferedPortImageRgb_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setStrict__SWIG_1")]
   public static extern void BufferedPortImageRgb_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_read__SWIG_0")]
   public static extern IntPtr BufferedPortImageRgb_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_read__SWIG_1")]
   public static extern IntPtr BufferedPortImageRgb_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_lastRead")]
   public static extern IntPtr BufferedPortImageRgb_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_isClosed")]
   public static extern bool BufferedPortImageRgb_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setReplier")]
   public static extern void BufferedPortImageRgb_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setReader")]
   public static extern void BufferedPortImageRgb_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setAdminReader")]
   public static extern void BufferedPortImageRgb_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_onRead")]
-  public static extern void BufferedPortImageRgb_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_onRead__SWIG_1")]
+  public static extern void BufferedPortImageRgb_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_useCallback__SWIG_0")]
   public static extern void BufferedPortImageRgb_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_useCallback__SWIG_1")]
   public static extern void BufferedPortImageRgb_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_disableCallback")]
   public static extern void BufferedPortImageRgb_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setEnvelope")]
   public static extern bool BufferedPortImageRgb_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_getEnvelope")]
   public static extern bool BufferedPortImageRgb_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_getInputCount")]
   public static extern int BufferedPortImageRgb_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_getOutputCount")]
   public static extern int BufferedPortImageRgb_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_isWriting")]
   public static extern bool BufferedPortImageRgb_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_getReport")]
   public static extern void BufferedPortImageRgb_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setReporter")]
   public static extern void BufferedPortImageRgb_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_acquire")]
-  public static extern IntPtr BufferedPortImageRgb_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_acquire")]
+  public static extern System.IntPtr BufferedPortImageRgb_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_release")]
-  public static extern void BufferedPortImageRgb_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_release")]
+  public static extern void BufferedPortImageRgb_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setTargetPeriod")]
   public static extern void BufferedPortImageRgb_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_getType")]
   public static extern IntPtr BufferedPortImageRgb_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_promiseType")]
   public static extern void BufferedPortImageRgb_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setInputMode")]
   public static extern void BufferedPortImageRgb_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setOutputMode")]
   public static extern void BufferedPortImageRgb_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setRpcMode")]
   public static extern void BufferedPortImageRgb_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_acquireProperties")]
   public static extern IntPtr BufferedPortImageRgb_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_releaseProperties")]
   public static extern void BufferedPortImageRgb_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_includeNodeInName")]
   public static extern void BufferedPortImageRgb_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setCallbackLock")]
   public static extern bool BufferedPortImageRgb_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_removeCallbackLock")]
   public static extern bool BufferedPortImageRgb_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_lockCallback")]
   public static extern bool BufferedPortImageRgb_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_tryLockCallback")]
   public static extern bool BufferedPortImageRgb_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_unlockCallback")]
   public static extern void BufferedPortImageRgb_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgba_getPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgba_getPixelSize")]
   public static extern int ImageRgba_getPixelSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgba_getPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgba_getPixelCode")]
   public static extern int ImageRgba_getPixelCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgba_pixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgba_pixel")]
   public static extern IntPtr ImageRgba_pixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgba_access")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgba_access")]
   public static extern IntPtr ImageRgba_access(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgba_safePixel__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgba_safePixel__SWIG_0")]
   public static extern IntPtr ImageRgba_safePixel__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ImageRgba")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ImageRgba")]
   public static extern IntPtr new_ImageRgba();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ImageRgba")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ImageRgba")]
   public static extern void delete_ImageRgba(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_setStrict__SWIG_0")]
   public static extern void TypedReaderImageRgba_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_setStrict__SWIG_1")]
   public static extern void TypedReaderImageRgba_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_read__SWIG_0")]
   public static extern IntPtr TypedReaderImageRgba_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_read__SWIG_1")]
   public static extern IntPtr TypedReaderImageRgba_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_interrupt")]
   public static extern void TypedReaderImageRgba_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_lastRead")]
   public static extern IntPtr TypedReaderImageRgba_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_isClosed")]
   public static extern bool TypedReaderImageRgba_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_useCallback")]
   public static extern void TypedReaderImageRgba_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_disableCallback")]
   public static extern void TypedReaderImageRgba_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_getPendingReads")]
   public static extern int TypedReaderImageRgba_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderImageRgba")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderImageRgba")]
   public static extern void delete_TypedReaderImageRgba(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_getName")]
   public static extern string TypedReaderImageRgba_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_setReplier")]
   public static extern void TypedReaderImageRgba_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_acquire")]
-  public static extern IntPtr TypedReaderImageRgba_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_acquire")]
+  public static extern System.IntPtr TypedReaderImageRgba_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_release")]
-  public static extern void TypedReaderImageRgba_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_release")]
+  public static extern void TypedReaderImageRgba_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgba_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_setTargetPeriod")]
   public static extern void TypedReaderImageRgba_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderCallbackImageRgba")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderCallbackImageRgba")]
   public static extern void delete_TypedReaderCallbackImageRgba(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageRgba_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageRgba_onRead__SWIG_0")]
   public static extern void TypedReaderCallbackImageRgba_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageRgba_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageRgba_onRead__SWIG_1")]
   public static extern void TypedReaderCallbackImageRgba_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_TypedReaderCallbackImageRgba")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageRgba")]
   public static extern IntPtr new_TypedReaderCallbackImageRgba();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageRgba__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageRgba_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgba__SWIG_0")]
   public static extern IntPtr new_BufferedPortImageRgba__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageRgba__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgba__SWIG_1")]
   public static extern IntPtr new_BufferedPortImageRgba__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortImageRgba")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortImageRgba")]
   public static extern void delete_BufferedPortImageRgba(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_addOutput__SWIG_0")]
   public static extern bool BufferedPortImageRgba_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_addOutput__SWIG_1")]
   public static extern bool BufferedPortImageRgba_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_addOutput__SWIG_2")]
   public static extern bool BufferedPortImageRgba_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_close")]
   public static extern void BufferedPortImageRgba_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_interrupt")]
   public static extern void BufferedPortImageRgba_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_resume")]
   public static extern void BufferedPortImageRgba_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_getPendingReads")]
   public static extern int BufferedPortImageRgba_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_where")]
   public static extern IntPtr BufferedPortImageRgba_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_getName")]
   public static extern string BufferedPortImageRgba_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_prepare")]
   public static extern IntPtr BufferedPortImageRgba_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_unprepare")]
   public static extern bool BufferedPortImageRgba_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_write__SWIG_0")]
   public static extern void BufferedPortImageRgba_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_write__SWIG_1")]
   public static extern void BufferedPortImageRgba_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_writeStrict")]
   public static extern void BufferedPortImageRgba_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_waitForWrite")]
   public static extern void BufferedPortImageRgba_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setStrict__SWIG_0")]
   public static extern void BufferedPortImageRgba_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setStrict__SWIG_1")]
   public static extern void BufferedPortImageRgba_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_read__SWIG_0")]
   public static extern IntPtr BufferedPortImageRgba_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_read__SWIG_1")]
   public static extern IntPtr BufferedPortImageRgba_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_lastRead")]
   public static extern IntPtr BufferedPortImageRgba_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_isClosed")]
   public static extern bool BufferedPortImageRgba_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setReplier")]
   public static extern void BufferedPortImageRgba_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setReader")]
   public static extern void BufferedPortImageRgba_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setAdminReader")]
   public static extern void BufferedPortImageRgba_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_onRead")]
-  public static extern void BufferedPortImageRgba_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_onRead__SWIG_1")]
+  public static extern void BufferedPortImageRgba_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_useCallback__SWIG_0")]
   public static extern void BufferedPortImageRgba_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_useCallback__SWIG_1")]
   public static extern void BufferedPortImageRgba_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_disableCallback")]
   public static extern void BufferedPortImageRgba_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setEnvelope")]
   public static extern bool BufferedPortImageRgba_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_getEnvelope")]
   public static extern bool BufferedPortImageRgba_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_getInputCount")]
   public static extern int BufferedPortImageRgba_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_getOutputCount")]
   public static extern int BufferedPortImageRgba_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_isWriting")]
   public static extern bool BufferedPortImageRgba_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_getReport")]
   public static extern void BufferedPortImageRgba_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setReporter")]
   public static extern void BufferedPortImageRgba_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_acquire")]
-  public static extern IntPtr BufferedPortImageRgba_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_acquire")]
+  public static extern System.IntPtr BufferedPortImageRgba_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_release")]
-  public static extern void BufferedPortImageRgba_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_release")]
+  public static extern void BufferedPortImageRgba_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setTargetPeriod")]
   public static extern void BufferedPortImageRgba_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_getType")]
   public static extern IntPtr BufferedPortImageRgba_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_promiseType")]
   public static extern void BufferedPortImageRgba_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setInputMode")]
   public static extern void BufferedPortImageRgba_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setOutputMode")]
   public static extern void BufferedPortImageRgba_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setRpcMode")]
   public static extern void BufferedPortImageRgba_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_acquireProperties")]
   public static extern IntPtr BufferedPortImageRgba_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_releaseProperties")]
   public static extern void BufferedPortImageRgba_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_includeNodeInName")]
   public static extern void BufferedPortImageRgba_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setCallbackLock")]
   public static extern bool BufferedPortImageRgba_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_removeCallbackLock")]
   public static extern bool BufferedPortImageRgba_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_lockCallback")]
   public static extern bool BufferedPortImageRgba_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_tryLockCallback")]
   public static extern bool BufferedPortImageRgba_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_unlockCallback")]
   public static extern void BufferedPortImageRgba_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono_getPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono_getPixelSize")]
   public static extern int ImageMono_getPixelSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono_getPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono_getPixelCode")]
   public static extern int ImageMono_getPixelCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono_pixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono_pixel")]
   public static extern IntPtr ImageMono_pixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono_access")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono_access")]
   public static extern IntPtr ImageMono_access(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono_safePixel__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono_safePixel__SWIG_0")]
   public static extern IntPtr ImageMono_safePixel__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ImageMono")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ImageMono")]
   public static extern IntPtr new_ImageMono();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ImageMono")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ImageMono")]
   public static extern void delete_ImageMono(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_setStrict__SWIG_0")]
   public static extern void TypedReaderImageMono_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_setStrict__SWIG_1")]
   public static extern void TypedReaderImageMono_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_read__SWIG_0")]
   public static extern IntPtr TypedReaderImageMono_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_read__SWIG_1")]
   public static extern IntPtr TypedReaderImageMono_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_interrupt")]
   public static extern void TypedReaderImageMono_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_lastRead")]
   public static extern IntPtr TypedReaderImageMono_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_isClosed")]
   public static extern bool TypedReaderImageMono_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_useCallback")]
   public static extern void TypedReaderImageMono_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_disableCallback")]
   public static extern void TypedReaderImageMono_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_getPendingReads")]
   public static extern int TypedReaderImageMono_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderImageMono")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderImageMono")]
   public static extern void delete_TypedReaderImageMono(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_getName")]
   public static extern string TypedReaderImageMono_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_setReplier")]
   public static extern void TypedReaderImageMono_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_acquire")]
-  public static extern IntPtr TypedReaderImageMono_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_acquire")]
+  public static extern System.IntPtr TypedReaderImageMono_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_release")]
-  public static extern void TypedReaderImageMono_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_release")]
+  public static extern void TypedReaderImageMono_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_setTargetPeriod")]
   public static extern void TypedReaderImageMono_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderCallbackImageMono")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderCallbackImageMono")]
   public static extern void delete_TypedReaderCallbackImageMono(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageMono_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageMono_onRead__SWIG_0")]
   public static extern void TypedReaderCallbackImageMono_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageMono_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageMono_onRead__SWIG_1")]
   public static extern void TypedReaderCallbackImageMono_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_TypedReaderCallbackImageMono")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageMono")]
   public static extern IntPtr new_TypedReaderCallbackImageMono();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageMono__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageMono_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageMono__SWIG_0")]
   public static extern IntPtr new_BufferedPortImageMono__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageMono__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageMono__SWIG_1")]
   public static extern IntPtr new_BufferedPortImageMono__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortImageMono")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortImageMono")]
   public static extern void delete_BufferedPortImageMono(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_addOutput__SWIG_0")]
   public static extern bool BufferedPortImageMono_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_addOutput__SWIG_1")]
   public static extern bool BufferedPortImageMono_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_addOutput__SWIG_2")]
   public static extern bool BufferedPortImageMono_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_close")]
   public static extern void BufferedPortImageMono_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_interrupt")]
   public static extern void BufferedPortImageMono_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_resume")]
   public static extern void BufferedPortImageMono_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_getPendingReads")]
   public static extern int BufferedPortImageMono_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_where")]
   public static extern IntPtr BufferedPortImageMono_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_getName")]
   public static extern string BufferedPortImageMono_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_prepare")]
   public static extern IntPtr BufferedPortImageMono_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_unprepare")]
   public static extern bool BufferedPortImageMono_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_write__SWIG_0")]
   public static extern void BufferedPortImageMono_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_write__SWIG_1")]
   public static extern void BufferedPortImageMono_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_writeStrict")]
   public static extern void BufferedPortImageMono_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_waitForWrite")]
   public static extern void BufferedPortImageMono_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setStrict__SWIG_0")]
   public static extern void BufferedPortImageMono_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setStrict__SWIG_1")]
   public static extern void BufferedPortImageMono_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_read__SWIG_0")]
   public static extern IntPtr BufferedPortImageMono_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_read__SWIG_1")]
   public static extern IntPtr BufferedPortImageMono_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_lastRead")]
   public static extern IntPtr BufferedPortImageMono_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_isClosed")]
   public static extern bool BufferedPortImageMono_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setReplier")]
   public static extern void BufferedPortImageMono_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setReader")]
   public static extern void BufferedPortImageMono_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setAdminReader")]
   public static extern void BufferedPortImageMono_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_onRead")]
-  public static extern void BufferedPortImageMono_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_onRead__SWIG_1")]
+  public static extern void BufferedPortImageMono_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_useCallback__SWIG_0")]
   public static extern void BufferedPortImageMono_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_useCallback__SWIG_1")]
   public static extern void BufferedPortImageMono_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_disableCallback")]
   public static extern void BufferedPortImageMono_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setEnvelope")]
   public static extern bool BufferedPortImageMono_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_getEnvelope")]
   public static extern bool BufferedPortImageMono_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_getInputCount")]
   public static extern int BufferedPortImageMono_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_getOutputCount")]
   public static extern int BufferedPortImageMono_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_isWriting")]
   public static extern bool BufferedPortImageMono_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_getReport")]
   public static extern void BufferedPortImageMono_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setReporter")]
   public static extern void BufferedPortImageMono_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_acquire")]
-  public static extern IntPtr BufferedPortImageMono_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_acquire")]
+  public static extern System.IntPtr BufferedPortImageMono_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_release")]
-  public static extern void BufferedPortImageMono_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_release")]
+  public static extern void BufferedPortImageMono_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setTargetPeriod")]
   public static extern void BufferedPortImageMono_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_getType")]
   public static extern IntPtr BufferedPortImageMono_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_promiseType")]
   public static extern void BufferedPortImageMono_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setInputMode")]
   public static extern void BufferedPortImageMono_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setOutputMode")]
   public static extern void BufferedPortImageMono_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setRpcMode")]
   public static extern void BufferedPortImageMono_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_acquireProperties")]
   public static extern IntPtr BufferedPortImageMono_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_releaseProperties")]
   public static extern void BufferedPortImageMono_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_includeNodeInName")]
   public static extern void BufferedPortImageMono_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setCallbackLock")]
   public static extern bool BufferedPortImageMono_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_removeCallbackLock")]
   public static extern bool BufferedPortImageMono_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_lockCallback")]
   public static extern bool BufferedPortImageMono_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_tryLockCallback")]
   public static extern bool BufferedPortImageMono_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_unlockCallback")]
   public static extern void BufferedPortImageMono_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono16_getPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono16_getPixelSize")]
   public static extern int ImageMono16_getPixelSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono16_getPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono16_getPixelCode")]
   public static extern int ImageMono16_getPixelCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono16_pixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono16_pixel")]
   public static extern IntPtr ImageMono16_pixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono16_access")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono16_access")]
   public static extern IntPtr ImageMono16_access(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono16_safePixel__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono16_safePixel__SWIG_0")]
   public static extern IntPtr ImageMono16_safePixel__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ImageMono16")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ImageMono16")]
   public static extern IntPtr new_ImageMono16();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ImageMono16")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ImageMono16")]
   public static extern void delete_ImageMono16(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_setStrict__SWIG_0")]
   public static extern void TypedReaderImageMono16_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_setStrict__SWIG_1")]
   public static extern void TypedReaderImageMono16_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_read__SWIG_0")]
   public static extern IntPtr TypedReaderImageMono16_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_read__SWIG_1")]
   public static extern IntPtr TypedReaderImageMono16_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_interrupt")]
   public static extern void TypedReaderImageMono16_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_lastRead")]
   public static extern IntPtr TypedReaderImageMono16_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_isClosed")]
   public static extern bool TypedReaderImageMono16_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_useCallback")]
   public static extern void TypedReaderImageMono16_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_disableCallback")]
   public static extern void TypedReaderImageMono16_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_getPendingReads")]
   public static extern int TypedReaderImageMono16_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderImageMono16")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderImageMono16")]
   public static extern void delete_TypedReaderImageMono16(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_getName")]
   public static extern string TypedReaderImageMono16_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_setReplier")]
   public static extern void TypedReaderImageMono16_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_acquire")]
-  public static extern IntPtr TypedReaderImageMono16_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_acquire")]
+  public static extern System.IntPtr TypedReaderImageMono16_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_release")]
-  public static extern void TypedReaderImageMono16_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_release")]
+  public static extern void TypedReaderImageMono16_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageMono16_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_setTargetPeriod")]
   public static extern void TypedReaderImageMono16_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderCallbackImageMono16")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderCallbackImageMono16")]
   public static extern void delete_TypedReaderCallbackImageMono16(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageMono16_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageMono16_onRead__SWIG_0")]
   public static extern void TypedReaderCallbackImageMono16_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageMono16_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageMono16_onRead__SWIG_1")]
   public static extern void TypedReaderCallbackImageMono16_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_TypedReaderCallbackImageMono16")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageMono16")]
   public static extern IntPtr new_TypedReaderCallbackImageMono16();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageMono16__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageMono16_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageMono16__SWIG_0")]
   public static extern IntPtr new_BufferedPortImageMono16__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageMono16__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageMono16__SWIG_1")]
   public static extern IntPtr new_BufferedPortImageMono16__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortImageMono16")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortImageMono16")]
   public static extern void delete_BufferedPortImageMono16(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_addOutput__SWIG_0")]
   public static extern bool BufferedPortImageMono16_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_addOutput__SWIG_1")]
   public static extern bool BufferedPortImageMono16_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_addOutput__SWIG_2")]
   public static extern bool BufferedPortImageMono16_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_close")]
   public static extern void BufferedPortImageMono16_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_interrupt")]
   public static extern void BufferedPortImageMono16_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_resume")]
   public static extern void BufferedPortImageMono16_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_getPendingReads")]
   public static extern int BufferedPortImageMono16_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_where")]
   public static extern IntPtr BufferedPortImageMono16_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_getName")]
   public static extern string BufferedPortImageMono16_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_prepare")]
   public static extern IntPtr BufferedPortImageMono16_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_unprepare")]
   public static extern bool BufferedPortImageMono16_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_write__SWIG_0")]
   public static extern void BufferedPortImageMono16_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_write__SWIG_1")]
   public static extern void BufferedPortImageMono16_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_writeStrict")]
   public static extern void BufferedPortImageMono16_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_waitForWrite")]
   public static extern void BufferedPortImageMono16_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setStrict__SWIG_0")]
   public static extern void BufferedPortImageMono16_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setStrict__SWIG_1")]
   public static extern void BufferedPortImageMono16_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_read__SWIG_0")]
   public static extern IntPtr BufferedPortImageMono16_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_read__SWIG_1")]
   public static extern IntPtr BufferedPortImageMono16_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_lastRead")]
   public static extern IntPtr BufferedPortImageMono16_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_isClosed")]
   public static extern bool BufferedPortImageMono16_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setReplier")]
   public static extern void BufferedPortImageMono16_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setReader")]
   public static extern void BufferedPortImageMono16_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setAdminReader")]
   public static extern void BufferedPortImageMono16_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_onRead")]
-  public static extern void BufferedPortImageMono16_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_onRead__SWIG_1")]
+  public static extern void BufferedPortImageMono16_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_useCallback__SWIG_0")]
   public static extern void BufferedPortImageMono16_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_useCallback__SWIG_1")]
   public static extern void BufferedPortImageMono16_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_disableCallback")]
   public static extern void BufferedPortImageMono16_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setEnvelope")]
   public static extern bool BufferedPortImageMono16_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_getEnvelope")]
   public static extern bool BufferedPortImageMono16_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_getInputCount")]
   public static extern int BufferedPortImageMono16_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_getOutputCount")]
   public static extern int BufferedPortImageMono16_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_isWriting")]
   public static extern bool BufferedPortImageMono16_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_getReport")]
   public static extern void BufferedPortImageMono16_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setReporter")]
   public static extern void BufferedPortImageMono16_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_acquire")]
-  public static extern IntPtr BufferedPortImageMono16_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_acquire")]
+  public static extern System.IntPtr BufferedPortImageMono16_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_release")]
-  public static extern void BufferedPortImageMono16_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_release")]
+  public static extern void BufferedPortImageMono16_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setTargetPeriod")]
   public static extern void BufferedPortImageMono16_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_getType")]
   public static extern IntPtr BufferedPortImageMono16_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_promiseType")]
   public static extern void BufferedPortImageMono16_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setInputMode")]
   public static extern void BufferedPortImageMono16_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setOutputMode")]
   public static extern void BufferedPortImageMono16_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setRpcMode")]
   public static extern void BufferedPortImageMono16_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_acquireProperties")]
   public static extern IntPtr BufferedPortImageMono16_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_releaseProperties")]
   public static extern void BufferedPortImageMono16_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_includeNodeInName")]
   public static extern void BufferedPortImageMono16_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setCallbackLock")]
   public static extern bool BufferedPortImageMono16_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_removeCallbackLock")]
   public static extern bool BufferedPortImageMono16_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_lockCallback")]
   public static extern bool BufferedPortImageMono16_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_tryLockCallback")]
   public static extern bool BufferedPortImageMono16_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_unlockCallback")]
   public static extern void BufferedPortImageMono16_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageInt_getPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageInt_getPixelSize")]
   public static extern int ImageInt_getPixelSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageInt_getPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageInt_getPixelCode")]
   public static extern int ImageInt_getPixelCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageInt_pixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageInt_pixel")]
   public static extern IntPtr ImageInt_pixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageInt_access")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageInt_access")]
   public static extern IntPtr ImageInt_access(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageInt_safePixel__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageInt_safePixel__SWIG_0")]
   public static extern IntPtr ImageInt_safePixel__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageInt_getPixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageInt_getPixel")]
   public static extern int ImageInt_getPixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageInt_setPixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageInt_setPixel")]
   public static extern void ImageInt_setPixel(HandleRef jarg1, int jarg2, int jarg3, int jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ImageInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ImageInt")]
   public static extern IntPtr new_ImageInt();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ImageInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ImageInt")]
   public static extern void delete_ImageInt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_setStrict__SWIG_0")]
   public static extern void TypedReaderImageInt_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_setStrict__SWIG_1")]
   public static extern void TypedReaderImageInt_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_read__SWIG_0")]
   public static extern IntPtr TypedReaderImageInt_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_read__SWIG_1")]
   public static extern IntPtr TypedReaderImageInt_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_interrupt")]
   public static extern void TypedReaderImageInt_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_lastRead")]
   public static extern IntPtr TypedReaderImageInt_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_isClosed")]
   public static extern bool TypedReaderImageInt_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_useCallback")]
   public static extern void TypedReaderImageInt_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_disableCallback")]
   public static extern void TypedReaderImageInt_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_getPendingReads")]
   public static extern int TypedReaderImageInt_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderImageInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderImageInt")]
   public static extern void delete_TypedReaderImageInt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_getName")]
   public static extern string TypedReaderImageInt_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_setReplier")]
   public static extern void TypedReaderImageInt_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_acquire")]
-  public static extern IntPtr TypedReaderImageInt_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_acquire")]
+  public static extern System.IntPtr TypedReaderImageInt_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_release")]
-  public static extern void TypedReaderImageInt_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_release")]
+  public static extern void TypedReaderImageInt_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageInt_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_setTargetPeriod")]
   public static extern void TypedReaderImageInt_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderCallbackImageInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderCallbackImageInt")]
   public static extern void delete_TypedReaderCallbackImageInt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageInt_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageInt_onRead__SWIG_0")]
   public static extern void TypedReaderCallbackImageInt_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageInt_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageInt_onRead__SWIG_1")]
   public static extern void TypedReaderCallbackImageInt_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_TypedReaderCallbackImageInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageInt")]
   public static extern IntPtr new_TypedReaderCallbackImageInt();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageInt__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageInt_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageInt__SWIG_0")]
   public static extern IntPtr new_BufferedPortImageInt__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageInt__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageInt__SWIG_1")]
   public static extern IntPtr new_BufferedPortImageInt__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortImageInt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortImageInt")]
   public static extern void delete_BufferedPortImageInt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_addOutput__SWIG_0")]
   public static extern bool BufferedPortImageInt_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_addOutput__SWIG_1")]
   public static extern bool BufferedPortImageInt_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_addOutput__SWIG_2")]
   public static extern bool BufferedPortImageInt_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_close")]
   public static extern void BufferedPortImageInt_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_interrupt")]
   public static extern void BufferedPortImageInt_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_resume")]
   public static extern void BufferedPortImageInt_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_getPendingReads")]
   public static extern int BufferedPortImageInt_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_where")]
   public static extern IntPtr BufferedPortImageInt_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_getName")]
   public static extern string BufferedPortImageInt_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_prepare")]
   public static extern IntPtr BufferedPortImageInt_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_unprepare")]
   public static extern bool BufferedPortImageInt_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_write__SWIG_0")]
   public static extern void BufferedPortImageInt_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_write__SWIG_1")]
   public static extern void BufferedPortImageInt_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_writeStrict")]
   public static extern void BufferedPortImageInt_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_waitForWrite")]
   public static extern void BufferedPortImageInt_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setStrict__SWIG_0")]
   public static extern void BufferedPortImageInt_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setStrict__SWIG_1")]
   public static extern void BufferedPortImageInt_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_read__SWIG_0")]
   public static extern IntPtr BufferedPortImageInt_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_read__SWIG_1")]
   public static extern IntPtr BufferedPortImageInt_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_lastRead")]
   public static extern IntPtr BufferedPortImageInt_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_isClosed")]
   public static extern bool BufferedPortImageInt_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setReplier")]
   public static extern void BufferedPortImageInt_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setReader")]
   public static extern void BufferedPortImageInt_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setAdminReader")]
   public static extern void BufferedPortImageInt_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_onRead")]
-  public static extern void BufferedPortImageInt_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_onRead__SWIG_1")]
+  public static extern void BufferedPortImageInt_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_useCallback__SWIG_0")]
   public static extern void BufferedPortImageInt_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_useCallback__SWIG_1")]
   public static extern void BufferedPortImageInt_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_disableCallback")]
   public static extern void BufferedPortImageInt_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setEnvelope")]
   public static extern bool BufferedPortImageInt_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_getEnvelope")]
   public static extern bool BufferedPortImageInt_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_getInputCount")]
   public static extern int BufferedPortImageInt_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_getOutputCount")]
   public static extern int BufferedPortImageInt_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_isWriting")]
   public static extern bool BufferedPortImageInt_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_getReport")]
   public static extern void BufferedPortImageInt_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setReporter")]
   public static extern void BufferedPortImageInt_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_acquire")]
-  public static extern IntPtr BufferedPortImageInt_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_acquire")]
+  public static extern System.IntPtr BufferedPortImageInt_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_release")]
-  public static extern void BufferedPortImageInt_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_release")]
+  public static extern void BufferedPortImageInt_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setTargetPeriod")]
   public static extern void BufferedPortImageInt_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_getType")]
   public static extern IntPtr BufferedPortImageInt_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_promiseType")]
   public static extern void BufferedPortImageInt_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setInputMode")]
   public static extern void BufferedPortImageInt_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setOutputMode")]
   public static extern void BufferedPortImageInt_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setRpcMode")]
   public static extern void BufferedPortImageInt_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_acquireProperties")]
   public static extern IntPtr BufferedPortImageInt_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_releaseProperties")]
   public static extern void BufferedPortImageInt_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_includeNodeInName")]
   public static extern void BufferedPortImageInt_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setCallbackLock")]
   public static extern bool BufferedPortImageInt_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_removeCallbackLock")]
   public static extern bool BufferedPortImageInt_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_lockCallback")]
   public static extern bool BufferedPortImageInt_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_tryLockCallback")]
   public static extern bool BufferedPortImageInt_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_unlockCallback")]
   public static extern void BufferedPortImageInt_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_setStrict__SWIG_0")]
   public static extern void TypedReaderSound_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_setStrict__SWIG_1")]
   public static extern void TypedReaderSound_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_read__SWIG_0")]
   public static extern IntPtr TypedReaderSound_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_read__SWIG_1")]
   public static extern IntPtr TypedReaderSound_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_interrupt")]
   public static extern void TypedReaderSound_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_lastRead")]
   public static extern IntPtr TypedReaderSound_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_isClosed")]
   public static extern bool TypedReaderSound_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_useCallback")]
   public static extern void TypedReaderSound_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_disableCallback")]
   public static extern void TypedReaderSound_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_getPendingReads")]
   public static extern int TypedReaderSound_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderSound")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderSound")]
   public static extern void delete_TypedReaderSound(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_getName")]
   public static extern string TypedReaderSound_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_setReplier")]
   public static extern void TypedReaderSound_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_acquire")]
-  public static extern IntPtr TypedReaderSound_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_acquire")]
+  public static extern System.IntPtr TypedReaderSound_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_release")]
-  public static extern void TypedReaderSound_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_release")]
+  public static extern void TypedReaderSound_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderSound_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_setTargetPeriod")]
   public static extern void TypedReaderSound_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortSound__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_onRead__SWIG_0_0")]
+  public static extern void BufferedPortSound_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortSound__SWIG_0")]
   public static extern IntPtr new_BufferedPortSound__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortSound__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortSound__SWIG_1")]
   public static extern IntPtr new_BufferedPortSound__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortSound")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortSound")]
   public static extern void delete_BufferedPortSound(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_addOutput__SWIG_0")]
   public static extern bool BufferedPortSound_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_addOutput__SWIG_1")]
   public static extern bool BufferedPortSound_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_addOutput__SWIG_2")]
   public static extern bool BufferedPortSound_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_close")]
   public static extern void BufferedPortSound_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_interrupt")]
   public static extern void BufferedPortSound_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_resume")]
   public static extern void BufferedPortSound_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_getPendingReads")]
   public static extern int BufferedPortSound_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_where")]
   public static extern IntPtr BufferedPortSound_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_getName")]
   public static extern string BufferedPortSound_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_prepare")]
   public static extern IntPtr BufferedPortSound_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_unprepare")]
   public static extern bool BufferedPortSound_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_write__SWIG_0")]
   public static extern void BufferedPortSound_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_write__SWIG_1")]
   public static extern void BufferedPortSound_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_writeStrict")]
   public static extern void BufferedPortSound_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_waitForWrite")]
   public static extern void BufferedPortSound_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setStrict__SWIG_0")]
   public static extern void BufferedPortSound_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setStrict__SWIG_1")]
   public static extern void BufferedPortSound_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_read__SWIG_0")]
   public static extern IntPtr BufferedPortSound_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_read__SWIG_1")]
   public static extern IntPtr BufferedPortSound_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_lastRead")]
   public static extern IntPtr BufferedPortSound_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_isClosed")]
   public static extern bool BufferedPortSound_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setReplier")]
   public static extern void BufferedPortSound_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setReader")]
   public static extern void BufferedPortSound_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setAdminReader")]
   public static extern void BufferedPortSound_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_onRead")]
-  public static extern void BufferedPortSound_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_onRead__SWIG_1")]
+  public static extern void BufferedPortSound_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_useCallback__SWIG_0")]
   public static extern void BufferedPortSound_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_useCallback__SWIG_1")]
   public static extern void BufferedPortSound_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_disableCallback")]
   public static extern void BufferedPortSound_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setEnvelope")]
   public static extern bool BufferedPortSound_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_getEnvelope")]
   public static extern bool BufferedPortSound_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_getInputCount")]
   public static extern int BufferedPortSound_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_getOutputCount")]
   public static extern int BufferedPortSound_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_isWriting")]
   public static extern bool BufferedPortSound_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_getReport")]
   public static extern void BufferedPortSound_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setReporter")]
   public static extern void BufferedPortSound_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_acquire")]
-  public static extern IntPtr BufferedPortSound_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_acquire")]
+  public static extern System.IntPtr BufferedPortSound_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_release")]
-  public static extern void BufferedPortSound_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_release")]
+  public static extern void BufferedPortSound_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setTargetPeriod")]
   public static extern void BufferedPortSound_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_getType")]
   public static extern IntPtr BufferedPortSound_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_promiseType")]
   public static extern void BufferedPortSound_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setInputMode")]
   public static extern void BufferedPortSound_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setOutputMode")]
   public static extern void BufferedPortSound_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setRpcMode")]
   public static extern void BufferedPortSound_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_acquireProperties")]
   public static extern IntPtr BufferedPortSound_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_releaseProperties")]
   public static extern void BufferedPortSound_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_includeNodeInName")]
   public static extern void BufferedPortSound_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setCallbackLock")]
   public static extern bool BufferedPortSound_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_removeCallbackLock")]
   public static extern bool BufferedPortSound_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_lockCallback")]
   public static extern bool BufferedPortSound_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_tryLockCallback")]
   public static extern bool BufferedPortSound_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_unlockCallback")]
   public static extern void BufferedPortSound_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageFloat_getPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageFloat_getPixelSize")]
   public static extern int ImageFloat_getPixelSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageFloat_getPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageFloat_getPixelCode")]
   public static extern int ImageFloat_getPixelCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageFloat_pixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageFloat_pixel")]
   public static extern IntPtr ImageFloat_pixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageFloat_access")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageFloat_access")]
   public static extern IntPtr ImageFloat_access(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageFloat_safePixel__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageFloat_safePixel__SWIG_0")]
   public static extern IntPtr ImageFloat_safePixel__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageFloat_getPixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageFloat_getPixel")]
   public static extern float ImageFloat_getPixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageFloat_setPixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageFloat_setPixel")]
   public static extern void ImageFloat_setPixel(HandleRef jarg1, int jarg2, int jarg3, float jarg4);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ImageFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ImageFloat")]
   public static extern IntPtr new_ImageFloat();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ImageFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ImageFloat")]
   public static extern void delete_ImageFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_setStrict__SWIG_0")]
   public static extern void TypedReaderImageFloat_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_setStrict__SWIG_1")]
   public static extern void TypedReaderImageFloat_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_read__SWIG_0")]
   public static extern IntPtr TypedReaderImageFloat_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_read__SWIG_1")]
   public static extern IntPtr TypedReaderImageFloat_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_interrupt")]
   public static extern void TypedReaderImageFloat_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_lastRead")]
   public static extern IntPtr TypedReaderImageFloat_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_isClosed")]
   public static extern bool TypedReaderImageFloat_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_useCallback")]
   public static extern void TypedReaderImageFloat_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_disableCallback")]
   public static extern void TypedReaderImageFloat_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_getPendingReads")]
   public static extern int TypedReaderImageFloat_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderImageFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderImageFloat")]
   public static extern void delete_TypedReaderImageFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_getName")]
   public static extern string TypedReaderImageFloat_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_setReplier")]
   public static extern void TypedReaderImageFloat_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_acquire")]
-  public static extern IntPtr TypedReaderImageFloat_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_acquire")]
+  public static extern System.IntPtr TypedReaderImageFloat_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_release")]
-  public static extern void TypedReaderImageFloat_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_release")]
+  public static extern void TypedReaderImageFloat_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageFloat_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_setTargetPeriod")]
   public static extern void TypedReaderImageFloat_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderCallbackImageFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderCallbackImageFloat")]
   public static extern void delete_TypedReaderCallbackImageFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageFloat_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageFloat_onRead__SWIG_0")]
   public static extern void TypedReaderCallbackImageFloat_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageFloat_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageFloat_onRead__SWIG_1")]
   public static extern void TypedReaderCallbackImageFloat_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_TypedReaderCallbackImageFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageFloat")]
   public static extern IntPtr new_TypedReaderCallbackImageFloat();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageFloat__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageFloat_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageFloat__SWIG_0")]
   public static extern IntPtr new_BufferedPortImageFloat__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageFloat__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageFloat__SWIG_1")]
   public static extern IntPtr new_BufferedPortImageFloat__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortImageFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortImageFloat")]
   public static extern void delete_BufferedPortImageFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_addOutput__SWIG_0")]
   public static extern bool BufferedPortImageFloat_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_addOutput__SWIG_1")]
   public static extern bool BufferedPortImageFloat_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_addOutput__SWIG_2")]
   public static extern bool BufferedPortImageFloat_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_close")]
   public static extern void BufferedPortImageFloat_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_interrupt")]
   public static extern void BufferedPortImageFloat_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_resume")]
   public static extern void BufferedPortImageFloat_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_getPendingReads")]
   public static extern int BufferedPortImageFloat_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_where")]
   public static extern IntPtr BufferedPortImageFloat_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_getName")]
   public static extern string BufferedPortImageFloat_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_prepare")]
   public static extern IntPtr BufferedPortImageFloat_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_unprepare")]
   public static extern bool BufferedPortImageFloat_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_write__SWIG_0")]
   public static extern void BufferedPortImageFloat_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_write__SWIG_1")]
   public static extern void BufferedPortImageFloat_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_writeStrict")]
   public static extern void BufferedPortImageFloat_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_waitForWrite")]
   public static extern void BufferedPortImageFloat_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setStrict__SWIG_0")]
   public static extern void BufferedPortImageFloat_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setStrict__SWIG_1")]
   public static extern void BufferedPortImageFloat_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_read__SWIG_0")]
   public static extern IntPtr BufferedPortImageFloat_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_read__SWIG_1")]
   public static extern IntPtr BufferedPortImageFloat_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_lastRead")]
   public static extern IntPtr BufferedPortImageFloat_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_isClosed")]
   public static extern bool BufferedPortImageFloat_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setReplier")]
   public static extern void BufferedPortImageFloat_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setReader")]
   public static extern void BufferedPortImageFloat_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setAdminReader")]
   public static extern void BufferedPortImageFloat_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_onRead")]
-  public static extern void BufferedPortImageFloat_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_onRead__SWIG_1")]
+  public static extern void BufferedPortImageFloat_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_useCallback__SWIG_0")]
   public static extern void BufferedPortImageFloat_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_useCallback__SWIG_1")]
   public static extern void BufferedPortImageFloat_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_disableCallback")]
   public static extern void BufferedPortImageFloat_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setEnvelope")]
   public static extern bool BufferedPortImageFloat_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_getEnvelope")]
   public static extern bool BufferedPortImageFloat_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_getInputCount")]
   public static extern int BufferedPortImageFloat_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_getOutputCount")]
   public static extern int BufferedPortImageFloat_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_isWriting")]
   public static extern bool BufferedPortImageFloat_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_getReport")]
   public static extern void BufferedPortImageFloat_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setReporter")]
   public static extern void BufferedPortImageFloat_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_acquire")]
-  public static extern IntPtr BufferedPortImageFloat_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_acquire")]
+  public static extern System.IntPtr BufferedPortImageFloat_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_release")]
-  public static extern void BufferedPortImageFloat_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_release")]
+  public static extern void BufferedPortImageFloat_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setTargetPeriod")]
   public static extern void BufferedPortImageFloat_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_getType")]
   public static extern IntPtr BufferedPortImageFloat_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_promiseType")]
   public static extern void BufferedPortImageFloat_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setInputMode")]
   public static extern void BufferedPortImageFloat_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setOutputMode")]
   public static extern void BufferedPortImageFloat_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setRpcMode")]
   public static extern void BufferedPortImageFloat_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_acquireProperties")]
   public static extern IntPtr BufferedPortImageFloat_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_releaseProperties")]
   public static extern void BufferedPortImageFloat_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_includeNodeInName")]
   public static extern void BufferedPortImageFloat_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setCallbackLock")]
   public static extern bool BufferedPortImageFloat_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_removeCallbackLock")]
   public static extern bool BufferedPortImageFloat_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_lockCallback")]
   public static extern bool BufferedPortImageFloat_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_tryLockCallback")]
   public static extern bool BufferedPortImageFloat_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_unlockCallback")]
   public static extern void BufferedPortImageFloat_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgbFloat_getPixelSize")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgbFloat_getPixelSize")]
   public static extern int ImageRgbFloat_getPixelSize(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgbFloat_getPixelCode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgbFloat_getPixelCode")]
   public static extern int ImageRgbFloat_getPixelCode(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgbFloat_pixel")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgbFloat_pixel")]
   public static extern IntPtr ImageRgbFloat_pixel(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgbFloat_access")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgbFloat_access")]
   public static extern IntPtr ImageRgbFloat_access(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgbFloat_safePixel__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgbFloat_safePixel__SWIG_0")]
   public static extern IntPtr ImageRgbFloat_safePixel__SWIG_0(HandleRef jarg1, int jarg2, int jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_ImageRgbFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_ImageRgbFloat")]
   public static extern IntPtr new_ImageRgbFloat();
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_ImageRgbFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_ImageRgbFloat")]
   public static extern void delete_ImageRgbFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_setStrict__SWIG_0")]
   public static extern void TypedReaderImageRgbFloat_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_setStrict__SWIG_1")]
   public static extern void TypedReaderImageRgbFloat_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_read__SWIG_0")]
   public static extern IntPtr TypedReaderImageRgbFloat_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_read__SWIG_1")]
   public static extern IntPtr TypedReaderImageRgbFloat_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_interrupt")]
   public static extern void TypedReaderImageRgbFloat_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_lastRead")]
   public static extern IntPtr TypedReaderImageRgbFloat_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_isClosed")]
   public static extern bool TypedReaderImageRgbFloat_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_useCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_useCallback")]
   public static extern void TypedReaderImageRgbFloat_useCallback(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_disableCallback")]
   public static extern void TypedReaderImageRgbFloat_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_getPendingReads")]
   public static extern int TypedReaderImageRgbFloat_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderImageRgbFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderImageRgbFloat")]
   public static extern void delete_TypedReaderImageRgbFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_getName")]
   public static extern string TypedReaderImageRgbFloat_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_setReplier")]
   public static extern void TypedReaderImageRgbFloat_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_acquire")]
-  public static extern IntPtr TypedReaderImageRgbFloat_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_acquire")]
+  public static extern System.IntPtr TypedReaderImageRgbFloat_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_release")]
-  public static extern void TypedReaderImageRgbFloat_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_release")]
+  public static extern void TypedReaderImageRgbFloat_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderImageRgbFloat_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_setTargetPeriod")]
   public static extern void TypedReaderImageRgbFloat_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_TypedReaderCallbackImageRgbFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_TypedReaderCallbackImageRgbFloat")]
   public static extern void delete_TypedReaderCallbackImageRgbFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageRgbFloat_onRead__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageRgbFloat_onRead__SWIG_0")]
   public static extern void TypedReaderCallbackImageRgbFloat_onRead__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_TypedReaderCallbackImageRgbFloat_onRead__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderCallbackImageRgbFloat_onRead__SWIG_1")]
   public static extern void TypedReaderCallbackImageRgbFloat_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_new_TypedReaderCallbackImageRgbFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageRgbFloat")]
   public static extern IntPtr new_TypedReaderCallbackImageRgbFloat();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageRgbFloat__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageRgbFloat_onRead__SWIG_0_0(HandleRef jarg1, HandleRef jarg2, HandleRef jarg3);
+
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgbFloat__SWIG_0")]
   public static extern IntPtr new_BufferedPortImageRgbFloat__SWIG_0();
 
-  [DllImport("yarp", EntryPoint="CSharp_new_BufferedPortImageRgbFloat__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgbFloat__SWIG_1")]
   public static extern IntPtr new_BufferedPortImageRgbFloat__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_delete_BufferedPortImageRgbFloat")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_delete_BufferedPortImageRgbFloat")]
   public static extern void delete_BufferedPortImageRgbFloat(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_addOutput__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_addOutput__SWIG_0")]
   public static extern bool BufferedPortImageRgbFloat_addOutput__SWIG_0(HandleRef jarg1, string jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_addOutput__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_addOutput__SWIG_1")]
   public static extern bool BufferedPortImageRgbFloat_addOutput__SWIG_1(HandleRef jarg1, string jarg2, string jarg3);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_addOutput__SWIG_2")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_addOutput__SWIG_2")]
   public static extern bool BufferedPortImageRgbFloat_addOutput__SWIG_2(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_close")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_close")]
   public static extern void BufferedPortImageRgbFloat_close(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_interrupt")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_interrupt")]
   public static extern void BufferedPortImageRgbFloat_interrupt(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_resume")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_resume")]
   public static extern void BufferedPortImageRgbFloat_resume(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_getPendingReads")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_getPendingReads")]
   public static extern int BufferedPortImageRgbFloat_getPendingReads(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_where")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_where")]
   public static extern IntPtr BufferedPortImageRgbFloat_where(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_getName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_getName")]
   public static extern string BufferedPortImageRgbFloat_getName(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_prepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_prepare")]
   public static extern IntPtr BufferedPortImageRgbFloat_prepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_unprepare")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_unprepare")]
   public static extern bool BufferedPortImageRgbFloat_unprepare(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_write__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_write__SWIG_0")]
   public static extern void BufferedPortImageRgbFloat_write__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_write__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_write__SWIG_1")]
   public static extern void BufferedPortImageRgbFloat_write__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_writeStrict")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_writeStrict")]
   public static extern void BufferedPortImageRgbFloat_writeStrict(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_waitForWrite")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_waitForWrite")]
   public static extern void BufferedPortImageRgbFloat_waitForWrite(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setStrict__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setStrict__SWIG_0")]
   public static extern void BufferedPortImageRgbFloat_setStrict__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setStrict__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setStrict__SWIG_1")]
   public static extern void BufferedPortImageRgbFloat_setStrict__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_read__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_read__SWIG_0")]
   public static extern IntPtr BufferedPortImageRgbFloat_read__SWIG_0(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_read__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_read__SWIG_1")]
   public static extern IntPtr BufferedPortImageRgbFloat_read__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_lastRead")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_lastRead")]
   public static extern IntPtr BufferedPortImageRgbFloat_lastRead(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_isClosed")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_isClosed")]
   public static extern bool BufferedPortImageRgbFloat_isClosed(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setReplier")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setReplier")]
   public static extern void BufferedPortImageRgbFloat_setReplier(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setReader")]
   public static extern void BufferedPortImageRgbFloat_setReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setAdminReader")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setAdminReader")]
   public static extern void BufferedPortImageRgbFloat_setAdminReader(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_onRead")]
-  public static extern void BufferedPortImageRgbFloat_onRead(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_onRead__SWIG_1")]
+  public static extern void BufferedPortImageRgbFloat_onRead__SWIG_1(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_useCallback__SWIG_0")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_useCallback__SWIG_0")]
   public static extern void BufferedPortImageRgbFloat_useCallback__SWIG_0(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_useCallback__SWIG_1")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_useCallback__SWIG_1")]
   public static extern void BufferedPortImageRgbFloat_useCallback__SWIG_1(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_disableCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_disableCallback")]
   public static extern void BufferedPortImageRgbFloat_disableCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setEnvelope")]
   public static extern bool BufferedPortImageRgbFloat_setEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_getEnvelope")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_getEnvelope")]
   public static extern bool BufferedPortImageRgbFloat_getEnvelope(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_getInputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_getInputCount")]
   public static extern int BufferedPortImageRgbFloat_getInputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_getOutputCount")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_getOutputCount")]
   public static extern int BufferedPortImageRgbFloat_getOutputCount(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_isWriting")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_isWriting")]
   public static extern bool BufferedPortImageRgbFloat_isWriting(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_getReport")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_getReport")]
   public static extern void BufferedPortImageRgbFloat_getReport(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setReporter")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setReporter")]
   public static extern void BufferedPortImageRgbFloat_setReporter(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_acquire")]
-  public static extern IntPtr BufferedPortImageRgbFloat_acquire(HandleRef jarg1);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_acquire")]
+  public static extern System.IntPtr BufferedPortImageRgbFloat_acquire(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_release")]
-  public static extern void BufferedPortImageRgbFloat_release(HandleRef jarg1, HandleRef jarg2);
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_release")]
+  public static extern void BufferedPortImageRgbFloat_release(HandleRef jarg1, System.IntPtr jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setTargetPeriod")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setTargetPeriod")]
   public static extern void BufferedPortImageRgbFloat_setTargetPeriod(HandleRef jarg1, double jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_getType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_getType")]
   public static extern IntPtr BufferedPortImageRgbFloat_getType(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_promiseType")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_promiseType")]
   public static extern void BufferedPortImageRgbFloat_promiseType(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setInputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setInputMode")]
   public static extern void BufferedPortImageRgbFloat_setInputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setOutputMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setOutputMode")]
   public static extern void BufferedPortImageRgbFloat_setOutputMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setRpcMode")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setRpcMode")]
   public static extern void BufferedPortImageRgbFloat_setRpcMode(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_acquireProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_acquireProperties")]
   public static extern IntPtr BufferedPortImageRgbFloat_acquireProperties(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_releaseProperties")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_releaseProperties")]
   public static extern void BufferedPortImageRgbFloat_releaseProperties(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_includeNodeInName")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_includeNodeInName")]
   public static extern void BufferedPortImageRgbFloat_includeNodeInName(HandleRef jarg1, bool jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_setCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setCallbackLock")]
   public static extern bool BufferedPortImageRgbFloat_setCallbackLock(HandleRef jarg1, HandleRef jarg2);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_removeCallbackLock")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_removeCallbackLock")]
   public static extern bool BufferedPortImageRgbFloat_removeCallbackLock(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_lockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_lockCallback")]
   public static extern bool BufferedPortImageRgbFloat_lockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_tryLockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_tryLockCallback")]
   public static extern bool BufferedPortImageRgbFloat_tryLockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_unlockCallback")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_unlockCallback")]
   public static extern void BufferedPortImageRgbFloat_unlockCallback(HandleRef jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Portable_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Portable_SWIGUpcast")]
   public static extern IntPtr Portable_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Value_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Value_SWIGUpcast")]
   public static extern IntPtr Value_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_UnbufferedContactable_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_UnbufferedContactable_SWIGUpcast")]
   public static extern IntPtr UnbufferedContactable_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Port_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Port_SWIGUpcast")]
   public static extern IntPtr Port_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_AbstractContactable_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_AbstractContactable_SWIGUpcast")]
   public static extern IntPtr AbstractContactable_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Network_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Network_SWIGUpcast")]
   public static extern IntPtr Network_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortablePairBase_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortablePairBase_SWIGUpcast")]
   public static extern IntPtr PortablePairBase_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Property_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Property_SWIGUpcast")]
   public static extern IntPtr Property_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Bottle_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Bottle_SWIGUpcast")]
   public static extern IntPtr Bottle_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortReaderBufferBase_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_SWIGUpcast")]
   public static extern IntPtr PortReaderBufferBase_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PortWriterWrapper_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PortWriterWrapper_SWIGUpcast")]
   public static extern IntPtr PortWriterWrapper_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RateThreadWrapper_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RateThreadWrapper_SWIGUpcast")]
   public static extern IntPtr RateThreadWrapper_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Stamp_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Stamp_SWIGUpcast")]
   public static extern IntPtr Stamp_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ResourceFinder_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ResourceFinder_SWIGUpcast")]
   public static extern IntPtr ResourceFinder_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcServer_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcServer_SWIGUpcast")]
   public static extern IntPtr RpcServer_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_RpcClient_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_RpcClient_SWIGUpcast")]
   public static extern IntPtr RpcClient_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortProperty_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_SWIGUpcast")]
   public static extern IntPtr BufferedPortProperty_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortBottle_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_SWIGUpcast")]
   public static extern IntPtr BufferedPortBottle_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Image_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Image_SWIGUpcast")]
   public static extern IntPtr Image_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_FlexImage_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_FlexImage_SWIGUpcast")]
   public static extern IntPtr FlexImage_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Sound_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Sound_SWIGUpcast")]
   public static extern IntPtr Sound_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_VectorBase_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_SWIGUpcast")]
   public static extern IntPtr VectorBase_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_Vector_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_Vector_SWIGUpcast")]
   public static extern IntPtr Vector_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceDriver_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceDriver_SWIGUpcast")]
   public static extern IntPtr DeviceDriver_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_DeviceResponder_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_SWIGUpcast")]
   public static extern IntPtr DeviceResponder_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_PolyDriver_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_PolyDriver_SWIGUpcast")]
   public static extern IntPtr PolyDriver_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_StubDriverCreator_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_StubDriverCreator_SWIGUpcast")]
   public static extern IntPtr StubDriverCreator_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_IFrameGrabberControlsDC1394_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_IFrameGrabberControlsDC1394_SWIGUpcast")]
   public static extern IntPtr IFrameGrabberControlsDC1394_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgb_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgb_SWIGUpcast")]
   public static extern IntPtr ImageRgb_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgb_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_SWIGUpcast")]
   public static extern IntPtr BufferedPortImageRgb_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgba_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgba_SWIGUpcast")]
   public static extern IntPtr ImageRgba_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgba_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_SWIGUpcast")]
   public static extern IntPtr BufferedPortImageRgba_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono_SWIGUpcast")]
   public static extern IntPtr ImageMono_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_SWIGUpcast")]
   public static extern IntPtr BufferedPortImageMono_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageMono16_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageMono16_SWIGUpcast")]
   public static extern IntPtr ImageMono16_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageMono16_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_SWIGUpcast")]
   public static extern IntPtr BufferedPortImageMono16_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageInt_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageInt_SWIGUpcast")]
   public static extern IntPtr ImageInt_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageInt_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_SWIGUpcast")]
   public static extern IntPtr BufferedPortImageInt_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortSound_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_SWIGUpcast")]
   public static extern IntPtr BufferedPortSound_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageFloat_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageFloat_SWIGUpcast")]
   public static extern IntPtr ImageFloat_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageFloat_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_SWIGUpcast")]
   public static extern IntPtr BufferedPortImageFloat_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_ImageRgbFloat_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_ImageRgbFloat_SWIGUpcast")]
   public static extern IntPtr ImageRgbFloat_SWIGUpcast(IntPtr jarg1);
 
-  [DllImport("yarp", EntryPoint="CSharp_BufferedPortImageRgbFloat_SWIGUpcast")]
+  [DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_SWIGUpcast")]
   public static extern IntPtr BufferedPortImageRgbFloat_SWIGUpcast(IntPtr jarg1);
 }

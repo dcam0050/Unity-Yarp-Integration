@@ -39,6 +39,11 @@ public class BufferedPortSound : Contactable {
     }
   }
 
+  public new void onRead(Sound datum, TypedReaderSound reader) {
+    yarpPINVOKE.BufferedPortSound_onRead__SWIG_0_0(swigCPtr, Sound.getCPtr(datum), TypedReaderSound.getCPtr(reader));
+    if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public BufferedPortSound() : this(yarpPINVOKE.new_BufferedPortSound__SWIG_0(), true) {
   }
 
@@ -164,7 +169,7 @@ public class BufferedPortSound : Contactable {
   }
 
   public new void onRead(Sound datum) {
-    yarpPINVOKE.BufferedPortSound_onRead(swigCPtr, Sound.getCPtr(datum));
+    yarpPINVOKE.BufferedPortSound_onRead__SWIG_1(swigCPtr, Sound.getCPtr(datum));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -218,14 +223,10 @@ public class BufferedPortSound : Contactable {
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual SWIGTYPE_p_void acquire() {
-    IntPtr cPtr = yarpPINVOKE.BufferedPortSound_acquire(swigCPtr);
-    SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
-    return ret;
-  }
+  public virtual System.IntPtr acquire() { return yarpPINVOKE.BufferedPortSound_acquire(swigCPtr); }
 
-  public virtual void release(SWIGTYPE_p_void handle) {
-    yarpPINVOKE.BufferedPortSound_release(swigCPtr, SWIGTYPE_p_void.getCPtr(handle));
+  public virtual void release(System.IntPtr handle) {
+    yarpPINVOKE.BufferedPortSound_release(swigCPtr, handle);
   }
 
   public new void setTargetPeriod(double period) {

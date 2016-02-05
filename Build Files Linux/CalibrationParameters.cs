@@ -90,6 +90,26 @@ public class CalibrationParameters : IDisposable {
     } 
   }
 
+  public double param5 {
+    set {
+      yarpPINVOKE.CalibrationParameters_param5_set(swigCPtr, value);
+    } 
+    get {
+      double ret = yarpPINVOKE.CalibrationParameters_param5_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double paramZero {
+    set {
+      yarpPINVOKE.CalibrationParameters_paramZero_set(swigCPtr, value);
+    } 
+    get {
+      double ret = yarpPINVOKE.CalibrationParameters_paramZero_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CalibrationParameters() : this(yarpPINVOKE.new_CalibrationParameters(), true) {
   }
 

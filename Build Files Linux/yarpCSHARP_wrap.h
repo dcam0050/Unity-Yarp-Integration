@@ -16,7 +16,7 @@ class SwigDirector_PortReader : public yarp::os::PortReader, public Swig::Direct
 public:
     SwigDirector_PortReader();
     virtual ~SwigDirector_PortReader();
-    virtual bool read(yarp::os::ConnectionReader &connection);
+    virtual bool read(yarp::os::ConnectionReader &reader);
     virtual Type getReadType();
 
     typedef unsigned int (SWIGSTDCALL* SWIG_Callback0_t)(void *);

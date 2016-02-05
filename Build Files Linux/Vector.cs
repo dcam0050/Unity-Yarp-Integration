@@ -127,11 +127,7 @@ public class Vector : Portable {
     yarpPINVOKE.Vector_pop_back(swigCPtr);
   }
 
-  public SWIGTYPE_p_void getGslVector() {
-    IntPtr cPtr = yarpPINVOKE.Vector_getGslVector__SWIG_0(swigCPtr);
-    SWIGTYPE_p_void ret = (cPtr == IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
-    return ret;
-  }
+  public System.IntPtr getGslVector() { return yarpPINVOKE.Vector_getGslVector__SWIG_0(swigCPtr); }
 
   public SWIGTYPE_p_double access(uint i) {
     SWIGTYPE_p_double ret = new SWIGTYPE_p_double(yarpPINVOKE.Vector_access__SWIG_0(swigCPtr, i), false);

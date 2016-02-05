@@ -39,18 +39,14 @@ public class PortWriterBufferBase : global::System.IDisposable {
     }
   }
 
-  public virtual PortWriterWrapper create(PortWriterBufferManager man, SWIGTYPE_p_void tracker) {
-    global::System.IntPtr cPtr = yarpPINVOKE.PortWriterBufferBase_create(swigCPtr, PortWriterBufferManager.getCPtr(man), SWIGTYPE_p_void.getCPtr(tracker));
+  public virtual PortWriterWrapper create(PortWriterBufferManager man, System.IntPtr tracker) {
+    global::System.IntPtr cPtr = yarpPINVOKE.PortWriterBufferBase_create(swigCPtr, PortWriterBufferManager.getCPtr(man), tracker);
     PortWriterWrapper ret = (cPtr == global::System.IntPtr.Zero) ? null : new PortWriterWrapper(cPtr, false);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public SWIGTYPE_p_void getContent() {
-    global::System.IntPtr cPtr = yarpPINVOKE.PortWriterBufferBase_getContent(swigCPtr);
-    SWIGTYPE_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
-    return ret;
-  }
+  public System.IntPtr getContent() { return yarpPINVOKE.PortWriterBufferBase_getContent(swigCPtr); }
 
   public bool releaseContent() {
     bool ret = yarpPINVOKE.PortWriterBufferBase_releaseContent(swigCPtr);

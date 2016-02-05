@@ -38,14 +38,14 @@ public class Portable : PortReader {
     }
   }
 
-  public new bool read(ConnectionReader connection) {
-    bool ret = yarpPINVOKE.Portable_read(swigCPtr, ConnectionReader.getCPtr(connection));
+  public new bool read(ConnectionReader reader) {
+    bool ret = yarpPINVOKE.Portable_read(swigCPtr, ConnectionReader.getCPtr(reader));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public new bool write(ConnectionWriter connection) {
-    bool ret = yarpPINVOKE.Portable_write(swigCPtr, ConnectionWriter.getCPtr(connection));
+  public new bool write(ConnectionWriter writer) {
+    bool ret = yarpPINVOKE.Portable_write(swigCPtr, ConnectionWriter.getCPtr(writer));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

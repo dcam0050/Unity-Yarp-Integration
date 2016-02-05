@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;UNITY_64;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_LINUX;UNITY_STANDALONE;UNITY_STANDALONE_LINUX_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_LINUX</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_2_3;UNITY_5_2;UNITY_5;UNITY_64;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_LINUX;UNITY_STANDALONE;UNITY_STANDALONE_LINUX_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_32;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -38,10 +38,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +129,7 @@
      <Compile Include="Assets\Plugins\ImageRgb.cs" />
      <Compile Include="Assets\Plugins\ImageRgbFloat.cs" />
      <Compile Include="Assets\Plugins\ImageRgba.cs" />
+     <Compile Include="Assets\Plugins\JointTypeEnum.cs" />
      <Compile Include="Assets\Plugins\MotorTorqueParameters.cs" />
      <Compile Include="Assets\Plugins\NameStore.cs" />
      <Compile Include="Assets\Plugins\Network.cs" />
@@ -191,6 +192,7 @@
      <Compile Include="Assets\Plugins\SWIGTYPE_p_unsigned_char.cs" />
      <Compile Include="Assets\Plugins\SWIGTYPE_p_unsigned_int.cs" />
      <Compile Include="Assets\Plugins\SWIGTYPE_p_void.cs" />
+     <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__dev__JointTypeEnum.cs" />
      <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__InputStream.cs" />
      <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__Mutex.cs" />
      <Compile Include="Assets\Plugins\SWIGTYPE_p_yarp__os__NestedContact.cs" />
@@ -233,13 +235,14 @@
      <Compile Include="Assets\Plugins\Value.cs" />
      <Compile Include="Assets\Plugins\Vector.cs" />
      <Compile Include="Assets\Plugins\VectorBase.cs" />
+     <Compile Include="Assets\Plugins\Vocab.cs" />
      <Compile Include="Assets\Plugins\YarpVocabPixelTypesEnum.cs" />
+     <Compile Include="Assets\Plugins\cameraFeature_id_t.cs" />
      <Compile Include="Assets\Plugins\yarp.cs" />
      <Compile Include="Assets\Plugins\yarpPINVOKE.cs" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\UnityStandardSurface.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_Standard.shader" />
      <None Include="Assets\MORPH3D\Content\Shaders\StandardSpecular-doublesided.shader" />
-     <None Include="Assets\Plugins\CMakeCache.txt" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_ShadowSample.cginc" />
      <None Include="Assets\MORPH3D\Readme.txt" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\Volund_StandardCharacterSpecularSurface.shader" />
@@ -250,17 +253,29 @@
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_setup.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_DepthOnly.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="M3D_DLL">
- <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="M3DIMPORT_DLL">
- <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
+ <HintPath>D:/MastersThesis/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
+ </Reference>
+ <Reference Include="M3D_DLL">
+ <HintPath>D:/MastersThesis/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Cecil">
+ <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>D:/Program Files (x86)/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

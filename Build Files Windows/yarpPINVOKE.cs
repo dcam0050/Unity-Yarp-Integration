@@ -617,7 +617,7 @@ class yarpPINVOKE {
   public static extern global::System.IntPtr new_Value__SWIG_5(string jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_6")]
-  public static extern global::System.IntPtr new_Value__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  public static extern global::System.IntPtr new_Value__SWIG_6(System.IntPtr jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_Value__SWIG_7")]
   public static extern global::System.IntPtr new_Value__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -743,7 +743,7 @@ class yarpPINVOKE {
   public static extern global::System.IntPtr Value_makeVocab__SWIG_1(string jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Value_makeBlob")]
-  public static extern global::System.IntPtr Value_makeBlob(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  public static extern global::System.IntPtr Value_makeBlob(System.IntPtr jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Value_makeList__SWIG_0")]
   public static extern global::System.IntPtr Value_makeList__SWIG_0();
@@ -759,6 +759,18 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Value_toString")]
   public static extern string Value_toString(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Vocab_encode")]
+  public static extern int Vocab_encode(string jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Vocab_decode")]
+  public static extern string Vocab_decode(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_Vocab")]
+  public static extern global::System.IntPtr new_Vocab();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_Vocab")]
+  public static extern void delete_Vocab(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_Contactable")]
   public static extern void delete_Contactable(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1633,6 +1645,9 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_Bottle__SWIG_2")]
   public static extern global::System.IntPtr new_Bottle__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_Bottle")]
+  public static extern void delete_Bottle(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_clear")]
   public static extern void Bottle_clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -1653,9 +1668,6 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_add__SWIG_0")]
   public static extern void Bottle_add__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_add__SWIG_1")]
-  public static extern void Bottle_add__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_addList")]
   public static extern global::System.IntPtr Bottle_addList(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1714,9 +1726,6 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_isNull")]
   public static extern bool Bottle_isNull(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_Bottle")]
-  public static extern void delete_Bottle(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_copy__SWIG_0")]
   public static extern void Bottle_copy__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
 
@@ -1741,23 +1750,20 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_tail")]
   public static extern global::System.IntPtr Bottle_tail(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_specialize")]
-  public static extern void Bottle_specialize(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_getSpecialization")]
-  public static extern int Bottle_getSpecialization(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_setNested")]
-  public static extern void Bottle_setNested(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_hasChanged")]
   public static extern void Bottle_hasChanged(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_toString__SWIG_0")]
   public static extern string Bottle_toString__SWIG_0(int jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_getSpecialization")]
+  public static extern int Bottle_getSpecialization(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_describeBottleCode")]
   public static extern string Bottle_describeBottleCode(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_add__SWIG_1")]
+  public static extern void Bottle_add__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Bottle_toString__SWIG_1")]
   public static extern string Bottle_toString__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1841,10 +1847,10 @@ class yarpPINVOKE {
   public static extern bool PortReaderBufferBase_getEnvelope(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_acquire")]
-  public static extern global::System.IntPtr PortReaderBufferBase_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr PortReaderBufferBase_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_release__SWIG_1")]
-  public static extern void PortReaderBufferBase_release__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void PortReaderBufferBase_release__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PortReaderBufferBase_setAutoRelease__SWIG_0")]
   public static extern void PortReaderBufferBase_setAutoRelease__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
@@ -1856,7 +1862,7 @@ class yarpPINVOKE {
   public static extern void delete_PortWriterBufferManager(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferManager_onCompletion")]
-  public static extern void PortWriterBufferManager_onCompletion(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void PortWriterBufferManager_onCompletion(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PortWriterWrapper_getInternal")]
   public static extern global::System.IntPtr PortWriterWrapper_getInternal(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1868,10 +1874,10 @@ class yarpPINVOKE {
   public static extern void delete_PortWriterBufferBase(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_create")]
-  public static extern global::System.IntPtr PortWriterBufferBase_create(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern global::System.IntPtr PortWriterBufferBase_create(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, System.IntPtr jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_getContent")]
-  public static extern global::System.IntPtr PortWriterBufferBase_getContent(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr PortWriterBufferBase_getContent(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PortWriterBufferBase_releaseContent")]
   public static extern bool PortWriterBufferBase_releaseContent(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -2774,10 +2780,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderProperty_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_acquire")]
-  public static extern global::System.IntPtr TypedReaderProperty_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderProperty_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_release")]
-  public static extern void TypedReaderProperty_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderProperty_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderProperty_setTargetPeriod")]
   public static extern void TypedReaderProperty_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -2802,6 +2808,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PropertyCallback_director_connect")]
   public static extern void PropertyCallback_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, PropertyCallback.SwigDelegatePropertyCallback_0 delegate0, PropertyCallback.SwigDelegatePropertyCallback_1 delegate1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_onRead__SWIG_0_0")]
+  public static extern void BufferedPortProperty_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortProperty__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortProperty__SWIG_0();
@@ -2884,8 +2893,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setAdminReader")]
   public static extern void BufferedPortProperty_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_onRead")]
-  public static extern void BufferedPortProperty_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_onRead__SWIG_1")]
+  public static extern void BufferedPortProperty_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_useCallback__SWIG_0")]
   public static extern void BufferedPortProperty_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -2918,10 +2927,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortProperty_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_acquire")]
-  public static extern global::System.IntPtr BufferedPortProperty_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortProperty_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_release")]
-  public static extern void BufferedPortProperty_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortProperty_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortProperty_setTargetPeriod")]
   public static extern void BufferedPortProperty_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -3005,10 +3014,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderBottle_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_acquire")]
-  public static extern global::System.IntPtr TypedReaderBottle_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderBottle_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_release")]
-  public static extern void TypedReaderBottle_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderBottle_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderBottle_setTargetPeriod")]
   public static extern void TypedReaderBottle_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -3033,6 +3042,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BottleCallback_director_connect")]
   public static extern void BottleCallback_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, BottleCallback.SwigDelegateBottleCallback_0 delegate0, BottleCallback.SwigDelegateBottleCallback_1 delegate1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_onRead__SWIG_0_0")]
+  public static extern void BufferedPortBottle_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortBottle__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortBottle__SWIG_0();
@@ -3115,8 +3127,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setAdminReader")]
   public static extern void BufferedPortBottle_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_onRead")]
-  public static extern void BufferedPortBottle_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_onRead__SWIG_1")]
+  public static extern void BufferedPortBottle_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_useCallback__SWIG_0")]
   public static extern void BufferedPortBottle_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -3149,10 +3161,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortBottle_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_acquire")]
-  public static extern global::System.IntPtr BufferedPortBottle_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortBottle_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_release")]
-  public static extern void BufferedPortBottle_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortBottle_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortBottle_setTargetPeriod")]
   public static extern void BufferedPortBottle_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -3254,7 +3266,7 @@ class yarpPINVOKE {
   public static extern void Image_resize__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Image_setExternal")]
-  public static extern void Image_setExternal(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, int jarg4);
+  public static extern void Image_setExternal(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2, int jarg3, int jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Image_getRawImage")]
   public static extern System.IntPtr Image_getRawImage(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -3263,10 +3275,10 @@ class yarpPINVOKE {
   public static extern int Image_getRawImageSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Image_getIplImage")]
-  public static extern global::System.IntPtr Image_getIplImage(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr Image_getIplImage(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Image_wrapIplImage")]
-  public static extern void Image_wrapIplImage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void Image_wrapIplImage(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Image_read")]
   public static extern bool Image_read(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -3679,6 +3691,9 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_getElementSize")]
   public static extern int VectorBase_getElementSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_getBottleTag")]
+  public static extern int VectorBase_getBottleTag(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VectorBase_getListSize")]
   public static extern uint VectorBase_getListSize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -3761,7 +3776,7 @@ class yarpPINVOKE {
   public static extern void Vector_pop_back(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Vector_getGslVector__SWIG_0")]
-  public static extern global::System.IntPtr Vector_getGslVector__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr Vector_getGslVector__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Vector_access__SWIG_0")]
   public static extern global::System.IntPtr Vector_access__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
@@ -3832,8 +3847,11 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_read")]
   public static extern bool DeviceResponder_read(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_onRead")]
-  public static extern void DeviceResponder_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_onRead__SWIG_0_0")]
+  public static extern void DeviceResponder_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_onRead__SWIG_1")]
+  public static extern void DeviceResponder_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_DeviceResponder_makeUsage")]
   public static extern void DeviceResponder_makeUsage(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -4294,6 +4312,18 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param4_get")]
   public static extern double CalibrationParameters_param4_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param5_set")]
+  public static extern void CalibrationParameters_param5_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_param5_get")]
+  public static extern double CalibrationParameters_param5_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_paramZero_set")]
+  public static extern void CalibrationParameters_paramZero_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_CalibrationParameters_paramZero_get")]
+  public static extern double CalibrationParameters_paramZero_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_CalibrationParameters")]
   public static extern global::System.IntPtr new_CalibrationParameters();
 
@@ -4471,6 +4501,12 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_disableAmp")]
   public static extern bool IAmplifierControl_disableAmp(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getAmpStatus__SWIG_0")]
+  public static extern bool IAmplifierControl_getAmpStatus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getAmpStatus__SWIG_1")]
+  public static extern bool IAmplifierControl_getAmpStatus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getCurrents__SWIG_0")]
   public static extern bool IAmplifierControl_getCurrents__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
@@ -4483,11 +4519,26 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_setMaxCurrent")]
   public static extern bool IAmplifierControl_setMaxCurrent(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getAmpStatus__SWIG_0")]
-  public static extern bool IAmplifierControl_getAmpStatus__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getNominalCurrent")]
+  public static extern bool IAmplifierControl_getNominalCurrent(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getAmpStatus__SWIG_1")]
-  public static extern bool IAmplifierControl_getAmpStatus__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getPeakCurrent")]
+  public static extern bool IAmplifierControl_getPeakCurrent(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_setPeakCurrent")]
+  public static extern bool IAmplifierControl_setPeakCurrent(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getPWM")]
+  public static extern bool IAmplifierControl_getPWM(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getPWMLimit")]
+  public static extern bool IAmplifierControl_getPWMLimit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_setPWMLimit")]
+  public static extern bool IAmplifierControl_setPWMLimit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getPowerSupplyVoltage")]
+  public static extern bool IAmplifierControl_getPowerSupplyVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControl_getCurrents__SWIG_1")]
   public static extern bool IAmplifierControl_getCurrents__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -4504,6 +4555,12 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_disableAmpRaw")]
   public static extern bool IAmplifierControlRaw_disableAmpRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_0")]
+  public static extern bool IAmplifierControlRaw_getAmpStatusRaw__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_1")]
+  public static extern bool IAmplifierControlRaw_getAmpStatusRaw__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getCurrentsRaw")]
   public static extern bool IAmplifierControlRaw_getCurrentsRaw(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
@@ -4516,11 +4573,26 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getMaxCurrentRaw")]
   public static extern bool IAmplifierControlRaw_getMaxCurrentRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_0")]
-  public static extern bool IAmplifierControlRaw_getAmpStatusRaw__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getNominalCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_getNominalCurrentRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getAmpStatusRaw__SWIG_1")]
-  public static extern bool IAmplifierControlRaw_getAmpStatusRaw__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getPeakCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_getPeakCurrentRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_setPeakCurrentRaw")]
+  public static extern bool IAmplifierControlRaw_setPeakCurrentRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getPWMRaw")]
+  public static extern bool IAmplifierControlRaw_getPWMRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getPWMLimitRaw")]
+  public static extern bool IAmplifierControlRaw_getPWMLimitRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_setPWMLimitRaw")]
+  public static extern bool IAmplifierControlRaw_setPWMLimitRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, double jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAmplifierControlRaw_getPowerSupplyVoltageRaw")]
+  public static extern bool IAmplifierControlRaw_getPowerSupplyVoltageRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlCalibrationRaw")]
   public static extern void delete_IControlCalibrationRaw(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -4633,224 +4705,17 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAxisInfo_getAxisName")]
   public static extern bool IAxisInfo_getAxisName(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAxisInfo_getJointType")]
+  public static extern bool IAxisInfo_getJointType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_IAxisInfoRaw")]
   public static extern void delete_IAxisInfoRaw(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAxisInfoRaw_getAxisNameRaw")]
   public static extern bool IAxisInfoRaw_getAxisNameRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CALIBRATE_JOINT_get")]
-  public static extern int VOCAB_CALIBRATE_JOINT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CALIBRATE_JOINT_PARAMS_get")]
-  public static extern int VOCAB_CALIBRATE_JOINT_PARAMS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CALIBRATE_get")]
-  public static extern int VOCAB_CALIBRATE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ABORTCALIB_get")]
-  public static extern int VOCAB_ABORTCALIB_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ABORTPARK_get")]
-  public static extern int VOCAB_ABORTPARK_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CALIBRATE_DONE_get")]
-  public static extern int VOCAB_CALIBRATE_DONE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_PARK_get")]
-  public static extern int VOCAB_PARK_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_SET_get")]
-  public static extern int VOCAB_SET_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_GET_get")]
-  public static extern int VOCAB_GET_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_IS_get")]
-  public static extern int VOCAB_IS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_FAILED_get")]
-  public static extern int VOCAB_FAILED_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OK_get")]
-  public static extern int VOCAB_OK_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OFFSET_get")]
-  public static extern int VOCAB_OFFSET_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_PID_get")]
-  public static extern int VOCAB_PID_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_PIDS_get")]
-  public static extern int VOCAB_PIDS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REF_get")]
-  public static extern int VOCAB_REF_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REFS_get")]
-  public static extern int VOCAB_REFS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REFG_get")]
-  public static extern int VOCAB_REFG_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_LIM_get")]
-  public static extern int VOCAB_LIM_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_LIMS_get")]
-  public static extern int VOCAB_LIMS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_RESET_get")]
-  public static extern int VOCAB_RESET_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_DISABLE_get")]
-  public static extern int VOCAB_DISABLE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ENABLE_get")]
-  public static extern int VOCAB_ENABLE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ERR_get")]
-  public static extern int VOCAB_ERR_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ERRS_get")]
-  public static extern int VOCAB_ERRS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OUTPUT_get")]
-  public static extern int VOCAB_OUTPUT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OUTPUTS_get")]
-  public static extern int VOCAB_OUTPUTS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REFERENCE_get")]
-  public static extern int VOCAB_REFERENCE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REFERENCES_get")]
-  public static extern int VOCAB_REFERENCES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_AXES_get")]
-  public static extern int VOCAB_AXES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_MOTION_DONE_get")]
-  public static extern int VOCAB_MOTION_DONE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_MOTION_DONES_get")]
-  public static extern int VOCAB_MOTION_DONES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_POSITION_MODE_get")]
-  public static extern int VOCAB_POSITION_MODE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_POSITION_MOVE_get")]
-  public static extern int VOCAB_POSITION_MOVE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_POSITION_MOVES_get")]
-  public static extern int VOCAB_POSITION_MOVES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_RELATIVE_MOVE_get")]
-  public static extern int VOCAB_RELATIVE_MOVE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_RELATIVE_MOVES_get")]
-  public static extern int VOCAB_RELATIVE_MOVES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REF_SPEED_get")]
-  public static extern int VOCAB_REF_SPEED_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REF_SPEEDS_get")]
-  public static extern int VOCAB_REF_SPEEDS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REF_ACCELERATION_get")]
-  public static extern int VOCAB_REF_ACCELERATION_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REF_ACCELERATIONS_get")]
-  public static extern int VOCAB_REF_ACCELERATIONS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_STOP_get")]
-  public static extern int VOCAB_STOP_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_STOPS_get")]
-  public static extern int VOCAB_STOPS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_VELOCITY_MODE_get")]
-  public static extern int VOCAB_VELOCITY_MODE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_VELOCITY_MOVE_get")]
-  public static extern int VOCAB_VELOCITY_MOVE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_VELOCITY_MOVES_get")]
-  public static extern int VOCAB_VELOCITY_MOVES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_AMP_ENABLE_get")]
-  public static extern int VOCAB_AMP_ENABLE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_AMP_DISABLE_get")]
-  public static extern int VOCAB_AMP_DISABLE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_AMP_CURRENT_get")]
-  public static extern int VOCAB_AMP_CURRENT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_AMP_CURRENTS_get")]
-  public static extern int VOCAB_AMP_CURRENTS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_AMP_MAXCURRENT_get")]
-  public static extern int VOCAB_AMP_MAXCURRENT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_AMP_STATUS_get")]
-  public static extern int VOCAB_AMP_STATUS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_AMP_STATUS_SINGLE_get")]
-  public static extern int VOCAB_AMP_STATUS_SINGLE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_LIMITS_get")]
-  public static extern int VOCAB_LIMITS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OPENLOOP_MODE_get")]
-  public static extern int VOCAB_OPENLOOP_MODE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_INFO_NAME_get")]
-  public static extern int VOCAB_INFO_NAME_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_TIMESTAMP_get")]
-  public static extern int VOCAB_TIMESTAMP_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_TORQUE_get")]
-  public static extern int VOCAB_TORQUE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_TORQUE_MODE_get")]
-  public static extern int VOCAB_TORQUE_MODE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_TRQS_get")]
-  public static extern int VOCAB_TRQS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_TRQ_get")]
-  public static extern int VOCAB_TRQ_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_BEMF_get")]
-  public static extern int VOCAB_BEMF_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_MOTOR_PARAMS_get")]
-  public static extern int VOCAB_MOTOR_PARAMS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_RANGES_get")]
-  public static extern int VOCAB_RANGES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_RANGE_get")]
-  public static extern int VOCAB_RANGE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_IMP_PARAM_get")]
-  public static extern int VOCAB_IMP_PARAM_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_IMP_OFFSET_get")]
-  public static extern int VOCAB_IMP_OFFSET_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_TORQUES_DIRECTS_get")]
-  public static extern int VOCAB_TORQUES_DIRECTS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_TORQUES_DIRECT_get")]
-  public static extern int VOCAB_TORQUES_DIRECT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_TORQUES_DIRECT_GROUP_get")]
-  public static extern int VOCAB_TORQUES_DIRECT_GROUP_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_PROTOCOL_VERSION_get")]
-  public static extern int VOCAB_PROTOCOL_VERSION_get();
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IAxisInfoRaw_getJointTypeRaw")]
+  public static extern bool IAxisInfoRaw_getJointTypeRaw(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_Pid_kp_set")]
   public static extern void Pid_kp_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -5740,30 +5605,6 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IEncoders_getEncoderAccelerations__SWIG_1")]
   public static extern bool IEncoders_getEncoderAccelerations__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_E_RESET_get")]
-  public static extern int VOCAB_E_RESET_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_E_RESETS_get")]
-  public static extern int VOCAB_E_RESETS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ENCODER_get")]
-  public static extern int VOCAB_ENCODER_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ENCODERS_get")]
-  public static extern int VOCAB_ENCODERS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ENCODER_SPEED_get")]
-  public static extern int VOCAB_ENCODER_SPEED_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ENCODER_SPEEDS_get")]
-  public static extern int VOCAB_ENCODER_SPEEDS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ENCODER_ACCELERATION_get")]
-  public static extern int VOCAB_ENCODER_ACCELERATION_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ENCODER_ACCELERATIONS_get")]
-  public static extern int VOCAB_ENCODER_ACCELERATIONS_get();
-
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_ICalibrator")]
   public static extern void delete_ICalibrator(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -5824,36 +5665,6 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IRemoteCalibrator_quitPark")]
   public static extern bool IRemoteCalibrator_quitPark(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_REMOTE_CALIBRATOR_INTERFACE_get")]
-  public static extern int VOCAB_REMOTE_CALIBRATOR_INTERFACE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_IS_CALIBRATOR_PRESENT_get")]
-  public static extern int VOCAB_IS_CALIBRATOR_PRESENT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CALIBRATE_SINGLE_JOINT_get")]
-  public static extern int VOCAB_CALIBRATE_SINGLE_JOINT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CALIBRATE_WHOLE_PART_get")]
-  public static extern int VOCAB_CALIBRATE_WHOLE_PART_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_HOMING_SINGLE_JOINT_get")]
-  public static extern int VOCAB_HOMING_SINGLE_JOINT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_HOMING_WHOLE_PART_get")]
-  public static extern int VOCAB_HOMING_WHOLE_PART_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_PARK_SINGLE_JOINT_get")]
-  public static extern int VOCAB_PARK_SINGLE_JOINT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_PARK_WHOLE_PART_get")]
-  public static extern int VOCAB_PARK_WHOLE_PART_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_QUIT_CALIBRATE_get")]
-  public static extern int VOCAB_QUIT_CALIBRATE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_QUIT_PARK_get")]
-  public static extern int VOCAB_QUIT_PARK_get();
-
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlMode")]
   public static extern void delete_IControlMode(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -5875,11 +5686,17 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_setOpenLoopMode")]
   public static extern bool IControlMode_setOpenLoopMode(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlMode")]
-  public static extern bool IControlMode_getControlMode(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlMode__SWIG_0")]
+  public static extern bool IControlMode_getControlMode__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlModes")]
-  public static extern bool IControlMode_getControlModes(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlModes__SWIG_0")]
+  public static extern bool IControlMode_getControlModes__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlMode__SWIG_1")]
+  public static extern int IControlMode_getControlMode__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IControlMode_getControlModes__SWIG_1")]
+  public static extern bool IControlMode_getControlModes__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_IControlModeRaw")]
   public static extern void delete_IControlModeRaw(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -5907,45 +5724,6 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IControlModeRaw_getControlModesRaw")]
   public static extern bool IControlModeRaw_getControlModesRaw(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_ICONTROLMODE_get")]
-  public static extern int VOCAB_ICONTROLMODE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_CONTROL_MODE_get")]
-  public static extern int VOCAB_CM_CONTROL_MODE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_CONTROL_MODE_GROUP_get")]
-  public static extern int VOCAB_CM_CONTROL_MODE_GROUP_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_CONTROL_MODES_get")]
-  public static extern int VOCAB_CM_CONTROL_MODES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_IDLE_get")]
-  public static extern int VOCAB_CM_IDLE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_TORQUE_get")]
-  public static extern int VOCAB_CM_TORQUE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_POSITION_get")]
-  public static extern int VOCAB_CM_POSITION_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_POSITION_DIRECT_get")]
-  public static extern int VOCAB_CM_POSITION_DIRECT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_VELOCITY_get")]
-  public static extern int VOCAB_CM_VELOCITY_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_OPENLOOP_get")]
-  public static extern int VOCAB_CM_OPENLOOP_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_IMPEDANCE_POS_get")]
-  public static extern int VOCAB_CM_IMPEDANCE_POS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_IMPEDANCE_VEL_get")]
-  public static extern int VOCAB_CM_IMPEDANCE_VEL_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_CM_UNKNOWN_get")]
-  public static extern int VOCAB_CM_UNKNOWN_get();
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_MotorTorqueParameters_bemf_set")]
   public static extern void MotorTorqueParameters_bemf_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -6211,18 +5989,6 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IImpedanceControl_getCurrentImpedanceLimit")]
   public static extern bool IImpedanceControl_getCurrentImpedanceLimit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_IMPEDANCE_get")]
-  public static extern int VOCAB_IMPEDANCE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_POSITION_get")]
-  public static extern int VOCAB_POSITION_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_VELOCITY_get")]
-  public static extern int VOCAB_VELOCITY_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_IOPENLOOP_get")]
-  public static extern int VOCAB_IOPENLOOP_get();
-
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_IVelocityControlRaw")]
   public static extern void delete_IVelocityControlRaw(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -6351,21 +6117,6 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IOpenLoopControl_setOpenLoopMode")]
   public static extern bool IOpenLoopControl_setOpenLoopMode(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OPENLOOP_INTERFACE_get")]
-  public static extern int VOCAB_OPENLOOP_INTERFACE_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OPENLOOP_REF_OUTPUT_get")]
-  public static extern int VOCAB_OPENLOOP_REF_OUTPUT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OPENLOOP_REF_OUTPUTS_get")]
-  public static extern int VOCAB_OPENLOOP_REF_OUTPUTS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OPENLOOP_PWM_OUTPUT_get")]
-  public static extern int VOCAB_OPENLOOP_PWM_OUTPUT_get();
-
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_VOCAB_OPENLOOP_PWM_OUTPUTS_get")]
-  public static extern int VOCAB_OPENLOOP_PWM_OUTPUTS_get();
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_DVector_Clear")]
   public static extern void DVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -6601,6 +6352,84 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_SVector")]
   public static extern void delete_SVector(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_Clear")]
+  public static extern void IVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_Add")]
+  public static extern void IVector_Add(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_size")]
+  public static extern uint IVector_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_capacity")]
+  public static extern uint IVector_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_reserve")]
+  public static extern void IVector_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_IVector__SWIG_0")]
+  public static extern global::System.IntPtr new_IVector__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_IVector__SWIG_1")]
+  public static extern global::System.IntPtr new_IVector__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_IVector__SWIG_2")]
+  public static extern global::System.IntPtr new_IVector__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_getitemcopy")]
+  public static extern int IVector_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_getitem")]
+  public static extern int IVector_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_setitem")]
+  public static extern void IVector_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_AddRange")]
+  public static extern void IVector_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_GetRange")]
+  public static extern global::System.IntPtr IVector_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_Insert")]
+  public static extern void IVector_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_InsertRange")]
+  public static extern void IVector_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_RemoveAt")]
+  public static extern void IVector_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_RemoveRange")]
+  public static extern void IVector_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_Repeat")]
+  public static extern global::System.IntPtr IVector_Repeat(int jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_Reverse__SWIG_0")]
+  public static extern void IVector_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_Reverse__SWIG_1")]
+  public static extern void IVector_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_SetRange")]
+  public static extern void IVector_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_Contains")]
+  public static extern bool IVector_Contains(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_IndexOf")]
+  public static extern int IVector_IndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_LastIndexOf")]
+  public static extern int IVector_LastIndexOf(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_IVector_Remove")]
+  public static extern bool IVector_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_delete_IVector")]
+  public static extern void delete_IVector(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_PidVector_Clear")]
   public static extern void PidVector_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -6728,10 +6557,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderImageRgb_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_acquire")]
-  public static extern global::System.IntPtr TypedReaderImageRgb_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderImageRgb_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_release")]
-  public static extern void TypedReaderImageRgb_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderImageRgb_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgb_setTargetPeriod")]
   public static extern void TypedReaderImageRgb_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -6747,6 +6576,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageRgb")]
   public static extern global::System.IntPtr new_TypedReaderCallbackImageRgb();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageRgb_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgb__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortImageRgb__SWIG_0();
@@ -6829,8 +6661,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setAdminReader")]
   public static extern void BufferedPortImageRgb_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_onRead")]
-  public static extern void BufferedPortImageRgb_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_onRead__SWIG_1")]
+  public static extern void BufferedPortImageRgb_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_useCallback__SWIG_0")]
   public static extern void BufferedPortImageRgb_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -6863,10 +6695,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortImageRgb_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_acquire")]
-  public static extern global::System.IntPtr BufferedPortImageRgb_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortImageRgb_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_release")]
-  public static extern void BufferedPortImageRgb_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortImageRgb_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgb_setTargetPeriod")]
   public static extern void BufferedPortImageRgb_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -6971,10 +6803,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderImageRgba_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_acquire")]
-  public static extern global::System.IntPtr TypedReaderImageRgba_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderImageRgba_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_release")]
-  public static extern void TypedReaderImageRgba_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderImageRgba_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgba_setTargetPeriod")]
   public static extern void TypedReaderImageRgba_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -6990,6 +6822,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageRgba")]
   public static extern global::System.IntPtr new_TypedReaderCallbackImageRgba();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageRgba_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgba__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortImageRgba__SWIG_0();
@@ -7072,8 +6907,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setAdminReader")]
   public static extern void BufferedPortImageRgba_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_onRead")]
-  public static extern void BufferedPortImageRgba_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_onRead__SWIG_1")]
+  public static extern void BufferedPortImageRgba_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_useCallback__SWIG_0")]
   public static extern void BufferedPortImageRgba_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -7106,10 +6941,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortImageRgba_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_acquire")]
-  public static extern global::System.IntPtr BufferedPortImageRgba_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortImageRgba_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_release")]
-  public static extern void BufferedPortImageRgba_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortImageRgba_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgba_setTargetPeriod")]
   public static extern void BufferedPortImageRgba_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -7214,10 +7049,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderImageMono_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_acquire")]
-  public static extern global::System.IntPtr TypedReaderImageMono_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderImageMono_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_release")]
-  public static extern void TypedReaderImageMono_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderImageMono_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono_setTargetPeriod")]
   public static extern void TypedReaderImageMono_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -7233,6 +7068,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageMono")]
   public static extern global::System.IntPtr new_TypedReaderCallbackImageMono();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageMono_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageMono__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortImageMono__SWIG_0();
@@ -7315,8 +7153,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setAdminReader")]
   public static extern void BufferedPortImageMono_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_onRead")]
-  public static extern void BufferedPortImageMono_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_onRead__SWIG_1")]
+  public static extern void BufferedPortImageMono_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_useCallback__SWIG_0")]
   public static extern void BufferedPortImageMono_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -7349,10 +7187,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortImageMono_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_acquire")]
-  public static extern global::System.IntPtr BufferedPortImageMono_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortImageMono_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_release")]
-  public static extern void BufferedPortImageMono_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortImageMono_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono_setTargetPeriod")]
   public static extern void BufferedPortImageMono_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -7457,10 +7295,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderImageMono16_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_acquire")]
-  public static extern global::System.IntPtr TypedReaderImageMono16_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderImageMono16_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_release")]
-  public static extern void TypedReaderImageMono16_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderImageMono16_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageMono16_setTargetPeriod")]
   public static extern void TypedReaderImageMono16_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -7476,6 +7314,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageMono16")]
   public static extern global::System.IntPtr new_TypedReaderCallbackImageMono16();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageMono16_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageMono16__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortImageMono16__SWIG_0();
@@ -7558,8 +7399,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setAdminReader")]
   public static extern void BufferedPortImageMono16_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_onRead")]
-  public static extern void BufferedPortImageMono16_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_onRead__SWIG_1")]
+  public static extern void BufferedPortImageMono16_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_useCallback__SWIG_0")]
   public static extern void BufferedPortImageMono16_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -7592,10 +7433,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortImageMono16_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_acquire")]
-  public static extern global::System.IntPtr BufferedPortImageMono16_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortImageMono16_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_release")]
-  public static extern void BufferedPortImageMono16_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortImageMono16_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageMono16_setTargetPeriod")]
   public static extern void BufferedPortImageMono16_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -7706,10 +7547,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderImageInt_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_acquire")]
-  public static extern global::System.IntPtr TypedReaderImageInt_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderImageInt_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_release")]
-  public static extern void TypedReaderImageInt_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderImageInt_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageInt_setTargetPeriod")]
   public static extern void TypedReaderImageInt_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -7725,6 +7566,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageInt")]
   public static extern global::System.IntPtr new_TypedReaderCallbackImageInt();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageInt_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageInt__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortImageInt__SWIG_0();
@@ -7807,8 +7651,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setAdminReader")]
   public static extern void BufferedPortImageInt_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_onRead")]
-  public static extern void BufferedPortImageInt_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_onRead__SWIG_1")]
+  public static extern void BufferedPortImageInt_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_useCallback__SWIG_0")]
   public static extern void BufferedPortImageInt_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -7841,10 +7685,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortImageInt_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_acquire")]
-  public static extern global::System.IntPtr BufferedPortImageInt_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortImageInt_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_release")]
-  public static extern void BufferedPortImageInt_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortImageInt_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageInt_setTargetPeriod")]
   public static extern void BufferedPortImageInt_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -7928,13 +7772,16 @@ class yarpPINVOKE {
   public static extern void TypedReaderSound_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_acquire")]
-  public static extern global::System.IntPtr TypedReaderSound_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderSound_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_release")]
-  public static extern void TypedReaderSound_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderSound_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderSound_setTargetPeriod")]
   public static extern void TypedReaderSound_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_onRead__SWIG_0_0")]
+  public static extern void BufferedPortSound_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortSound__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortSound__SWIG_0();
@@ -8017,8 +7864,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setAdminReader")]
   public static extern void BufferedPortSound_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_onRead")]
-  public static extern void BufferedPortSound_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_onRead__SWIG_1")]
+  public static extern void BufferedPortSound_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_useCallback__SWIG_0")]
   public static extern void BufferedPortSound_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -8051,10 +7898,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortSound_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_acquire")]
-  public static extern global::System.IntPtr BufferedPortSound_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortSound_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_release")]
-  public static extern void BufferedPortSound_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortSound_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortSound_setTargetPeriod")]
   public static extern void BufferedPortSound_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -8165,10 +8012,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderImageFloat_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_acquire")]
-  public static extern global::System.IntPtr TypedReaderImageFloat_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderImageFloat_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_release")]
-  public static extern void TypedReaderImageFloat_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderImageFloat_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageFloat_setTargetPeriod")]
   public static extern void TypedReaderImageFloat_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -8184,6 +8031,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageFloat")]
   public static extern global::System.IntPtr new_TypedReaderCallbackImageFloat();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageFloat_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageFloat__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortImageFloat__SWIG_0();
@@ -8266,8 +8116,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setAdminReader")]
   public static extern void BufferedPortImageFloat_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_onRead")]
-  public static extern void BufferedPortImageFloat_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_onRead__SWIG_1")]
+  public static extern void BufferedPortImageFloat_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_useCallback__SWIG_0")]
   public static extern void BufferedPortImageFloat_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -8300,10 +8150,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortImageFloat_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_acquire")]
-  public static extern global::System.IntPtr BufferedPortImageFloat_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortImageFloat_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_release")]
-  public static extern void BufferedPortImageFloat_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortImageFloat_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageFloat_setTargetPeriod")]
   public static extern void BufferedPortImageFloat_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -8408,10 +8258,10 @@ class yarpPINVOKE {
   public static extern void TypedReaderImageRgbFloat_setReplier(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_acquire")]
-  public static extern global::System.IntPtr TypedReaderImageRgbFloat_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr TypedReaderImageRgbFloat_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_release")]
-  public static extern void TypedReaderImageRgbFloat_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void TypedReaderImageRgbFloat_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_TypedReaderImageRgbFloat_setTargetPeriod")]
   public static extern void TypedReaderImageRgbFloat_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -8427,6 +8277,9 @@ class yarpPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_TypedReaderCallbackImageRgbFloat")]
   public static extern global::System.IntPtr new_TypedReaderCallbackImageRgbFloat();
+
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_onRead__SWIG_0_0")]
+  public static extern void BufferedPortImageRgbFloat_onRead__SWIG_0_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_new_BufferedPortImageRgbFloat__SWIG_0")]
   public static extern global::System.IntPtr new_BufferedPortImageRgbFloat__SWIG_0();
@@ -8509,8 +8362,8 @@ class yarpPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setAdminReader")]
   public static extern void BufferedPortImageRgbFloat_setAdminReader(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_onRead")]
-  public static extern void BufferedPortImageRgbFloat_onRead(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_onRead__SWIG_1")]
+  public static extern void BufferedPortImageRgbFloat_onRead__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_useCallback__SWIG_0")]
   public static extern void BufferedPortImageRgbFloat_useCallback__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -8543,10 +8396,10 @@ class yarpPINVOKE {
   public static extern void BufferedPortImageRgbFloat_setReporter(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_acquire")]
-  public static extern global::System.IntPtr BufferedPortImageRgbFloat_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern System.IntPtr BufferedPortImageRgbFloat_acquire(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_release")]
-  public static extern void BufferedPortImageRgbFloat_release(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern void BufferedPortImageRgbFloat_release(global::System.Runtime.InteropServices.HandleRef jarg1, System.IntPtr jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("yarp_cs", EntryPoint="CSharp_BufferedPortImageRgbFloat_setTargetPeriod")]
   public static extern void BufferedPortImageRgbFloat_setTargetPeriod(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);

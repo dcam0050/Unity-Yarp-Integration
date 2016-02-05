@@ -43,6 +43,11 @@ public class VectorBase : Portable {
     return ret;
   }
 
+  public virtual int getBottleTag() {
+    int ret = yarpPINVOKE.VectorBase_getBottleTag(swigCPtr);
+    return ret;
+  }
+
   public virtual uint getListSize() {
     uint ret = yarpPINVOKE.VectorBase_getListSize(swigCPtr);
     return ret;

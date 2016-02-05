@@ -71,8 +71,13 @@ public class DeviceResponder : PortReader {
     return ret;
   }
 
+  public new void onRead(Bottle datum, TypedReaderBottle reader) {
+    yarpPINVOKE.DeviceResponder_onRead__SWIG_0_0(swigCPtr, Bottle.getCPtr(datum), TypedReaderBottle.getCPtr(reader));
+    if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public new void onRead(Bottle v) {
-    yarpPINVOKE.DeviceResponder_onRead(swigCPtr, Bottle.getCPtr(v));
+    yarpPINVOKE.DeviceResponder_onRead__SWIG_1(swigCPtr, Bottle.getCPtr(v));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 

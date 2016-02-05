@@ -39,8 +39,8 @@ public class PortWriter : global::System.IDisposable {
     }
   }
 
-  public new bool write(ConnectionWriter connection) {
-    bool ret = yarpPINVOKE.PortWriter_write(swigCPtr, ConnectionWriter.getCPtr(connection));
+  public new bool write(ConnectionWriter writer) {
+    bool ret = yarpPINVOKE.PortWriter_write(swigCPtr, ConnectionWriter.getCPtr(writer));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

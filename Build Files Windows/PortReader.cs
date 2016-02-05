@@ -39,8 +39,8 @@ public class PortReader : global::System.IDisposable {
     }
   }
 
-  public new bool read(ConnectionReader connection) {
-    bool ret = yarpPINVOKE.PortReader_read(swigCPtr, ConnectionReader.getCPtr(connection));
+  public new bool read(ConnectionReader reader) {
+    bool ret = yarpPINVOKE.PortReader_read(swigCPtr, ConnectionReader.getCPtr(reader));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -68,15 +68,15 @@ public class PortReader : global::System.IDisposable {
     return hasDerivedMethod;
   }
 
-  private bool SwigDirectorread(global::System.IntPtr connection) {
-    return read(new ConnectionReader(connection, false));
+  private bool SwigDirectorread(global::System.IntPtr reader) {
+    return read(new ConnectionReader(reader, false));
   }
 
   private global::System.IntPtr SwigDirectorgetReadType() {
     return SWIGTYPE_p_Type.getCPtr(getReadType()).Handle;
   }
 
-  public delegate bool SwigDelegatePortReader_0(global::System.IntPtr connection);
+  public delegate bool SwigDelegatePortReader_0(global::System.IntPtr reader);
   public delegate global::System.IntPtr SwigDelegatePortReader_1();
 
   private SwigDelegatePortReader_0 swigDelegate0;

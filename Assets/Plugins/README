@@ -1,5 +1,0 @@
-x86 contains generated .cs files for Yarp 32bit windows
-
-x86_64 contains generated .cs filed for Yarp 64bit linux
-
-Must only build for 32bit windows!

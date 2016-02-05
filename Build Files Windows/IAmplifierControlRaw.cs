@@ -49,6 +49,16 @@ public class IAmplifierControlRaw : global::System.IDisposable {
     return ret;
   }
 
+  public virtual bool getAmpStatusRaw(SWIGTYPE_p_int st) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_getAmpStatusRaw__SWIG_0(swigCPtr, SWIGTYPE_p_int.getCPtr(st));
+    return ret;
+  }
+
+  public virtual bool getAmpStatusRaw(int j, SWIGTYPE_p_int st) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_getAmpStatusRaw__SWIG_1(swigCPtr, j, SWIGTYPE_p_int.getCPtr(st));
+    return ret;
+  }
+
   public virtual bool getCurrentsRaw(SWIGTYPE_p_double vals) {
     bool ret = yarpPINVOKE.IAmplifierControlRaw_getCurrentsRaw(swigCPtr, SWIGTYPE_p_double.getCPtr(vals));
     return ret;
@@ -69,13 +79,38 @@ public class IAmplifierControlRaw : global::System.IDisposable {
     return ret;
   }
 
-  public virtual bool getAmpStatusRaw(SWIGTYPE_p_int st) {
-    bool ret = yarpPINVOKE.IAmplifierControlRaw_getAmpStatusRaw__SWIG_0(swigCPtr, SWIGTYPE_p_int.getCPtr(st));
+  public virtual bool getNominalCurrentRaw(int m, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_getNominalCurrentRaw(swigCPtr, m, SWIGTYPE_p_double.getCPtr(val));
     return ret;
   }
 
-  public virtual bool getAmpStatusRaw(int j, SWIGTYPE_p_int st) {
-    bool ret = yarpPINVOKE.IAmplifierControlRaw_getAmpStatusRaw__SWIG_1(swigCPtr, j, SWIGTYPE_p_int.getCPtr(st));
+  public virtual bool getPeakCurrentRaw(int m, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_getPeakCurrentRaw(swigCPtr, m, SWIGTYPE_p_double.getCPtr(val));
+    return ret;
+  }
+
+  public virtual bool setPeakCurrentRaw(int m, double val) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_setPeakCurrentRaw(swigCPtr, m, val);
+    return ret;
+  }
+
+  public virtual bool getPWMRaw(int j, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_getPWMRaw(swigCPtr, j, SWIGTYPE_p_double.getCPtr(val));
+    return ret;
+  }
+
+  public virtual bool getPWMLimitRaw(int j, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_getPWMLimitRaw(swigCPtr, j, SWIGTYPE_p_double.getCPtr(val));
+    return ret;
+  }
+
+  public virtual bool setPWMLimitRaw(int j, double val) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_setPWMLimitRaw(swigCPtr, j, val);
+    return ret;
+  }
+
+  public virtual bool getPowerSupplyVoltageRaw(int j, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControlRaw_getPowerSupplyVoltageRaw(swigCPtr, j, SWIGTYPE_p_double.getCPtr(val));
     return ret;
   }
 

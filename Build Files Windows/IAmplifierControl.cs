@@ -49,6 +49,16 @@ public class IAmplifierControl : global::System.IDisposable {
     return ret;
   }
 
+  public virtual bool getAmpStatus(SWIGTYPE_p_int st) {
+    bool ret = yarpPINVOKE.IAmplifierControl_getAmpStatus__SWIG_0(swigCPtr, SWIGTYPE_p_int.getCPtr(st));
+    return ret;
+  }
+
+  public virtual bool getAmpStatus(int j, SWIGTYPE_p_int v) {
+    bool ret = yarpPINVOKE.IAmplifierControl_getAmpStatus__SWIG_1(swigCPtr, j, SWIGTYPE_p_int.getCPtr(v));
+    return ret;
+  }
+
   public virtual bool getCurrents(SWIGTYPE_p_double vals) {
     bool ret = yarpPINVOKE.IAmplifierControl_getCurrents__SWIG_0(swigCPtr, SWIGTYPE_p_double.getCPtr(vals));
     return ret;
@@ -69,13 +79,38 @@ public class IAmplifierControl : global::System.IDisposable {
     return ret;
   }
 
-  public virtual bool getAmpStatus(SWIGTYPE_p_int st) {
-    bool ret = yarpPINVOKE.IAmplifierControl_getAmpStatus__SWIG_0(swigCPtr, SWIGTYPE_p_int.getCPtr(st));
+  public virtual bool getNominalCurrent(int m, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControl_getNominalCurrent(swigCPtr, m, SWIGTYPE_p_double.getCPtr(val));
     return ret;
   }
 
-  public virtual bool getAmpStatus(int j, SWIGTYPE_p_int v) {
-    bool ret = yarpPINVOKE.IAmplifierControl_getAmpStatus__SWIG_1(swigCPtr, j, SWIGTYPE_p_int.getCPtr(v));
+  public virtual bool getPeakCurrent(int m, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControl_getPeakCurrent(swigCPtr, m, SWIGTYPE_p_double.getCPtr(val));
+    return ret;
+  }
+
+  public virtual bool setPeakCurrent(int m, double val) {
+    bool ret = yarpPINVOKE.IAmplifierControl_setPeakCurrent(swigCPtr, m, val);
+    return ret;
+  }
+
+  public virtual bool getPWM(int j, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControl_getPWM(swigCPtr, j, SWIGTYPE_p_double.getCPtr(val));
+    return ret;
+  }
+
+  public virtual bool getPWMLimit(int j, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControl_getPWMLimit(swigCPtr, j, SWIGTYPE_p_double.getCPtr(val));
+    return ret;
+  }
+
+  public virtual bool setPWMLimit(int j, double val) {
+    bool ret = yarpPINVOKE.IAmplifierControl_setPWMLimit(swigCPtr, j, val);
+    return ret;
+  }
+
+  public virtual bool getPowerSupplyVoltage(int j, SWIGTYPE_p_double val) {
+    bool ret = yarpPINVOKE.IAmplifierControl_getPowerSupplyVoltage(swigCPtr, j, SWIGTYPE_p_double.getCPtr(val));
     return ret;
   }
 

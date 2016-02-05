@@ -114,8 +114,8 @@ public class Image : Portable {
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void setExternal(SWIGTYPE_p_void data, int imgWidth, int imgHeight) {
-    yarpPINVOKE.Image_setExternal(swigCPtr, SWIGTYPE_p_void.getCPtr(data), imgWidth, imgHeight);
+  public void setExternal(System.IntPtr data, int imgWidth, int imgHeight) {
+    yarpPINVOKE.Image_setExternal(swigCPtr, data, imgWidth, imgHeight);
   }
 
   public System.IntPtr getRawImage() { return yarpPINVOKE.Image_getRawImage(swigCPtr); }
@@ -125,14 +125,10 @@ public class Image : Portable {
     return ret;
   }
 
-  public SWIGTYPE_p_void getIplImage() {
-    global::System.IntPtr cPtr = yarpPINVOKE.Image_getIplImage(swigCPtr);
-    SWIGTYPE_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
-    return ret;
-  }
+  public System.IntPtr getIplImage() { return yarpPINVOKE.Image_getIplImage(swigCPtr); }
 
-  public void wrapIplImage(SWIGTYPE_p_void iplImage) {
-    yarpPINVOKE.Image_wrapIplImage(swigCPtr, SWIGTYPE_p_void.getCPtr(iplImage));
+  public void wrapIplImage(System.IntPtr iplImage) {
+    yarpPINVOKE.Image_wrapIplImage(swigCPtr, iplImage);
   }
 
   public new bool read(ConnectionReader connection) {

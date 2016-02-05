@@ -77,8 +77,8 @@ public class Contact : global::System.IDisposable {
     return ret;
   }
 
-  public Contact addHost(string host) {
-    Contact ret = new Contact(yarpPINVOKE.Contact_addHost(swigCPtr, host), true);
+  public Contact addHost(string hostname) {
+    Contact ret = new Contact(yarpPINVOKE.Contact_addHost(swigCPtr, hostname), true);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -88,14 +88,14 @@ public class Contact : global::System.IDisposable {
     return ret;
   }
 
-  public static Contact bySocket(string carrier, string host, int portNumber) {
-    Contact ret = new Contact(yarpPINVOKE.Contact_bySocket(carrier, host, portNumber), true);
+  public static Contact bySocket(string carrier, string hostname, int portNumber) {
+    Contact ret = new Contact(yarpPINVOKE.Contact_bySocket(carrier, hostname, portNumber), true);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Contact addSocket(string carrier, string host, int portNumber) {
-    Contact ret = new Contact(yarpPINVOKE.Contact_addSocket(swigCPtr, carrier, host, portNumber), true);
+  public Contact addSocket(string carrier, string hostname, int portNumber) {
+    Contact ret = new Contact(yarpPINVOKE.Contact_addSocket(swigCPtr, carrier, hostname, portNumber), true);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

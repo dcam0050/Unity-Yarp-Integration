@@ -38,6 +38,11 @@ public class BufferedPortBottle : Contactable {
     }
   }
 
+  public new void onRead(Bottle datum, TypedReaderBottle reader) {
+    yarpPINVOKE.BufferedPortBottle_onRead__SWIG_0_0(swigCPtr, Bottle.getCPtr(datum), TypedReaderBottle.getCPtr(reader));
+    if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public BufferedPortBottle() : this(yarpPINVOKE.new_BufferedPortBottle__SWIG_0(), true) {
   }
 
@@ -163,7 +168,7 @@ public class BufferedPortBottle : Contactable {
   }
 
   public new void onRead(Bottle datum) {
-    yarpPINVOKE.BufferedPortBottle_onRead(swigCPtr, Bottle.getCPtr(datum));
+    yarpPINVOKE.BufferedPortBottle_onRead__SWIG_1(swigCPtr, Bottle.getCPtr(datum));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -217,14 +222,10 @@ public class BufferedPortBottle : Contactable {
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public virtual SWIGTYPE_p_void acquire() {
-    global::System.IntPtr cPtr = yarpPINVOKE.BufferedPortBottle_acquire(swigCPtr);
-    SWIGTYPE_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_void(cPtr, false);
-    return ret;
-  }
+  public virtual System.IntPtr acquire() { return yarpPINVOKE.BufferedPortBottle_acquire(swigCPtr); }
 
-  public virtual void release(SWIGTYPE_p_void handle) {
-    yarpPINVOKE.BufferedPortBottle_release(swigCPtr, SWIGTYPE_p_void.getCPtr(handle));
+  public virtual void release(System.IntPtr handle) {
+    yarpPINVOKE.BufferedPortBottle_release(swigCPtr, handle);
   }
 
   public new void setTargetPeriod(double period) {

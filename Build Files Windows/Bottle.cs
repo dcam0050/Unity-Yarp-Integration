@@ -115,10 +115,6 @@ public class Bottle : Portable {
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void add(string txt) {
-    yarpPINVOKE.Bottle_add__SWIG_1(swigCPtr, txt);
-  }
-
   public Bottle addList() {
     Bottle ret = new Bottle(yarpPINVOKE.Bottle_addList(swigCPtr), false);
     return ret;
@@ -239,13 +235,13 @@ public class Bottle : Portable {
     return ret;
   }
 
-  public virtual bool isEqual(Bottle alt) {
+  public bool isEqual(Bottle alt) {
     bool ret = yarpPINVOKE.Bottle_isEqual(swigCPtr, Bottle.getCPtr(alt));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual bool notEqual(Bottle alt) {
+  public bool notEqual(Bottle alt) {
     bool ret = yarpPINVOKE.Bottle_notEqual(swigCPtr, Bottle.getCPtr(alt));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
@@ -261,19 +257,6 @@ public class Bottle : Portable {
     return ret;
   }
 
-  public void specialize(int subCode) {
-    yarpPINVOKE.Bottle_specialize(swigCPtr, subCode);
-  }
-
-  public int getSpecialization() {
-    int ret = yarpPINVOKE.Bottle_getSpecialization(swigCPtr);
-    return ret;
-  }
-
-  public void setNested(bool nested) {
-    yarpPINVOKE.Bottle_setNested(swigCPtr, nested);
-  }
-
   public void hasChanged() {
     yarpPINVOKE.Bottle_hasChanged(swigCPtr);
   }
@@ -283,9 +266,18 @@ public class Bottle : Portable {
     return ret;
   }
 
+  public int getSpecialization() {
+    int ret = yarpPINVOKE.Bottle_getSpecialization(swigCPtr);
+    return ret;
+  }
+
   public static string describeBottleCode(int code) {
     string ret = yarpPINVOKE.Bottle_describeBottleCode(code);
     return ret;
+  }
+
+  public void add(string txt) {
+    yarpPINVOKE.Bottle_add__SWIG_1(swigCPtr, txt);
   }
 
   public new string toString() {

@@ -15,6 +15,8 @@ public class yarpSendCameraImage : MonoBehaviour {
 	public Texture2D temp2D;
 	private BufferedPortImageRgb imagePort;
 	private ImageRgb texImage;
+	private System.IntPtr newPtr;
+	private byte[] byteArray;
 
 	// Use this for initialization
 	void Start () 
@@ -33,6 +35,20 @@ public class yarpSendCameraImage : MonoBehaviour {
 		resWidth = view.width;
 		resHeight = view.height;
 		temp2D = new Texture2D(resWidth,resHeight, TextureFormat.ARGB32, false);
+
+		texImage = imagePort.prepare();
+		
+		//set resolution and parameters of image
+		texImage.resize(resWidth, resHeight);
+		texImage.setTopIsLowIndex(false);
+		texImage.setQuantum(1);
+		texImage.zero();
+
+		System.IntPtr imagePtr = texImage.getRawImage();
+		int imageSize = texImage.getRawImageSize();
+		byteArray = new byte[imageSize];
+
+		newPtr = Marshal.AllocHGlobal(byteArray.Length);
 	}
 
 	void Update ()
@@ -41,11 +57,11 @@ public class yarpSendCameraImage : MonoBehaviour {
 		texImage = imagePort.prepare();
 
 		//set resolution and parameters of image
-		texImage.resize(resWidth, resHeight);
-		texImage.setTopIsLowIndex(false);
-		texImage.setQuantum(1);
+		//texImage.resize(resWidth, resHeight);
+		//texImage.setTopIsLowIndex(false);
+		//texImage.setQuantum(1);
 		
-		texImage.zero(); //test
+		//texImage.zero(); //test
 	}
 	
 	// Update is called once per frame
@@ -67,7 +83,6 @@ public class yarpSendCameraImage : MonoBehaviour {
 		//create pointer to texImage
 		System.IntPtr imagePtr = texImage.getRawImage();
 		int imageSize = texImage.getRawImageSize();
-		byte[] byteArray = new byte[imageSize];
 
 		//convert Color32 array into byte array
 		int currLoc = 0;
@@ -80,13 +95,11 @@ public class yarpSendCameraImage : MonoBehaviour {
 			byteArray[currLoc+2]=(byte)currPix.b;
 		}
 
-		System.IntPtr arrayPointer = Marshal.AllocHGlobal(imageSize);
-		Marshal.Copy(byteArray, 0, imagePtr, imageSize);
-		Marshal.FreeHGlobal(arrayPointer);
-
-		texImage.setExternal (imagePtr, resWidth, resHeight);
-		//send image
+		Marshal.Copy(byteArray,0,newPtr,byteArray.Length);
+		
+		texImage.setExternal(newPtr,resWidth,resHeight);
 		imagePort.write();
+			//Marshal.FreeHGlobal(newPtr);
 	}
 
 	public void changeRes (int newWidth, int newHeight)

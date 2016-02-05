@@ -45,4 +45,10 @@ public class IAxisInfoRaw : global::System.IDisposable {
     return ret;
   }
 
+  public virtual bool getJointTypeRaw(int axis, SWIGTYPE_p_yarp__dev__JointTypeEnum type) {
+    bool ret = yarpPINVOKE.IAxisInfoRaw_getJointTypeRaw(swigCPtr, axis, SWIGTYPE_p_yarp__dev__JointTypeEnum.getCPtr(type));
+    if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }

@@ -107,26 +107,26 @@ public class ResourceFinder : Searchable {
     return ret;
   }
 
-  public string findFile(string key) {
-    string ret = yarpPINVOKE.ResourceFinder_findFile__SWIG_0(swigCPtr, key);
+  public string findFile(string name) {
+    string ret = yarpPINVOKE.ResourceFinder_findFile__SWIG_0(swigCPtr, name);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public string findFileByName(string fileName) {
-    string ret = yarpPINVOKE.ResourceFinder_findFileByName__SWIG_0(swigCPtr, fileName);
+  public string findFileByName(string name) {
+    string ret = yarpPINVOKE.ResourceFinder_findFileByName__SWIG_0(swigCPtr, name);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public string findPath(string key) {
-    string ret = yarpPINVOKE.ResourceFinder_findPath__SWIG_0(swigCPtr, key);
+  public string findPath(string name) {
+    string ret = yarpPINVOKE.ResourceFinder_findPath__SWIG_0(swigCPtr, name);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public Bottle findPaths(string key) {
-    Bottle ret = new Bottle(yarpPINVOKE.ResourceFinder_findPaths__SWIG_0(swigCPtr, key), true);
+  public Bottle findPaths(string name) {
+    Bottle ret = new Bottle(yarpPINVOKE.ResourceFinder_findPaths__SWIG_0(swigCPtr, name), true);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -258,26 +258,26 @@ public class ResourceFinder : Searchable {
     return ret;
   }
 
-  public Bottle findPaths(string key, SWIGTYPE_p_ResourceFinderOptions options) {
-    Bottle ret = new Bottle(yarpPINVOKE.ResourceFinder_findPaths__SWIG_1(swigCPtr, key, SWIGTYPE_p_ResourceFinderOptions.getCPtr(options)), true);
+  public Bottle findPaths(string name, SWIGTYPE_p_ResourceFinderOptions options) {
+    Bottle ret = new Bottle(yarpPINVOKE.ResourceFinder_findPaths__SWIG_1(swigCPtr, name, SWIGTYPE_p_ResourceFinderOptions.getCPtr(options)), true);
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public string findPath(string key, SWIGTYPE_p_ResourceFinderOptions options) {
-    string ret = yarpPINVOKE.ResourceFinder_findPath__SWIG_2(swigCPtr, key, SWIGTYPE_p_ResourceFinderOptions.getCPtr(options));
+  public string findPath(string name, SWIGTYPE_p_ResourceFinderOptions options) {
+    string ret = yarpPINVOKE.ResourceFinder_findPath__SWIG_2(swigCPtr, name, SWIGTYPE_p_ResourceFinderOptions.getCPtr(options));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public string findFile(string key, SWIGTYPE_p_ResourceFinderOptions options) {
-    string ret = yarpPINVOKE.ResourceFinder_findFile__SWIG_1(swigCPtr, key, SWIGTYPE_p_ResourceFinderOptions.getCPtr(options));
+  public string findFile(string name, SWIGTYPE_p_ResourceFinderOptions options) {
+    string ret = yarpPINVOKE.ResourceFinder_findFile__SWIG_1(swigCPtr, name, SWIGTYPE_p_ResourceFinderOptions.getCPtr(options));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public string findFileByName(string fileName, SWIGTYPE_p_ResourceFinderOptions options) {
-    string ret = yarpPINVOKE.ResourceFinder_findFileByName__SWIG_1(swigCPtr, fileName, SWIGTYPE_p_ResourceFinderOptions.getCPtr(options));
+  public string findFileByName(string name, SWIGTYPE_p_ResourceFinderOptions options) {
+    string ret = yarpPINVOKE.ResourceFinder_findFileByName__SWIG_1(swigCPtr, name, SWIGTYPE_p_ResourceFinderOptions.getCPtr(options));
     if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -70,12 +70,23 @@ public class IControlMode : global::System.IDisposable {
   }
 
   public virtual bool getControlMode(int j, SWIGTYPE_p_int mode) {
-    bool ret = yarpPINVOKE.IControlMode_getControlMode(swigCPtr, j, SWIGTYPE_p_int.getCPtr(mode));
+    bool ret = yarpPINVOKE.IControlMode_getControlMode__SWIG_0(swigCPtr, j, SWIGTYPE_p_int.getCPtr(mode));
     return ret;
   }
 
   public virtual bool getControlModes(SWIGTYPE_p_int modes) {
-    bool ret = yarpPINVOKE.IControlMode_getControlModes(swigCPtr, SWIGTYPE_p_int.getCPtr(modes));
+    bool ret = yarpPINVOKE.IControlMode_getControlModes__SWIG_0(swigCPtr, SWIGTYPE_p_int.getCPtr(modes));
+    return ret;
+  }
+
+  public int getControlMode(int j) {
+    int ret = yarpPINVOKE.IControlMode_getControlMode__SWIG_1(swigCPtr, j);
+    return ret;
+  }
+
+  public bool getControlModes(IVector data) {
+    bool ret = yarpPINVOKE.IControlMode_getControlModes__SWIG_1(swigCPtr, IVector.getCPtr(data));
+    if (yarpPINVOKE.SWIGPendingException.Pending) throw yarpPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

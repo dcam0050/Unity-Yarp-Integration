@@ -28,6 +28,7 @@ public class yarpSendImage : MonoBehaviour {
 			imagePort.open (sourcePortName);
 
 			Debug.Log ("Connect Port");
+			//TODO initialise but wait for port connection within main code body
 			Network.connect(sourcePortName, destPortName);
 			
 			writeImageThread = new YarpImageCheckWrite();

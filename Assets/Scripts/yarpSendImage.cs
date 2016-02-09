@@ -60,8 +60,6 @@ public class yarpSendImage : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log ("Frame");
-		
 		if (writeImageThread != null)
 		{
 			if (writeImageThread.imageWritten)
@@ -73,7 +71,6 @@ public class yarpSendImage : MonoBehaviour {
 				temp2D.ReadPixels(new Rect(0,0,resWidth,resHeight),0,0);
 				temp2D.Apply();
 
-				Debug.Log ("Width = " + resWidth + " Height = " + resHeight);
 				//extract color array from 2D Texture
 				Color32[] pix = temp2D.GetPixels32();
 				writeImageThread.colorArray = pix;
@@ -110,7 +107,6 @@ public class YarpImageCheckWrite : ThreadedJob
 
 	public bool InitVariables()
 	{
-		Debug.Log("Resolution Set");
 		//resWidth = 10;
 		//resHeight = 200;
 		byteArray = new byte[resWidth*resHeight*3];

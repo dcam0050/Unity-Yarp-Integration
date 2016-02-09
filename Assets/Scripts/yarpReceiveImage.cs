@@ -13,6 +13,7 @@ public class yarpReceiveImage : MonoBehaviour {
 	private Texture2D image2DTex; 
 	public GameObject plane;
 	private Renderer planeRender;
+	private bool checkInit;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +27,7 @@ public class yarpReceiveImage : MonoBehaviour {
 			checkImageThread = new YarpImageCheck();
 			checkImageThread.imagePort = inputImagePort;
 			checkImageThread.Start();
-			bool checkInit = checkImageThread.InitVariables();
+			checkInit = checkImageThread.InitVariables();
 
 			if(checkInit)
 			{
@@ -40,8 +41,6 @@ public class yarpReceiveImage : MonoBehaviour {
 			{
 				Debug.Log("Could not initialise resolution. No images received");
 			}
-
-
 		}
 		else
 		{
@@ -51,10 +50,8 @@ public class yarpReceiveImage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-	{
-		Debug.Log ("Frame");
-		
-		if (checkImageThread != null)
+	{	
+		if (checkImageThread != null && checkInit)
 		{
 			if (checkImageThread.imageReceived)
 			{
@@ -78,8 +75,6 @@ public class yarpReceiveImage : MonoBehaviour {
 		if (checkImageThread != null) 
 		{
 			Debug.Log ("Closing Thread");
-			//checkImageThread.Abort();
-			//checkImageThread.Join ();
 		}
 	}
 }
@@ -104,10 +99,12 @@ public class YarpImageCheck : ThreadedJob
 			{
 				resWidth = inputImage.width();
 				resHeight = inputImage.height();
-				Debug.Log("Resolution Set");
 				init = true;
 			}
 			iters++;
+			if (iters > 20) {
+				break;
+			}
 		}
 		return init;
 	}

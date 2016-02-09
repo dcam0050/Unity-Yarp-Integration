@@ -53,11 +53,13 @@
      <Compile Include="Assets\Scripts\Job.cs" />
      <Compile Include="Assets\Scripts\ThreadedJob.cs" />
      <Compile Include="Assets\Scripts\cylinderRotate.cs" />
+     <Compile Include="Assets\Scripts\iCubController.cs" />
      <Compile Include="Assets\Scripts\yarpChangeFace.cs" />
      <Compile Include="Assets\Scripts\yarpReceiveImage.cs" />
      <Compile Include="Assets\Scripts\yarpSendCameraImage.cs" />
      <Compile Include="Assets\Scripts\yarpSendImage.cs" />
      <Compile Include="Assets\Scripts\yarpSendText.cs" />
+     <Compile Include="Assets\yarpReceiveText.cs" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\UnityStandardSurface.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_Standard.shader" />
      <None Include="Assets\MORPH3D\Content\Shaders\StandardSpecular-doublesided.shader" />

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 public class yarpReceiveImage : MonoBehaviour {
 	
@@ -21,14 +22,15 @@ public class yarpReceiveImage : MonoBehaviour {
 		if(sourcePortName != null)
 		{
 			inputImagePort = new BufferedPortImageRgb();
-			inputImagePort.open (inputPortName);
+			bool open = inputImagePort.open (inputPortName);
+			Debug.Log ("Port opened: " + open);
 			Network.connect(sourcePortName, inputPortName);
 			
 			checkImageThread = new YarpImageCheck();
 			checkImageThread.imagePort = inputImagePort;
 			checkImageThread.Start();
 			checkInit = checkImageThread.InitVariables();
-
+			Debug.Log(checkImageThread.iters);
 			if(checkInit)
 			{
 				Debug.Log("Initialised Correctly");
@@ -87,10 +89,11 @@ public class YarpImageCheck : ThreadedJob
 	public int resWidth;
 	public int resHeight;
 	public Color32[] colorArray;
+	public int iters;
 
 	public bool InitVariables()
 	{
-		int iters = 0;
+		iters = 0;
 		init = false;
 		//loop to check first image to set resolution of texture
 		while(!init) //put in failsafe limiting number of iterations or use ienumerator class
@@ -102,9 +105,11 @@ public class YarpImageCheck : ThreadedJob
 				init = true;
 			}
 			iters++;
-			if (iters > 20) {
+
+			if (iters > 100) {
 				break;
 			}
+			System.Threading.Thread.Sleep(100);
 		}
 		return init;
 	}

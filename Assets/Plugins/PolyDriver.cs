@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 
 public class PolyDriver : DeviceDriver {
   private HandleRef swigCPtr;
+  public string name;
 
   internal PolyDriver(IntPtr cPtr, bool cMemoryOwn) : base(yarpPINVOKE.PolyDriver_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new HandleRef(this, cPtr);
@@ -26,6 +27,7 @@ public class PolyDriver : DeviceDriver {
   }
 
   public override void Dispose() {
+		this.name = null;
     lock(this) {
       if (swigCPtr.Handle != IntPtr.Zero) {
         if (swigCMemOwn) {

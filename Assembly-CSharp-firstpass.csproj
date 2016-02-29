@@ -250,14 +250,21 @@
      <None Include="Assets\MORPH3D\Content\Shaders\Standard-2pass-doublesided-half depth.shader" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\UnityPBSLighting.cginc" />
      <None Include="Assets\MORPH3D\Content\Shaders\Standard-2pass-doublesided.shader" />
+     <None Include="Assets\DistanceTool\READ ME.txt" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_setup.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_DepthOnly.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="M3D_DLL">
  <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>

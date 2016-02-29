@@ -1,0 +1,101 @@
+conactFrictionCoefficient 1.0
+moorMaxTorque 1000
+maxVelocity 1000
+motorDryFriction 0.3
+joint bounciness 0
+
+ports created:
+ * - /icubSim/left_leg/rpc:i : left_leg rpc port
+ * - /icubSim/left_leg/command:i : left_leg command port
+ * - /icubSim/left_leg/state:o : left_leg state port
+ *
+ * - /icubSim/right_leg/rpc:i : right_leg rpc port
+ * - /icubSim/right_leg/command:i : right_leg command port
+ * - /icubSim/right_leg/state:o : right_leg state port
+ *
+ * - /icubSim/torso/rpc:i : torso rpc port
+ * - /icubSim/torso/command:i : torso command port
+ * - /icubSim/torso/state:o : torso state port
+ *
+ * - /icubSim/left_arm/rpc:i : left arm rpc port
+ * - /icubSim/left_arm/command:i : left arm command port
+ * - /icubSim/left_arm/state:o : left arm state port
+ *
+ * - /icubSim/right_arm/rpc:i : right arm rpc port
+ * - /icubSim/right_arm/command:i : right arm command port
+ * - /icubSim/right_arm/state:o : right arm state port
+ *
+ * - /icubSim/head/rpc:i : head rpc port
+ * - /icubSim/head/command:i : head command port
+ * - /icubSim/head/state:o : head state port
+ *
+ * - /icubSim/face/eyelids : port to control the eyelids
+ * - /icubSim/cam/left : streams out the data from the left camera (cartesian format 320x240 )
+ * - /icubSim/cam/left/fovea : streams out the data from the left camera (fovea format 128x128 ) 
+ * - /icubSim/cam/left/logpolar : streams out the data from the left camera (log polar format 252x152 ) 
+ * - /icubSim/cam/right : streams out the data from the right camera (cartesian format 320x240 )
+ * - /icubSim/cam/right/fovea : streams out the data from the left camera (fovea format 128x128 ) 
+ * - /icubSim/cam/right/logpolar : streams out the data from the left camera (log polar format 252x152 ) 
+ * - /icubSim/cam : streams out the data from the global view
+ *
+ * - /icubSim/skinManager/skin_events:o
+ * - /icubSim/skin/left_arm_comp
+ * - /icubSim/skin/right_arm_comp 
+ * - /icubSim/skin/left_forearm_comp
+ * - /icubSim/skin/right_forearm_comp 
+ * - /icubSim/skin/left_hand_comp
+ * - /icubSim/skin/right_hand_comp
+ * - /icubSim/skin/torso_comp
+ *   
+ * - /icubSim/world : port to manipulate the environment
+ * - /icubSim/touch : streams out a sequence the touch sensors for both hands
+ * - /icubSim/inertial : streams out a sequence of inertial data taken from the head
+ * - /icubSim/texture : port to receive texture data to place on an object (e.g. data from a webcam etc...)
+
+
+create SimulationBundle: bundle =  new OdeSdlSimulationBundle
+bundle->onBegin() -> initODE
+
+create LogicalJoints icub_joints = bundle->createJoints(config) = iCubLogicalJoints(config(RobotConfig))
+checks flags.actHead from config which indicates if part is on or not
+assigns number to part e.g head = PART_HEAD=3 and rawHead = PART_HEAD_RAW = 9
+
+getController(3,0).init("head","hinge",0,+1,config);
+
+parameters in config:    
+virtual int getWorldTimestep() = 0;
+    virtual double getWorldCFM() = 0;
+    virtual double getWorldERP() = 0;
+
+    virtual double getFudgeFactor() = 0;
+    virtual double getStopCFM() = 0;
+    virtual double getJointCFM() = 0;
+    virtual double getStopERP() = 0;
+    
+    virtual double getMaxContactCorrectingVel() = 0;
+    virtual double getContactFrictionCoefficient() = 0;
+    virtual double getContactSurfaceLayer() = 0;
+
+    virtual double getMotorMaxTorque() = 0;
+    virtual double getMotorDryFriction() = 0;
+    virtual double getJointStopBouncyness() = 0;
+
+getController function = simControl[part][axis] which is an array of OdeLogicalJoint
+each item of OdeLogicalJoint undergoes .init
+
+.init("head","hinge",0,+1,config);
+
+
+create World
+
+PolyDriver icub_joints_dev;
+icub_joints_dev.give(icub_joints,true);
+
+// Make sure all individual control boards route to single ode_joints driver
+Drivers::factory().add(new DriverLinkCreator("robot_joints",icub_joints_dev));
+
+// Provide simulated controlboard driver
+Drivers::factory().add(new DriverCreatorOf<iCubSimulationControl>("simulationcontrol", 
+"controlboard",
+"iCubSimulationControl"));
+

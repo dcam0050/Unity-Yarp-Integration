@@ -45,6 +45,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DistanceTool\Editor\DistanceToolEditor.cs" />
+     <Compile Include="Assets\DistanceTool\Editor\DistanceToolMenu.cs" />
      <Compile Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Editor\HairShaderGUI.cs" />
      <Compile Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\Editor\VolundMultiStandardShaderGUI.cs" />
      <Compile Include="Assets\MORPH3D\Scripts\Editor\M3DBlendshapeNamesEditor.cs" />
@@ -61,9 +63,13 @@
      <None Include="Assets\MORPH3D\Content\Shaders\Standard-2pass-doublesided-half depth.shader" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\UnityPBSLighting.cginc" />
      <None Include="Assets\MORPH3D\Content\Shaders\Standard-2pass-doublesided.shader" />
+     <None Include="Assets\DistanceTool\READ ME.txt" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_setup.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_DepthOnly.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -78,6 +84,9 @@
  </Reference>
  <Reference Include="UnityEditor.Networking">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="M3D_DLL">
  <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>

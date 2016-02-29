@@ -45,20 +45,35 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DistanceTool\DistanceTool.cs" />
+     <Compile Include="Assets\IKController.cs" />
      <Compile Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\HairRenderer.cs" />
      <Compile Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow.cs" />
      <Compile Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadowSun.cs" />
      <Compile Include="Assets\MORPH3D\Scripts\AttachmentPoints\SinglePropDefaultLayoutExample.cs" />
      <Compile Include="Assets\MORPH3D\Scripts\AttachmentPoints\SpiralPropLayout.cs" />
+     <Compile Include="Assets\Scripts\DriverCreatorOf.cs" />
+     <Compile Include="Assets\Scripts\DriverLinkCreator.cs" />
+     <Compile Include="Assets\Scripts\FMotor.cs" />
+     <Compile Include="Assets\Scripts\FakeMotor.cs" />
      <Compile Include="Assets\Scripts\Job.cs" />
+     <Compile Include="Assets\Scripts\LogicalJoint.cs" />
+     <Compile Include="Assets\Scripts\OdeLogicalJoint.cs" />
+     <Compile Include="Assets\Scripts\RobotConfig.cs" />
      <Compile Include="Assets\Scripts\ThreadedJob.cs" />
+     <Compile Include="Assets\Scripts\coreController.cs" />
      <Compile Include="Assets\Scripts\cylinderRotate.cs" />
      <Compile Include="Assets\Scripts\iCubController.cs" />
+     <Compile Include="Assets\Scripts\iCubLogicalJoints.cs" />
+     <Compile Include="Assets\Scripts\iCubSimulationControl.cs" />
+     <Compile Include="Assets\Scripts\pidfilter.cs" />
      <Compile Include="Assets\Scripts\yarpChangeFace.cs" />
      <Compile Include="Assets\Scripts\yarpReceiveImage.cs" />
      <Compile Include="Assets\Scripts\yarpSendCameraImage.cs" />
      <Compile Include="Assets\Scripts\yarpSendImage.cs" />
      <Compile Include="Assets\Scripts\yarpSendText.cs" />
+     <Compile Include="Assets\driverTest.cs" />
+     <Compile Include="Assets\playbackController.cs" />
      <Compile Include="Assets\yarpReceiveText.cs" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\UnityStandardSurface.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_Standard.shader" />
@@ -70,14 +85,21 @@
      <None Include="Assets\MORPH3D\Content\Shaders\Standard-2pass-doublesided-half depth.shader" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Shared\UnityPBSLighting.cginc" />
      <None Include="Assets\MORPH3D\Content\Shaders\Standard-2pass-doublesided.shader" />
+     <None Include="Assets\DistanceTool\READ ME.txt" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_setup.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\Hair\Hair_UnityStandardCore.cginc" />
      <None Include="Assets\MORPH3D\Content\Vendor\Unity\Volund\Features\UniqueShadow\UniqueShadow_DepthOnly.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="M3D_DLL">
  <HintPath>/home/daniel/DanielGit/Unity-Yarp-Integration/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>

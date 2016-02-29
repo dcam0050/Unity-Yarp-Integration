@@ -19,6 +19,8 @@ public class DriverCreator : IDisposable {
     swigCPtr = new HandleRef(this, cPtr);
   }
 
+  public DriverCreator(){}
+
   internal static HandleRef getCPtr(DriverCreator obj) {
     return (obj == null) ? new HandleRef(null, IntPtr.Zero) : obj.swigCPtr;
   }
